@@ -1,1 +1,1 @@
-# xdg-sidekick
+# xdg-ninja
