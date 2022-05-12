@@ -1,0 +1,10 @@
+{
+    "name": "latexmk",
+    "files": [
+        {
+            "path": "$HOME/.latexmkrc",
+            "movable": true,
+            "help": "XDG is supported out-of-the-box, so we can simply move the file to _XDG_CONFIG_HOME/latexmk/latexmkrc_.\n"
+        }
+    ]
+}

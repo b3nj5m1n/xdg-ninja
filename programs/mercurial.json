@@ -1,0 +1,10 @@
+{
+    "name": "mercurial",
+    "files": [
+        {
+            "path": "$HOME/.hgrc",
+            "movable": true,
+            "help": "Supported since _v4.2_.\n\nYou can move the file to _XDG_CONFIG_HOME/hg/hgrc_.\n"
+        }
+    ]
+}

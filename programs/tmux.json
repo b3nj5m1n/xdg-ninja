@@ -1,0 +1,10 @@
+{
+    "name": "tmux",
+    "files": [
+        {
+            "path": "$HOME/.tmux.conf",
+            "movable": true,
+            "help": "Supported since _v3.2_ (Partial support since _v3.1_).\n\nYou can move the file to _XDG_CONFIG_HOME/tmux/tmux.conf_.\n"
+        }
+    ]
+}

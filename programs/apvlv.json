@@ -1,0 +1,10 @@
+{
+    "name": "apvlv",
+    "files": [
+        {
+            "path": "$HOME/.apvlvrc",
+            "movable": true,
+            "help": "XDG is supported out-of-the-box, so we can simply move the file to _XDG_CONFIG_HOME/apvlv/apvlvrc_.\n"
+        }
+    ]
+}

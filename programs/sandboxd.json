@@ -1,0 +1,10 @@
+{
+    "name": "sandbox",
+    "files": [
+        {
+            "path": "$HOME/.sandboxrc",
+            "movable": true,
+            "help": "Supported since commit _91e0b6a_.\n\nYou can move the file to _XDG_CONFIG_HOME/sandboxd/sandboxrc_.\n"
+        }
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "name": "antimicrox",
+    "files": [
+        {
+            "path": "$HOME/.antimicro",
+            "movable": true,
+            "help": ""
+        },
+        {
+            "path": "$HOME/.antimicrox",
+            "movable": true,
+            "help": ""
+        }
+    ]
+}

@@ -1,0 +1,25 @@
+{
+    "name": "asunder",
+    "files": [
+        {
+            "path": "$HOME/.asunder",
+            "movable": true,
+            "help": "Supported since _v2.9.0_.\n\nYou can move the file to _XDG_CONFIG_HOME/asunder/asunder_.\n"
+        },
+        {
+            "path": "$HOME/.asunder_album_artist",
+            "movable": true,
+            "help": "Supported since _v2.9.0_.\n\nYou can move the file to _XDG_CACHE_HOME/asunder/asunder_album_artist_.\n"
+        },
+        {
+            "path": "$HOME/.asunder_album_genre",
+            "movable": true,
+            "help": "Supported since _v2.9.0_.\n\nYou can move the file to _XDG_CACHE_HOME/asunder/asunder_album_genre_.\n"
+        },
+        {
+            "path": "$HOME/.asunder_album_title",
+            "movable": true,
+            "help": "Supported since _v2.9.0_.\n\nYou can move the file to _XDG_CACHE_HOME/asunder/asunder_album_title_.\n"
+        }
+    ]
+}
