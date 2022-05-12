@@ -112,7 +112,6 @@ check_program() {
     INPUT=$1
 
     NAME=$(echo "$INPUT" | jq -r .name)
-
     
 
     while IFS= read -r file; do
@@ -122,7 +121,7 @@ check_program() {
 
 # Loops over all files in the programs/ directory and calls check_program
 enumerate_programs() {
-    for prog_filename in "./programs/*"; do
+    for prog_filename in ./programs/*; do
         check_program "$(cat $prog_filename)"
     done
 }
