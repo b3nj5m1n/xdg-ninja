@@ -3,7 +3,7 @@
         {
             "path": "$HOME/.m2",
             "movable": true,
-            "help": "_See [here](https://wiki.archlinux.org/title/Leiningen#m2_repo_location)._\n"
+            "help": "See [here](https://wiki.archlinux.org/title/Leiningen#m2_repo_location).\n"
         },
         {
             "path": "$HOME/.lein",

@@ -9,6 +9,39 @@ fi
 
 unalias -a
 
+HELPSTRING="""\
+
+
+    \e[37;45;1mxdg-ninja\e[0m
+
+    \e[1;3mCheck your \$HOME for unwanted files.\e[1;0m
+
+    ────────────────────────────────────
+
+    \e[3m--help\e[0m              \e[1mThis help menu\e[0m
+    \e[3m-h\e[0m
+
+    \e[3m--no-skip-ok\e[0m        \e[1mDisplay messages for all files checked (verbose)\e[0m
+    \e[3m-v\e[0m
+
+    \e[3m--skip-ok\e[0m           \e[1mDon't display anything for files that do not exist (default)\e[0m
+
+"""
+
+SKIP_OK=true
+for i in "$@" ; do
+    if [[ $i == "--help" ]] || [[ $i == "-h" ]] ; then
+        echo -e "$HELPSTRING"
+        exit
+    elif [[ $i == "--skip-ok" ]] ; then
+        SKIP_OK=true
+    elif [[ $i == "--no-skip-ok" ]] ; then
+        SKIP_OK=false
+    elif [[ $i == "-v" ]] ; then
+        SKIP_OK=false
+    fi
+done
+
 ERR=0
 WARN=1
 INFO=2
@@ -60,7 +93,9 @@ log() {
             ;;
 
         SUCS)
-            printf "[\e[1;32m$NAME\e[1;0m]: \e[1;3m$FILENAME\e[1;0m\n"
+            if [ "$SKIP_OK" = false ]; then
+                printf "[\e[1;32m$NAME\e[1;0m]: \e[1;3m$FILENAME\e[1;0m\n"
+            fi
             ;;
 
         HELP)
