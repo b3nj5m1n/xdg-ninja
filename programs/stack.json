@@ -1,0 +1,10 @@
+{
+    "files": [
+        {
+            "path": "$HOME/.stack",
+            "movable": true,
+            "help": "Export the following environment variables:\n\n```bash\nexport STACK_ROOT=\"$XDG_DATA_HOME\"/stack\n```\n"
+        }
+    ],
+    "name": "stack"
+}

@@ -1,0 +1,10 @@
+{
+    "files": [
+        {
+            "path": "$HOME/.cabal",
+            "movable": true,
+            "help": "Export the following environment variables:\n\n```bash\nexport CABAL_CONFIG=\"$XDG_CONFIG_HOME\"/cabal/config\nexport CABAL_DIR=\"$XDG_CACHE_HOME\"/cabal\n```\n"
+        }
+    ],
+    "name": "cabal"
+}
