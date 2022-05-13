@@ -5,6 +5,10 @@
 
 A shell script which checks your _$HOME_ for unwanted files and directories.
 
+<p align="center">
+  <img src="https://s8.gifyu.com/images/Peek-2022-05-13-16-07.gif" width="500"/>
+</p>
+
 When it encounters a file it knows about, it will tell you whether it's possible to move this file to an appropriate location, and how to do it.
 
 Currently, a subset of the [arch wiki page on XDG_BASE_DIR](https://wiki.archlinux.org/title/XDG_Base_Directory) is implemented as configurations.
