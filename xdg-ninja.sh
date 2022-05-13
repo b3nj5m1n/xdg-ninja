@@ -80,21 +80,20 @@ log() {
     case "$MODE" in
 
     ERR)
-        printf "[\e[1;31m$NAME\e[1;0m]: \e[1;3m$FILENAME\e[1;0m\n"
+        printf '[\e[1;31m%s\e[1;0m]: \e[1;3m%s\e[1;0m\n' "$NAME" "$FILENAME"
         ;;
 
     WARN)
-        printf "[\e[1;33m$NAME\e[1;0m]: \e[1;3m$FILENAME\e[1;0m\n"
+        printf '[\e[1;33m%s\e[1;0m]: \e[1;3m%s\e[1;0m\n' "$NAME" "$FILENAME"
         ;;
 
     INFO)
-        printf "[\e[1;36m$NAME\e[1;0m]: \e[1;3m$FILENAME\e[1;0m\n"
+        printf '[\e[1;36m%s\e[1;0m]: \e[1;3m%s\e[1;0m\n' "$NAME" "$FILENAME"
         ;;
 
     SUCS)
-        if [ "$SKIP_OK" = false ]; then
-            printf "[\e[1;32m$NAME\e[1;0m]: \e[1;3m$FILENAME\e[1;0m\n"
-        fi
+        [ "$SKIP_OK" = false ] &&
+            printf '[\e[1;32m%s\e[1;0m]: \e[1;3m%s\e[1;0m\n' "$NAME" "$FILENAME"
         ;;
 
     HELP)
@@ -131,7 +130,7 @@ check_file() {
         else
             log WARN "$NAME" "$FILENAME" "$HELP"
         fi
-        if ! [ -z "$HELP" ]; then
+        if [ "$HELP" ]; then
             log HELP "$NAME" "$FILENAME" "$HELP"
         else
             log HELP "$NAME" "$FILENAME" "_No help available._"
@@ -157,7 +156,7 @@ enumerate_programs() {
     echo -e "\e[1;3mStarting to check your \e[1;36m\$HOME.\e[1;0m"
     echo -e ""
     for prog_filename in ./programs/*; do
-        check_program "$(cat $prog_filename)"
+        check_program "$(cat "$prog_filename")"
     done
     echo -e "\e[1;3mDone checking your \e[1;36m\$HOME.\e[1;0m"
     echo -e ""
