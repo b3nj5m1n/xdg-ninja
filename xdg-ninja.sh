@@ -166,7 +166,7 @@ check_program() {
 enumerate_programs() {
     echo -e "\e[1;3mStarting to check your \e[1;36m\$HOME.\e[1;0m"
     echo -e ""
-    for prog_filename in ./programs/*; do
+	for prog_filename in "$(dirname "${BASH_SOURCE[0]}")"/programs/*; do
         check_program "$(cat $prog_filename)"
     done
     echo -e "\e[1;3mDone checking your \e[1;36m\$HOME.\e[1;0m"
