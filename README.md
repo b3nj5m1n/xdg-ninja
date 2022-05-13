@@ -15,6 +15,16 @@ Clone the repository somewhere, then run the _./xdg-ninja.sh_ script.
 
 This will run every test in the default configuration.
 
+## Dependencies
+
+- [bash](https://repology.org/project/bash/packages), obviously
+- [jq](https://repology.org/project/jq/packages) for parsing the json files
+
+### Optional
+
+- [glow](https://repology.org/project/glow/packages) for rendering markdown in the terminal
+- [cabal](https://repology.org/project/cabal/packages) for compiling the helper program for creating configurations
+
 ## Configuration
 
 The configuration is done in the _programs/_ directory.
