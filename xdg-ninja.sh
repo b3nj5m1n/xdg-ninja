@@ -7,6 +7,14 @@ then
     USE_GLOW=false
 fi
 
+# Check for the existence of jq, since it's required.
+if ! command -v jq &> /dev/null
+then
+    echo "jq not found. Please install it, first, then re-run this command."
+    # Exit
+    exit
+fi
+
 unalias -a
 
 HELPSTRING="""\
