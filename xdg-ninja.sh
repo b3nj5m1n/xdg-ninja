@@ -45,7 +45,7 @@ done
 if ! command -v jq &> /dev/null
 then
     echo "jq is needed to run this script, but it wasn't found. Please install it to be able to use this script."
-    USE_GLOW=false
+    exit
 fi
 
 ERR=0
