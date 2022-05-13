@@ -15,6 +15,7 @@ import Data.UUID.V4
 import GHC.Float (double2Float)
 import GHC.Generics
 import System.Console.Haskeline
+import System.Environment (getEnv)
 import System.Exit
 import System.IO
 import System.Process
@@ -41,21 +42,22 @@ instance ToJSON Program where
 
 save :: Program -> IO ()
 save program = do
-  let path = ( "./programs/" ++ (T.unpack (name program) ) ++ ".json")
+  let path = ("./programs/" ++ (T.unpack (name program)) ++ ".json")
   B.writeFile path (encodePretty program)
 
 getHelp :: IO String
 getHelp =
   toString <$> Data.UUID.V4.nextRandom >>= \id ->
-    appendFile ( "/tmp/xdg-ninja." ++ id ++ ".md" ) "Export the following environment variables:\n\n```bash\n\n```" >>
-    createProcess (shell ("nvim /tmp/xdg-ninja." ++ id ++ ".md")) >>= \r ->
-      case r of
-        (_, _, _, p) ->
-          waitForProcess p
-            >>= ( \f -> case f of
-                    ExitSuccess -> readFile ("/tmp/xdg-ninja." ++ id ++ ".md")
-                    (ExitFailure a) -> return ""
-                )
+    appendFile ("/tmp/xdg-ninja." ++ id ++ ".md") "Export the following environment variables:\n\n```bash\n\n```"
+      >> (getEnv "EDITOR") >>= \editor ->
+        createProcess (shell (editor ++ " /tmp/xdg-ninja." ++ id ++ ".md")) >>= \r ->
+          case r of
+            (_, _, _, p) ->
+              waitForProcess p
+                >>= ( \f -> case f of
+                        ExitSuccess -> readFile ("/tmp/xdg-ninja." ++ id ++ ".md")
+                        (ExitFailure a) -> return ""
+                    )
 
 getProp :: T.Text -> T.Text -> IO String
 getProp prompt placeholder = do
@@ -112,14 +114,17 @@ getProgram =
     >> printf "%s\n" (T.unpack (faint (italic (cyan "First, tell me what program you're creating a configuration for."))))
     >> getProp (yellow "Program name: ") ""
     >>= \name ->
-      printf "%s\n" (T.unpack (faint (italic (cyan "Alright, now let's configure which files belong to this program.")))) >>
-      printf "%s\n" (T.unpack (faint (italic (cyan "I'm going to ask you for the path to the file, please use $HOME instead of ~.")))) >>
-      printf "%s\n" (T.unpack (faint (italic (cyan "I'll then ask you wether or not this file can be moved to a different directory.")))) >>
-      printf "%s\n" (T.unpack (faint (italic (cyan "Finally, your editor is going to open a markdown document. Enter instructions on moving the file in question, then save and close.")))) >>
-      getFiles [] >>= \files ->
-        return Program {name = T.pack name, files = files}
+      printf "%s\n" (T.unpack (faint (italic (cyan "Alright, now let's configure which files belong to this program."))))
+        >> printf "%s\n" (T.unpack (faint (italic (cyan "I'm going to ask you for the path to the file, please use $HOME instead of ~."))))
+        >> printf "%s\n" (T.unpack (faint (italic (cyan "I'll then ask you wether or not this file can be moved to a different directory."))))
+        >> printf "%s\n" (T.unpack (faint (italic (cyan "Finally, your editor is going to open a markdown document. Enter instructions on moving the file in question, then save and close."))))
+        >> getFiles [] >>= \files ->
+          return Program {name = T.pack name, files = files}
 
 main :: IO ()
 main =
-  getProgram
-    >>= save
+  getProgram >>= \program ->
+    promptBool (green "Save? (y/n) ") (red "Please provide a valid answer.") "" >>= \do_save ->
+      if do_save
+        then save program
+        else return ()
