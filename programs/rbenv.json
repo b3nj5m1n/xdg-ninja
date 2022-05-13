@@ -3,7 +3,7 @@
         {
             "path": "$HOME/.rbenv",
             "movable": true,
-            "help": "Export the following environment variables:\n\n```bash\nexport RBENV_ROOT=XDG_DATA_HOME/rbenv\n```\n"
+            "help": "Export the following environment variables:\n\n```bash\nexport RBENV_ROOT=\"$XDG_DATA_HOME\"/rbenv\n```\n"
         }
     ],
     "name": "rbenv"
