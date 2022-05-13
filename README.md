@@ -9,6 +9,12 @@ When it encounters a file it knows about, it will tell you whether it's possible
 
 Currently, a subset of the [arch wiki page on XDG_BASE_DIR](https://wiki.archlinux.org/title/XDG_Base_Directory) is implemented as configurations.
 
+## Running
+
+Clone the repository somewhere, then run the _./xdg-ninja.sh_ script.
+
+This will run every test in the default configuration.
+
 ## Configuration
 
 The configuration is done in the _programs/_ directory.
@@ -23,7 +29,7 @@ Files in this directory can have any name, but using the name of the program is 
 
 ### Automatically Generating Configuration
 
-You need _haskell_ and _cabal_ installed.
+You need _haskell_ and _cabal_ installed. (To be clear, this is just for a tool that will help you automatically generate the config files, you still only need bash to run the tests)
 
 Run the following command:
 ```bash
