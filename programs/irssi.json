@@ -1,0 +1,10 @@
+{
+    "files": [
+        {
+            "path": "$HOME/.irssi",
+            "movable": true,
+            "help": "Alias irssi to use a custom configuration and data location:\n\n```bash\nalias irssi=irssi --config=\"$XDG_CONFIG_HOME\"/irssi/config --home=\"$XDG_DATA_HOME\"/irssi\n```\n"
+        }
+    ],
+    "name": "irssi"
+}

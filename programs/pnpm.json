@@ -1,0 +1,10 @@
+{
+    "files": [
+        {
+            "path": "$HOME/.pnpm-store",
+            "movable": true,
+            "help": "Add the following to your npmrc:\n\n```\nstore-dir=${XDG_DATA_HOME}/pnpm-store\n```\n"
+        }
+    ],
+    "name": "pnpm"
+}

@@ -1,0 +1,10 @@
+{
+    "files": [
+        {
+            "path": "$HOME/.opam",
+            "movable": true,
+            "help": "Export the following environment variables:\n\n```bash\nexport OPAMROOT=\"$XDG_DATA_HOME/opam\" \n```\n"
+        }
+    ],
+    "name": "opam"
+}

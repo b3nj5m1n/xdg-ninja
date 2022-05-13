@@ -1,0 +1,10 @@
+{
+    "files": [
+        {
+            "path": "$HOME/.nvidia-settings-rc",
+            "movable": true,
+            "help": "Alias nvidia-settings to use a custom configuration location:\n\n```bash\nnvidia-settings --config=\"$XDG_CONFIG_HOME\"/nvidia/settings \n```\n"
+        }
+    ],
+    "name": "nvidia-settings"
+}

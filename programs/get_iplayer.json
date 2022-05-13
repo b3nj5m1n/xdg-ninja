@@ -1,0 +1,10 @@
+{
+    "files": [
+        {
+            "path": "$HOME/.get_iplayer",
+            "movable": true,
+            "help": "Export the following environment variables:\n\n```bash\nexport GETIPLAYERUSERPREFS=\"$XDG_DATA_HOME\"/get_iplayer\n```\n"
+        }
+    ],
+    "name": "get_iplayer"
+}

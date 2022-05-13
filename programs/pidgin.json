@@ -1,0 +1,10 @@
+{
+    "files": [
+        {
+            "path": "$HOME/.purple",
+            "movable": true,
+            "help": "Alias pidgin to use custom configuration location:\n\n```bash\npidgin --config=\"$XDG_DATA_HOME\"/purple\n```\n"
+        }
+    ],
+    "name": "pidgin"
+}

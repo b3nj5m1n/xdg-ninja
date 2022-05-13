@@ -1,0 +1,15 @@
+{
+    "files": [
+        {
+            "path": "$HOME/.compose-cache",
+            "movable": true,
+            "help": "Export the following environment variables:\n\n```bash\nexport XCOMPOSECACHE=\"$XDG_CACHE_HOME\"/X11/xcompose\n```\n"
+        },
+        {
+            "path": "$HOME/.XCompose",
+            "movable": true,
+            "help": "Export the following environment variables:\n\n```bash\nexport XCOMPOSEFILE=\"$XDG_CONFIG_HOME\"/X11/xcompose\n```\n"
+        }
+    ],
+    "name": "libx11"
+}

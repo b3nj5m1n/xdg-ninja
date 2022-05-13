@@ -1,0 +1,10 @@
+{
+    "files": [
+        {
+            "path": "$HOME/.fceux",
+            "movable": true,
+            "help": "Export the following environment variables:\n\n```bash\nexport FCEUX_HOME=\"$XDG_CONFIG_HOME\"/fceux\n```\n"
+        }
+    ],
+    "name": "fceux"
+}

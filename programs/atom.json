@@ -1,0 +1,10 @@
+{
+    "files": [
+        {
+            "path": "$HOME/.atom",
+            "movable": true,
+            "help": "Export the following environment variables:\n\n```bash\nexport ATOM_HOME=\"$XDG_DATA_HOME\"/atom\n```\n"
+        }
+    ],
+    "name": "atom"
+}

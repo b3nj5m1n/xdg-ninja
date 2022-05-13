@@ -1,0 +1,10 @@
+{
+    "files": [
+        {
+            "path": "$HOME/.kodi",
+            "movable": true,
+            "help": "Export the following environment variables:\n\n```bash\nKODI_DATA=$XDG_DATA_HOME/kodi\n```\n"
+        }
+    ],
+    "name": "kodi"
+}

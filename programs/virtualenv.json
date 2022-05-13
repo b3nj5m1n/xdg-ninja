@@ -1,0 +1,10 @@
+{
+    "files": [
+        {
+            "path": "$HOME/.virtualenvs",
+            "movable": true,
+            "help": "Export the following environment variables:\n\n```bash\nexport WORKON_HOME=\"$XDG_DATA_HOME/virtualenvs\"\n```\n"
+        }
+    ],
+    "name": "virtualenv"
+}

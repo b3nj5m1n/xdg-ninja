@@ -1,0 +1,10 @@
+{
+    "files": [
+        {
+            "path": "$HOME/.node_repl_history",
+            "movable": true,
+            "help": "Export the following environment variables:\n\n```bash\nexport NODE_REPL_HISTORY=\"$XDG_DATA_HOME\"/node_repl_history\n```\n"
+        }
+    ],
+    "name": "nodejs"
+}

@@ -1,0 +1,10 @@
+{
+    "files": [
+        {
+            "path": "$HOME/.elinks",
+            "movable": true,
+            "help": "Export the following environment variables:\n\n```bash\nexport ELINKS_CONFDIR=\"$XDG_CONFIG_HOME\"/elinks\n```\n"
+        }
+    ],
+    "name": "elinks"
+}

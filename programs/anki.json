@@ -1,0 +1,10 @@
+{
+    "files": [
+        {
+            "path": "$HOME/Anki",
+            "movable": true,
+            "help": "Alias anki to use a custom data location:\n\n```bash\nanki -b \"$XDG_DATA_HOME\"/Anki\n```\n"
+        }
+    ],
+    "name": "anki"
+}

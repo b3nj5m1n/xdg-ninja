@@ -1,0 +1,10 @@
+{
+    "files": [
+        {
+            "path": "$HOME/.z",
+            "movable": true,
+            "help": "Export the following environment variables:\n\n```bash\nexport _Z_DATA=\"$XDG_DATA_HOME/z\"\n```\n"
+        }
+    ],
+    "name": "z"
+}

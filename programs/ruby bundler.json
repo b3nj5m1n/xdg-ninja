@@ -1,0 +1,10 @@
+{
+    "files": [
+        {
+            "path": "$HOME/.bundle",
+            "movable": true,
+            "help": "Export the following environment variables:\n\n```bash\nexport BUNDLE_USER_CONFIG=\"$XDG_CONFIG_HOME\"/bundle\nexport BUNDLE_USER_CACHE=\"$XDG_CACHE_HOME\"/bundle\nexport BUNDLE_USER_PLUGIN=\"$XDG_DATA_HOME\"/bundle\n```\n"
+        }
+    ],
+    "name": "ruby bundler"
+}

@@ -1,0 +1,10 @@
+{
+    "files": [
+        {
+            "path": "$HOME/.mplayer",
+            "movable": true,
+            "help": "Export the following environment variables:\n\n```bash\nexport MPLAYER_HOME=\"$XDG_CONFIG_HOME\"/mplayer \n```\n"
+        }
+    ],
+    "name": "mplayer"
+}

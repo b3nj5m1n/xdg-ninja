@@ -1,0 +1,10 @@
+{
+    "files": [
+        {
+            "path": "$HOME/.dosbox",
+            "movable": true,
+            "help": "Alias dosbox to use a custom configuration locaion:\n\n```bash\nalias dosbox=dosbox -conf \"$XDG_CONFIG_HOME\"/dosbox/dosbox.conf\n```\n\n_Move $HOME/.dosbox/dosbox-0.74-2.conf to $XDG_CONFIG_HOME/dosbox/dosbox.conf._\n"
+        }
+    ],
+    "name": "dosbox"
+}

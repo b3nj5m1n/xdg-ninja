@@ -1,0 +1,10 @@
+{
+    "files": [
+        {
+            "path": "$HOME/.docker",
+            "movable": true,
+            "help": "Export the following environment variables:\n\n```bash\nexport DOCKER_CONFIG=\"$XDG_CONFIG_HOME\"/docker\n```\n"
+        }
+    ],
+    "name": "docker"
+}

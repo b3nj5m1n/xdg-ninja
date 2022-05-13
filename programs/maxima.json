@@ -1,0 +1,10 @@
+{
+    "files": [
+        {
+            "path": "$HOME/.maxima",
+            "movable": true,
+            "help": "Export the following environment variables:\n\n```bash\nexport MAXIMA_USERDIR=\"$XDG_CONFIG_HOME\"/maxima\n```\n"
+        }
+    ],
+    "name": "maxima"
+}

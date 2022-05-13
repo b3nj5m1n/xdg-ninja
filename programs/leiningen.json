@@ -1,0 +1,15 @@
+{
+    "files": [
+        {
+            "path": "$HOME/.m2",
+            "movable": true,
+            "help": "_See [here](https://wiki.archlinux.org/title/Leiningen#m2_repo_location)._\n"
+        },
+        {
+            "path": "$HOME/.lein",
+            "movable": true,
+            "help": "Export the following environment variables:\n\n```bash\nexport LEIN_HOME=\"$XDG_DATA_HOME\"/lein\n```\n"
+        }
+    ],
+    "name": "leiningen"
+}

@@ -1,0 +1,15 @@
+{
+    "files": [
+        {
+            "path": "$HOME/.xserverrc",
+            "movable": true,
+            "help": "Export the following environment variables:\n\n```bash\nexport XSERVERRC=\"$XDG_CONFIG_HOME\"/X11/xserverrc\n```\n"
+        },
+        {
+            "path": "$HOME/.xinitrc",
+            "movable": true,
+            "help": "Export the following environment variables:\n\n```bash\nexport XINITRC=\"$XDG_CONFIG_HOME\"/X11/xinitrc\n```\n"
+        }
+    ],
+    "name": "xinit"
+}

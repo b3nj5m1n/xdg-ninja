@@ -1,0 +1,15 @@
+{
+    "files": [
+        {
+            "path": "$HOME/.task",
+            "movable": true,
+            "help": "Set the data location in your taskrc file:\n\n```bash\ndata.location=$XDG_DATA_HOME/task/\n```\n"
+        },
+        {
+            "path": "$HOME/.taskrc",
+            "movable": true,
+            "help": "Supported since version _2.6_, _XDG_CONFIG_HOME/task/taskrc_ needs to exist, or task will offer to create the legacy file for you.\n"
+        }
+    ],
+    "name": "taskwarrior"
+}

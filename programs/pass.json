@@ -1,0 +1,10 @@
+{
+    "files": [
+        {
+            "path": "$HOME/.password-store",
+            "movable": true,
+            "help": "Export the following environment variables:\n\n```bash\nexport PASSWORD_STORE_DIR=\"$XDG_DATA_HOME\"/pass\n```\n"
+        }
+    ],
+    "name": "pass"
+}

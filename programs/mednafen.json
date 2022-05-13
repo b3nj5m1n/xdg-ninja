@@ -1,0 +1,10 @@
+{
+    "files": [
+        {
+            "path": "$HOME/.mednafen",
+            "movable": true,
+            "help": "Export the following environment variables:\n\n```bash\nexport MEDNAFEN_HOME=\"$XDG_CONFIG_HOME\"/mednafen\n```\n"
+        }
+    ],
+    "name": "mednafen"
+}

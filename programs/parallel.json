@@ -1,0 +1,10 @@
+{
+    "files": [
+        {
+            "path": "$HOME/.parallel",
+            "movable": true,
+            "help": "Export the following environment variables:\n\n```bash\nexport PARALLEL_HOME=\"$XDG_CONFIG_HOME\"/parallel \n```\n"
+        }
+    ],
+    "name": "parallel"
+}

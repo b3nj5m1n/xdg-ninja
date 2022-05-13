@@ -1,0 +1,10 @@
+{
+    "files": [
+        {
+            "path": "$HOME/.getmail",
+            "movable": true,
+            "help": "Alias getmail to use a custom configuration and data location:\n\n```bash\ngetmail --rcfile=\"$XDG_CONFIG_HOME/getmail/getmailrc\" --getmaildir=\"$XDG_DATA_HOME/getmail\"\n```\n"
+        }
+    ],
+    "name": "getmail"
+}

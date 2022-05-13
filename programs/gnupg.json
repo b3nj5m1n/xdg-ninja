@@ -1,0 +1,10 @@
+{
+    "files": [
+        {
+            "path": "$HOME/.gnupg",
+            "movable": true,
+            "help": "Export the following environment variables:\n\n```bash\nexport GNUPGHOME=\"$XDG_DATA_HOME\"/gnupg\n```\n"
+        }
+    ],
+    "name": "gnupg"
+}

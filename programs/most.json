@@ -1,0 +1,10 @@
+{
+    "files": [
+        {
+            "path": "$HOME/.mostrc",
+            "movable": true,
+            "help": "Export the following environment variables:\n\n```bash\nexport MOST_INITFILE=\"$XDG_CONFIG_HOME\"/mostrc\n```\n"
+        }
+    ],
+    "name": "most"
+}

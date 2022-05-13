@@ -1,0 +1,10 @@
+{
+    "files": [
+        {
+            "path": "$HOME/.glivrc",
+            "movable": true,
+            "help": "Alias gliv to use a custom configuration location:\n\n```bash\ngliv --glivrc=\"$XDG_CONFIG_HOME\"/gliv/glivrc\n```\n"
+        }
+    ],
+    "name": "gliv"
+}

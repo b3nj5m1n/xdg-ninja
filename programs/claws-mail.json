@@ -1,0 +1,10 @@
+{
+    "files": [
+        {
+            "path": "$HOME/.claws-mail",
+            "movable": true,
+            "help": "Alias claws-mail to use a different configuration location:\n\n```bash\nclaws-mail --alternate-config-dir \"$XDG_DATA_HOME\"/claws-mail\n```\n"
+        }
+    ],
+    "name": "claws-mail"
+}

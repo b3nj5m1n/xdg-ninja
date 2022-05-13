@@ -1,0 +1,10 @@
+{
+    "files": [
+        {
+            "path": "$HOME/.grip",
+            "movable": true,
+            "help": "Export the following environment variables:\n\n```bash\nexport GRIPHOME=\"$XDG_CONFIG_HOME/grip\"\n```\n"
+        }
+    ],
+    "name": "grip"
+}

@@ -1,0 +1,10 @@
+{
+    "files": [
+        {
+            "path": "$HOME/.dictrc",
+            "movable": true,
+            "help": "Alias dict to use a custom configuration location:\n\n```bash\ndict -c \"$XDG_CONFIG_HOME\"/dict/dictrc\n```\n"
+        }
+    ],
+    "name": "dict"
+}

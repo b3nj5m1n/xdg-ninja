@@ -1,0 +1,10 @@
+{
+    "files": [
+        {
+            "path": "$HOME/.hledger.journal",
+            "movable": true,
+            "help": "Export the following environment variables:\n\n```bash\nexport LEDGER_FILE=\"$XDG_DATA_HOME\"/hledger.journal\n```\n"
+        }
+    ],
+    "name": "hledger"
+}

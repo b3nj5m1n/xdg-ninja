@@ -1,0 +1,10 @@
+{
+    "files": [
+        {
+            "path": "$HOME/.ncmpc",
+            "movable": true,
+            "help": "Alias ncmpc to use a custom configuration location:\n\n```bash\nncmpc -f \"$XDG_CONFIG_HOME\"/ncmpc/config \n```\n"
+        }
+    ],
+    "name": "ncmpc"
+}

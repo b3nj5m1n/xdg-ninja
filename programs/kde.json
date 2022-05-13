@@ -1,0 +1,15 @@
+{
+    "files": [
+        {
+            "path": "$HOME/.kde4",
+            "movable": true,
+            "help": "Export the following environment variables:\n\n```bash\nexport KDEHOME=\"$XDG_CONFIG_HOME\"/kde\n```\n"
+        },
+        {
+            "path": "$HOME/.kde",
+            "movable": true,
+            "help": "Export the following environment variables:\n\n```bash\nexport KDEHOME=\"$XDG_CONFIG_HOME\"/kde\n```\n"
+        }
+    ],
+    "name": "kde"
+}

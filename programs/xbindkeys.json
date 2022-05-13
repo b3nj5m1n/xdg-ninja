@@ -1,0 +1,10 @@
+{
+    "files": [
+        {
+            "path": "$HOME/.xbindkeysrc",
+            "movable": true,
+            "help": "Alias xbindkeys to use a custom configuration location:\n\n```bash\nalias xbindkeys=xbindkeys -f \"$XDG_CONFIG_HOME\"/xbindkeys/config\n```\n"
+        }
+    ],
+    "name": "xbindkeys"
+}

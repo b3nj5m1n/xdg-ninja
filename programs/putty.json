@@ -1,0 +1,10 @@
+{
+    "files": [
+        {
+            "path": "$HOME/.putty",
+            "movable": true,
+            "help": "Uses _$XDG_CONFIG_HOME/putty_ if it exists.\n"
+        }
+    ],
+    "name": "putty"
+}

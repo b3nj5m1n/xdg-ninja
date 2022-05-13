@@ -1,0 +1,10 @@
+{
+    "files": [
+        {
+            "path": "$HOME/.gtkrc-2.0",
+            "movable": true,
+            "help": "Export the following environment variables:\n\n```bash\nexport GTK2_RC_FILES=\"$XDG_CONFIG_HOME\"/gtk-2.0/gtkrc\n```\n"
+        }
+    ],
+    "name": "gtk-2"
+}

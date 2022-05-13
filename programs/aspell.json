@@ -1,0 +1,10 @@
+{
+    "files": [
+        {
+            "path": "$HOME/.aspell.conf",
+            "movable": true,
+            "help": "Export the following environment variables:\n\n```bash\nexport ASPELL_CONF=\"per-conf $XDG_CONFIG_HOME/aspell/aspell.conf; personal $XDG_CONFIG_HOME/aspell/en.pws; repl $XDG_CONFIG_HOME/aspell/en.prepl\"\n```\n"
+        }
+    ],
+    "name": "aspell"
+}

@@ -1,0 +1,20 @@
+{
+    "files": [
+        {
+            "path": "$HOME/.texlive/texmf-config",
+            "movable": true,
+            "help": "Export the following environment variables:\n\n```bash\nexport TEXMFCONFIG=$XDG_CONFIG_HOME/texlive/texmf-config\n```\n"
+        },
+        {
+            "path": "$HOME/.texlive/texmf-var",
+            "movable": true,
+            "help": "Export the following environment variables:\n\n```bash\nexport TEXMFVAR=$XDG_CACHE_HOME/texlive/texmf-var\n```\n"
+        },
+        {
+            "path": "$HOME/.texmf",
+            "movable": true,
+            "help": "Export the following environment variables:\n\n```bash\nexport TEXMFHOME=$XDG_DATA_HOME/texmf\n```\n"
+        }
+    ],
+    "name": "texmf"
+}

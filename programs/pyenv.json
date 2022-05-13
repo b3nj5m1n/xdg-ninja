@@ -1,0 +1,10 @@
+{
+    "files": [
+        {
+            "path": "$HOME/.pyenv",
+            "movable": true,
+            "help": "Export the following environment variables:\n\n```bash\nexport PYENV_ROOT=$XDG_DATA_HOME/pyenv \n```\n"
+        }
+    ],
+    "name": "pyenv"
+}

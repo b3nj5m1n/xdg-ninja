@@ -1,0 +1,10 @@
+{
+    "files": [
+        {
+            "path": "$HOME/.conkyrc",
+            "movable": true,
+            "help": "Alias conky to use a custom configuration location:\n\n```bash\nconky --config=\"$XDG_CONFIG_HOME\"/conky/conkyrc\n```\n"
+        }
+    ],
+    "name": "conky"
+}

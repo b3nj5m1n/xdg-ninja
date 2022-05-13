@@ -1,0 +1,15 @@
+{
+    "files": [
+        {
+            "path": "$HOME/.bashdb_hist",
+            "movable": false,
+            "help": "_This file is hardcoded, see [here](https://sourceforge.net/p/bashdb/code/ci/bash-5.1/tree/lib/hist.sh#l28)._\n"
+        },
+        {
+            "path": "$HOME/.bashdbinit",
+            "movable": true,
+            "help": "Alias bashdb to use a custom init file location:\n\n```bash\nalias bashdb='bashdb -x ${XDG_CONFIG_HOME:-$HOME/.config}/bashdb/bashdbinit'\n```\n"
+        }
+    ],
+    "name": "bashdb"
+}

@@ -1,0 +1,10 @@
+{
+    "files": [
+        {
+            "path": "$HOME/.electrum",
+            "movable": true,
+            "help": "Export the following environment variables:\n\n```bash\nexport ELECTRUMDIR=\"$XDG_DATA_HOME/electrum\"\n```\n"
+        }
+    ],
+    "name": "electrum"
+}

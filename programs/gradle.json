@@ -1,0 +1,10 @@
+{
+    "files": [
+        {
+            "path": "$HOME/.gradle",
+            "movable": true,
+            "help": "Export the following environment variables:\n\n```bash\nexport GRADLE_USER_HOME=\"$XDG_DATA_HOME\"/gradle\n```\n"
+        }
+    ],
+    "name": "gradle"
+}

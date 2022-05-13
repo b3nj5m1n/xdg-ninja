@@ -1,0 +1,15 @@
+{
+    "files": [
+        {
+            "path": "$HOME/.wget-hsts",
+            "movable": true,
+            "help": "Alias wget to use a custom history file location:\n\n```bash\nalias wget=wget --hsts-file=\"$XDG_DATA_HOME/wget-hsts\"\n```\n"
+        },
+        {
+            "path": "$HOME/.wgetrc",
+            "movable": true,
+            "help": "Export the following environment variables:\n\n```bash\nexport WGETRC=\"$XDG_CONFIG_HOME/wgetrc\"\n```\n"
+        }
+    ],
+    "name": "wget"
+}

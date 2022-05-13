@@ -1,0 +1,10 @@
+{
+    "files": [
+        {
+            "path": "$HOME/.java",
+            "movable": true,
+            "help": "Export the following environment variables:\n\n```bash\nexport _JAVA_OPTIONS=-Djava.util.prefs.userRoot=\"$XDG_CONFIG_HOME\"/java\n```\n"
+        }
+    ],
+    "name": "openjdk"
+}

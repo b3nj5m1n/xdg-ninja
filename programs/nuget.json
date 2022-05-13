@@ -1,0 +1,10 @@
+{
+    "files": [
+        {
+            "path": "$HOME/.nuget/packages",
+            "movable": true,
+            "help": "Export the following environment variables:\n\n```bash\nexport NUGET_PACKAGES=\"$XDG_CACHE_HOME\"/NuGetPackages\n```\n"
+        }
+    ],
+    "name": "nuget"
+}

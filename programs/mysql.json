@@ -1,0 +1,20 @@
+{
+    "files": [
+        {
+            "path": "$HOME/.mylogin.cnf",
+            "movable": false,
+            "help": ""
+        },
+        {
+            "path": "$HOME/.my.cnf",
+            "movable": false,
+            "help": ""
+        },
+        {
+            "path": "$HOME/.mysql_history",
+            "movable": true,
+            "help": "Export the following environment variables:\n\n```bash\nexport MYSQL_HISTFILE=\"$XDG_DATA_HOME\"/mysql_history\n```\n"
+        }
+    ],
+    "name": "mysql"
+}

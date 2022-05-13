@@ -1,0 +1,10 @@
+{
+    "files": [
+        {
+            "path": "$HOME/.jupyter",
+            "movable": true,
+            "help": "Export the following environment variables:\n\n```bash\nexport JUPYTER_CONFIG_DIR=\"$XDG_CONFIG_HOME\"/jupyter\n```\n"
+        }
+    ],
+    "name": "jupyter"
+}

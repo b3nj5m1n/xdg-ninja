@@ -1,0 +1,10 @@
+{
+    "files": [
+        {
+            "path": "$HOME/.aws",
+            "movable": true,
+            "help": "Export the following environment variables:\n\n```bash\nexport AWS_SHARED_CREDENTIALS_FILE=\"$XDG_CONFIG_HOME\"/aws/credentials\nexport AWS_CONFIG_FILE=\"$XDG_CONFIG_HOME\"/aws/config\n```\n"
+        }
+    ],
+    "name": "aws-cli"
+}

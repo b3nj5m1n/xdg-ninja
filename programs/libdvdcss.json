@@ -1,0 +1,10 @@
+{
+    "files": [
+        {
+            "path": "$HOME/.dvdcss",
+            "movable": true,
+            "help": "Export the following environment variables:\n\n```bash\nexport DVDCSS_CACHE=\"$XDG_DATA_HOME\"/dvdcss\n```\n"
+        }
+    ],
+    "name": "libdvdcss"
+}

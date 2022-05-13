@@ -1,0 +1,10 @@
+{
+    "files": [
+        {
+            "path": "$HOME/.mysql/workbench",
+            "movable": true,
+            "help": "Alias mysql-workbench to use a custom location:\n\n```bash\nalias mysql-workbench=mysql-workbench --configdir=\"$XDG_DATA_HOME/mysql/workbench\"\n```\n"
+        }
+    ],
+    "name": "mysql-workbench"
+}

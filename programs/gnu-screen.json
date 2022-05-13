@@ -1,0 +1,10 @@
+{
+    "files": [
+        {
+            "path": "$HOME/.screenrc",
+            "movable": true,
+            "help": "Export the following environment variables:\n\n```bash\nexport SCREENRC=\"$XDG_CONFIG_HOME\"/screen/screenrc\n```\n"
+        }
+    ],
+    "name": "gnu-screen"
+}

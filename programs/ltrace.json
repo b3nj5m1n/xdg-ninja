@@ -1,0 +1,10 @@
+{
+    "files": [
+        {
+            "path": "$HOME/.ltrace.conf",
+            "movable": true,
+            "help": "Alias ltrace to use a custom configuration location:\n\n```bash\nalias ltrace=ltrace -F \"$XDG_CONFIG_HOME\"/ltrace/ltrace.conf\n```\n"
+        }
+    ],
+    "name": "ltrace"
+}

@@ -1,0 +1,10 @@
+{
+    "files": [
+        {
+            "path": "$HOME/.nvm",
+            "movable": true,
+            "help": "Export the following environment variables:\n\n```bash\nexport NVM_DIR=\"$XDG_DATA_HOME\"/nvm\n```\n"
+        }
+    ],
+    "name": "nvm"
+}

@@ -1,0 +1,10 @@
+{
+    "files": [
+        {
+            "path": "$HOME/.imapfilter",
+            "movable": true,
+            "help": "Export the following environment variables:\n\n```bash\nexport IMAPFILTER_HOME=\"$XDG_CONFIG_HOME/imapfilter\"\n```\n"
+        }
+    ],
+    "name": "imapfilter"
+}

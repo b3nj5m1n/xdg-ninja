@@ -1,0 +1,10 @@
+{
+    "files": [
+        {
+            "path": "$HOME/.ipfs",
+            "movable": true,
+            "help": "Export the following environment variables:\n\n```bash\nexport IPFS_PATH=\"$XDG_DATA_HOME\"/ipfs\n```\n"
+        }
+    ],
+    "name": "ipfs"
+}

@@ -1,0 +1,10 @@
+{
+    "files": [
+        {
+            "path": "$HOME/.azure",
+            "movable": true,
+            "help": "Export the following environment variables:\n\n```bash\nexport AZURE_CONFIG_DIR=$XDG_DATA_HOME/azure \n```\n"
+        }
+    ],
+    "name": "python-azure-cliAU"
+}

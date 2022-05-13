@@ -1,0 +1,15 @@
+{
+    "files": [
+        {
+            "path": "$HOME/.pricedb",
+            "movable": false,
+            "help": "\n"
+        },
+        {
+            "path": "$HOME/.ledgerrc",
+            "movable": true,
+            "help": "Alias ledger to use a custom configuration file:\n\n```bash\nledger --init-file \"$XDG_CONFIG_HOME\"/ledgerrc\n```\n"
+        }
+    ],
+    "name": "ledger"
+}

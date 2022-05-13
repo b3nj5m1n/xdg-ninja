@@ -1,0 +1,10 @@
+{
+    "files": [
+        {
+            "path": "$HOME/.bitmonero",
+            "movable": true,
+            "help": "Alias monerod to use a custom data location:\n\n```bash\nalias monerod=monerod --data-dir \"$XDG_DATA_HOME\"/bitmonero\n```\n"
+        }
+    ],
+    "name": "monero"
+}

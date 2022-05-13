@@ -1,0 +1,10 @@
+{
+    "files": [
+        {
+            "path": "$HOME/.ffmpeg",
+            "movable": true,
+            "help": "Export the following environment variables:\n\n```bash\nexport FFMPEG_DATADIR=\"$XDG_CONFIG_HOME\"/ffmpeg\n```\n"
+        }
+    ],
+    "name": ".ffmpeg"
+}

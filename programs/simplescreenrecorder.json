@@ -1,0 +1,10 @@
+{
+    "files": [
+        {
+            "path": "$HOME/.ssr",
+            "movable": true,
+            "help": "Uses _XDG_CONFIG_HOME/simplescreenrecorder/_ if it exists.\n"
+        }
+    ],
+    "name": "simplescreenrecorder"
+}

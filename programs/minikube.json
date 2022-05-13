@@ -1,0 +1,10 @@
+{
+    "files": [
+        {
+            "path": "$HOME/.minikube",
+            "movable": true,
+            "help": "Export the following environment variables:\n\n```bash\nexport MINIKUBE_HOME=\"$XDG_DATA_HOME\"/minikube\n```\n"
+        }
+    ],
+    "name": "minikube"
+}

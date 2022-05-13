@@ -1,0 +1,10 @@
+{
+    "files": [
+        {
+            "path": "$HOME/.uncrustify.cfg",
+            "movable": true,
+            "help": "Export the following environment variables:\n\n```bash\nexport UNCRUSTIFY_CONFIG=\"$XDG_CONFIG_HOME\"/uncrustify/uncrustify.cfg\n```\n"
+        }
+    ],
+    "name": "uncrustify"
+}

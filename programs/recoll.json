@@ -1,0 +1,10 @@
+{
+    "files": [
+        {
+            "path": "$HOME/.recoll",
+            "movable": true,
+            "help": "Export the following environment variables:\n\n```bash\nexport RECOLL_CONFDIR=\"$XDG_CONFIG_HOME/recoll\" \n```\n"
+        }
+    ],
+    "name": "recoll"
+}

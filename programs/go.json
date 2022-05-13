@@ -1,0 +1,10 @@
+{
+    "files": [
+        {
+            "path": "$HOME/go",
+            "movable": true,
+            "help": "Export the following environment variables:\n\n```bash\nexport GOPATH=\"$XDG_DATA_HOME\"/go\n```\n"
+        }
+    ],
+    "name": "go"
+}

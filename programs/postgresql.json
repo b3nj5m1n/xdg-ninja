@@ -1,0 +1,25 @@
+{
+    "files": [
+        {
+            "path": "$HOME/.pg_service.conf",
+            "movable": true,
+            "help": "Export the following environment variables:\n\n```bash\nexport PGSERVICEFILE=\"$XDG_CONFIG_HOME/pg/pg_service.conf\"\n```\n"
+        },
+        {
+            "path": "$HOME/.pgpass",
+            "movable": true,
+            "help": "Export the following environment variables:\n\n```bash\nexport PGPASSFILE=\"$XDG_CONFIG_HOME/pg/pgpass\"\n```\n"
+        },
+        {
+            "path": "$HOME/.psql_history",
+            "movable": true,
+            "help": "Export the following environment variables:\n\n```bash\nexport PSQL_HISTORY=\"$XDG_DATA_HOME/psql_history\"\n```\n"
+        },
+        {
+            "path": "$HOME/.psqlrc",
+            "movable": true,
+            "help": "Export the following environment variables:\n\n```bash\nexport PSQLRC=\"$XDG_CONFIG_HOME/pg/psqlrc\"\n```\n"
+        }
+    ],
+    "name": "postgresql"
+}

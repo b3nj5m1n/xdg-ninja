@@ -1,0 +1,10 @@
+{
+    "files": [
+        {
+            "path": "$HOME/.netbeans",
+            "movable": true,
+            "help": "Alias netbeans to use a custom configuration location:\n\n```bash\nalias netbeans=netbeans --userdir \"${XDG_CONFIG_HOME}\"/netbeans\n```\n"
+        }
+    ],
+    "name": "netbeans"
+}

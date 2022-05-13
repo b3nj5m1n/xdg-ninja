@@ -1,0 +1,10 @@
+{
+    "files": [
+        {
+            "path": "$HOME/.inputrc",
+            "movable": true,
+            "help": "Export the following environment variables:\n\n```bash\nexport INPUTRC=\"$XDG_CONFIG_HOME\"/readline/inputrc\n```\n"
+        }
+    ],
+    "name": "readline"
+}

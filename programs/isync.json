@@ -1,0 +1,10 @@
+{
+    "files": [
+        {
+            "path": "$HOME/.mbsyncrc",
+            "movable": true,
+            "help": "Alias mbsync to use a custom configuration file location:\n\n```bash\nalias mbsync=mbsync -c \"$XDG_CONFIG_HOME\"/isync/mbsyncrc\n```\n"
+        }
+    ],
+    "name": "isync"
+}

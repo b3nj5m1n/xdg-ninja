@@ -1,0 +1,10 @@
+{
+    "files": [
+        {
+            "path": "$HOME/.calc_history",
+            "movable": true,
+            "help": "Export the following environment variables:\n\n```bash\nexport CALCHISTFILE=\"$XDG_CACHE_HOME\"/calc_history\n```\n"
+        }
+    ],
+    "name": "calc"
+}

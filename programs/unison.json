@@ -1,0 +1,10 @@
+{
+    "files": [
+        {
+            "path": "$HOME/.unison",
+            "movable": true,
+            "help": "Export the following environment variables:\n\n```bash\nexport UNISON=\"$XDG_DATA_HOME\"/unison\n```\n"
+        }
+    ],
+    "name": "unison"
+}

@@ -1,0 +1,15 @@
+{
+    "files": [
+        {
+            "path": "$HOME/.npm",
+            "movable": true,
+            "help": "You need to put the following into your npmrc:\n\n```\nprefix=${XDG_DATA_HOME}/npm\ncache=${XDG_CACHE_HOME}/npm\ntmp=${XDG_RUNTIME_DIR}/npm\ninit-module=${XDG_CONFIG_HOME}/npm/config/npm-init.js\n```\n"
+        },
+        {
+            "path": "$HOME/.npmrc",
+            "movable": true,
+            "help": "Export the following environment variables:\n\n```bash\nexport NPM_CONFIG_USERCONFIG=$XDG_CONFIG_HOME/npm/npmrc \n```\n"
+        }
+    ],
+    "name": "npm"
+}

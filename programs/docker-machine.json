@@ -1,0 +1,10 @@
+{
+    "files": [
+        {
+            "path": "$HOME/.docker/machine",
+            "movable": true,
+            "help": "Export the following environment variables:\n\n```bash\nexport MACHINE_STORAGE_PATH=\"$XDG_DATA_HOME\"/docker-machine\n```\n"
+        }
+    ],
+    "name": "docker-machine"
+}

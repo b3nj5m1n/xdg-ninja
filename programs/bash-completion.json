@@ -1,0 +1,10 @@
+{
+    "files": [
+        {
+            "path": "$HOME/.bash_completion",
+            "movable": true,
+            "help": "Export the following environment variables:\n\n```bash\nexport BASH_COMPLETION_USER_FILE=\"$XDG_CONFIG_HOME\"/bash-completion/bash_completion\n```\n"
+        }
+    ],
+    "name": "bash-completion"
+}

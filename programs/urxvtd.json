@@ -1,0 +1,10 @@
+{
+    "files": [
+        {
+            "path": "$HOME/.urxvt/urxvtd-hostname",
+            "movable": true,
+            "help": "Export the following environment variables:\n\n```bash\nexport RXVT_SOCKET=\"$XDG_RUNTIME_DIR\"/urxvtd\n```\n"
+        }
+    ],
+    "name": "urxvtd"
+}

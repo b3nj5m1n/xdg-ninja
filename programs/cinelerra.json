@@ -1,0 +1,10 @@
+{
+    "files": [
+        {
+            "path": "$HOME/.bcast5",
+            "movable": true,
+            "help": "Export the following environment variables:\n\n```bash\nexport CIN_CONFIG=\"$XDG_CONFIG_HOME\"/bcast5\n```\n"
+        }
+    ],
+    "name": "cinelerra"
+}

@@ -1,0 +1,10 @@
+{
+    "files": [
+        {
+            "path": "$HOME/.mix",
+            "movable": true,
+            "help": "If the XDG environment variables are present, elixir should use those locations by default.\n"
+        }
+    ],
+    "name": "elixir"
+}

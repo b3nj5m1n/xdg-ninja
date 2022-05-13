@@ -1,0 +1,10 @@
+{
+    "files": [
+        {
+            "path": "$HOME/.elm",
+            "movable": true,
+            "help": "Export the following environment variables:\n\n```bash\nexport ELM_HOME=\"$XDG_CONFIG_HOME\"/elm\n```\n"
+        }
+    ],
+    "name": "elm"
+}

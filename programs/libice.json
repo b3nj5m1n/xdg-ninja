@@ -1,0 +1,10 @@
+{
+    "files": [
+        {
+            "path": "$HOME/.ICEauthority",
+            "movable": true,
+            "help": "Export the following environment variables:\n\n```bash\nexport ICEAUTHORITY=\"$XDG_CACHE_HOME\"/ICEauthority\n```\n\n_Note: do not use XDG_RUNTIME_DIR._\n"
+        }
+    ],
+    "name": "libice"
+}

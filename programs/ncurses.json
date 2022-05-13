@@ -1,0 +1,10 @@
+{
+    "files": [
+        {
+            "path": "$HOME/.terminfo",
+            "movable": true,
+            "help": "Export the following environment variables:\n\n```bash\nexport TERMINFO=\"$XDG_DATA_HOME\"/terminfo\nexport TERMINFO_DIRS=\"$XDG_DATA_HOME\"/terminfo:/usr/share/terminfo\n```\n"
+        }
+    ],
+    "name": "ncurses"
+}

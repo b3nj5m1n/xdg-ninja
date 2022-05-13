@@ -1,0 +1,15 @@
+{
+    "files": [
+        {
+            "path": "$HOME/.gq-state",
+            "movable": true,
+            "help": "Export the following environment variables:\n\n```bash\nexport GQSTATE=\"$XDG_DATA_HOME\"/gq/gq-state\n```\n"
+        },
+        {
+            "path": "$HOME/.gq",
+            "movable": true,
+            "help": "Export the following environment variables:\n\n```bash\nexport GQRC=\"$XDG_CONFIG_HOME\"/gqrc\n```\n"
+        }
+    ],
+    "name": "gq-ldap-client"
+}

@@ -1,0 +1,10 @@
+{
+    "files": [
+        {
+            "path": "$HOME/.ackrc",
+            "movable": true,
+            "help": "Export the following environment variables:\n\n```bash\nexport ACKRC=\"$XDG_CONFIG_HOME/ack/ackrc\"\n```\n"
+        }
+    ],
+    "name": "ack"
+}

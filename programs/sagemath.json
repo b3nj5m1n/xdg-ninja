@@ -1,0 +1,10 @@
+{
+    "files": [
+        {
+            "path": "$HOME/.sage",
+            "movable": true,
+            "help": "Export the following environment variables:\n\n```bash\nexport DOT_SAGE=\"$XDG_CONFIG_HOME\"/sage\n```\n"
+        }
+    ],
+    "name": "sagemath"
+}

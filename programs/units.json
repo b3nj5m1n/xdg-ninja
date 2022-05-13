@@ -1,0 +1,10 @@
+{
+    "files": [
+        {
+            "path": "$HOME/.units_history",
+            "movable": true,
+            "help": "Alias units to use a custom history location:\n\n```bash\nalias units=units --history \"$XDG_DATA_HOME\"/units_history \n```\n"
+        }
+    ],
+    "name": "units"
+}

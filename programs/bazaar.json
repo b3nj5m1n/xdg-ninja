@@ -1,0 +1,15 @@
+{
+    "files": [
+        {
+            "path": "$HOME/.bzr.log",
+            "movable": false,
+            "help": "\n"
+        },
+        {
+            "path": "$HOME/.bazaar",
+            "movable": true,
+            "help": "Bazaar should use _$HOME/.config/bazaar_ if it exists.\n"
+        }
+    ],
+    "name": "bazaar"
+}

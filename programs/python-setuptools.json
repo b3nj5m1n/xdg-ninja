@@ -1,0 +1,10 @@
+{
+    "files": [
+        {
+            "path": "$HOME/.python-eggs",
+            "movable": true,
+            "help": "Export the following environment variables:\n\n```bash\nexport PYTHON_EGG_CACHE=\"$XDG_CACHE_HOME\"/python-eggs\n```\n"
+        }
+    ],
+    "name": "python-setuptools"
+}

@@ -1,0 +1,10 @@
+{
+    "files": [
+        {
+            "path": "$HOME/.solargraph/cache/",
+            "movable": true,
+            "help": "Export the following environment variables:\n\n```bash\nexport SOLARGRAPH_CACHE=$XDG_CACHE_HOME/solargraph \n```\n"
+        }
+    ],
+    "name": "solargraph"
+}

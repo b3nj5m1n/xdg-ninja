@@ -1,0 +1,10 @@
+{
+    "files": [
+        {
+            "path": "$HOME/.Xauthority",
+            "movable": true,
+            "help": "Export the following environment variables:\n\n```bash\nexport XAUTHORITY=\"$XDG_RUNTIME_DIR\"/Xauthority\n```\n\n- **LightDM does not allow you to do this.** See [here](https://askubuntu.com/a/961459) for workaround.\n- SLiM has _~/.Xauthority_ hardcoded\n\n_Note: this might not work as expected, so be careful._\n"
+        }
+    ],
+    "name": "xorg-xauth"
+}

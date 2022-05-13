@@ -1,0 +1,10 @@
+{
+    "files": [
+        {
+            "path": "$HOME/.nv",
+            "movable": true,
+            "help": "Export the following environment variables:\n\n```bash\nexport CUDA_CACHE_PATH=\"$XDG_CACHE_HOME\"/nv\n```\n"
+        }
+    ],
+    "name": "cuda"
+}
