@@ -1,0 +1,10 @@
+{
+    "files": [
+        {
+            "path": "$HOME/.rustup",
+            "movable": true,
+            "help": "Export the following environment variables:\n\n```bash\nexport RUSTUP_HOME=\"$XDG_DATA_HOME\"/rustup\n```\n"
+        }
+    ],
+    "name": "rustup"
+}
