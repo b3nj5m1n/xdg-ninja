@@ -1,0 +1,10 @@
+{
+    "files": [
+        {
+            "path": "$HOME/.wine",
+            "movable": true,
+            "help": "Export the following environment variables:\n\n```bash\nexport WINEPREFIX=\"$XDG_DATA_HOME\"/wine\n```\n"
+        }
+    ],
+    "name": "wine"
+}

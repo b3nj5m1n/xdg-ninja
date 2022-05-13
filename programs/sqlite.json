@@ -1,0 +1,10 @@
+{
+    "files": [
+        {
+            "path": "$HOME/.sqlite_history",
+            "movable": true,
+            "help": "Export the following environment variables:\n\n```bash\nexport SQLITE_HISTORY=$XDG_DATA_HOME/sqlite_history\n```\n"
+        }
+    ],
+    "name": "sqlite"
+}

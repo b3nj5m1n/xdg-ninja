@@ -1,0 +1,35 @@
+{
+    "files": [
+        {
+            "path": "$HOME/.zcompcache",
+            "movable": true,
+            "help": "Set this in your zshrc:\n\n```bash\nzstyle ':completion:*' cache-path $XDG_CACHE_HOME/zsh/zcompcache\n```\n"
+        },
+        {
+            "path": "$HOME/.zcompdump",
+            "movable": true,
+            "help": "Set this in your zshrc:\n\n```bash\ncompinit -d $XDG_CACHE_HOME/zsh/zcompdump-$ZSH_VERSION\n```\n"
+        },
+        {
+            "path": "$HOME/.histfile",
+            "movable": true,
+            "help": "Export the following environment variables:\n\n```bash\nexport HISTFILE=\"$XDG_DATA_HOME\"/zsh/history \n```\n"
+        },
+        {
+            "path": "$HOME/.zlogin",
+            "movable": true,
+            "help": "Export the following environment variables:\n\n```bash\nZDOTDIR=$HOME/.config/zsh\n```\n\nYou can do this in _/etc/zsh/zshenv_.\n"
+        },
+        {
+            "path": "$HOME/.zshenv",
+            "movable": true,
+            "help": "You can remove this file and instead use _/etc/zsh/zshenv_.\n\n_Note: this requires sudo privileges._\n"
+        },
+        {
+            "path": "$HOME/.zshrc",
+            "movable": true,
+            "help": "Export the following environment variables:\n\n```bash\nZDOTDIR=$HOME/.config/zsh\n```\n\nYou can do this in _/etc/zsh/zshenv_.\n"
+        }
+    ],
+    "name": "zsh"
+}

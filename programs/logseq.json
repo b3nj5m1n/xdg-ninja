@@ -1,0 +1,10 @@
+{
+    "files": [
+        {
+            "path": "$HOME/.logseq",
+            "movable": false,
+            "help": "Currently not supported, see [this](https://github.com/logseq/logseq/issues/3462) issue.\n"
+        }
+    ],
+    "name": "logseq"
+}

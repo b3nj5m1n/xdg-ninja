@@ -1,0 +1,10 @@
+{
+    "files": [
+        {
+            "path": "$HOME/.w3m",
+            "movable": false,
+            "help": "Currently not supported, see this [PR](https://github.com/tats/w3m/pull/207).\n"
+        }
+    ],
+    "name": "w3m"
+}

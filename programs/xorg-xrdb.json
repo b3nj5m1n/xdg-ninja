@@ -1,0 +1,10 @@
+{
+    "files": [
+        {
+            "path": "$HOME/.Xresources",
+            "movable": true,
+            "help": "xrdb loads these resources, wherever you call xrdb, add this flag:\n\n```bash\nxrdb -load \"$XDG_CONFIG_HOME/.config/X11/xresources\"\n```\n\n_Note: It will probably be called by your Xsession file._\n"
+        }
+    ],
+    "name": "xorg-xrdb"
+}

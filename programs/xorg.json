@@ -1,0 +1,25 @@
+{
+    "files": [
+        {
+            "path": "$HOME/.xsession-errors",
+            "movable": true,
+            "help": "You need to export these enviornment variables as part of your xorg init script.\n\nThis could be _$HOME/.xinitrc_ for example, most display managers should also source _/etc/profile_.\n\n```bash\nERRFILE=\"$XDG_CACHE_HOME/X11/xsession-errors\"\n```\n"
+        },
+        {
+            "path": "$HOME/.Xsession",
+            "movable": true,
+            "help": "You need to export these enviornment variables as part of your xorg init script.\n\nThis could be _$HOME/.xinitrc_ for example, most display managers should also source _/etc/profile_.\n\n```bash\nALTUSERXSESSION=\"$XDG_CACHE_HOME/X11/Xsession\"\n```\n"
+        },
+        {
+            "path": "$HOME/.xsessionrc",
+            "movable": true,
+            "help": "You need to export these enviornment variables as part of your xorg init script.\n\nThis could be _$HOME/.xinitrc_ for example, most display managers should also source _/etc/profile_.\n\n```bash\nUSERXSESSIONRC=\"$XDG_CACHE_HOME/X11/xsessionrc\"\n```\n"
+        },
+        {
+            "path": "$HOME/.xsession",
+            "movable": true,
+            "help": "You need to export these enviornment variables as part of your xorg init script.\n\nThis could be _$HOME/.xinitrc_ for example, most display managers should also source _/etc/profile_.\n\n```bash\nUSERXSESSION=\"$XDG_CACHE_HOME/X11/xsession\"\n```\n"
+        }
+    ],
+    "name": "xorg"
+}

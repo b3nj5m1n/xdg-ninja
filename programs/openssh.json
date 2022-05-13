@@ -1,0 +1,10 @@
+{
+    "files": [
+        {
+            "path": "$HOME/.ssh",
+            "movable": false,
+            "help": ""
+        }
+    ],
+    "name": "openssh"
+}

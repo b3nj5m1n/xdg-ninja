@@ -1,0 +1,10 @@
+{
+    "files": [
+        {
+            "path": "$HOME/Zotero",
+            "movable": false,
+            "help": "You _may_ be able to solve this by aliasing zotero to use the _data-dir_ flag.\n"
+        }
+    ],
+    "name": "zotero"
+}
