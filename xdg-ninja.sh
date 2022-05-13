@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 USE_GLOW=true
 if ! command -v glow &> /dev/null
