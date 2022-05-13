@@ -50,12 +50,6 @@ then
     exit
 fi
 
-ERR=0
-WARN=1
-INFO=2
-SUCS=3
-HELP=4
-
 # Function to expand enviornment variables in string
 # https://stackoverflow.com/a/20316582/11110290
 apply_shell_expansion() {
