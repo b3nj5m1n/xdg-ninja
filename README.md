@@ -21,7 +21,20 @@ If this is the case, you also specify instructions on how to accomplish this in 
 
 Files in this directory can have any name, but using the name of the program is encouraged.
 
-### Example
+### Automatically Generating Configuration
+
+You need _haskell_ and _cabal_ installed.
+
+Run the following command:
+```bash
+cabal build
+```
+
+You should now have a binary which you can run. You'll find it in somewhere in _dist-newstyle/build_, for example in _dist-newstyle/build/x86_64-linux/ghc-9.0.2/add-program-0.1.0.0/x/add-program/build/add-program/add-program_.
+
+Execute this binary in this directory. It will guide you through the process.
+
+### Manually
 
 We're going to use _git_ as an example.
 
