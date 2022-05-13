@@ -1,8 +1,7 @@
 #!/bin/bash
 
 USE_GLOW=true
-if ! command -v glow &> /dev/null
-then
+if ! command -v glow &>/dev/null; then
     echo "Glow not found, markdown rendering not available."
     echo "Output will be raw markdown and might look weird."
     echo "Install glow for easier reading & copy-paste."
@@ -31,21 +30,20 @@ HELPSTRING="""\
 """
 
 SKIP_OK=true
-for i in "$@" ; do
-    if [[ $i == "--help" ]] || [[ $i == "-h" ]] ; then
+for i in "$@"; do
+    if [[ $i == "--help" ]] || [[ $i == "-h" ]]; then
         echo -e "$HELPSTRING"
         exit
-    elif [[ $i == "--skip-ok" ]] ; then
+    elif [[ $i == "--skip-ok" ]]; then
         SKIP_OK=true
-    elif [[ $i == "--no-skip-ok" ]] ; then
+    elif [[ $i == "--no-skip-ok" ]]; then
         SKIP_OK=false
-    elif [[ $i == "-v" ]] ; then
+    elif [[ $i == "-v" ]]; then
         SKIP_OK=false
     fi
 done
 
-if ! command -v jq &> /dev/null
-then
+if ! command -v jq &>/dev/null; then
     echo "jq is needed to run this script, but it wasn't found. Please install it to be able to use this script."
     exit
 fi
@@ -72,7 +70,6 @@ check_not_exists_file() {
     fi
 }
 
-
 # Function to handle the formatting of output
 log() {
     MODE="$1"
@@ -82,31 +79,31 @@ log() {
 
     case "$MODE" in
 
-        ERR)
-            printf "[\e[1;31m$NAME\e[1;0m]: \e[1;3m$FILENAME\e[1;0m\n"
-            ;;
+    ERR)
+        printf "[\e[1;31m$NAME\e[1;0m]: \e[1;3m$FILENAME\e[1;0m\n"
+        ;;
 
-        WARN)
-            printf "[\e[1;33m$NAME\e[1;0m]: \e[1;3m$FILENAME\e[1;0m\n"
-            ;;
+    WARN)
+        printf "[\e[1;33m$NAME\e[1;0m]: \e[1;3m$FILENAME\e[1;0m\n"
+        ;;
 
-        INFO)
-            printf "[\e[1;36m$NAME\e[1;0m]: \e[1;3m$FILENAME\e[1;0m\n"
-            ;;
+    INFO)
+        printf "[\e[1;36m$NAME\e[1;0m]: \e[1;3m$FILENAME\e[1;0m\n"
+        ;;
 
-        SUCS)
-            if [ "$SKIP_OK" = false ]; then
-                printf "[\e[1;32m$NAME\e[1;0m]: \e[1;3m$FILENAME\e[1;0m\n"
-            fi
-            ;;
+    SUCS)
+        if [ "$SKIP_OK" = false ]; then
+            printf "[\e[1;32m$NAME\e[1;0m]: \e[1;3m$FILENAME\e[1;0m\n"
+        fi
+        ;;
 
-        HELP)
-            if $USE_GLOW; then
-                echo "$HELP" | glow -
-            else
-                echo "$HELP"
-            fi
-            ;;
+    HELP)
+        if $USE_GLOW; then
+            echo "$HELP" | glow -
+        else
+            echo "$HELP"
+        fi
+        ;;
 
     esac
 }
@@ -124,22 +121,22 @@ check_file() {
 
     case $? in
 
-        0)
-            log SUCS "$NAME" "$FILENAME" "$HELP"
-            ;;
+    0)
+        log SUCS "$NAME" "$FILENAME" "$HELP"
+        ;;
 
-        1 | 2)
-            if "$MOVABLE"; then
-                log ERR "$NAME" "$FILENAME" "$HELP"
-            else
-                log WARN "$NAME" "$FILENAME" "$HELP"
-            fi
-            if ! [ -z "$HELP" ]; then
-                log HELP "$NAME" "$FILENAME" "$HELP"
-            else
-                log HELP "$NAME" "$FILENAME" "_No help available._"
-            fi
-            ;;
+    1 | 2)
+        if "$MOVABLE"; then
+            log ERR "$NAME" "$FILENAME" "$HELP"
+        else
+            log WARN "$NAME" "$FILENAME" "$HELP"
+        fi
+        if ! [ -z "$HELP" ]; then
+            log HELP "$NAME" "$FILENAME" "$HELP"
+        else
+            log HELP "$NAME" "$FILENAME" "_No help available._"
+        fi
+        ;;
 
     esac
 }
@@ -149,11 +146,10 @@ check_program() {
     INPUT=$1
 
     NAME=$(echo "$INPUT" | jq -r .name)
-    
 
     while IFS= read -r file; do
         check_file "$file" "$NAME"
-    done <<< "$(echo "$INPUT" | jq -rc '.files[]')"
+    done <<<"$(echo "$INPUT" | jq -rc '.files[]')"
 }
 
 # Loops over all files in the programs/ directory and calls check_program
