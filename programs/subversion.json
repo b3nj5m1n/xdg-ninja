@@ -3,7 +3,7 @@
         {
             "path": "$HOME/.subversion",
             "movable": true,
-            "help": "Alias svn to use a custom configuration location:\n\n```bash\nalias svn=svn --config-dir \"$XDG_CONFIG_HOME\"/subversion\n```\n"
+            "help": "Alias svn to use a custom configuration location:\n\n```bash\nalias svn=svn --config-dir \"$XDG_CONFIG_HOME/subversion\"\n```\n"
         }
     ],
     "name": "subversion"
