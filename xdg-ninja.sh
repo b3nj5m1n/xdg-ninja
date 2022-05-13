@@ -4,6 +4,8 @@ USE_GLOW=true
 if ! command -v glow &> /dev/null
 then
     echo "Glow not found, markdown rendering not available."
+    echo "Output will be raw markdown and might look weird."
+    echo "Install glow for easier reading & copy-paste."
     USE_GLOW=false
 fi
 
