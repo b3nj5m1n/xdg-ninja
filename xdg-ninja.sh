@@ -156,9 +156,15 @@ check_program() {
 
 # Loops over all files in the programs/ directory and calls check_program
 enumerate_programs() {
+    echo -e "\e[1;3mStarting to check your \e[1;36m\$HOME.\e[1;0m"
+    echo -e ""
     for prog_filename in ./programs/*; do
         check_program "$(cat $prog_filename)"
     done
+    echo -e "\e[1;3mDone checking your \e[1;36m\$HOME.\e[1;0m"
+    echo -e ""
+    echo -e "\e[3mIf you have files in your \e[1;36m\$HOME\e[1;0m that shouldn't be there, but weren't recognised by xdg-ninja, please consider creating a configuration file for it and opening a pull request on github.\e[1;0m"
+    echo -e ""
 }
 
 enumerate_programs
