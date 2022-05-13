@@ -43,6 +43,27 @@ for i in "$@"; do
     fi
 done
 
+if [[ -z "${XDG_DATA_HOME}" ]]; then
+    printf '\e[1;36m%s\e[1;0m\n' "The \$XDG_DATA_HOME enviornment variable is not set, make sure to add it to your shell's configuration before setting any of the other enviornment variables!"
+    printf '\e[1;36m    ⤷ \e[1mThe recommended value is: \e[1;3m$HOME/.local/share\e[1;0m\n'
+fi
+if [[ -z "${XDG_CONFIG_HOME}" ]]; then
+    printf '\e[1;36m%s\e[1;0m\n' "The \$XDG_CONFIG_HOME enviornment variable is not set, make sure to add it to your shell's configuration before setting any of the other enviornment variables!"
+    printf '\e[1;36m    ⤷ \e[1mThe recommended value is: \e[1;3m$HOME/.config\e[1;0m\n'
+fi
+if [[ -z "${XDG_STATE_HOME}" ]]; then
+    printf '\e[1;36m%s\e[1;0m\n' "The \$XDG_STATE_HOME enviornment variable is not set, make sure to add it to your shell's configuration before setting any of the other enviornment variables!"
+    printf '\e[1;36m    ⤷ \e[1mThe recommended value is: \e[1;3m$HOME/.local/state\e[1;0m\n'
+fi
+if [[ -z "${XDG_CACHE_HOME}" ]]; then
+    printf '\e[1;36m%s\e[1;0m\n' "The \$XDG_CACHE_HOME enviornment variable is not set, make sure to add it to your shell's configuration before setting any of the other enviornment variables!"
+    printf '\e[1;36m    ⤷ \e[1mThe recommended value is: \e[1;3m$HOME/.cache\e[1;0m\n'
+fi
+if [[ -z "${XDG_RUNTIME_DIR}" ]]; then
+    printf '\e[1;36m%s\e[1;0m\n' "The \$XDG_RUNTIME_DIR enviornment variable is not set, make sure to add it to your shell's configuration before setting any of the other enviornment variables!"
+    printf '\e[1;36m    ⤷ \e[1mThe recommended value is: \e[1;3m/run/user/$UID\e[1;0m\n'
+fi
+
 if ! command -v jq &>/dev/null; then
     echo "jq is needed to run this script, but it wasn't found. Please install it to be able to use this script."
     exit
