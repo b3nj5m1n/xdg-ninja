@@ -1,0 +1,10 @@
+{
+    "files": [
+        {
+            "path": "$HOME/.fehbg",
+            "movable": true,
+            "help": "When setting the background, pass the _--no-fehbg_ flag to feh.\n"
+        }
+    ],
+    "name": "feh"
+}
