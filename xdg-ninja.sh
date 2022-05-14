@@ -3,9 +3,9 @@
 
 USE_GLOW=true
 if ! command -v glow >/dev/null 2>/dev/null; then
-    printf "Glow not found, markdown rendering not available."
-    printf "Output will be raw markdown and might look weird."
-    printf "Install glow for easier reading & copy-paste."
+    printf "Glow not found, markdown rendering not available.\n"
+    printf "Output will be raw markdown and might look weird.\n"
+    printf "Install glow for easier reading & copy-paste.\n"
     USE_GLOW=false
 fi
 
