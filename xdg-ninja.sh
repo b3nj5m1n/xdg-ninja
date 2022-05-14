@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 USE_GLOW=true
-if ! command -v glow &>/dev/null; then
+if ! command -v glow >/dev/null 2>/dev/null; then
     printf "Glow not found, markdown rendering not available."
     printf "Output will be raw markdown and might look weird."
     printf "Install glow for easier reading & copy-paste."
@@ -64,7 +64,7 @@ if [ -z "${XDG_RUNTIME_DIR}" ]; then
     printf '\e[1;36m    ⤷ \e[1mThe recommended value is: \e[1;3m/run/user/$UID\e[1;0m\n'
 fi
 
-if ! command -v jq &>/dev/null; then
+if ! command -v jq >/dev/null 2>/dev/null; then
     printf "jq is needed to run this script, but it wasn't found. Please install it to be able to use this script."
     exit
 fi
