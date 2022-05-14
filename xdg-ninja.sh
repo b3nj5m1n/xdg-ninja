@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/usr/bin/env sh
 # shellcheck disable=SC2016
 
 USE_GLOW=true
@@ -172,14 +172,16 @@ check_program() {
 
     while IFS= read -r file; do
         check_file "$file" "$NAME"
-    done <<<"$(printf "%s" "$INPUT" | jq -rc '.files[]')"
+    done <<EOF
+$(echo "$INPUT" | jq -rc '.files[]')
+EOF
 }
 
 # Loops over all files in the programs/ directory and calls check_program
 enumerate_programs() {
     printf "\e[1;3mStarting to check your \e[1;36m\$HOME.\e[1;0m\n"
     printf "\n"
-	for prog_filename in "$(dirname "${BASH_SOURCE[0]}")"/programs/*; do
+    for prog_filename in "${0%/*}"/programs/*; do
         check_program "$(cat "$prog_filename")"
     done
     printf "\e[1;3mDone checking your \e[1;36m\$HOME.\e[1;0m\n"
