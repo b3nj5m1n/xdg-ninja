@@ -31,14 +31,14 @@ HELPSTRING="""\
 
 SKIP_OK=true
 for i in "$@"; do
-    if [ "$i" == "--help" ] || [ "$i" == "-h" ]; then
+    if [ "$i" = "--help" ] || [ "$i" = "-h" ]; then
         printf "%b" "$HELPSTRING"
         exit
-    elif [ "$i" == "--skip-ok" ]; then
+    elif [ "$i" = "--skip-ok" ]; then
         SKIP_OK=true
-    elif [ "$i" == "--no-skip-ok" ]; then
+    elif [ "$i" = "--no-skip-ok" ]; then
         SKIP_OK=false
-    elif [ "$i" == "-v" ]; then
+    elif [ "$i" = "-v" ]; then
         SKIP_OK=false
     fi
 done
