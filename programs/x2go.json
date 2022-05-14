@@ -3,7 +3,7 @@
         {
             "path": "$HOME/.x2goclient",
             "movable": true,
-            "help": "Config location can be specified:\n\n```bash\nalias x2goclient=\"x2goclient --home=$HOME/.config\"\n```\n\n_Note: This will not work unless calling from terminal._\n"
+            "help": "Alias x2goclient to use a custom configuration location:\n\n```bash\nalias x2goclient=\"x2goclient --home=$XDG_CONFIG_HOME\"\n```\n"
         }
     ],
     "name": "x2goclient"

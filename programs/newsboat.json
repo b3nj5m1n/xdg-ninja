@@ -3,7 +3,7 @@
         {
             "path": "$HOME/.newsboat",
             "movable": true,
-            "help": "If XDG Base Directory Variables are set simply move:\n\n config, urls to:\n\n$XDG_CONFIG_HOME/newsboat\n\n cache.db, history.search, history.cmdline, queue to:\n\n$XDG_DATA_HOME/newsboat\n"
+            "help": "If the XDG environment variables are set, simply move the configuration files.\n\n_Note: configuration and urls should go to **$XDG_CONFIG_HOME/newsboat**_\n\n_Note: cache.db, history.search, history.cmdline, queue should go to **$XDG_DATA_HOME/newsboat**_\n"
         }
     ],
     "name": "newsboat"
