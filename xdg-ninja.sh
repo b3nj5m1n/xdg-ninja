@@ -31,35 +31,35 @@ HELPSTRING="""\
 
 SKIP_OK=true
 for i in "$@"; do
-    if [[ $i == "--help" ]] || [[ $i == "-h" ]]; then
+    if [ $i == "--help" ] || [ $i == "-h" ]; then
         echo -e "$HELPSTRING"
         exit
-    elif [[ $i == "--skip-ok" ]]; then
+    elif [ $i == "--skip-ok" ]; then
         SKIP_OK=true
-    elif [[ $i == "--no-skip-ok" ]]; then
+    elif [ $i == "--no-skip-ok" ]; then
         SKIP_OK=false
-    elif [[ $i == "-v" ]]; then
+    elif [ $i == "-v" ]; then
         SKIP_OK=false
     fi
 done
 
-if [[ -z "${XDG_DATA_HOME}" ]]; then
+if [ -z "${XDG_DATA_HOME}" ]; then
     printf '\e[1;36m%s\e[1;0m\n' "The \$XDG_DATA_HOME environment variable is not set, make sure to add it to your shell's configuration before setting any of the other environment variables!"
     printf '\e[1;36m    ⤷ \e[1mThe recommended value is: \e[1;3m$HOME/.local/share\e[1;0m\n'
 fi
-if [[ -z "${XDG_CONFIG_HOME}" ]]; then
+if [ -z "${XDG_CONFIG_HOME}" ]; then
     printf '\e[1;36m%s\e[1;0m\n' "The \$XDG_CONFIG_HOME environment variable is not set, make sure to add it to your shell's configuration before setting any of the other environment variables!"
     printf '\e[1;36m    ⤷ \e[1mThe recommended value is: \e[1;3m$HOME/.config\e[1;0m\n'
 fi
-if [[ -z "${XDG_STATE_HOME}" ]]; then
+if [ -z "${XDG_STATE_HOME}" ]; then
     printf '\e[1;36m%s\e[1;0m\n' "The \$XDG_STATE_HOME environment variable is not set, make sure to add it to your shell's configuration before setting any of the other environment variables!"
     printf '\e[1;36m    ⤷ \e[1mThe recommended value is: \e[1;3m$HOME/.local/state\e[1;0m\n'
 fi
-if [[ -z "${XDG_CACHE_HOME}" ]]; then
+if [ -z "${XDG_CACHE_HOME}" ]; then
     printf '\e[1;36m%s\e[1;0m\n' "The \$XDG_CACHE_HOME environment variable is not set, make sure to add it to your shell's configuration before setting any of the other environment variables!"
     printf '\e[1;36m    ⤷ \e[1mThe recommended value is: \e[1;3m$HOME/.cache\e[1;0m\n'
 fi
-if [[ -z "${XDG_RUNTIME_DIR}" ]]; then
+if [ -z "${XDG_RUNTIME_DIR}" ]; then
     printf '\e[1;36m%s\e[1;0m\n' "The \$XDG_RUNTIME_DIR environment variable is not set, make sure to add it to your shell's configuration before setting any of the other environment variables!"
     printf '\e[1;36m    ⤷ \e[1mThe recommended value is: \e[1;3m/run/user/$UID\e[1;0m\n'
 fi
