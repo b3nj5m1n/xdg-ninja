@@ -1,0 +1,10 @@
+{
+    "files": [
+        {
+            "path": "$HOME/.x2goclient",
+            "movable": true,
+            "help": "Config location can be specified:\n\n```bash\nalias x2goclient=\"x2goclient --home=$HOME/.config\"\n```\n\n_Note: This will not work unless calling from terminal._\n"
+        }
+    ],
+    "name": "x2goclient"
+}
