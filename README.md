@@ -3,7 +3,7 @@
   <h5 align="center">Because you wouldn't let just anyone into your <i>$HOME</i></h5>
 </div>
 
-A shell script which checks your _$HOME_ for unwanted files and directories.
+The shell script which checks your _$HOME_ for unwanted files and directories.
 
 <p align="center">
   <img src="https://s8.gifyu.com/images/Peek-2022-05-13-16-07.gif" width="500"/>
