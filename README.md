@@ -21,7 +21,7 @@ This will run every test in the default configuration.
 
 ## Dependencies
 
-- [bash](https://repology.org/project/bash/packages), obviously
+- /bin/sh, obviously
 - [jq](https://repology.org/project/jq/packages) for parsing the json files
 
 ### Optional
