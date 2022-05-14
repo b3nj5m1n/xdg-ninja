@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+# shellcheck disable=SC2016
 
 USE_GLOW=true
 if ! command -v glow >/dev/null 2>/dev/null; then
