@@ -76,7 +76,7 @@ printf "\n"
 apply_shell_expansion() {
     data="$1"
     delimiter="__apply_shell_expansion_delimiter__"
-    command="cat <<$delimiter"$'\n'"$data"$'\n'"$delimiter"
+    command=$(printf "cat <<%s\n%s\n%s" "$delimiter" "$data" "$delimiter")
     eval "$command"
 }
 
