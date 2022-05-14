@@ -1,0 +1,10 @@
+{
+    "name": "julia",
+    "files": [
+        {
+            "path": "$HOME/.julia",
+            "movable": true,
+            "help": "The trailing :$JULIA_DEPOT_PATH is necessary. \n  export JULIA_DEPOT_PATH=\"$XDG_DATA_HOME/julia:$JULIA_DEPOT_PATH\" \n"
+        }
+    ]
+}
