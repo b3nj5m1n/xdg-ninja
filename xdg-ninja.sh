@@ -2,9 +2,9 @@
 
 USE_GLOW=true
 if ! command -v glow &>/dev/null; then
-    echo "Glow not found, markdown rendering not available."
-    echo "Output will be raw markdown and might look weird."
-    echo "Install glow for easier reading & copy-paste."
+    printf "Glow not found, markdown rendering not available."
+    printf "Output will be raw markdown and might look weird."
+    printf "Install glow for easier reading & copy-paste."
     USE_GLOW=false
 fi
 
@@ -32,7 +32,7 @@ HELPSTRING="""\
 SKIP_OK=true
 for i in "$@"; do
     if [ "$i" == "--help" ] || [ "$i" == "-h" ]; then
-        echo -e "$HELPSTRING"
+        printf "%b" "$HELPSTRING"
         exit
     elif [ "$i" == "--skip-ok" ]; then
         SKIP_OK=true
@@ -65,9 +65,11 @@ if [ -z "${XDG_RUNTIME_DIR}" ]; then
 fi
 
 if ! command -v jq &>/dev/null; then
-    echo "jq is needed to run this script, but it wasn't found. Please install it to be able to use this script."
+    printf "jq is needed to run this script, but it wasn't found. Please install it to be able to use this script."
     exit
 fi
+
+printf "\n"
 
 # Function to expand environment variables in string
 # https://stackoverflow.com/a/20316582/11110290
@@ -119,9 +121,9 @@ log() {
 
     HELP)
         if $USE_GLOW; then
-            echo "$HELP" | glow -
+            printf "%s" "$HELP" | glow -
         else
-            echo "$HELP"
+            printf "%s" "$HELP"
         fi
         ;;
 
@@ -133,9 +135,9 @@ check_file() {
     INPUT="$1"
     NAME="$2"
 
-    FILENAME=$(echo -E "$INPUT" | jq -r .path)
-    MOVABLE=$(echo -E "$INPUT" | jq -r .movable)
-    HELP=$(echo -E "$INPUT" | jq -r .help)
+    FILENAME=$(printf "%s" "$INPUT" | jq -r .path)
+    MOVABLE=$(printf "%s" "$INPUT" | jq -r .movable)
+    HELP=$(printf "%s" "$INPUT" | jq -r .help)
 
     check_not_exists_file "$FILENAME"
 
@@ -165,24 +167,24 @@ check_file() {
 check_program() {
     INPUT=$1
 
-    NAME=$(echo "$INPUT" | jq -r .name)
+    NAME=$(printf "%s" "$INPUT" | jq -r .name)
 
     while IFS= read -r file; do
         check_file "$file" "$NAME"
-    done <<<"$(echo "$INPUT" | jq -rc '.files[]')"
+    done <<<"$(printf "%s" "$INPUT" | jq -rc '.files[]')"
 }
 
 # Loops over all files in the programs/ directory and calls check_program
 enumerate_programs() {
-    echo -e "\e[1;3mStarting to check your \e[1;36m\$HOME.\e[1;0m"
-    echo -e ""
+    printf "\e[1;3mStarting to check your \e[1;36m\$HOME.\e[1;0m\n"
+    printf "\n"
 	for prog_filename in "$(dirname "${BASH_SOURCE[0]}")"/programs/*; do
         check_program "$(cat "$prog_filename")"
     done
-    echo -e "\e[1;3mDone checking your \e[1;36m\$HOME.\e[1;0m"
-    echo -e ""
-    echo -e "\e[3mIf you have files in your \e[1;36m\$HOME\e[1;0m that shouldn't be there, but weren't recognised by xdg-ninja, please consider creating a configuration file for it and opening a pull request on github.\e[1;0m"
-    echo -e ""
+    printf "\e[1;3mDone checking your \e[1;36m\$HOME.\e[1;0m\n"
+    printf "\n"
+    printf "\e[3mIf you have files in your \e[1;36m\$HOME\e[1;0m that shouldn't be there, but weren't recognised by xdg-ninja, please consider creating a configuration file for it and opening a pull request on github.\e[1;0m\n"
+    printf "\n"
 }
 
 enumerate_programs
