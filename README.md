@@ -21,7 +21,7 @@ This will run every test in the default configuration.
 
 ## Dependencies
 
-- [bash](https://repology.org/project/bash/packages), obviously
+- your favorite POSIX-compliant shell ([bash](https://repology.org/project/bash/packages), [zsh](https://repology.org/project/zsh/packages), [dash](https://repology.org/project/dash-shell/packages), ...)
 - [jq](https://repology.org/project/jq/packages) for parsing the json files
 
 ### Optional
@@ -43,10 +43,10 @@ Files in this directory can have any name, but using the name of the program is 
 
 ### Automatically Generating Configuration
 
-You need _haskell_ and _cabal_ installed. (To be clear, this is just for a tool that will help you automatically generate the config files, you still only need bash to run the tests)
+You need _haskell_ and _cabal_ installed. (To be clear, this is just for a tool that will help you automatically generate the config files, you still only need your shell to run the tests)
 
 Run the following command:
-```bash
+```sh
 cabal build
 ```
 
@@ -63,13 +63,13 @@ It puts the file _.gitconfig_ into _$HOME.
 Luckily, the XDG spec is supported by git, so we can simply move the file to _XDG_CONFIG_HOME/git/config_.
 
 We can use that last sentence as our instructions. In this case, there are no newlines, so escaping this string for use in json is trivial, however, this is how you should generally approach it:
-```bash
+```sh
 echo "Luckily, the XDG spec is supported by git, so we can simply move the file to _XDG_CONFIG_HOME/git/config_." | jq -aRs .
 ```
 
 Let's see what the output of this command looks like for something a little more sophisticated.
 Here's an example file:
-```bash
+```sh
 cat example.md
 ```
 ```
@@ -78,7 +78,7 @@ Currently not fixable.
 _(But you can probably just delete the dir)_
 ```
 Here's what catting this file to the _jq_ command produces:
-```bash
+```sh
 cat example.md | jq -aRs .
 ```
 ```
