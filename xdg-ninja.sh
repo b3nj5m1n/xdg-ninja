@@ -74,9 +74,9 @@ printf "\n"
 # Function to expand environment variables in string
 # https://stackoverflow.com/a/20316582/11110290
 apply_shell_expansion() {
-    declare data="$1"
-    declare delimiter="__apply_shell_expansion_delimiter__"
-    declare command="cat <<$delimiter"$'\n'"$data"$'\n'"$delimiter"
+    data="$1"
+    delimiter="__apply_shell_expansion_delimiter__"
+    command="cat <<$delimiter"$'\n'"$data"$'\n'"$delimiter"
     eval "$command"
 }
 
