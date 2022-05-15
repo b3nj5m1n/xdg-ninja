@@ -1,0 +1,10 @@
+{
+    "name": "clojure",
+    "files": [
+        {
+            "path": "$HOME/.clojure",
+            "movable": true,
+            "help": "XDG is supported out-of-the-box, so we can simply move the directory to _XDG_CONFIG_HOME/clojure_.\n"
+        }
+    ]
+}
