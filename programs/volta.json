@@ -1,0 +1,10 @@
+{
+    "files": [
+        {
+            "path": "$HOME/.volta",
+            "movable": true,
+            "help": "Export the following environment variables:\n\n```bash\nexport VOLTA_HOME=\"$XDG_DATA_HOME\"/volta\n```\n"
+        }
+    ],
+    "name": "volta"
+}
