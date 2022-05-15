@@ -3,7 +3,7 @@
         {
             "path": "$HOME/.ansible",
             "movable": false,
-            "help": "See [this](https://github.com/ansible/ansible/commit/d7fbde4ea9db6cc44e81c39d699595330f4fa3c6) pull request.\n\nSeems to be implemented now, you should be able to set the _ANSIBLE_HOME_ enviornment variable.\n\nI couldn't get it to work yet unfortunately, and you might need to wait for a new release.\n"
+            "help": "See [this](https://github.com/ansible/ansible/commit/d7fbde4ea9db6cc44e81c39d699595330f4fa3c6) pull request.\n\nSeems to be implemented now, you should be able to set the _ANSIBLE_HOME_ environment variable.\n\nI couldn't get it to work yet unfortunately, and you might need to wait for a new release.\n"
         }
     ],
     "name": "ansible"
