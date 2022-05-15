@@ -126,11 +126,11 @@ log() {
 
     HELP)
         if $USE_GLOW; then
-            printf "%s" "$HELP" | glow -
+            printf "%s\n" "$HELP" | glow -
         elif $USE_BAT; then
-            printf "%s" "$HELP" | bat -pp -f --language markdown
+            printf "%s\n" "$HELP" | bat -pp -f --language markdown
         else
-            printf "%s" "$HELP"
+            printf "%s\n" "$HELP"
         fi
         ;;
 
