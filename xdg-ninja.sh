@@ -174,14 +174,14 @@ check_file() {
 
 # Reads a file from programs/, calls check_file on each file specified for the program
 check_program() {
-    INPUT=$1
+    PROGRAM=$1
 
-    NAME=$(printf "%s" "$INPUT" | jq -r .name)
+    NAME=$(jq -r .name "$PROGRAM")
 
     while IFS= read -r file; do
         check_file "$file" "$NAME"
     done <<EOF
-$(echo "$INPUT" | jq -rc '.files[]')
+$(jq -rc '.files[]' "$PROGRAM")
 EOF
 }
 
@@ -190,7 +190,7 @@ enumerate_programs() {
     printf "\e[1;3mStarting to check your \e[1;36m\$HOME.\e[1;0m\n"
     printf "\n"
     for prog_filename in "${0%/*}"/programs/*; do
-        check_program "$(cat "$prog_filename")"
+        check_program "$prog_filename"
     done
     printf "\e[1;3mDone checking your \e[1;36m\$HOME.\e[1;0m\n"
     printf "\n"
