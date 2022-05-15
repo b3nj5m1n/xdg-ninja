@@ -189,7 +189,7 @@ EOF
 enumerate_programs() {
     printf "\033[1;3mStarting to check your \033[1;36m\$HOME.\033[1;0m\n"
     printf "\n"
-    for prog_filename in "${0%/*}"/programs/*; do
+    for prog_filename in "$(dirname $0)"/programs/*; do
         check_program "$prog_filename"
     done
     printf "\033[1;3mDone checking your \033[1;36m\$HOME.\033[1;0m\n"
