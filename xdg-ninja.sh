@@ -1,12 +1,16 @@
 #!/usr/bin/env sh
 # shellcheck disable=SC2016
 
-USE_GLOW=true
-if ! command -v glow >/dev/null 2>/dev/null; then
-    printf "Glow not found, markdown rendering not available.\n"
+USE_GLOW=false
+USE_BAT=false
+if command -v glow >/dev/null 2>/dev/null; then
+    USE_GLOW=true
+elif command -v bat >/dev/null 2>/dev/null; then
+    USE_BAT=true
+else
+    printf "Glow or bat not found, markdown rendering not available.\n"
     printf "Output will be raw markdown and might look weird.\n"
-    printf "Install glow for easier reading & copy-paste.\n"
-    USE_GLOW=false
+    printf "Install glow or bat for easier reading & copy-paste.\n"
 fi
 
 unalias -a
@@ -123,6 +127,8 @@ log() {
     HELP)
         if $USE_GLOW; then
             printf "%s" "$HELP" | glow -
+        elif $USE_BAT; then
+            printf "%s" "$HELP" | bat -pp -f --language markdown
         else
             printf "%s" "$HELP"
         fi
