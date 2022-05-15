@@ -1,0 +1,10 @@
+{
+    "files": [
+        {
+            "path": "$HOME/.since",
+            "movable": true,
+            "help": "Export the following environment variables:\n\n```bash\nexport SINCE=\"$XDG_DATA_HOME\"/since\n```\n"
+        }
+    ],
+    "name": "since"
+}
