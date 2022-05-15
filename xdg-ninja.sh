@@ -7,10 +7,12 @@ if command -v glow >/dev/null 2>/dev/null; then
     USE_GLOW=true
 elif command -v bat >/dev/null 2>/dev/null; then
     USE_BAT=true
+    printf "Glow not found, markdown rendering will be done by bat.\n"
+    printf "Install glow for easier reading & copy-paste.\n"
 else
     printf "Glow or bat not found, markdown rendering not available.\n"
     printf "Output will be raw markdown and might look weird.\n"
-    printf "Install glow or bat for easier reading & copy-paste.\n"
+    printf "Install glow for easier reading & copy-paste.\n"
 fi
 
 unalias -a
@@ -126,11 +128,11 @@ log() {
 
     HELP)
         if $USE_GLOW; then
-            printf "%s" "$HELP" | glow -
+            printf "%s\n" "$HELP" | glow -
         elif $USE_BAT; then
-            printf "%s" "$HELP" | bat -pp -f --language markdown
+            printf "%s\n" "$HELP" | bat -pp -f --language markdown
         else
-            printf "%s" "$HELP"
+            printf "%s\n" "$HELP"
         fi
         ;;
 
