@@ -1,5 +1,4 @@
 #!/usr/bin/env sh
-# shellcheck disable=SC2016
 
 USE_GLOW=false
 USE_BAT=false
@@ -52,23 +51,23 @@ done
 
 if [ -z "${XDG_DATA_HOME}" ]; then
     printf '\033[1;36m%s\033[1;0m\n' "The \$XDG_DATA_HOME environment variable is not set, make sure to add it to your shell's configuration before setting any of the other environment variables!"
-    printf '\033[1;36m    ⤷ \033[1mThe recommended value is: \033[1;3m$HOME/.local/share\033[1;0m\n'
+    printf "\033[1;36m    ⤷ \033[1mThe recommended value is: \033[1;3m\$HOME/.local/share\033[1;0m\n"
 fi
 if [ -z "${XDG_CONFIG_HOME}" ]; then
     printf '\033[1;36m%s\033[1;0m\n' "The \$XDG_CONFIG_HOME environment variable is not set, make sure to add it to your shell's configuration before setting any of the other environment variables!"
-    printf '\033[1;36m    ⤷ \033[1mThe recommended value is: \033[1;3m$HOME/.config\033[1;0m\n'
+    printf "\033[1;36m    ⤷ \033[1mThe recommended value is: \033[1;3m\$HOME/.config\033[1;0m\n"
 fi
 if [ -z "${XDG_STATE_HOME}" ]; then
     printf '\033[1;36m%s\033[1;0m\n' "The \$XDG_STATE_HOME environment variable is not set, make sure to add it to your shell's configuration before setting any of the other environment variables!"
-    printf '\033[1;36m    ⤷ \033[1mThe recommended value is: \033[1;3m$HOME/.local/state\033[1;0m\n'
+    printf "\033[1;36m    ⤷ \033[1mThe recommended value is: \033[1;3m\$HOME/.local/state\033[1;0m\n"
 fi
 if [ -z "${XDG_CACHE_HOME}" ]; then
     printf '\033[1;36m%s\033[1;0m\n' "The \$XDG_CACHE_HOME environment variable is not set, make sure to add it to your shell's configuration before setting any of the other environment variables!"
-    printf '\033[1;36m    ⤷ \033[1mThe recommended value is: \033[1;3m$HOME/.cache\033[1;0m\n'
+    printf "\033[1;36m    ⤷ \033[1mThe recommended value is: \033[1;3m\$HOME/.cache\033[1;0m\n"
 fi
 if [ -z "${XDG_RUNTIME_DIR}" ]; then
     printf '\033[1;36m%s\033[1;0m\n' "The \$XDG_RUNTIME_DIR environment variable is not set, make sure to add it to your shell's configuration before setting any of the other environment variables!"
-    printf '\033[1;36m    ⤷ \033[1mThe recommended value is: \033[1;3m/run/user/$UID\033[1;0m\n'
+    printf "\033[1;36m    ⤷ \033[1mThe recommended value is: \033[1;3m/run/user/\$UID\033[1;0m\n"
 fi
 
 if ! command -v jq >/dev/null 2>/dev/null; then
