@@ -1,0 +1,10 @@
+{
+    "name": "mapscii",
+    "files": [
+        {
+            "path": "${HOME}/.mapscii",
+            "moveable": true,
+            "help": "Supported\n\nThe file ${HOME}/.mapscii can be moved to ${XDG_CACHE_HOME}/mapscii.\n"
+        }
+    ]
+}

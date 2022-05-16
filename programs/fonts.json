@@ -1,0 +1,10 @@
+{
+    "name": "fonts",
+    "files": [
+        {
+            "path": "${HOME}/.fonts",
+            "moveable": true,
+            "help": "Supported\n\nThe file ${HOME}/.fonts can be moved to ${XDG_DATA_HOME}/fonts.\n"
+        }
+    ]
+}

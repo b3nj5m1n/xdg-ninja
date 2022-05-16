@@ -1,10 +1,15 @@
 {
-    "name": "aria2",
+    "name": "aria2_dir",
     "files": [
         {
-            "path": "$HOME/.aria2",
-            "movable": true,
-            "help": "Supported since commit _8bc1d37_.\n\nYou can move the configuration file to _XDG_CONFIG_HOME/aria2/aria2.conf_.\n\nYou can move the cache files to _XDG_CACHE_HOME/aria2_.\n"
+            "path": "${HOME}/.aria2/dht.dat",
+            "moveable": true,
+            "help": "Supported\n\nThe file ${HOME}/.aria2/dht.dat can be moved to ${XDG_CACHE_HOME}/aria2/dht.dat.\n"
+        },
+        {
+            "path": "${HOME}/.aria2/aria.conf",
+            "moveable": true,
+            "help": "Supported\n\nThe file ${HOME}/.aria2/aria.conf can be moved to ${XDG_CONFIG_HOME}/aria2/aria2.conf.\n"
         }
     ]
 }

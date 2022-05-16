@@ -1,0 +1,10 @@
+{
+    "name": "lnav",
+    "files": [
+        {
+            "path": "${HOME}/.lnav",
+            "moveable": true,
+            "help": "Supported\n\nThe file ${HOME}/.lnav can be moved to ${XDG_CONFIG_HOME}/lnav.\n"
+        }
+    ]
+}

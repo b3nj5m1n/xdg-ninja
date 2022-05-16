@@ -1,0 +1,10 @@
+{
+    "name": "less",
+    "files": [
+        {
+            "path": "${HOME}/.lesshst",
+            "moveable": true,
+            "help": "Export the following environment variables:\n\n```bash\nexport LESSHISTFILE=${XDG_CACHE_HOME}/less/history\n```\n"
+        }
+    ]
+}

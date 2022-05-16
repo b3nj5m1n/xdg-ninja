@@ -1,0 +1,10 @@
+{
+    "name": "httpie",
+    "files": [
+        {
+            "path": "${HOME}/.httpie",
+            "moveable": true,
+            "help": "Supported\n\nThe file ${HOME}/.httpie can be moved to ${XDG_CONFIG_HOME}/httpie.\n"
+        }
+    ]
+}

@@ -1,0 +1,10 @@
+{
+    "name": "pylint",
+    "files": [
+        {
+            "path": "${HOME}/.pylint.d",
+            "moveable": true,
+            "help": "Export the following environment variables:\n\n```bash\nexport PYLINTHOME=${XDG_CACHE_HOME}/pylint\n```\n"
+        }
+    ]
+}

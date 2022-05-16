@@ -1,0 +1,10 @@
+{
+    "name": "tig",
+    "files": [
+        {
+            "path": "${HOME}/.tig_history",
+            "moveable": true,
+            "help": "Supported\n\nThe file ${HOME}/.tig_history can be moved to ${XDG_DATA_HOME}/tig/history.\n"
+        }
+    ]
+}
