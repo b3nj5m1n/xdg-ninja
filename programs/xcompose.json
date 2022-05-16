@@ -3,12 +3,12 @@
     "files": [
         {
             "path": "${HOME}/.XCompose",
-            "moveable": true,
+            "movable": true,
             "help": "Export the following environment variables:\n\n```bash\nexport XCOMPOSEFILE=${XDG_CONFIG_HOME}/X11/xcompose\n```\n"
         },
         {
             "path": "${HOME}/.compose-cache",
-            "moveable": true,
+            "movable": true,
             "help": "Export the following environment variables:\n\n```bash\nexport XCOMPOSECACHE=${XDG_CACHE_HOME}/X11/xcompose\n```\n"
         }
     ]

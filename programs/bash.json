@@ -3,7 +3,7 @@
     "files": [
         {
             "path": "${HOME}/.bash_history",
-            "moveable": true,
+            "movable": true,
             "help": "Export the following environment variables:\n\n```bash\nexport HISTFILE=${XDG_CACHE_HOME}/bash/history\n```\n"
         }
     ]

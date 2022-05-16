@@ -3,12 +3,12 @@
     "files": [
         {
             "path": "${HOME}/.aria2/dht.dat",
-            "moveable": true,
+            "movable": true,
             "help": "Supported\n\nThe file ${HOME}/.aria2/dht.dat can be moved to ${XDG_CACHE_HOME}/aria2/dht.dat.\n"
         },
         {
             "path": "${HOME}/.aria2/aria.conf",
-            "moveable": true,
+            "movable": true,
             "help": "Supported\n\nThe file ${HOME}/.aria2/aria.conf can be moved to ${XDG_CONFIG_HOME}/aria2/aria2.conf.\n"
         }
     ]

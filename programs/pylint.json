@@ -3,7 +3,7 @@
     "files": [
         {
             "path": "${HOME}/.pylint.d",
-            "moveable": true,
+            "movable": true,
             "help": "Export the following environment variables:\n\n```bash\nexport PYLINTHOME=${XDG_CACHE_HOME}/pylint\n```\n"
         }
     ]

@@ -3,7 +3,7 @@
     "files": [
         {
             "path": "${HOME}/.racket",
-            "moveable": true,
+            "movable": true,
             "help": "Supported\n\nThe file ${HOME}/.racket can be moved to ${XDG_CONFIG_HOME}/racket.\n"
         }
     ]

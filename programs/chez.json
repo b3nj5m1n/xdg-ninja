@@ -3,7 +3,7 @@
     "files": [
         {
             "path": "${HOME}/.chezscheme_history",
-            "moveable": true,
+            "movable": true,
             "help": "Alias petite to use custom locations:\n\n```bash\nalias petite=petite --eehistory ${XDG_DATA_HOME}/chezscheme/history\nalias scheme=scheme --eehistory ${XDG_DATA_HOME}/chezscheme/history```\n"
         }
     ]

@@ -3,17 +3,17 @@
     "files": [
         {
             "path": "${HOME}/.gem/ruby",
-            "moveable": true,
+            "movable": true,
             "help": "Supported\n\nThe file ${HOME}/.gem/ruby can be moved to ${XDG_CONFIG_HOME}/gem.\n"
         },
         {
             "path": "${HOME}/.gem",
-            "moveable": true,
+            "movable": true,
             "help": "Export the following environment variables:\n\n```bash\nexport GEM_HOME=${XDG_DATA_HOME}/gem\n```\n"
         },
         {
             "path": "${HOME}/.gem/specs",
-            "moveable": true,
+            "movable": true,
             "help": "Export the following environment variables:\n\n```bash\nexport GEM_SPEC_CACHE=${XDG_CACHE_HOME}/gem\n```\n"
         }
     ]
