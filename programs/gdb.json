@@ -3,7 +3,7 @@
     "files": [
         {
             "path": "${HOME}/.gdbinit",
-            "moveable": true,
+            "movable": true,
             "help": "Alias gdb to use custom locations:\n\n```bash\nalias gdb=gdb -n -x $XDG_CONFIG_HOME/gdb/init```\n"
         }
     ]

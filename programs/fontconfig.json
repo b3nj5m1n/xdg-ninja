@@ -3,7 +3,7 @@
     "files": [
         {
             "path": "${HOME}/.fontconfig",
-            "moveable": true,
+            "movable": true,
             "help": "Supported\n\nThe file ${HOME}/.fontconfig can be moved to ${XDG_DATA_HOME}/fontconfig.\n"
         }
     ]
