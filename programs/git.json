@@ -5,6 +5,11 @@
             "path": "$HOME/.gitconfig",
             "movable": true,
             "help": "XDG is supported out-of-the-box, so we can simply move the file to _XDG_CONFIG_HOME/git/config_.\n"
+        },
+        {
+            "path": "$HOME/.git-credentials",
+            "movable": true,
+            "help": "XDG is supported out-of-the-box, so we can simply move the file to _XDG_CONFIG_HOME/git/credentials_.\n"
         }
     ]
 }
