@@ -129,7 +129,7 @@ log() {
         if $USE_GLOW; then
             printf "%s\n" "$HELP" | glow -
         elif $USE_BAT; then
-            printf "%s\n" "$HELP" | bat -pp -f --language markdown
+            printf "%s\n" "$HELP" | bat -pp --decorations=always --color=always --language markdown
         else
             printf "%s\n" "$HELP"
         fi
