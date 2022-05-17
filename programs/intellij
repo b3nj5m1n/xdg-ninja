@@ -6,5 +6,5 @@
             "help": "Add ```-Djdk.downloader.home=<your preferred path>``` to the IntelliJ Custom VM options.\n\nSee: [here](https://youtrack.jetbrains.com/issue/IDEA-254464)."
         }
     ],
-    "name": "since"
+    "name": "intellij"
 }
