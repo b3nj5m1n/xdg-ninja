@@ -1,0 +1,10 @@
+{
+    "files": [
+        {
+            "path": "$HOME/.pki",
+            "movable": true,
+            "help": "XDG is supported out-of-the-box, so we can simply move the file to _XDG_DATA_HOME/pki_.\n"
+        }
+    ],
+    "name": "nss"
+}
