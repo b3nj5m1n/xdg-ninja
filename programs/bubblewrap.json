@@ -1,0 +1,10 @@
+{
+    "files": [
+        {
+            "path": "$HOME/.bubblewrap",
+            "movable": false,
+            "help": "Currently unsupported.\n\n_Relevant issue:_ https://github.com/GoogleChromeLabs/bubblewrap/issues/362\n"
+        }
+    ],
+    "name": "bubblewrap"
+}

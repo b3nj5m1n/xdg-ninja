@@ -1,0 +1,10 @@
+{
+    "files": [
+        {
+            "path": "$HOME/.expo",
+            "movable": false,
+            "help": ""
+        }
+    ],
+    "name": "expo"
+}
