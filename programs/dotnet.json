@@ -1,0 +1,10 @@
+{
+    "files": [
+        {
+            "path": "$HOME/.dotnet",
+            "movable": false,
+            "help": "Currently unsupported.\n\n_Relevant issue:_ https://github.com/dotnet/sdk/issues/8678\n"
+        }
+    ],
+    "name": "dotnet"
+}
