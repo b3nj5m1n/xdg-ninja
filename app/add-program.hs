@@ -1,31 +1,31 @@
-{-# LANGUAGE DeriveGeneric #-}
+{-# LANGUAGE DeriveGeneric     #-}
 {-# LANGUAGE OverloadedStrings #-}
 
 -- I do not know haskell, this code is probably shit
 
-import Data.Aeson
-import Data.Aeson.Types
-import Data.Aeson.Encode.Pretty
-import qualified Data.ByteString.Lazy as B
-import Data.List.Extra
-import Data.Maybe
-import qualified Data.Text as T
-import Data.Text.ANSI
-import Data.UUID
-import Data.UUID.V4
-import GHC.Float (double2Float)
-import GHC.Generics
-import System.Console.Haskeline
-import System.Environment (getEnv)
-import System.Exit
-import System.IO
-import System.Process
-import Text.Printf (printf)
+import           Data.Aeson
+import           Data.Aeson.Encode.Pretty
+import           Data.Aeson.Types
+import qualified Data.ByteString.Lazy     as B
+import           Data.List.Extra
+import           Data.Maybe
+import qualified Data.Text                as T
+import           Data.Text.ANSI
+import           Data.UUID
+import           Data.UUID.V4
+import           GHC.Float                (double2Float)
+import           GHC.Generics
+import           System.Console.Haskeline
+import           System.Environment       (getEnv)
+import           System.Exit
+import           System.IO
+import           System.Process
+import           Text.Printf              (printf)
 
 data File = File
-  { path :: String,
+  { path         :: String,
     supportLevel :: SupportLevel,
-    help :: String
+    help         :: String
   }
   deriving (Generic, Show)
 
@@ -33,7 +33,7 @@ instance ToJSON File where
   toEncoding (File path supportLevel help) = pairs ("path" .= path <> "movable" .= supportLevel <> "help" .= help)
 
 data Program = Program
-  { name :: T.Text,
+  { name  :: T.Text,
     files :: [File]
   }
   deriving (Generic, Show)
@@ -51,7 +51,7 @@ data SupportLevel = Unsupported | Alias | EnvVars | Supported
 
 instance ToJSON SupportLevel where
   toEncoding Unsupported = toEncoding ( Bool False )
-  toEncoding _ = toEncoding ( Bool True )
+  toEncoding _           = toEncoding ( Bool True )
 
 getTemplate :: SupportLevel -> String
 getTemplate Unsupported = "Currently unsupported.\n\n_Relevant issue:_ https://github.com/user/repo/issues/nr\n"
@@ -67,7 +67,7 @@ getHelp supportLevel = do
   (_, _, _, p) <- createProcess (shell (editor ++ " /tmp/xdg-ninja." ++ id ++ ".md"))
   f <- waitForProcess p
   case f of
-    ExitSuccess -> readFile ("/tmp/xdg-ninja." ++ id ++ ".md")
+    ExitSuccess   -> readFile ("/tmp/xdg-ninja." ++ id ++ ".md")
     ExitFailure a -> return ""
 
 getProp :: T.Text -> T.Text -> IO String
@@ -76,7 +76,7 @@ getProp prompt placeholder = do
   let string_placholder = T.unpack placeholder
   x <- runInputT defaultSettings (getInputLineWithInitial string_prompt (string_placholder, ""))
   case x of
-    Just s -> return s
+    Just s  -> return s
     Nothing -> return ""
 
 data Answer = Yes | No | Unknown
@@ -84,12 +84,12 @@ data Answer = Yes | No | Unknown
 stringToBool :: String -> Answer
 stringToBool s = case lower s of
   "yes" -> Yes
-  "y" -> Yes
-  "1" -> Yes
-  "no" -> No
-  "n" -> No
-  "0" -> No
-  _ -> Unknown
+  "y"   -> Yes
+  "1"   -> Yes
+  "no"  -> No
+  "n"   -> No
+  "0"   -> No
+  _     -> Unknown
 
 promptBool :: T.Text -> T.Text -> T.Text -> IO Bool
 promptBool prompt prompt_unrecognised placeholder = do
