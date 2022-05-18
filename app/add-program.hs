@@ -4,6 +4,7 @@
 -- I do not know haskell, this code is probably shit
 
 import Data.Aeson
+import Data.Aeson.Types
 import Data.Aeson.Encode.Pretty
 import qualified Data.ByteString.Lazy as B
 import Data.List.Extra
@@ -23,13 +24,13 @@ import Text.Printf (printf)
 
 data File = File
   { path :: String,
-    movable :: Bool,
+    supportLevel :: SupportLevel,
     help :: String
   }
   deriving (Generic, Show)
 
 instance ToJSON File where
-  toEncoding = genericToEncoding defaultOptions
+  toEncoding (File path supportLevel help) = pairs ("path" .= path <> "movable" .= supportLevel <> "help" .= help)
 
 data Program = Program
   { name :: T.Text,
@@ -45,10 +46,24 @@ save program = do
   let path = ("./programs/" ++ (T.unpack (name program)) ++ ".json")
   B.writeFile path (encodePretty program)
 
-getHelp :: IO String
-getHelp = do
+data SupportLevel = Unsupported | Alias | EnvVars | Supported
+  deriving (Generic, Show)
+
+instance ToJSON SupportLevel where
+  toEncoding Unsupported = toEncoding ( Bool False )
+  toEncoding _ = toEncoding ( Bool True )
+
+getTemplate :: SupportLevel -> String
+getTemplate Unsupported = "Currently unsupported.\n\n_Relevant issue:_ https://github.com/user/repo/issues/nr\n"
+getTemplate EnvVars = "Export the following environment variables:\n\n```bash\n\n```"
+getTemplate Alias = "Alias PROGRAM to use a custom configuration location:\n\n```bash\nalias PROGRAM=PROGRAM --config \"$XDG_CONFIG_HOME\"/PROGRAM/config\n```\n"
+getTemplate Supported = "Supported since _VERSION_.\n\nYou can move the file to _XDG_CONFIG_HOME/PROGRAM/CONFIG.\n"
+
+
+getHelp :: SupportLevel -> IO String
+getHelp supportLevel = do
   id <- toString <$> Data.UUID.V4.nextRandom
-  editor <- appendFile ("/tmp/xdg-ninja." ++ id ++ ".md") "Export the following environment variables:\n\n```bash\n\n```" >> (getEnv "EDITOR")
+  editor <- appendFile ("/tmp/xdg-ninja." ++ id ++ ".md") (getTemplate supportLevel) >> (getEnv "EDITOR")
   (_, _, _, p) <- createProcess (shell (editor ++ " /tmp/xdg-ninja." ++ id ++ ".md"))
   f <- waitForProcess p
   case f of
@@ -84,12 +99,27 @@ promptBool prompt prompt_unrecognised placeholder = do
     No -> return False
     Unknown -> printf "%s\n" prompt_unrecognised >> promptBool prompt prompt_unrecognised placeholder
 
+getSupportLevel :: IO SupportLevel
+getSupportLevel = do
+  movable <- promptBool (blue "Can the file be moved? (y/n) ") (red "Please provide a valid answer.") "y"
+  if movable
+  then do
+    envVars <- promptBool (blue "Do you have to export environment variables? (y/n) ") (red "Please provide a valid answer.") "y"
+    if envVars
+    then return EnvVars
+    else do
+      alias <- promptBool (blue "Do you have to set an alias? (y/n) ") (red "Please provide a valid answer.") "y"
+      if alias
+      then return Alias
+      else return Supported
+  else return Unsupported
+
 getFile :: IO File
 getFile = do
   path <- getProp (blue "Path to file: ") "$HOME/."
-  movable <- promptBool (blue "Can the file be moved? (y/n) ") (red "Please provide a valid answer.") "y"
-  help <- getHelp
-  return File {path = path, movable = movable, help = help}
+  supportLevel <- getSupportLevel
+  help <- getHelp supportLevel
+  return File {path = path, supportLevel = supportLevel, help = help}
 
 getFiles :: [File] -> IO [File]
 getFiles files =
