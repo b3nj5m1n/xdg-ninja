@@ -71,7 +71,7 @@ if [ -z "${XDG_RUNTIME_DIR}" ]; then
 fi
 
 if ! command -v jq >/dev/null 2>/dev/null; then
-    printf "jq is needed to run this script, but it wasn't found. Please install it to be able to use this script."
+    printf "jq is needed to run this script, but it wasn't found. Please install it to be able to use this script.\n"
     exit
 fi
 
