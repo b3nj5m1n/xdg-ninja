@@ -13,7 +13,7 @@
         {
             "path": "$HOME/.histfile",
             "movable": true,
-            "help": "Export the following environment variables:\n\n```bash\nexport HISTFILE=\"$XDG_DATA_HOME\"/zsh/history \n```\n"
+            "help": "Export the following environment variables:\n\n```bash\nexport HISTFILE=\"$XDG_STATE_HOME\"/zsh/history \n```\n"
         },
         {
             "path": "$HOME/.zlogin",
