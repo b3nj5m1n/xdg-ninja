@@ -1,0 +1,10 @@
+{
+    "files": [
+        {
+            "path": "$HOME/.gramps",
+            "movable": false,
+            "help": "Currently unsupported.\n\n_Relevant issue:_ https://gramps-project.org/bugs/view.php?id=8025\n"
+        }
+    ],
+    "name": "gramps"
+}
