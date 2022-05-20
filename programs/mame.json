@@ -1,0 +1,10 @@
+{
+    "files": [
+        {
+            "path": "$HOME/.mame",
+            "movable": false,
+            "help": "Currently unsupported and issue closed.\n\n_Relevant issue:_ https://github.com/mamedev/mame/issues/3853\n"
+        }
+    ],
+    "name": "mame"
+}
