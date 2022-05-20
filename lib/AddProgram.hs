@@ -17,6 +17,8 @@ import           Data.UUID
 import           Data.UUID.V4
 import           GHC.Float                (double2Float)
 import           GHC.Generics
+import           Program
+import           Prompts
 import           System.Console.Haskeline
 import           System.Environment       (getEnv)
 import           System.Exit
@@ -24,82 +26,14 @@ import           System.IO
 import           System.Process
 import           Text.Printf              (printf)
 
-data File = File
-  { path         :: String,
-    supportLevel :: SupportLevel,
-    help         :: String
-  }
-  deriving (Generic, Show)
-
-instance ToJSON File where
-  toEncoding (File path supportLevel help) = pairs ("path" .= path <> "movable" .= supportLevel <> "help" .= help)
-
-data Program = Program
-  { name  :: T.Text,
-    files :: [File]
-  }
-  deriving (Generic, Show)
-
-instance ToJSON Program where
-  toEncoding = genericToEncoding defaultOptions
-
-save :: Program -> IO ()
-save program = do
-  let path = ("./programs/" ++ (T.unpack (name program)) ++ ".json")
-  B.writeFile path (encodePretty program)
-
-data SupportLevel = Unsupported | Alias | EnvVars | Supported
-  deriving (Generic, Show)
-
-instance ToJSON SupportLevel where
-  toEncoding Unsupported = toEncoding ( Bool False )
-  toEncoding _           = toEncoding ( Bool True )
-
 getTemplate :: SupportLevel -> String
 getTemplate Unsupported = "Currently unsupported.\n\n_Relevant issue:_ https://github.com/user/repo/issues/nr\n"
 getTemplate EnvVars = "Export the following environment variables:\n\n```bash\n\n```"
 getTemplate Alias = "Alias PROGRAM to use a custom configuration location:\n\n```bash\nalias PROGRAM=PROGRAM --config \"$XDG_CONFIG_HOME\"/PROGRAM/config\n```\n"
 getTemplate Supported = "Supported since _VERSION_.\n\nYou can move the file to _XDG_CONFIG_HOME/PROGRAM/CONFIG.\n"
 
-
 getHelp :: SupportLevel -> IO String
-getHelp supportLevel = do
-  id <- toString <$> Data.UUID.V4.nextRandom
-  editor <- appendFile ("/tmp/xdg-ninja." ++ id ++ ".md") (getTemplate supportLevel) >> (getEnv "EDITOR")
-  (_, _, _, p) <- createProcess (shell (editor ++ " /tmp/xdg-ninja." ++ id ++ ".md"))
-  f <- waitForProcess p
-  case f of
-    ExitSuccess   -> readFile ("/tmp/xdg-ninja." ++ id ++ ".md")
-    ExitFailure a -> return ""
-
-getProp :: T.Text -> T.Text -> IO String
-getProp prompt placeholder = do
-  let string_prompt = T.unpack prompt
-  let string_placholder = T.unpack placeholder
-  x <- runInputT defaultSettings (getInputLineWithInitial string_prompt (string_placholder, ""))
-  case x of
-    Just s  -> return s
-    Nothing -> return ""
-
-data Answer = Yes | No | Unknown
-
-stringToBool :: String -> Answer
-stringToBool s = case lower s of
-  "yes" -> Yes
-  "y"   -> Yes
-  "1"   -> Yes
-  "no"  -> No
-  "n"   -> No
-  "0"   -> No
-  _     -> Unknown
-
-promptBool :: T.Text -> T.Text -> T.Text -> IO Bool
-promptBool prompt prompt_unrecognised placeholder = do
-  x <- getProp prompt placeholder
-  case stringToBool x of
-    Yes -> return True
-    No -> return False
-    Unknown -> printf "%s\n" prompt_unrecognised >> promptBool prompt prompt_unrecognised placeholder
+getHelp supportLevel = getInputMarkdown (getTemplate supportLevel)
 
 getSupportLevel :: IO SupportLevel
 getSupportLevel = do
