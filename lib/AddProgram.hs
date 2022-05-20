@@ -3,6 +3,8 @@
 
 -- I do not know haskell, this code is probably shit
 
+module AddProgram where
+
 import           Data.Aeson
 import           Data.Aeson.Encode.Pretty
 import           Data.Aeson.Types
@@ -147,8 +149,8 @@ getProgram = do
            >> getFiles []
   return Program {name = T.pack name, files = files}
 
-main :: IO ()
-main = do
+saveProgram :: IO ()
+saveProgram = do
   program <- getProgram
   do_save <- promptBool (green "Save? (y/n) ") (red "Please provide a valid answer.") ""
   if do_save
