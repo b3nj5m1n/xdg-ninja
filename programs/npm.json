@@ -8,7 +8,7 @@
         {
             "path": "$HOME/.npmrc",
             "movable": true,
-            "help": "Export the following environment variables:\n\n```bash\nexport NPM_CONFIG_USERCONFIG=$XDG_CONFIG_HOME/npm/npmrc \n```\n"
+            "help": "Export the following environment variables:\n\n```bash\nexport NPM_CONFIG_USERCONFIG=\"$XDG_CONFIG_HOME\"/npm/npmrc \n```\n"
         }
     ],
     "name": "npm"

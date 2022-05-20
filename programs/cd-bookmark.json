@@ -3,7 +3,7 @@
         {
             "path": "$HOME/.cdbookmark",
             "movable": true,
-            "help": "Export the following environment variables:\n\n```bash\nexport CD_BOOKMARK_FILE=$XDG_CONFIG_HOME/cd-bookmark/bookmarks\n```\n\n_There's also a [fork](https://github.com/erikw/cd-bookmark/) with XDG support built-in._\n"
+            "help": "Export the following environment variables:\n\n```bash\nexport CD_BOOKMARK_FILE=\"$XDG_CONFIG_HOME\"/cd-bookmark/bookmarks\n```\n\n_There's also a [fork](https://github.com/erikw/cd-bookmark/) with XDG support built-in._\n"
         }
     ],
     "name": "cd-bookmark"

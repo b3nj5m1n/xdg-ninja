@@ -3,7 +3,7 @@
         {
             "path": "$HOME/.sqlite_history",
             "movable": true,
-            "help": "Export the following environment variables:\n\n```bash\nexport SQLITE_HISTORY=$XDG_CACHE_HOME/sqlite_history\n```\n"
+            "help": "Export the following environment variables:\n\n```bash\nexport SQLITE_HISTORY=\"$XDG_CACHE_HOME\"/sqlite_history\n```\n"
         }
     ],
     "name": "sqlite"
