@@ -1,0 +1,10 @@
+{
+    "files": [
+        {
+            "path": "$HOME/.nv/GLCache",
+            "movable": true,
+            "help": "Export the following environment variables:\n\n```bash\nexport __GL_SHADER_DISK_CACHE_PATH=\"$XDG_CACHE_HOME\"/nv\n```\n"
+        }
+    ],
+    "name": "nvidia-glcache"
+}
