@@ -1,0 +1,10 @@
+{
+    "files": [
+        {
+            "path": "$HOME/.vscode",
+            "movable": false,
+            "help": "Currently unsupported.\n\n_Relevant issue:_ https://github.com/microsoft/vscode/issues/3884\n"
+        }
+    ],
+    "name": "vscode"
+}
