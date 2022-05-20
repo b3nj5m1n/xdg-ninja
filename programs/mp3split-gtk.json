@@ -1,0 +1,10 @@
+{
+    "files": [
+        {
+            "path": "$HOME/.mp3splt-gtk",
+            "movable": false,
+            "help": "Currently unsupported.\n\n_Relevant issue:_ https://github.com/mp3splt/mp3splt/issues/131\n"
+        }
+    ],
+    "name": "mp3splt-gtk"
+}
