@@ -3,7 +3,7 @@
         {
             "path": "$HOME/.android",
             "movable": true,
-            "help": "Export the following environment variables:\n\n```bash\nexport ANDROID_HOME=$XDG_DATA_HOME/android\n```\n"
+            "help": "Export the following environment variables:\n\n```bash\nexport ANDROID_HOME=\"$XDG_DATA_HOME\"/android\n```\n"
         }
     ],
     "name": "android-studio"

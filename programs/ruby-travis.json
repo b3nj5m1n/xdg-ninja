@@ -3,7 +3,7 @@
         {
             "path": "$HOME/.travis",
             "movable": true,
-            "help": "Export the following environment variables:\n\n```bash\nexport TRAVIS_CONFIG_PATH=$XDG_CONFIG_HOME/travis\n```\n"
+            "help": "Export the following environment variables:\n\n```bash\nexport TRAVIS_CONFIG_PATH=\"$XDG_CONFIG_HOME\"/travis\n```\n"
         }
     ],
     "name": "ruby-travis"

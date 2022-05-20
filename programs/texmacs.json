@@ -3,7 +3,7 @@
         {
             "path": "$HOME/.TeXmacs",
             "movable": true,
-            "help": "Export the following environment variables:\n\n```bash\nexport TEXMACS_HOME_PATH=$XDG_STATE_HOME/texmacs\n```\n"
+            "help": "Export the following environment variables:\n\n```bash\nexport TEXMACS_HOME_PATH=\"$XDG_STATE_HOME\"/texmacs\n```\n"
         }
     ],
     "name": "texmacs"

@@ -4,7 +4,7 @@
         {
             "path": "${HOME}/.pex",
             "movable": true,
-            "help": "Export the following environment variables:\n\n```bash\nexport PEX_ROOT=${XDG_CACHE_HOME}/pex\n```\n"
+            "help": "Export the following environment variables:\n\n```bash\nexport PEX_ROOT=\"${XDG_CACHE_HOME}\"/pex\n```\n"
         }
     ]
 }
