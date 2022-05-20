@@ -47,12 +47,8 @@ You need _haskell_ and _cabal_ installed. (To be clear, this is just for a tool 
 
 Run the following command:
 ```sh
-cabal build
+cabal run xdgnj add
 ```
-
-You should now have a binary which you can run. You'll find it in somewhere in _dist-newstyle/build_, for example in _dist-newstyle/build/x86_64-linux/ghc-9.0.2/add-program-0.1.0.0/x/add-program/build/add-program/add-program_.
-
-Execute this binary in this directory. It will guide you through the process.
 
 ### Manually
 

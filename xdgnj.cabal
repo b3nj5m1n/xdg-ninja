@@ -1,6 +1,6 @@
 cabal-version:      2.4
-name:               add-program
-version:            0.1.0.0
+name:               xdg-ninja
+version:            0.2.0.0
 
 -- A short (one-line) description of the package.
 -- synopsis:
@@ -20,14 +20,7 @@ maintainer:         b3nj4m1n@gmx.net
 -- copyright:
 -- category:
 
-executable add-program
-    main-is:          add-program.hs
-
-    -- Modules included in this executable, other than Main.
-    -- other-modules:
-
-    -- LANGUAGE extensions used by modules in this package.
-    -- other-extensions:
+library
     build-depends:
         base ^>=4.15.1.0,
         process ^>=1.6.13.2,
@@ -40,6 +33,26 @@ executable add-program
         text-ansi ^>=0.1.1,
         extra ^>=1.7.10,
         aeson-pretty ^>=0.8.9,
-    hs-source-dirs:   app
+    hs-source-dirs:   lib
+    default-language: Haskell2010
+    exposed-modules: AddProgram
+
+executable add-program
+    main-is:          add-program.hs
+    build-depends:
+        base ^>=4.15.1.0,
+        text ^>=1.2.5.0,
+        text-ansi ^>=0.1.1,
+        xdg-ninja,
+    hs-source-dirs:   src
+    default-language: Haskell2010
+
+executable xdgnj
+    main-is:          xdgnj.hs
+    build-depends:
+        base ^>=4.15.1.0,
+        optparse-applicative ^>=0.17.0.0,
+        xdg-ninja,
+    hs-source-dirs:   src
     default-language: Haskell2010
 
