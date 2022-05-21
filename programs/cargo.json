@@ -2,7 +2,7 @@
     "files": [
         {
             "path": "$HOME/.cargo",
-            "movable": true,
+            "movable": false,
             "help": "Export the following environment variables:\n\n```bash\nexport CARGO_HOME=\"$XDG_DATA_HOME\"/cargo\n```\n"
         }
     ],

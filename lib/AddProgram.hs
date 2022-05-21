@@ -88,5 +88,5 @@ saveProgram = do
   program <- getProgram
   do_save <- promptBool (green "Save? (y/n) ") (red "Please provide a valid answer.") ""
   if do_save
-  then save program
+  then save (makeFilename (name program)) program
   else return ()

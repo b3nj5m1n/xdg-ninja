@@ -35,7 +35,7 @@ library
         aeson-pretty ^>=0.8.9,
     hs-source-dirs:   lib
     default-language: Haskell2010
-    exposed-modules: AddProgram, Program, Prompts
+    exposed-modules: AddProgram, Program, Prompts, EditProgram
 
 executable add-program
     main-is:          add-program.hs

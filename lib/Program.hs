@@ -9,15 +9,11 @@ import qualified Data.ByteString.Lazy     as B
 import qualified Data.Text                as T
 import           GHC.Generics
 
-data File = File
-  { path         :: String,
-    supportLevel :: SupportLevel,
-    help         :: String
-  }
-  deriving (Generic, Show)
-
-instance ToJSON File where
-  toEncoding (File path supportLevel help) = pairs ("path" .= path <> "movable" .= supportLevel <> "help" .= help)
+instance FromJSON File where
+  parseJSON (Object v) = File
+    <$> v .: "path"
+    <*> v .: "movable"
+    <*> v .: "help"
 
 data Program = Program
   { name  :: T.Text,
@@ -26,17 +22,36 @@ data Program = Program
   deriving (Generic, Show)
 
 instance ToJSON Program where
-  toEncoding = genericToEncoding defaultOptions
+  toJSON (Program name files) = object [ "name" .= name, "files" .= files ]
+  toEncoding (Program name files) = pairs ("name" .= name <> "files" .= files)
+instance FromJSON Program
 
-save :: Program -> IO ()
-save program = do
-  let path = ("./programs/" ++ (T.unpack (name program)) ++ ".json")
-  B.writeFile path (encodePretty program)
+data File = File
+  { path         :: String,
+    supportLevel :: SupportLevel,
+    help         :: String
+  }
+  deriving (Generic, Show)
+
+instance ToJSON File where
+  toJSON (File path supportLevel help) = object [ "path" .= path, "movable" .= supportLevel, "help" .= help ]
+  toEncoding (File path supportLevel help) = pairs ("path" .= path <> "movable" .= supportLevel <> "help" .= help)
 
 data SupportLevel = Unsupported | Alias | EnvVars | Supported
   deriving (Generic, Show)
 
 instance ToJSON SupportLevel where
+  toJSON Unsupported = toJSON (Bool False)
+  toJSON _           = toJSON (Bool True)
   toEncoding Unsupported = toEncoding ( Bool False )
   toEncoding _           = toEncoding ( Bool True )
+instance FromJSON SupportLevel where
+  parseJSON (Bool False) = return Unsupported
+  parseJSON (Bool True)  = return EnvVars
 
+makeFilename :: T.Text -> T.Text
+makeFilename s = T.pack ( "./programs/" ++ T.unpack s ++ ".json" )
+
+save :: T.Text -> Program -> IO ()
+save filename program = do
+  B.writeFile (T.unpack filename) (encodePretty program)

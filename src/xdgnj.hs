@@ -1,7 +1,9 @@
 module Main where
 
-import           AddProgram
+
+import qualified AddProgram          as PA
 import           Data.Semigroup      ((<>))
+import qualified EditProgram         as PE
 import           Options.Applicative
 
 data Args = AddProgram
@@ -37,5 +39,6 @@ main :: IO ()
 main = do
     args <- execParser args
     case args of
-        AddProgram -> saveProgram
-        _          -> print args
+        AddProgram           -> PA.saveProgram
+        EditProgram filename -> PE.editProgram filename
+        _                    -> print args
