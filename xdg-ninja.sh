@@ -90,10 +90,8 @@ apply_shell_expansion() {
 # Return 1 if the path points to a file, 2 if it points to a directory
 check_not_exists_file() {
     FILE_PATH=$(apply_shell_expansion "$1")
-    if [ -f "$FILE_PATH" ]; then
+    if [ -e "$FILE_PATH" ]; then
         return 1
-    elif [ -d "$FILE_PATH" ]; then
-        return 2
     else
         return 0
     fi
@@ -155,7 +153,7 @@ check_file() {
         log SUCS "$NAME" "$FILENAME" "$HELP"
         ;;
 
-    1 | 2)
+    1)
         if "$MOVABLE"; then
             log ERR "$NAME" "$FILENAME" "$HELP"
         else
