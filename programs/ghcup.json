@@ -2,7 +2,7 @@
     "files": [
         {
             "path": "$HOME/.ghcup",
-            "supportLevel": "EnvVars",
+            "movable": true,
             "help": "Export the following environment variables:\n\n```bash\nexport GHCUP_USE_XDG_DIRS=true\n```\n"
         }
     ],

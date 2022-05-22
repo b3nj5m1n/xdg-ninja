@@ -2,18 +2,18 @@
     "files": [
         {
             "path": "$HOME/.steampid",
-            "supportLevel": "Unsupported",
+            "movable": false,
             "help": ""
         },
         {
             "path": "$HOME/.steampath",
-            "supportLevel": "Supported",
+            "movable": false,
             "help": ""
         },
         {
             "path": "$HOME/.steam",
-            "supportLevel": "Unsupported",
-            "help": "\n"
+            "movable": false,
+            "help": "See the relevant [issue](https://github.com/ValveSoftware/steam-for-linux/issues/1890). It's a goldmine.\n\n> Day 3368\n> A drop or two and follows a river of tears\n> How the cries of the anguished fall on deaf ears\n> A $HOME I believed I'm the one to own\n> Excalibur lifted and this issue remains in stone\n\n"
         }
     ],
     "name": "steam"
