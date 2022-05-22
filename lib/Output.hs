@@ -49,5 +49,5 @@ logFile :: T.Text -> File -> Bool -> IO ()
 logFile programName file onFilesystem = case onFilesystem of
   False -> Output.log SUCS (T.unpack programName) (path file) (help file)
   True -> case (supportLevel file) of
-    Unsupported -> Output.log WARN (T.unpack programName) (path file) (help file)
-    _ -> Output.log ERR (T.unpack programName) (path file) (help file)
+    Unsupported -> Output.log ERR (T.unpack programName) (path file) (help file)
+    _ -> Output.log WARN (T.unpack programName) (path file) (help file)

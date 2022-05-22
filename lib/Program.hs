@@ -55,3 +55,8 @@ makeFilename s = T.pack ( "./programs/" ++ T.unpack s ++ ".json" )
 save :: T.Text -> Program -> IO ()
 save filename program = do
   B.writeFile (T.unpack filename) (encodePretty program)
+
+readProgram :: String -> IO ( Maybe Program )
+readProgram filename = do
+    json_data <- B.readFile filename
+    return (decode json_data)

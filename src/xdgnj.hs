@@ -4,6 +4,7 @@ module Main where
 import qualified AddProgram          as PA
 import           Data.Semigroup      ((<>))
 import qualified EditProgram         as PE
+import qualified PreviewProgram         as PP
 import           Options.Applicative
 
 data Args = AddProgram
@@ -41,4 +42,5 @@ main = do
     case args of
         AddProgram           -> PA.saveProgram
         EditProgram filename -> PE.editProgram filename
+        PreviewProgram filename -> PP.previewProgramFile filename
         _                    -> print args

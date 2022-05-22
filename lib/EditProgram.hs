@@ -61,11 +61,6 @@ editFile f = do
     help <- getHelp (help f)
     return File {path = path f, supportLevel = supportLevel, help = help}
 
-readProgram :: String -> IO ( Maybe Program )
-readProgram filename = do
-    json_data <- B.readFile filename
-    return (decode json_data)
-
 editProgram :: String -> IO ()
 editProgram filename = do
   program <- readProgram filename
