@@ -2,16 +2,16 @@
 
 module Checks where
 
-import Program
-import Data.List (isSuffixOf)
-import Output
-import System.FilePath
-import qualified Data.Text                as T
-import qualified Data.Text.Lazy                as TL
-import Data.Text.ANSI
-import System.Directory.Extra
-import           System.Environment       (getEnv)
-import Text.Replace
+import           Data.List              (isSuffixOf)
+import qualified Data.Text              as T
+import           Data.Text.ANSI
+import qualified Data.Text.Lazy         as TL
+import           Output
+import           Program
+import           System.Directory.Extra
+import           System.Environment     (getEnv)
+import           System.FilePath
+import           Text.Replace
 
 data Result = Exist | MustExist | NoExist
   deriving Show
@@ -22,7 +22,7 @@ expandPath path = do
   let replacements = [ Replace "$HOME" (T.pack home) ]
   let result = replaceWithList replacements (TL.pack path)
   return (TL.unpack result)
-    
+
 
 checkFile :: T.Text -> Bool -> File -> IO Result
 checkFile programName verbose file  = do
@@ -39,7 +39,7 @@ checkFile programName verbose file  = do
       logFile programName file True
       case (supportLevel file) of
         Unsupported -> return MustExist
-        _ -> return Exist
+        _           -> return Exist
 
 checkProgram :: Bool -> Program -> IO [Result]
 checkProgram verbose program = sequence (map (checkFile (name program) verbose) (files program))

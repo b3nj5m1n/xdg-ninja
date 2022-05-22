@@ -2,11 +2,11 @@ module Main where
 
 
 import qualified AddProgram          as PA
-import qualified Checks          as C
+import qualified Checks              as C
 import           Data.Semigroup      ((<>))
 import qualified EditProgram         as PE
-import qualified PreviewProgram         as PP
 import           Options.Applicative
+import qualified PreviewProgram      as PP
 
 data Args = RunChecks
     | AddProgram
@@ -43,8 +43,8 @@ main :: IO ()
 main = do
     args <- execParser args
     case args of
-        RunChecks           -> C.checkDir "./programs"
-        AddProgram           -> PA.saveProgram
-        EditProgram filename -> PE.editProgram filename
+        RunChecks               -> C.checkDir "./programs"
+        AddProgram              -> PA.saveProgram
+        EditProgram filename    -> PE.editProgram filename
         PreviewProgram filename -> PP.previewProgramFile filename
-        _                    -> print args
+        _                       -> print args

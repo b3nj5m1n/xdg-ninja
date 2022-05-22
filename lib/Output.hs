@@ -1,13 +1,13 @@
 module Output where
 
-import qualified Data.Text                as T
-import Data.Char (isSpace)
-import Data.Text.ANSI
+import           Data.Char      (isSpace)
+import qualified Data.Text      as T
+import           Data.Text.ANSI
 import           Data.UUID
 import           Data.UUID.V4
+import           Program
 import           System.Exit
 import           System.Process
-import Program
 
 getFilename :: IO String
 getFilename = do
@@ -44,7 +44,7 @@ log mode name filename help = case mode of
     SUCS -> putStrLn (line green name filename)
     HELP -> do
       md <- case (all isSpace help) of
-        True -> renderMarkdown "_No help available._"
+        True  -> renderMarkdown "_No help available._"
         False -> renderMarkdown help
       putStr md
 

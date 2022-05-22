@@ -1,9 +1,9 @@
 module PreviewProgram where
 
+import qualified Data.Text      as T
+import           Data.Text.ANSI
+import           Output
 import           Program
-import Data.Text.ANSI
-import Output
-import qualified Data.Text                as T
 
 previewFile :: T.Text -> File -> IO ()
 previewFile name file = logFile name file True
@@ -18,5 +18,5 @@ previewProgramFile filename = do
   x <- readProgram filename
   case x of
     Just program -> previewProgram program
-    Nothing -> putStrLn (T.unpack (red (T.pack "Error.")))
+    Nothing      -> putStrLn (T.unpack (red (T.pack "Error.")))
   return ()
