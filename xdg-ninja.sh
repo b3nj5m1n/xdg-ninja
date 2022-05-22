@@ -88,7 +88,7 @@ apply_shell_expansion() {
 
 # Returns 0 if the path doesn't lead anywhere
 # Return 1 if the path points to a file, 2 if it points to a directory
-check_not_exists_file() {
+check_if_file_exists() {
     FILE_PATH=$(apply_shell_expansion "$1")
     if [ -e "$FILE_PATH" ]; then
         return 1
@@ -145,7 +145,7 @@ check_file() {
     MOVABLE=$(printf "%s" "$INPUT" | jq -r .movable)
     HELP=$(printf "%s" "$INPUT" | jq -r .help)
 
-    check_not_exists_file "$FILENAME"
+    check_if_file_exists "$FILENAME"
 
     case $? in
 
