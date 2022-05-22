@@ -33,9 +33,11 @@ library
         text-ansi ^>=0.1.1,
         extra ^>=1.7.10,
         aeson-pretty ^>=0.8.9,
+        text-replace ^>=0.1,
+        filepath ^>=1.4.2.2,
     hs-source-dirs:   lib
     default-language: Haskell2010
-    exposed-modules: AddProgram, Program, Prompts, EditProgram, Output, PreviewProgram
+    exposed-modules: AddProgram, Program, Prompts, EditProgram, Output, PreviewProgram, Checks
 
 executable add-program
     main-is:          add-program.hs

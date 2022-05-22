@@ -2,12 +2,14 @@ module Main where
 
 
 import qualified AddProgram          as PA
+import qualified Checks          as C
 import           Data.Semigroup      ((<>))
 import qualified EditProgram         as PE
 import qualified PreviewProgram         as PP
 import           Options.Applicative
 
-data Args = AddProgram
+data Args = RunChecks
+    | AddProgram
     | EditProgram String
     | PreviewProgram String
     | LintProgram String
@@ -25,7 +27,8 @@ lintProgram = LintProgram <$> argument str (metavar "PROGRAM")
 
 argsParser :: Parser Args
 argsParser = subparser
-        (command "add" (info (pure AddProgram) (progDesc "Add program"))
+        (command "run" (info (pure RunChecks) (progDesc "Run checks"))
+      <> command "add" (info (pure AddProgram) (progDesc "Add program"))
       <> command "edit" (info editProgram (progDesc "Edit program config"))
       <> command "prev" (info previewProgram (progDesc "Preview program config"))
       <> command "lintp" (info lintProgram (progDesc "Lint program config"))
@@ -40,6 +43,7 @@ main :: IO ()
 main = do
     args <- execParser args
     case args of
+        RunChecks           -> C.checkDir "./programs"
         AddProgram           -> PA.saveProgram
         EditProgram filename -> PE.editProgram filename
         PreviewProgram filename -> PP.previewProgramFile filename

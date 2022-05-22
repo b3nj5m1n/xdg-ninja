@@ -1,6 +1,7 @@
 module Output where
 
 import qualified Data.Text                as T
+import Data.Char (isSpace)
 import Data.Text.ANSI
 import           Data.UUID
 import           Data.UUID.V4
@@ -42,7 +43,9 @@ log mode name filename help = case mode of
       Output.log HELP name filename help
     SUCS -> putStrLn (line green name filename)
     HELP -> do
-      md <- renderMarkdown help
+      md <- case (all isSpace help) of
+        True -> renderMarkdown "_No help available._"
+        False -> renderMarkdown help
       putStr md
 
 logFile :: T.Text -> File -> Bool -> IO ()
