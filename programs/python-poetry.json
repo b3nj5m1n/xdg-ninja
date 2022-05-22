@@ -1,0 +1,10 @@
+{
+    "files": [
+        {
+            "path": "$HOME/.poetry",
+            "movable": true,
+            "help": "Export the following environment variables:\n\n```bash\nexport POETRY_HOME=\"$XDG_DATA_HOME\"/poetry\n```\n"
+        }
+    ],
+    "name": "python-poetry"
+}
