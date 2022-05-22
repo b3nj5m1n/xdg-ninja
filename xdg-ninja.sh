@@ -88,12 +88,10 @@ apply_shell_expansion() {
 
 # Returns 0 if the path doesn't lead anywhere
 # Return 1 if the path points to a file, 2 if it points to a directory
-check_not_exists_file() {
+check_if_file_exists() {
     FILE_PATH=$(apply_shell_expansion "$1")
-    if [ -f "$FILE_PATH" ]; then
+    if [ -e "$FILE_PATH" ]; then
         return 1
-    elif [ -d "$FILE_PATH" ]; then
-        return 2
     else
         return 0
     fi
@@ -140,14 +138,12 @@ log() {
 
 # Checks that the given file does not exist, otherwise outputs help
 check_file() {
-    INPUT="$1"
-    NAME="$2"
+    NAME="$1"
+    FILENAME="$2"
+    MOVABLE="$3"
+    HELP="$4"
 
-    FILENAME=$(printf "%s" "$INPUT" | jq -r .path)
-    MOVABLE=$(printf "%s" "$INPUT" | jq -r .movable)
-    HELP=$(printf "%s" "$INPUT" | jq -r .help)
-
-    check_not_exists_file "$FILENAME"
+    check_if_file_exists "$FILENAME"
 
     case $? in
 
@@ -155,7 +151,7 @@ check_file() {
         log SUCS "$NAME" "$FILENAME" "$HELP"
         ;;
 
-    1 | 2)
+    1)
         if "$MOVABLE"; then
             log ERR "$NAME" "$FILENAME" "$HELP"
         else
@@ -171,16 +167,22 @@ check_file() {
     esac
 }
 
+decode_string() {
+    tmp="${1#\"}" # Trim leading quote
+    tmp="${tmp%\"}" # Trim traling quote
+    printf "%s" "$(echo "$tmp" | sed -e 's/\\n/\
+/g' -e 's/\\\"/\"/g')" # Replace \n with literal newline and \" with "
+}
+
 # Reads a file from programs/, calls check_file on each file specified for the program
 check_program() {
     PROGRAM=$1
 
-    NAME=$(jq -r .name "$PROGRAM")
-
-    while IFS= read -r file; do
-        check_file "$file" "$NAME"
+    while IFS="
+" read -r name; read -r filename; read -r movable; read -r help; do
+        check_file "$(decode_string "$name")" "$(decode_string "$filename")" "$movable" "$(decode_string "$help")"
     done <<EOF
-$(jq -rc '.files[]' "$PROGRAM")
+$(jq '.files[] as $files | .name, $files.path, $files.movable, $files.help' "$PROGRAM")
 EOF
 }
 
