@@ -138,12 +138,10 @@ log() {
 
 # Checks that the given file does not exist, otherwise outputs help
 check_file() {
-    INPUT="$1"
-    NAME="$2"
-
-    FILENAME=$(printf "%s" "$INPUT" | jq -r .path)
-    MOVABLE=$(printf "%s" "$INPUT" | jq -r .movable)
-    HELP=$(printf "%s" "$INPUT" | jq -r .help)
+    NAME="$1"
+    FILENAME="$2"
+    MOVABLE="$3"
+    HELP="$4"
 
     check_if_file_exists "$FILENAME"
 
@@ -169,16 +167,22 @@ check_file() {
     esac
 }
 
+decode_string() {
+    tmp="${1#\"}" # Trim leading quote
+    tmp="${tmp%\"}" # Trim traling quote
+    printf "%s" "$(echo "$tmp" | sed -e 's/\\n/\
+/g' -e 's/\\\"/\"/g')" # Replace \n with literal newline and \" with "
+}
+
 # Reads a file from programs/, calls check_file on each file specified for the program
 check_program() {
     PROGRAM=$1
 
-    NAME=$(jq -r .name "$PROGRAM")
-
-    while IFS= read -r file; do
-        check_file "$file" "$NAME"
+    while IFS="
+" read -r name; read -r filename; read -r movable; read -r help; do
+        check_file "$(decode_string "$name")" "$(decode_string "$filename")" "$movable" "$(decode_string "$help")"
     done <<EOF
-$(jq -rc '.files[]' "$PROGRAM")
+$(jq '.files[] as $files | .name, $files.path, $files.movable, $files.help' "$PROGRAM")
 EOF
 }
 
