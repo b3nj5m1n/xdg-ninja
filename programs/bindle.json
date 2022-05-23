@@ -1,0 +1,20 @@
+{
+    "files": [
+        {
+            "path": "$HOME/.bindle",
+            "movable": true,
+            "help": "Export the following environment variables:\n\n```bash\nexport BINDLEPATH=\"$XDG_DATA_HOME/bindle\"\n```\n"
+        },
+        {
+            "path": "$HOME/.bindlerc",
+            "movable": true,
+            "help": "Export the following environment variables:\n\n```bash\nexport BINDLERC=\"$XDG_CONFIG_HOME/bindlerc\"\n```\n"
+        },
+        {
+            "path": "$HOME/.dotsrc",
+            "movable": true,
+            "help": "Export the following environment variables:\n\n```bash\nexport BINDLERC=\"$XDG_CONFIG_HOME/dotsrc\"\n```\n"
+        }
+    ],
+    "name": "bindle"
+}

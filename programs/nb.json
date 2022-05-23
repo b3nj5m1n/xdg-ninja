@@ -1,0 +1,15 @@
+{
+    "files": [
+        {
+            "path": "$HOME/.nb",
+            "movable": true,
+            "help": "Export the following environment variables:\n\n```bash\nexport NB_DIR=\"$XDG_DATA_HOME/nb\"\n```\n"
+        },
+        {
+            "path": "$HOME/.nbrc",
+            "movable": true,
+            "help": "Export the following environment variables:\n\n```bash\nexport NBRC_PATH=\"$XDG_CONFIG_HOME/nbrc\"\n```\n"
+        }
+    ],
+    "name": "nb"
+}
