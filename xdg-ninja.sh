@@ -87,7 +87,7 @@ apply_shell_expansion() {
 }
 
 # Returns 0 if the path doesn't lead anywhere
-# Return 1 if the path points to a file, 2 if it points to a directory
+# Returns 1 if the path leads to something
 check_if_file_exists() {
     FILE_PATH=$(apply_shell_expansion "$1")
     if [ -e "$FILE_PATH" ]; then
