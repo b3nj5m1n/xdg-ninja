@@ -1,0 +1,10 @@
+{
+    "files": [
+        {
+            "path": "$HOME/.Osmos",
+            "movable": false,
+            "help": "Currently unsupported.\n\n_Relevant thread:_ https://holarse.de/forums/spiele/allgemein/make_home_directory_xdg_base_spec_great_again\n"
+        }
+    ],
+    "name": "osmos"
+}

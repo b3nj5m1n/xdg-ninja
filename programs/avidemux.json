@@ -1,0 +1,10 @@
+{
+    "files": [
+        {
+            "path": "$HOME/.avidemux6",
+            "movable": false,
+            "help": "Currently unsupported\n\n_Relevant thread:_ https://avidemux.org/smif/index.php/topic,19596.0.html\n"
+        }
+    ],
+    "name": "avidemux"
+}

@@ -1,0 +1,10 @@
+{
+    "files": [
+        {
+            "path": "$HOME/.BurpSuite",
+            "movable": false,
+            "help": "Currently unsupported\n\n_Relevant thread:_ https://forum.portswigger.net/thread/follow-xdg-directory-specification-d5aea605\n"
+        }
+    ],
+    "name": "burpsuite"
+}
