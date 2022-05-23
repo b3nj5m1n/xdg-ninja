@@ -97,6 +97,11 @@ check_if_file_exists() {
     fi
 }
 
+decode_string() {
+    printf "%s\n" "$1" | sed -e 's/\\n/\
+/g' -e 's/\\\"/\"/g' # Replace \n with literal newline and \" with "
+}
+
 # Function to handle the formatting of output
 log() {
     MODE="$1"
@@ -125,11 +130,11 @@ log() {
 
     HELP)
         if $USE_GLOW; then
-            printf "%s\n" "$HELP" | glow -
+            decode_string "$HELP" | glow -
         elif $USE_BAT; then
-            printf "%s\n" "$HELP" | bat -pp --decorations=always --color=always --language markdown
+            decode_string "$HELP" | bat -pp --decorations=always --color=always --language markdown
         else
-            printf "%s\n" "$HELP"
+            decode_string "$HELP"
         fi
         ;;
 
@@ -167,21 +172,15 @@ check_file() {
     esac
 }
 
-decode_string() {
-    tmp="${1#\"}" # Trim leading quote
-    tmp="${tmp%\"}" # Trim traling quote
-    printf "%s" "$(echo "$tmp" | sed -e 's/\\n/\
-/g' -e 's/\\\"/\"/g')" # Replace \n with literal newline and \" with "
-}
-
 # Reads files from programs/, calls check_file on each file specified for each program
 do_check_programs() {
     while IFS="
 " read -r name; read -r filename; read -r movable; read -r help; do
-        check_file "$(decode_string "$name")" "$(decode_string "$filename")" "$movable" "$(decode_string "$help")"
+        check_file "$name" "$filename" "$movable" "$help"
     done <<EOF
-$(jq 'inputs as $input | $input.files[] as $file | $input.name, $file.path, $file.movable, $file.help' "$(dirname "$0")"/programs/*)
+$(jq 'inputs as $input | $input.files[] as $file | $input.name, $file.path, $file.movable, $file.help' "$(dirname "$0")"/programs/* | sed -e 's/^"//' -e 's/"$//')
 EOF
+# sed is to trim quotes
 }
 
 check_programs() {
