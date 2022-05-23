@@ -4,7 +4,7 @@
         {
             "path": "${HOME}/.lesshst",
             "movable": true,
-            "help": "Export the following environment variables:\n\n```bash\nexport LESSHISTFILE=\"${XDG_CACHE_HOME}\"/less/history\n```\n"
+            "help": "Export the following environment variables:\n\n```bash\nexport LESSHISTFILE=\"$XDG_CACHE_HOME\"/less/history\n```\n"
         }
     ]
 }
