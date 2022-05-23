@@ -87,7 +87,7 @@ apply_shell_expansion() {
 }
 
 # Returns 0 if the path doesn't lead anywhere
-# Return 1 if the path points to a file, 2 if it points to a directory
+# Returns 1 if the path leads to something
 check_if_file_exists() {
     FILE_PATH=$(apply_shell_expansion "$1")
     if [ -e "$FILE_PATH" ]; then
@@ -95,6 +95,11 @@ check_if_file_exists() {
     else
         return 0
     fi
+}
+
+decode_string() {
+    printf "%s\n" "$1" | sed -e 's/\\n/\
+/g' -e 's/\\\"/\"/g' # Replace \n with literal newline and \" with "
 }
 
 # Function to handle the formatting of output
@@ -125,11 +130,11 @@ log() {
 
     HELP)
         if $USE_GLOW; then
-            printf "%s\n" "$HELP" | glow -
+            decode_string "$HELP" | glow -
         elif $USE_BAT; then
-            printf "%s\n" "$HELP" | bat -pp --decorations=always --color=always --language markdown
+            decode_string "$HELP" | bat -pp --decorations=always --color=always --language markdown
         else
-            printf "%s\n" "$HELP"
+            decode_string "$HELP"
         fi
         ;;
 
@@ -167,36 +172,25 @@ check_file() {
     esac
 }
 
-decode_string() {
-    tmp="${1#\"}" # Trim leading quote
-    tmp="${tmp%\"}" # Trim traling quote
-    printf "%s" "$(echo "$tmp" | sed -e 's/\\n/\
-/g' -e 's/\\\"/\"/g')" # Replace \n with literal newline and \" with "
-}
-
-# Reads a file from programs/, calls check_file on each file specified for the program
-check_program() {
-    PROGRAM=$1
-
+# Reads files from programs/, calls check_file on each file specified for each program
+do_check_programs() {
     while IFS="
 " read -r name; read -r filename; read -r movable; read -r help; do
-        check_file "$(decode_string "$name")" "$(decode_string "$filename")" "$movable" "$(decode_string "$help")"
+        check_file "$name" "$filename" "$movable" "$help"
     done <<EOF
-$(jq '.files[] as $files | .name, $files.path, $files.movable, $files.help' "$PROGRAM")
+$(jq 'inputs as $input | $input.files[] as $file | $input.name, $file.path, $file.movable, $file.help' "$(dirname "$0")"/programs/* | sed -e 's/^"//' -e 's/"$//')
 EOF
+# sed is to trim quotes
 }
 
-# Loops over all files in the programs/ directory and calls check_program
-enumerate_programs() {
+check_programs() {
     printf "\033[1;3mStarting to check your \033[1;36m\$HOME.\033[1;0m\n"
     printf "\n"
-    for prog_filename in "$(dirname "$0")"/programs/*; do
-        check_program "$prog_filename"
-    done
+    do_check_programs
     printf "\033[1;3mDone checking your \033[1;36m\$HOME.\033[1;0m\n"
     printf "\n"
     printf "\033[3mIf you have files in your \033[1;36m\$HOME\033[1;0m that shouldn't be there, but weren't recognised by xdg-ninja, please consider creating a configuration file for it and opening a pull request on github.\033[1;0m\n"
     printf "\n"
 }
 
-enumerate_programs
+check_programs
