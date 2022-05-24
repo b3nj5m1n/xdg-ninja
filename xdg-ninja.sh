@@ -129,9 +129,9 @@ log() {
         ;;
 
     HELP)
-        if $USE_GLOW; then
+        if [ "$USE_GLOW" = true ]; then
             decode_string "$HELP" | glow -
-        elif $USE_BAT; then
+        elif [ "$USE_BAT" = true ]; then
             decode_string "$HELP" | bat -pp --decorations=always --color=always --language markdown
         else
             decode_string "$HELP"
@@ -157,12 +157,12 @@ check_file() {
         ;;
 
     1)
-        if [ "$MOVABLE" ]; then
+        if [ "$MOVABLE" = true ]; then
             log ERR "$NAME" "$FILENAME" "$HELP"
         else
             log WARN "$NAME" "$FILENAME" "$HELP"
         fi
-        if [ "$HELP" ]; then
+        if [ "$HELP" = true ]; then
             log HELP "$NAME" "$FILENAME" "$HELP"
         else
             log HELP "$NAME" "$FILENAME" "_No help available._"
