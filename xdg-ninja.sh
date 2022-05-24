@@ -163,7 +163,7 @@ check_file() {
     1)
         if [ "$MOVABLE" = problematic ]; then
             log PROB "$NAME" "$FILENAME" "$HELP"
-        elif "$MOVABLE"; then
+        elif [ "$MOVABLE" ]; then
             log ERR "$NAME" "$FILENAME" "$HELP"
         else
             log WARN "$NAME" "$FILENAME" "$HELP"
