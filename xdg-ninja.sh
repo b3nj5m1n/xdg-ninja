@@ -115,6 +115,10 @@ log() {
         printf '[\033[1;31m%s\033[1;0m]: \033[1;3m%s\033[1;0m\n' "$NAME" "$FILENAME"
         ;;
 
+    PROB)
+        printf '[\033[1;35m%s\033[1;0m]: \033[1;3m%s\033[1;0m\n' "$NAME" "$FILENAME"
+        ;;
+
     WARN)
         printf '[\033[1;33m%s\033[1;0m]: \033[1;3m%s\033[1;0m\n' "$NAME" "$FILENAME"
         ;;
@@ -157,7 +161,9 @@ check_file() {
         ;;
 
     1)
-        if "$MOVABLE"; then
+        if [ "$MOVABLE" = problematic ]; then
+            log PROB "$NAME" "$FILENAME" "$HELP"
+        elif "$MOVABLE"; then
             log ERR "$NAME" "$FILENAME" "$HELP"
         else
             log WARN "$NAME" "$FILENAME" "$HELP"
