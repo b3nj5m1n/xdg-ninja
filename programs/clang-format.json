@@ -1,0 +1,10 @@
+{
+    "files": [
+        {
+            "path": "$HOME/.clang-format",
+            "movable": "problematic",
+            "help": "Providing exact path to file via _--style_ (_-style_) flag is supported since version 14, but some repositories (Arch Linux repositories, for example) still don't have that version."
+        }
+    ],
+    "name": "clang-format"
+}
