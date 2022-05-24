@@ -157,7 +157,7 @@ check_file() {
         ;;
 
     1)
-        if "$MOVABLE"; then
+        if [ "$MOVABLE" ]; then
             log ERR "$NAME" "$FILENAME" "$HELP"
         else
             log WARN "$NAME" "$FILENAME" "$HELP"
