@@ -3,7 +3,7 @@
         {
             "path": "$HOME/.python_history",
             "movable": true,
-            "help": "Export the following environment variables:\n\n```bash\nexport PYTHONSTARTUP=\"${XDG_CONFIG_HOME}/python/pythonrc\"\n```\n\nNow create the file _pythonrc_, and put the following code into it:\n\n```python\nimport os\nimport atexit\nimport readline\n\nhistory = os.path.join(os.environ['XDG_CACHE_HOME'], 'python_history')\ntry:\n    readline.read_history_file(history)\nexcept OSError:\n    pass\n\ndef write_history():\n    try:\n        readline.write_history_file(history)\n    except OSError:\n        pass\n\natexit.register(write_history)\n```\n\n_Credit:_ https://unix.stackexchange.com/a/675631/417527\n"
+            "help": "Export the following environment variables:\n\n```bash\nexport PYTHONSTARTUP=\"${XDG_CONFIG_HOME}/python/pythonrc\"\n```\n\nNow create the file _pythonrc_, and put the following code into it:\n\n```python\nimport os\nimport atexit\nimport readline\n\nhistory = os.path.join(os.environ['XDG_CACHE_HOME'], 'python_history')\ntry:\n    readline.read_history_file(history)\nexcept OSError:\n    pass\n\ndef write_history():\n    try:\n        readline.write_history_file(history)\n    except OSError:\n        pass\n\natexit.register(write_history)\n```\nNote that this won't work if python is invoked with -i flag.\n\n_Credit:_ https://unix.stackexchange.com/a/675631/417527\n"
         }
     ],
     "name": "python"
