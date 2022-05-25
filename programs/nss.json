@@ -3,7 +3,7 @@
         {
             "path": "$HOME/.pki",
             "movable": false,
-            "help": "**Disclaimer: supported, but may be created by other files.**\n\nXDG is supported out-of-the-box, so we can simply move the file to _\"$XDG_DATA_HOME\"/pki_.\n\nSome apps (chromium, for example) hardcode path to _\"$HOME\"/.pki_, so the folder may appear again, see [https://bugzilla.mozilla.org/show_bug.cgi?id=818686#c11]().\n"
+            "help": "**Disclaimer: supported, but may be created by other files.**\n\nXDG is supported out-of-the-box, so we can simply move the file to _\"$XDG_DATA_HOME\"/pki_.\n\nSome apps (chromium, for example) hardcode path to _\"$HOME\"/.pki_, so the folder may appear again, see [](https://bugzilla.mozilla.org/show_bug.cgi?id=818686#c11).\n"
         }
     ],
     "name": "nss"
