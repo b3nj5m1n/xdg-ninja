@@ -162,7 +162,7 @@ check_file() {
         else
             log WARN "$NAME" "$FILENAME" "$HELP"
         fi
-        if [ "$HELP" = true ]; then
+        if [ "$HELP" ]; then
             log HELP "$NAME" "$FILENAME" "$HELP"
         else
             log HELP "$NAME" "$FILENAME" "_No help available._"
