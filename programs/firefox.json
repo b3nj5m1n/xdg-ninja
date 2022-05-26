@@ -1,0 +1,10 @@
+{
+    "files": [
+        {
+            "path": "$HOME/.mozilla",
+            "movable": false,
+            "help": "Currently unsupported.\n\n_Relevant issue:_ https://bugzilla.mozilla.org/show_bug.cgi?id=259356\n"
+        }
+    ],
+    "name": "Firefox"
+}
