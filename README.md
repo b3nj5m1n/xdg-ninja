@@ -26,7 +26,7 @@ This will run every test in the default configuration.
 
 ### Optional
 
-- [glow](https://repology.org/project/glow/packages) for rendering markdown in the terminal ([bat](https://repology.org/project/bat-cat/packages) can be used as a fallback, but glows output is clearer and therefore recommended)
+- [glow](https://repology.org/project/glow/packages) for rendering markdown in the terminal ([bat](https://repology.org/project/bat-cat/packages), [pygmentize](https://repology.org/project/pygments/versions) or [highlight](https://repology.org/project/highlight/packages) can be used as fallback, but glow's output is clearer and therefore glow is recommended)
 - [cabal](https://repology.org/project/cabal/packages) for compiling the helper program for creating configurations
 
 ## Configuration
