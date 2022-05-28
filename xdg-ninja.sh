@@ -149,6 +149,7 @@ log() {
             decode_string "$HELP" | bat -pp --decorations=always --color=always --language markdown
         elif [ $USE_PYGMENTIZE = true ]; then
             decode_string "$HELP" | pygmentize -l markdown
+            printf "\n"
         elif [ $USE_HIGHLIGHT = true ]; then
             decode_string "$HELP" | highlight --out-format ansi --syntax markdown
         else
