@@ -98,8 +98,10 @@ check_if_file_exists() {
 }
 
 decode_string() {
-    printf "%s\n" "$1" | sed -e 's/\\n/\
-/g' -e 's/\\\"/\"/g' # Replace \n with literal newline and \" with "
+    printf "%s" "$1" | sed -e 's/\\n/\
+/g' -e 's/\\\"/\"/g' -e '$ s/\n*$/\
+\
+/' # Replace \n with literal newline and \" with ", normalize number of trailing newlines to 2
 }
 
 # Function to handle the formatting of output
