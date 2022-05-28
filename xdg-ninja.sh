@@ -1,16 +1,30 @@
 #!/usr/bin/env sh
 
+has_command() {
+    command -v "$1" >/dev/null 2>/dev/null
+    return $?
+}
+
 USE_GLOW=false
 USE_BAT=false
-if command -v glow >/dev/null 2>/dev/null; then
+USE_PYGMENTIZE=false
+USE_HIGHLIGHT=false
+if has_command glow; then
     USE_GLOW=true
-elif command -v bat >/dev/null 2>/dev/null; then
-    USE_BAT=true
-    printf "Glow not found, markdown rendering will be done by bat.\n"
-    printf "Install glow for easier reading & copy-paste.\n"
 else
-    printf "Glow or bat not found, markdown rendering not available.\n"
-    printf "Output will be raw markdown and might look weird.\n"
+    if has_command bat; then
+        USE_BAT=true
+        printf "Markdown rendering will be done by bat. (Glow is recommended)\n"
+    elif has_command pygmentize; then
+        printf "Markdown rendering will be done by pygmentize. (Glow is recommended)\n"
+        USE_PYGMENTIZE=true
+    elif has_command highlight; then
+        printf "Markdown rendering will be done by highlight. (Glow is recommended)\n"
+        USE_HIGHLIGHT=true
+    else
+        printf "Markdown rendering not available. (Glow is recommended)\n"
+        printf "Output will be raw markdown and might look weird.\n"
+    fi
     printf "Install glow for easier reading & copy-paste.\n"
 fi
 
@@ -135,6 +149,11 @@ log() {
             decode_string "$HELP" | glow -
         elif [ "$USE_BAT" = true ]; then
             decode_string "$HELP" | bat -pp --decorations=always --color=always --language markdown
+        elif [ $USE_PYGMENTIZE = true ]; then
+            decode_string "$HELP" | pygmentize -l markdown
+            printf "\n"
+        elif [ $USE_HIGHLIGHT = true ]; then
+            decode_string "$HELP" | highlight --out-format ansi --syntax markdown
         else
             decode_string "$HELP"
         fi
