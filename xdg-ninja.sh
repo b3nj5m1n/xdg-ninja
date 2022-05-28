@@ -14,15 +14,15 @@ if has_command glow; then
 else
     if has_command bat; then
         USE_BAT=true
-        printf "Glow not found, markdown rendering will be done by bat.\n"
+        printf "Markdown rendering will be done by bat. (Glow is recommended)\n"
     elif has_command pygmentize; then
-        printf "Nor glow, neither bat found, markdown rendering will be done by pygmentize.\n"
+        printf "Markdown rendering will be done by pygmentize. (Glow is recommended)\n"
         USE_PYGMENTIZE=true
     elif has_command highlight; then
-        printf "Nor glow, nor bat, neither pygmentize found, markdown rendering will be done by highlight.\n"
+        printf "Markdown rendering will be done by highlight. (Glow is recommended)\n"
         USE_HIGHLIGHT=true
     else
-        printf "Nor glow, nor bat, nor pygmentize, neither highlight found, markdown rendering not available.\n"
+        printf "Markdown rendering not available. (Glow is recommended)\n"
         printf "Output will be raw markdown and might look weird.\n"
     fi
     printf "Install glow for easier reading & copy-paste.\n"
