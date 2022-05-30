@@ -3,7 +3,7 @@
         {
             "path": "$HOME/.opam",
             "movable": true,
-            "help": "Export the following environment variables:\n\n```bash\nexport OPAMROOT=\"$XDG_DATA_HOME/opam\" \n```\n"
+            "help": "Export the following environment variables:\n\n```bash\nexport OPAMROOT=\"$XDG_DATA_HOME/opam\" \n```\nRun ```opam init``` to re-initialize it and check the results with ```opam env -v```."
         }
     ],
     "name": "opam"
