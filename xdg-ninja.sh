@@ -1,95 +1,17 @@
 #!/usr/bin/env sh
 
-has_command() {
-    command -v "$1" >/dev/null 2>/dev/null
-    return $?
-}
-
-USE_GLOW=false
-USE_BAT=false
-USE_PYGMENTIZE=false
-USE_HIGHLIGHT=false
-if has_command glow; then
-    USE_GLOW=true
-else
-    if has_command bat; then
-        USE_BAT=true
-        printf "Markdown rendering will be done by bat. (Glow is recommended)\n"
-    elif has_command pygmentize; then
-        printf "Markdown rendering will be done by pygmentize. (Glow is recommended)\n"
-        USE_PYGMENTIZE=true
-    elif has_command highlight; then
-        printf "Markdown rendering will be done by highlight. (Glow is recommended)\n"
-        USE_HIGHLIGHT=true
-    else
-        printf "Markdown rendering not available. (Glow is recommended)\n"
-        printf "Output will be raw markdown and might look weird.\n"
-    fi
-    printf "Install glow for easier reading & copy-paste.\n"
-fi
-
+# placeholder for PR/77#issuecomment-1146584127
 unalias -a
 
-HELPSTRING="""\
+has_command() {
+    command -v "$1" >/dev/null 2>/dev/null
+}
 
-
-    \033[37;45;1mxdg-ninja\033[0m
-
-    \033[1;3mCheck your \$HOME for unwanted files.\033[1;0m
-
-    ────────────────────────────────────
-
-    \033[3m--help\033[0m              \033[1mThis help menu\033[0m
-    \033[3m-h\033[0m
-
-    \033[3m--no-skip-ok\033[0m        \033[1mDisplay messages for all files checked (verbose)\033[0m
-    \033[3m-v\033[0m
-
-    \033[3m--skip-ok\033[0m           \033[1mDon't display anything for files that do not exist (default)\033[0m
-
-"""
-
-SKIP_OK=true
-for i in "$@"; do
-    if [ "$i" = "--help" ] || [ "$i" = "-h" ]; then
-        printf "%b" "$HELPSTRING"
-        exit
-    elif [ "$i" = "--skip-ok" ]; then
-        SKIP_OK=true
-    elif [ "$i" = "--no-skip-ok" ]; then
-        SKIP_OK=false
-    elif [ "$i" = "-v" ]; then
-        SKIP_OK=false
-    fi
-done
-
-if [ -z "${XDG_DATA_HOME}" ]; then
-    printf '\033[1;36m%s\033[1;0m\n' "The \$XDG_DATA_HOME environment variable is not set, make sure to add it to your shell's configuration before setting any of the other environment variables!"
-    printf "\033[1;36m    ⤷ \033[1mThe recommended value is: \033[1;3m\$HOME/.local/share\033[1;0m\n"
-fi
-if [ -z "${XDG_CONFIG_HOME}" ]; then
-    printf '\033[1;36m%s\033[1;0m\n' "The \$XDG_CONFIG_HOME environment variable is not set, make sure to add it to your shell's configuration before setting any of the other environment variables!"
-    printf "\033[1;36m    ⤷ \033[1mThe recommended value is: \033[1;3m\$HOME/.config\033[1;0m\n"
-fi
-if [ -z "${XDG_STATE_HOME}" ]; then
-    printf '\033[1;36m%s\033[1;0m\n' "The \$XDG_STATE_HOME environment variable is not set, make sure to add it to your shell's configuration before setting any of the other environment variables!"
-    printf "\033[1;36m    ⤷ \033[1mThe recommended value is: \033[1;3m\$HOME/.local/state\033[1;0m\n"
-fi
-if [ -z "${XDG_CACHE_HOME}" ]; then
-    printf '\033[1;36m%s\033[1;0m\n' "The \$XDG_CACHE_HOME environment variable is not set, make sure to add it to your shell's configuration before setting any of the other environment variables!"
-    printf "\033[1;36m    ⤷ \033[1mThe recommended value is: \033[1;3m\$HOME/.cache\033[1;0m\n"
-fi
-if [ -z "${XDG_RUNTIME_DIR}" ]; then
-    printf '\033[1;36m%s\033[1;0m\n' "The \$XDG_RUNTIME_DIR environment variable is not set, make sure to add it to your shell's configuration before setting any of the other environment variables!"
-    printf "\033[1;36m    ⤷ \033[1mThe recommended value is: \033[1;3m/run/user/\$UID\033[1;0m\n"
-fi
-
-if ! command -v jq >/dev/null 2>/dev/null; then
-    printf "jq is needed to run this script, but it wasn't found. Please install it to be able to use this script.\n"
-    exit
-fi
-
-printf "\n"
+# function to display message for a missing XDG variable, taking arguments as what is missing, and what should be there.
+xdgprint() {
+    printf '\033[0;37m%s \033[1;36m%s \033[0;37m%s\n' "The" "$1" "environment variable is not set, make sure to add it to your shell's configuration before setting any of the other environment variables!"
+    printf "\033[1;37m%s: \033[1;36m%s \033[0m\n\n" "	The recommended value is" "$2"
+}
 
 # Function to expand environment variables in string
 # https://stackoverflow.com/a/20316582/11110290
@@ -100,17 +22,14 @@ apply_shell_expansion() {
     eval "$command"
 }
 
-# Returns 0 if the path doesn't lead anywhere
-# Returns 1 if the path leads to something
+
 check_if_file_exists() {
     FILE_PATH=$(apply_shell_expansion "$1")
-    if [ -e "$FILE_PATH" ]; then
-        return 1
-    else
-        return 0
-    fi
+	# check if the file does NOT exist, return 1 if it does.
+	[ ! -e "$FILE_PATH" ]
 }
 
+# function to handle markdown characters for $HELP
 decode_string() {
     printf "%s" "$1" | sed -e 's/\\n/\
 /g' -e 's/\\\"/\"/g' -e '$ s/\n*$/\
@@ -125,93 +44,115 @@ log() {
     FILENAME="$3"
     HELP="$4"
 
+	# takes only the color argument, as the parameters are already set.
+	print() {
+		printf '[\033[1;%sm%s\033[1;0m]: \033[1;3m%s\033[1;0m\n' "$1" "$NAME" "$FILENAME"
+	}
+
     case "$MODE" in
-
-    ERR)
-        printf '[\033[1;31m%s\033[1;0m]: \033[1;3m%s\033[1;0m\n' "$NAME" "$FILENAME"
+		ERR) print '31' ;;
+		WARN) print '33' ;;
+		INFO) print '36' ;;
+		SUCS) [ "$SKIP_OK" = false ] && print '32' ;;
+		HELP)
+			case $MDRENDERER in
+				glow) decode_string "$HELP" | glow - ;;
+				bat) decode_string "$HELP" | bat -pp --decorations=always --color=always --language markdown ;;
+				pygmentize) decode_string "$HELP" | pygmentize -l markdown ;;
+				hightlight) decode_string "$HELP" | highlight --out-format ansi --syntax markdown ;;
+				*)
+					printf "\033[1;31m%s. %s\n" "Markdown rendering not available," "Output will be raw markdown."
+					decode_string "$HELP"
+				;;
+			esac
         ;;
-
-    WARN)
-        printf '[\033[1;33m%s\033[1;0m]: \033[1;3m%s\033[1;0m\n' "$NAME" "$FILENAME"
-        ;;
-
-    INFO)
-        printf '[\033[1;36m%s\033[1;0m]: \033[1;3m%s\033[1;0m\n' "$NAME" "$FILENAME"
-        ;;
-
-    SUCS)
-        [ "$SKIP_OK" = false ] &&
-            printf '[\033[1;32m%s\033[1;0m]: \033[1;3m%s\033[1;0m\n' "$NAME" "$FILENAME"
-        ;;
-
-    HELP)
-        if [ "$USE_GLOW" = true ]; then
-            decode_string "$HELP" | glow -
-        elif [ "$USE_BAT" = true ]; then
-            decode_string "$HELP" | bat -pp --decorations=always --color=always --language markdown
-        elif [ $USE_PYGMENTIZE = true ]; then
-            decode_string "$HELP" | pygmentize -l markdown
-            printf "\n"
-        elif [ $USE_HIGHLIGHT = true ]; then
-            decode_string "$HELP" | highlight --out-format ansi --syntax markdown
-        else
-            decode_string "$HELP"
-        fi
-        ;;
-
     esac
 }
 
-# Checks that the given file does not exist, otherwise outputs help
+# Checks that the given file does not exist, prints appropiate message for that file.
 check_file() {
     NAME="$1"
     FILENAME="$2"
     MOVABLE="$3"
     HELP="$4"
 
-    check_if_file_exists "$FILENAME"
+	logsc() {
+		log "$1" "$NAME" "$FILENAME" "${HELP:-$2}" # use 2nd argument if it exists, otherwise default $HELP
+	}
 
-    case $? in
-
-    0)
-        log SUCS "$NAME" "$FILENAME" "$HELP"
-        ;;
-
-    1)
-        if [ "$MOVABLE" = true ]; then
-            log ERR "$NAME" "$FILENAME" "$HELP"
-        else
-            log WARN "$NAME" "$FILENAME" "$HELP"
-        fi
-        if [ "$HELP" ]; then
-            log HELP "$NAME" "$FILENAME" "$HELP"
-        else
-            log HELP "$NAME" "$FILENAME" "_No help available._"
-        fi
-        ;;
-
-    esac
+	check_if_file_exists "$FILENAME" || {
+		# if file exists, check if it is movable, error if it is, otherwise warn
+		[ "$MOVABLE" = true ] && logsc ERR || logsc WARN
+		# if help exists, output it, otherwise display that it is not available.
+		[ "$HELP" ] && logsc HELP || logsc HELP "No help available."
+	} && logsc SUCS # if previous hadn't already matched, display success for $SKIP_OK
 }
 
 # Reads files from programs/, calls check_file on each file specified for each program
-do_check_programs() {
+check_programs() {
     while IFS="
 " read -r name; read -r filename; read -r movable; read -r help; do
         check_file "$name" "$filename" "$movable" "$help"
     done <<EOF
-$(jq 'inputs as $input | $input.files[] as $file | $input.name, $file.path, $file.movable, $file.help' "$(dirname "$0")"/programs/* | sed -e 's/^"//' -e 's/"$//')
+"$(jq 'inputs as $input | $input.files[] as $file | $input.name, $file.path, $file.movable, $file.help' "$(dirname "$0")"/programs/* | sed -e 's/^"//' -e 's/"$//')"
 EOF
 # sed is to trim quotes
 }
 
-check_programs() {
-    printf "\033[1;3mStarting to check your \033[1;36m\$HOME.\033[1;0m\n"
-    printf "\n"
-    do_check_programs
-    printf "\033[1;3mDone checking your \033[1;36m\$HOME.\033[1;0m\n"
-    printf "\n"
-    printf "\033[3mIf you have files in your \033[1;36m\$HOME\033[1;0m that shouldn't be there, but weren't recognised by xdg-ninja, please consider creating a configuration file for it and opening a pull request on github.\033[1;0m\n"
-    printf "\n"
+# variables
+SKIP_OK=true
+HELPSTRING="""\
+
+    \033[37;45;1mxdg-ninja\033[0m
+
+    \033[1;3mCheck your \$HOME for unwanted files.\033[1;0m
+
+    ────────────────────────────────────
+
+    \033[3m--help\033[0m              \033[1mThis help menu\033[0m
+    \033[3m-h\033[0m
+
+    \033[3m--no-skip-ok\033[0m        \033[1mDisplay messages for all files checked (verbose)\033[0m
+    \033[3m-v\033[0m
+
+    \033[3m--skip-ok\033[0m           \033[1mDon't display anything for files that do not exist (default)\033[0m
+    \033[3m-s\033[0m
+
+"""
+
+main() {
+	case "$1" in
+		-h|--help) printf "%b" "$HELPSTRING" && return 0 ;;
+		-s|--skip-ok) SKIP_OK=true ;;
+		-v|--no-skip-ok|--verbose) SKIP_OK=false ;;
+	esac
+	
+	# check for xdg varaibles
+	printf "\n"
+	[ -z "${XDG_DATA_HOME}" ] && xdgprint "\$XDG_DATA_HOME" "\$HOME/.local/share"
+	[ -z "${XDG_CONFIG_HOME}" ] && xdgprint "\$XDG_CONFIG_HOME" "\$HOME/.config"
+	[ -z "${XDG_STATE_HOME}" ] && xdgprint "\$XDG_STATE_HOME" "\$HOME/.local/state"
+	[ -z "${XDG_CACHE_HOME}" ] && xdgprint "\$XDG_CACHE_HOME" "\$HOME/.cache"
+	[ -z "${XDG_RUNTIME_DIR}" ] && xdgprint "\$XDG_RUNTIME_DIR" "/run/user/\$UID"
+	
+	# check if jq exists, if not, display message and exit
+	has_command jq || {
+		printf "\033[1;31m%s\033[0m\n\n" \
+		   "jq is needed to run this script, but it wasn't found. Please install it to be able to use this script."
+		exit 1
+	}
+
+	# loop for all available markdown renderers, stop looping when matched
+	for rend in glow bat pygmentize highlight; do
+		has_command "$rend" && MDRENDERER="$rend" && break
+	done
+
+    printf "\033[1m%s \033[1;36m%s.\033[0m\n\n" "Starting to check your" "\$HOME"
+    check_programs
+    printf "\033[1;39m%s \033[1;36m%s.\033[1;0m\n" "Done checking your" "\$HOME"
+    printf "\033[3m%s \033[1;36m%s \033[1;0m%s\033[0m\n\n" \
+		"If you have files in your" "\$HOME" \
+		"that shouldn't be there, but weren't recognised by xdg-ninja, please consider creating a configuration file for it and opening a pull request on github."
 }
 
-check_programs
+main "$@"
