@@ -1,0 +1,10 @@
+{
+    "files": [
+        {
+            "path": "$HOME/.lyrics",
+            "movable": false,
+            "help": "Currently unsupported. No information found.\n"
+        }
+    ],
+    "name": "lyrics"
+}

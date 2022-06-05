@@ -1,0 +1,15 @@
+{
+    "files": [
+        {
+            "path": "$HOME/.arduino15",
+            "movable": false,
+            "help": "Currently unsupported.\n\n_Relevant issue:_ https://github.com/arduino/Arduino/issues/3915\n"
+        },
+        {
+            "path": "$HOME/.arduino-create",
+            "movable": false,
+            "help": "Currently unsupported. No information found.\n"
+        }
+    ],
+    "name": "arduino"
+}
