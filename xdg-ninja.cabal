@@ -25,7 +25,7 @@ library
         base ^>=4.15.1.0,
         process ^>=1.6.13.2,
         text ^>=1.2.5.0,
-        aeson ^>=1.5.6.0,
+        aeson ^>=2.0.3.0,
         bytestring ^>=0.10.12.1,
         uuid ^>=1.3.15,
         entropy ^>=0.4.1.7,
@@ -34,7 +34,7 @@ library
         extra ^>=1.7.10,
         aeson-pretty ^>=0.8.9,
         text-replace ^>=0.1,
-        filepath ^>=1.4.2.2,
+        filepath ^>=1.4.2.1,
     hs-source-dirs:   lib
     default-language: Haskell2010
     exposed-modules: AddProgram, Program, Prompts, EditProgram, Output, PreviewProgram, Checks
@@ -53,7 +53,7 @@ executable xdgnj
     main-is:          xdgnj.hs
     build-depends:
         base ^>=4.15.1.0,
-        optparse-applicative ^>=0.17.0.0,
+        optparse-applicative ^>=0.16.1.0,
         xdg-ninja,
     hs-source-dirs:   src
     default-language: Haskell2010
