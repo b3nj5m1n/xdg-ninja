@@ -1,0 +1,10 @@
+{
+    "files": [
+        {
+            "path": "$HOME/.mujoco",
+            "movable": true,
+            "help": "Export the following environment variables:\n\n```bash\nexport MUJOCO_PY_MUJOCO_PATH=\"${XDG_SHARE_HOME}/mujoco/mujoco210\"\n```\naccording to https://github.com/openai/mujoco-py#install-mujoco\n"
+        }
+    ],
+    "name": "mujoco"
+}

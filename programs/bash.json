@@ -1,10 +1,40 @@
 {
-    "name": "bash",
     "files": [
         {
-            "path": "${HOME}/.bash_history",
+            "path": "$HOME/.bash_logout",
+            "movable": false,
+            "help": "Currently unsupported.\n\n_Relevant issue:_ https://savannah.gnu.org/support/?108134\n"
+        },
+        {
+            "path": "$HOME/.bash_login",
+            "movable": false,
+            "help": "Currently unsupported.\n\n_Relevant issue:_ https://savannah.gnu.org/support/?108134\n"
+        },
+        {
+            "path": "$HOME/.bash_profile",
+            "movable": false,
+            "help": "Currently unsupported.\n\n_Relevant issue:_ https://savannah.gnu.org/support/?108134\n"
+        },
+        {
+            "path": "$HOME/.bash_aliases",
+            "movable": false,
+            "help": "Currently unsupported.\n\n_Relevant issue:_ https://savannah.gnu.org/support/?108134\n"
+        },
+        {
+            "path": "$HOME/.bashrc",
+            "movable": false,
+            "help": "Currently unsupported.\n\n_Relevant issue:_ https://savannah.gnu.org/support/?108134\n"
+        },
+        {
+            "path": "$HOME/.oh-my-bash",
+            "movable": true,
+            "help": "Export the following environment variables:\n\n```bash\nexport OSH=\"${XDG_DATA_HOME}/oh-my-bash\"\n```\n"
+        },
+        {
+            "path": "$HOME/.bash_history",
             "movable": true,
             "help": "Export the following environment variables:\n\n```bash\nexport HISTFILE=\"${XDG_STATE_HOME}\"/bash/history\n```\n"
         }
-    ]
+    ],
+    "name": "bash"
 }

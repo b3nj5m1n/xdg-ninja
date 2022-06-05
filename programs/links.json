@@ -1,0 +1,10 @@
+{
+    "files": [
+        {
+            "path": "$HOME/.links",
+            "movable": false,
+            "help": "Currently unsupported. No information found.\n"
+        }
+    ],
+    "name": "links"
+}
