@@ -1,0 +1,10 @@
+{
+    "files": [
+        {
+            "help": "Supported since _a5562b1_.\n\nYou can move the file to _XDG_STATE_HOME/gnuplot_history_.\n",
+            "movable": true,
+            "path": "$HOME/.gnuplot_history"
+        }
+    ],
+    "name": "gnuplot"
+}

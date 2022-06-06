@@ -1,0 +1,10 @@
+{
+    "files": [
+        {
+            "help": "Currently unsupported.\n\n_Relevant issue:_ https://bugzilla.gnome.org/show_bug.cgi?id=166643\n",
+            "movable": false,
+            "path": "$HOME/.thumbnails"
+        }
+    ],
+    "name": "gimp"
+}

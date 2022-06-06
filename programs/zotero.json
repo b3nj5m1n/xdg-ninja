@@ -1,9 +1,14 @@
 {
     "files": [
         {
-            "path": "$HOME/Zotero",
+            "help": "You _may_ be able to solve this by aliasing zotero to use the _data-dir_ flag.\nBut officially, this feature is currently unsupported.\n\n_Relevant issue:_ https://github.com/zotero/zotero/issues/1203\n",
             "movable": false,
-            "help": "You _may_ be able to solve this by aliasing zotero to use the _data-dir_ flag.\n"
+            "path": "$HOME/Zotero"
+        },
+        {
+            "help": "Currently unsupported.\n\n_Relevant issue:_ https://github.com/zotero/zotero/issues/1203\n",
+            "movable": false,
+            "path": "$HOME/.zotero"
         }
     ],
     "name": "zotero"

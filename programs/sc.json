@@ -1,0 +1,10 @@
+{
+    "files": [
+        {
+            "help": "Currently unsupported. No information found.\n",
+            "movable": false,
+            "path": "$HOME/.sc_history"
+        }
+    ],
+    "name": "sc"
+}

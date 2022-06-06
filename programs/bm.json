@@ -1,0 +1,10 @@
+{
+    "files": [
+        {
+            "help": "Currently unsupported. Harcoded value.\n",
+            "movable": false,
+            "path": "$HOME/.sdirs"
+        }
+    ],
+    "name": "bm"
+}

@@ -1,0 +1,10 @@
+{
+    "files": [
+        {
+            "help": "Currently unsupported. Not enought information.\n",
+            "movable": false,
+            "path": "$HOME/.xscreensaver"
+        }
+    ],
+    "name": "xscreensaver"
+}

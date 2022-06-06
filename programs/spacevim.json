@@ -1,0 +1,15 @@
+{
+    "files": [
+        {
+            "help": "Currently unsupported.\n\n_Relevant doc:_ https://spacevim.org/quick-start-guide/\nThe configuration is installed through the install.sh script, so the location of the config might be hardcoded.\n",
+            "movable": false,
+            "path": "$HOME/.SpaceVim.d"
+        },
+        {
+            "help": "Currently unsupported.\n\n_Relevant doc:_ https://spacevim.org/quick-start-guide/\nThe configuration is installed through the install.sh script, so the location of the config might be hardcoded.\n",
+            "movable": false,
+            "path": "$HOME/.SpaceVim"
+        }
+    ],
+    "name": "spacevim"
+}

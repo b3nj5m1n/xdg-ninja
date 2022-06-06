@@ -1,0 +1,15 @@
+{
+    "files": [
+        {
+            "help": "Export the following environment variable:\n\n```bash\nexport RLWRAP_HOME=\"${XDG_STATE_HOME}/mathomatic/history\"\n```\nand run `rlwrap mathomatic -r`.\n",
+            "movable": true,
+            "path": "$HOME/.matho_history"
+        },
+        {
+            "help": "Currently unsupported. Won't fix.\n",
+            "movable": false,
+            "path": "$HOME/.mathomaticrc"
+        }
+    ],
+    "name": "mathomatic"
+}

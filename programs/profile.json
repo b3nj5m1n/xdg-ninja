@@ -1,0 +1,10 @@
+{
+    "files": [
+        {
+            "help": "There are shells and window managers that don't need this file and won't create it, depending on your config, this file might be deleted or moved.\n\nIf you do not know, please do not move this file as it could lead to errors.\n",
+            "movable": true,
+            "path": "$HOME/.profile"
+        }
+    ],
+    "name": "profile"
+}

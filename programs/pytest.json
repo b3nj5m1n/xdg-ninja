@@ -1,0 +1,10 @@
+{
+    "files": [
+        {
+            "help": "Currently unsupported.\n\n_Relevant issue:_ https://github.com/pytest-dev/pytest/issues/1089\n",
+            "movable": false,
+            "path": "$HOME/.pytest_cache"
+        }
+    ],
+    "name": "pytest"
+}

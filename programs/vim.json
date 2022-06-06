@@ -1,0 +1,20 @@
+{
+    "files": [
+        {
+            "help": "Since 7.3.1178 vim will search for ~/.vim/vimrc if ~/.vimrc is not found.\n\n\"$XDG_CONFIG_HOME\"/vim/vimrc\n```vim\nset runtimepath^=$XDG_CONFIG_HOME/vim\nset runtimepath+=$XDG_DATA_HOME/vim\nset runtimepath+=$XDG_CONFIG_HOME/vim/after\n\nset packpath^=$XDG_DATA_HOME/vim,$XDG_CONFIG_HOME/vim\nset packpath+=$XDG_CONFIG_HOME/vim/after,$XDG_DATA_HOME/vim/after\n\nlet g:netrw_home = $XDG_DATA_HOME.\"/vim\"\ncall mkdir($XDG_DATA_HOME.\"/vim/spell\", 'p')\n\nset backupdir=$XDG_STATE_HOME/vim/backup | call mkdir(&backupdir, 'p')\nset directory=$XDG_STATE_HOME/vim/swap   | call mkdir(&directory, 'p')\nset undodir=$XDG_STATE_HOME/vim/undo     | call mkdir(&undodir,   'p')\nset viewdir=$XDG_STATE_HOME/vim/view     | call mkdir(&viewdir,   'p')\n\nif !has('nvim') | set viminfofile=$XDG_STATE_HOME/vim/viminfo | endif\n```\n\n~/.profile\n```\nexport GVIMINIT='let $MYGVIMRC=\"$XDG_CONFIG_HOME/vim/gvimrc\" | source $MYGVIMRC'\nexport VIMINIT='let $MYVIMRC=\"$XDG_CONFIG_HOME/vim/vimrc\" | source $MYVIMRC'\n```\n[G]VIMINIT environment variable will also affect Neovim. If separate configs for Vim and Neovim are desired then the following will be a better choice:\n\n```\nexport GVIMINIT='let $MYGVIMRC = !has(\"nvim\") ? \"$XDG_CONFIG_HOME/vim/gvimrc\" : \"$XDG_CONFIG_HOME/nvim/init.gvim\" | so $MYGVIMRC'\nexport VIMINIT='let $MYVIMRC = !has(\"nvim\") ? \"$XDG_CONFIG_HOME/vim/vimrc\" : \"$XDG_CONFIG_HOME/nvim/init.vim\" | so $MYVIMRC'\n```\n\nAdditional information:\nhttps://blog.joren.ga/vim-xdg\nhttps://tlvince.com/vim-respect-xdg\n",
+            "movable": true,
+            "path": "$HOME/.vimrc"
+        },
+        {
+            "help": "See help for _.vimrc_\n",
+            "movable": true,
+            "path": "$HOME/.viminfo"
+        },
+        {
+            "help": "See help for _.vimrc_\n",
+            "movable": true,
+            "path": "$HOME/.vim"
+        }
+    ],
+    "name": "vim"
+}

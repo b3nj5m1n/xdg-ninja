@@ -1,0 +1,10 @@
+{
+    "files": [
+        {
+            "help": "Export the following environment variables:\n\n```bash\nexport KERAS_HOME=\"${XDG_STATE_HOME}/keras\"\n```\n\nThis looks untested however.\n_Relevant issue_: https://github.com/tensorflow/tensorflow/issues/38831\n",
+            "movable": true,
+            "path": "$HOME/.keras"
+        }
+    ],
+    "name": "python-tensorflow"
+}

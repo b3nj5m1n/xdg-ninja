@@ -1,0 +1,20 @@
+{
+    "files": [
+        {
+            "help": "Currently unsupported.\n\n_Relevant issue:_ https://github.com/universal-ctags/ctags/issues/89\n",
+            "movable": false,
+            "path": "$HOME/.ctags.d"
+        },
+        {
+            "help": "Currently unsupported.\n\n_Relevant issue:_ https://github.com/universal-ctags/ctags/issues/89\n",
+            "movable": false,
+            "path": "$HOME/.ctagsrc"
+        },
+        {
+            "help": "Currently unsupported.\n\n_Relevant issue:_ https://github.com/universal-ctags/ctags/issues/89\n",
+            "movable": false,
+            "path": "$HOME/.ctags"
+        }
+    ],
+    "name": "ctags"
+}
