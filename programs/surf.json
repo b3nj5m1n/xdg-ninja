@@ -1,7 +1,7 @@
 {
     "files": [
         {
-            "help": "Supported natively.\n\nYou can move the file to _XDG_CACHE_HOME/surf by editing the config.h file of the source code.\n",
+            "help": "Supported natively.\n\nYou can move the file to _XDG_CACHE_HOME/surf_ by editing the config.h file of the source code.\n",
             "movable": true,
             "path": "$HOME/.surf"
         }

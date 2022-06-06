@@ -1,7 +1,7 @@
 {
     "files": [
         {
-            "help": "This is probably a custom directory on your system.\n\nYou can move the file to _XDG_DATA_HOME/themes.\n",
+            "help": "This is probably a custom directory on your system.\n\nYou can move the file to _XDG_DATA_HOME/themes_.\n",
             "movable": true,
             "path": "$HOME/.themes"
         }
