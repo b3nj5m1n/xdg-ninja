@@ -1,13 +1,13 @@
 {
     "files": [
         {
-            "help": "Currently unsupported. No information found.\n",
-            "movable": false,
+            "help": "Supported since _4.0_ according to https://bugzilla.redhat.com/show_bug.cgi?id=845607\n\nYou can move the file to _XDG_CONFIG_HOME/pulse_\n",
+            "movable": true,
             "path": "$HOME/.pulse"
         },
         {
-            "help": "Currently unsupported. No information found.\n",
-            "movable": false,
+            "help": "Supported since _4.0_ according to https://bugzilla.redhat.com/show_bug.cgi?id=845607\n\nYou can move this file to _XDG_CONFIG_HOME/pulse/cookie_\n",
+            "movable": true,
             "path": "$HOME/.pulse-cookie"
         }
     ],
