@@ -3,7 +3,7 @@
         {
             "path": "$HOME/.cabal",
             "movable": true,
-            "help": "Export the following environment variables:\n\n```bash\nexport CABAL_CONFIG=\"$XDG_CONFIG_HOME\"/cabal/config\nexport CABAL_DIR=\"$XDG_DATA_HOME\"/cabal\n```\n"
+            "help": "Export the following environment variables:\n\n```bash\nexport CABAL_CONFIG=\"$XDG_CONFIG_HOME\"/cabal/config\nexport CABAL_DIR=\"$XDG_DATA_HOME\"/cabal\n```\n\n_cabal_ might also require you to edit your new _XDG_CONFIG_HOME/cabal/config_ file by replacing all mentions of _~/.cabal_ with either _XDG_CONFIG_HOME/cabal_ or _XDG_DATA_HOME/cabal_."
         }
     ],
     "name": "cabal"
