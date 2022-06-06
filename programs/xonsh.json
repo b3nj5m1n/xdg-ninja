@@ -1,8 +1,8 @@
 {
     "files": [
         {
-            "help": "Currently unsupported. No information found.\n",
-            "movable": false,
+            "help": "Alias xonsh to use a custom configuration location:\n\n```bash\nalias xonsh=\"xonsh --rc $XDG_CONFIG_HOME/xonsh/xonshrc\"\n```\n",
+            "movable": true,
             "path": "$HOME/.xonshrc"
         },
         {
