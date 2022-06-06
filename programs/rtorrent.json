@@ -1,0 +1,10 @@
+{
+    "files": [
+        {
+            "help": "Supported since _6a8d332_.\n\nYou can move the file to _XDG_CONFIG_HOME/rtorrent/rtorrent.rc.\n",
+            "movable": true,
+            "path": "$HOME/.rtorrent.rc"
+        }
+    ],
+    "name": "rtorrent"
+}

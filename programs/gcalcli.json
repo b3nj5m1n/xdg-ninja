@@ -1,0 +1,15 @@
+{
+    "files": [
+        {
+            "help": "Currently unsupported. No information found.\n",
+            "movable": false,
+            "path": "$HOME/.galcli_oauth"
+        },
+        {
+            "help": "Currently unsupported. No information found.\n",
+            "movable": false,
+            "path": "$HOME/.gcalcli_cache"
+        }
+    ],
+    "name": "gcalcli"
+}

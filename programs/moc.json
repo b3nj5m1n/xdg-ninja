@@ -1,0 +1,10 @@
+{
+    "files": [
+        {
+            "help": "Alias mocp to use a custom configuration location:\n\n```bash\nalias mocp=mocp -M \"$XDG_CONFIG_HOME\"/moc\n```\nor\n```bash\nalias mocp=mocp -O MOCDir=\"$XDG_CONFIG_HOME\"/moc\n```\n",
+            "movable": true,
+            "path": "$HOME/.moc"
+        }
+    ],
+    "name": "moc"
+}

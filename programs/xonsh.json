@@ -1,0 +1,15 @@
+{
+    "files": [
+        {
+            "help": "Currently unsupported. No information found.\n",
+            "movable": false,
+            "path": "$HOME/.xonshrc"
+        },
+        {
+            "help": "Supported natively.\n\nYou can move the file to _XDG_DATA_HOME/oh-my-xonsh by adding the following to your xonshrc file:\n\n```python\n# set where oh-my-xonsh lives\nif not 'OMX_HOME' in ${...}:\n    $OMX_HOME = p\"~/.oh-my-xonsh\"\n\n# clone omx if needed\nif not pf\"{$OMX_HOME}\".exists():\n    git clone --depth=1 https://github.com/oh-my-xonsh/oh-my-xonsh $OMX_HOME\n\n# source oh-my-xonsh to give you the `omx` object\nsource $OMX_HOME/oh-my-xonsh.xsh\n```\n",
+            "movable": true,
+            "path": "$HOME/.oh-my-xonsh"
+        }
+    ],
+    "name": "xonsh"
+}

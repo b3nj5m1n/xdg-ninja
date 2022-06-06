@@ -1,0 +1,10 @@
+{
+    "files": [
+        {
+            "help": "Moving .gsutil appears to be possible but untested.\n\n_RELEVANT ISSUE_: https://github.com/GoogleCloudPlatform/gsutil/issues/991\n",
+            "movable": true,
+            "path": "$HOME/.gsutil"
+        }
+    ],
+    "name": "google-cloud-sdk"
+}

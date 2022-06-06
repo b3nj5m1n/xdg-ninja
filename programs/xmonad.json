@@ -1,0 +1,10 @@
+{
+    "files": [
+        {
+            "help": "Supported since _40fc10b_.\n\nAccording to XDG:\n\"\nAll of these must exist, otherwise it gives up and falls back to ~/.xmonad/ for each:\n```\nXDG_CACHE_HOME/xmonad\nXDG_CONFIG_HOME/xmonad\nXDG_DATA_HOME/xmonad\n```\nAlternatively, it always respects XMONAD_CACHE_DIR, XMONAD_CONFIG_DIR, and XMONAD_DATA_DIR.\n\"\n",
+            "movable": true,
+            "path": "$HOME/.xmonad"
+        }
+    ],
+    "name": "xmonad"
+}

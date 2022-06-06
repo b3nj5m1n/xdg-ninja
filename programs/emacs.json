@@ -1,0 +1,20 @@
+{
+    "files": [
+        {
+            "help": "Supported since _27.1_.\n\nYou can move the file to _XDG_CONFIG_HOME/emacs/init.el.\n",
+            "movable": true,
+            "path": "$HOME/.emacs.d/init.el"
+        },
+        {
+            "help": "Currently unsupported.\n\n_Relevant issue:_ \"Legacy paths have precedence over XDG paths. Emacs will never create XDG_CONFIG_HOME/emacs/.\" according to XDG.\n\n",
+            "movable": false,
+            "path": "$HOME/.emacs.d"
+        },
+        {
+            "help": "Looks to be supported natively. However, according to XDG \"Legacy paths have precedence over XDG paths. Emacs will never create `XDG_CONFIG_HOME/emacs/\".\nMove at your own risk.\n\nYou can move the file to _XDG_CONFIG_HOME/emacs.\n",
+            "movable": true,
+            "path": "$HOME/.emacs"
+        }
+    ],
+    "name": "emacs"
+}

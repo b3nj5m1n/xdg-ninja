@@ -1,0 +1,10 @@
+{
+    "files": [
+        {
+            "help": "Currently unsupported.\n\n_Relevant issue:_ https://gitlab.com/arandr/arandr/-/issues/45\n",
+            "movable": false,
+            "path": "$HOME/.screenlayout"
+        }
+    ],
+    "name": "arandr"
+}

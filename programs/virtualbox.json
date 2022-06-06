@@ -1,0 +1,10 @@
+{
+    "files": [
+        {
+            "help": "Supported since _4.3_.\n\nYou can move the file to _XDG_DATA_HOME/virtualbox.\n\nGo in the settings of the GUI and change the default location.\n\nBe carefull, that might break existing images and changing the path to their respective files is not straight forward.\n",
+            "movable": true,
+            "path": "$HOME/.VirtualBox"
+        }
+    ],
+    "name": "virtualbox"
+}

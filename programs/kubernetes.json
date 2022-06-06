@@ -1,0 +1,10 @@
+{
+    "files": [
+        {
+            "help": "Currently unsupported.\n\n_Relevant issue:_ https://github.com/kubernetes/kubernetes/issues/56402\n",
+            "movable": false,
+            "path": "$HOME/.kube"
+        }
+    ],
+    "name": "kubernetes"
+}

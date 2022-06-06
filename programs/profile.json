@@ -1,0 +1,10 @@
+{
+    "files": [
+        {
+            "help": "Currently unsupported. Won't fix.\n",
+            "movable": false,
+            "path": "$HOME/.profile"
+        }
+    ],
+    "name": "profile"
+}

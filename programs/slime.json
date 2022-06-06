@@ -1,0 +1,10 @@
+{
+    "files": [
+        {
+            "help": "Currently unsupported.\n\n_Relevant issue:_ https://github.com/slime/slime/issues/610\n",
+            "movable": false,
+            "path": "$HOME/.slime"
+        }
+    ],
+    "name": "slime"
+}

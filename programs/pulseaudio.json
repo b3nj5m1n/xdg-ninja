@@ -1,0 +1,15 @@
+{
+    "files": [
+        {
+            "help": "Currently unsupported. No information found.\n",
+            "movable": false,
+            "path": "$HOME/.pulse"
+        },
+        {
+            "help": "Currently unsupported. No information found.\n",
+            "movable": false,
+            "path": "$HOME/.pulse-cookie"
+        }
+    ],
+    "name": "pulseaudio"
+}
