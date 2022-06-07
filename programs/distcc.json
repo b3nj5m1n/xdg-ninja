@@ -1,0 +1,10 @@
+{
+    "files": [
+        {
+            "path": "$HOME/.distcc",
+            "movable": true,
+            "help": "Export the following environment variables:\n\n```bash\nexport DISTCC_DIR=\"$XDG_CONFIG_HOME\"/distcc\n```\n"
+        }
+    ],
+    "name": "distcc"
+}

@@ -1,0 +1,10 @@
+{
+    "files": [
+        {
+            "path": "$HOME/.vesta",
+            "movable": false,
+            "help": "Currently unsupported. No information found. \n"
+        }
+    ],
+    "name": "tigervnc"
+}

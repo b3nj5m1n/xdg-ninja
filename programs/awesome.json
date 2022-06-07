@@ -1,0 +1,10 @@
+{
+    "files": [
+        {
+            "path": "$HOME/.awesome-errors",
+            "movable": true,
+            "help": "Update /etc/X11/Sessions/awesome and edit the line like \n\n```\nfor errfile in \"$HOME/.awesome-errors\" \"${TMPDIR-/tmp}/awesome-$USER\" \"/tmp/awesome-$USER\"\n```\n\nto read\n\n```\nfor errfile in $XDG_CACHE_HOME/awesome/errors\n\n```\n\n"
+        }
+    ],
+    "name": "awesome"
+}
