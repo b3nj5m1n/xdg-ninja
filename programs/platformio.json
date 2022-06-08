@@ -1,0 +1,10 @@
+{
+    "files": [
+        {
+            "path": "$HOME/.platformio",
+            "movable": true,
+            "help": "Export the following environment variables:\n\n```bash\nexport PLATFORMIO_CORE_DIR=\"$XDG_DATA_HOME\"/platformio\n```\n"
+        }
+    ],
+    "name": "platformio"
+}
