@@ -27,7 +27,6 @@ This will run every test in the default configuration.
 ### Optional
 
 - [glow](https://repology.org/project/glow/packages) for rendering markdown in the terminal ([bat](https://repology.org/project/bat-cat/packages), [pygmentize](https://repology.org/project/pygments/versions) or [highlight](https://repology.org/project/highlight/packages) can be used as fallback, but glow's output is clearer and therefore glow is recommended)
-- [cabal](https://repology.org/project/cabal/packages) for compiling the helper program for creating configurations
 
 ## Configuration
 
@@ -43,12 +42,18 @@ Files in this directory can have any name, but using the name of the program is 
 
 ### Automatically Generating Configuration
 
-You need _haskell_ and _cabal_ installed. (To be clear, this is just for a tool that will help you automatically generate the config files, you still only need your shell to run the tests)
+You can download the _xdgnj_ executable from the releases page. Alternatively you can build it from scratch using _cabal_, _stack_, or the provided docker image in _build/_. (To be clear, this is just a tool that will help you automatically generate the config files, you still only need your shell to run the tests)
 
-Run the following command:
+Available commands:
 ```sh
-cabal run xdgnj add
+xdgnj add # Adds a new configuration
+xdgnj prev programs/FILE.json # Preview the configuration for a program
+xdgnj run # Mostly the same as running the shell script
 ```
+
+#### Building from scratch
+
+You can use `cabal build`, `stack build`, or the provided dockerfile in _build/_.
 
 ### Manually
 
