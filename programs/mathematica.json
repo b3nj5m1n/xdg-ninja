@@ -4,6 +4,11 @@
             "path": "$HOME/.Mathematica",
             "movable": true,
             "help": "Export the following environment variables:\n\n```bash\nexport MATHEMATICA_USERBASE=\"$XDG_CONFIG_HOME\"/mathematica\n```\n"
+        },
+        {
+            "path": "$HOME/.Wolfram",
+            "movable": false,
+            "help": "Currently unsupported. No information found.\n"
         }
     ],
     "name": "mathematica"

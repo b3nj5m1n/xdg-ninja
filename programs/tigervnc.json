@@ -1,0 +1,10 @@
+{
+    "files": [
+        {
+            "path": "$HOME/.vnc",
+            "movable": false,
+            "help": "Currently unsupported.\n\n_Relevant issue:_ https://github.com/TigerVNC/tigervnc/issues/1195\n"
+        }
+    ],
+    "name": "tigervnc"
+}

@@ -1,0 +1,9 @@
+{
+	"files": [
+		{
+			"path": "$HOME/.zoom",
+			"movable": true,
+			"help": "Unrecommended: setting the following variable moves the contents of .zoom but the directory itself always gets created. Moreover, it breaks some functionalities eg. being able to start a meeting:\n\n```bash\nexport SSB_HOME=\"$XDG_DATA_HOME\"/zoom\n```\n"
+		}
+	]
+}
