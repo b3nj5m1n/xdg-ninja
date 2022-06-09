@@ -76,6 +76,7 @@ help() {
         ${ANSI_BEGIN}${ANSI_ITALLIC}${ANSI_END}-v${ANSI_BEGIN}${ANSI_CLEAR}${ANSI_END}
 
         ${ANSI_BEGIN}${ANSI_ITALLIC}${ANSI_END}--skip-ok${ANSI_BEGIN}${ANSI_CLEAR}${ANSI_END}           ${ANSI_BEGIN}${ANSI_BOLD}${ANSI_END}Don't display anything for files that do not exist (default)${ANSI_BEGIN}${ANSI_CLEAR}${ANSI_END}
+        ${ANSI_BEGIN}${ANSI_ITALLIC}${ANSI_END}--skip-warn${ANSI_BEGIN}${ANSI_CLEAR}${ANSI_END}         ${ANSI_BEGIN}${ANSI_BOLD}${ANSI_END}Don't display anything for files that cannot be fixed.${ANSI_BEGIN}${ANSI_CLEAR}${ANSI_END}
         ${ANSI_BEGIN}${ANSI_ITALLIC}${ANSI_END}--color=WHEN${ANSI_BEGIN}${ANSI_CLEAR}${ANSI_END}        ${ANSI_BEGIN}${ANSI_BOLD}${ANSI_END}Color the output always, never, or auto (default)${ANSI_BEGIN}${ANSI_CLEAR}${ANSI_END}
         ${ANSI_BEGIN}${ANSI_ITALLIC}${ANSI_END}--decoder=DECODER${ANSI_BEGIN}${ANSI_CLEAR}${ANSI_END}   ${ANSI_BEGIN}${ANSI_BOLD}${ANSI_END}Manually set the decoder used for markdown.${ANSI_BEGIN}${ANSI_CLEAR}${ANSI_END}
         ${ANSI_BEGIN}${ANSI_ITALLIC}${ANSI_END}--json${ANSI_BEGIN}${ANSI_CLEAR}${ANSI_END}              ${ANSI_BEGIN}${ANSI_BOLD}${ANSI_END}Output json${ANSI_BEGIN}${ANSI_CLEAR}${ANSI_END}
@@ -86,6 +87,7 @@ exit
 }
 
 SKIP_OK=true
+SKIP_WARN=false
 COLOR=auto
 JSON=false
 for i in "$@"; do
@@ -98,6 +100,9 @@ for i in "$@"; do
             ;;
         --skip-ok)
             SKIP_OK=true
+            ;;
+        --skip-warn)
+            SKIP_WARN=true
             ;;
         --no-skip-ok|-v)
             SKIP_OK=false
@@ -207,7 +212,7 @@ check_file() {
     FILENAME="$2"
     MOVABLE="$3"
     HELP="$4"
-	JSON_FILE="$5"
+    JSON_FILE="$5"
 
     check_if_file_exists "$FILENAME"
 
@@ -219,10 +224,12 @@ check_file() {
         ;;
 
     1)
-        [ "$JSON" = true ] && cat "$JSON_FILE" && return
         if [ "$MOVABLE" = true ]; then
+            [ "$JSON" = true ] && cat "$JSON_FILE" && return
             log ERR "$NAME" "$FILENAME" "$HELP"
         else
+            [ "$SKIP_WARN" = true ] && return
+            [ "$JSON" = true ] && cat "$JSON_FILE" && return
             log WARN "$NAME" "$FILENAME" "$HELP"
         fi
         if [ "$HELP" ]; then
