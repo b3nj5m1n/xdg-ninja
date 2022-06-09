@@ -1,0 +1,10 @@
+{
+    "files": [
+        {
+            "path": "$HOME/revive.toml",
+            "movable": true,
+            "help": "Providing path to config file via _--config_ (_-config_) flag is supported.\n\nMove config file to _\"$XDG_CONFIG_HOME\"/revive/revive.toml_ and place this shell script with name \"revive\" to some directory in _\"$PATH\"_, preceding _/usr/bin/_ (I suggest _\"$HOME\"/.local/bin/_ or _/usr/local/bin/_):\n```sh\n#!/usr/bin/env sh\n\nCONFIG_FILE_PATH=\"$XDG_CONFIG_HOME\"/revive/revive.toml\n\nconfig_arg_set() {\n    for arg in \"$@\"\n    do\n        case \"$arg\" in\n            -config*|--config*)\n                return 0\n                ;;\n            --)\n                return 1\n        esac\n    done\n    return 1\n}\n\nif config_arg_set \"$@\"\nthen\n    /usr/bin/revive \"$@\"\nelse\n    /usr/bin/revive --config=\"$CONFIG_FILE_PATH\" \"$@\"\nfi\n```"
+        }
+    ],
+    "name": "revive"
+}
