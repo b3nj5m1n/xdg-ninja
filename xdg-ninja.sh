@@ -5,83 +5,126 @@ has_command() {
     return $?
 }
 
-USE_GLOW=false
-USE_BAT=false
-USE_PYGMENTIZE=false
-USE_HIGHLIGHT=false
-if has_command glow; then
-    USE_GLOW=true
-else
-    if has_command bat; then
-        USE_BAT=true
-        printf "Markdown rendering will be done by bat. (Glow is recommended)\n"
-    elif has_command pygmentize; then
-        printf "Markdown rendering will be done by pygmentize. (Glow is recommended)\n"
-        USE_PYGMENTIZE=true
-    elif has_command highlight; then
-        printf "Markdown rendering will be done by highlight. (Glow is recommended)\n"
-        USE_HIGHLIGHT=true
+check_decoder() {
+    USE_GLOW=false
+    USE_BAT=false
+    USE_PYGMENTIZE=false
+    USE_HIGHLIGHT=false
+    if has_command glow; then
+        USE_GLOW=true
     else
-        printf "Markdown rendering not available. (Glow is recommended)\n"
-        printf "Output will be raw markdown and might look weird.\n"
+        if has_command bat; then
+            USE_BAT=true
+            printf "Markdown rendering will be done by bat. (Glow is recommended)\n"
+        elif has_command pygmentize; then
+            printf "Markdown rendering will be done by pygmentize. (Glow is recommended)\n"
+            USE_PYGMENTIZE=true
+        elif has_command highlight; then
+            printf "Markdown rendering will be done by highlight. (Glow is recommended)\n"
+            USE_HIGHLIGHT=true
+        else
+            printf "Markdown rendering not available. (Glow is recommended)\n"
+            printf "Output will be raw markdown and might look weird.\n"
+        fi
+        printf "Install glow for easier reading & copy-paste.\n"
     fi
-    printf "Install glow for easier reading & copy-paste.\n"
-fi
+}
 
 unalias -a
 
-HELPSTRING="""\
+#Set ansi color code variables
+set_colors() {
+    case $COLOR in
+        never)
+            return
+        ;;
+        auto)
+            [ -t 1 ] || return # No color if used in a pipe
+            [ $NO_COLOR ] && return # https://no-color.org/
+        ;;
+    esac
+    check_decoder
+    ANSI_BEGIN="\033["
+    ANSI_END="m"
+
+    ANSI_CLEAR=";0"
+    ANSI_BOLD=";1"
+    ANSI_ITALLIC=";3"
+
+    ANSI_RED=";31"
+    ANSI_GREEN=";32"
+    ANSI_YELLOW=";33"
+    ANSI_CYAN=";36"
+    ANSI_WHITE=";37"
+
+    ANSI_BACKGROUND_PURPLE=";45"
+}
+
+help() {
+    set_colors
+    HELPSTRING="""\
 
 
-    \033[37;45;1mxdg-ninja\033[0m
+        ${ANSI_BEGIN}${ANSI_BOLD}${ANSI_WHITE}${ANSI_BACKGROUND_PURPLE}${ANSI_END}xdg-ninja${ANSI_BEGIN}${ANSI_CLEAR}${ANSI_END}
 
-    \033[1;3mCheck your \$HOME for unwanted files.\033[1;0m
+        ${ANSI_BEGIN}${ANSI_BOLD}${ANSI_ITALLIC}${ANSI_END}Check your \$HOME for unwanted files.${ANSI_BEGIN}${ANSI_BOLD}${ANSI_CLEAR}${ANSI_END}
 
-    ────────────────────────────────────
+        ────────────────────────────────────
 
-    \033[3m--help\033[0m              \033[1mThis help menu\033[0m
-    \033[3m-h\033[0m
+        ${ANSI_BEGIN}${ANSI_ITALLIC}${ANSI_END}--help${ANSI_BEGIN}${ANSI_CLEAR}${ANSI_END}              ${ANSI_BEGIN}${ANSI_BOLD}${ANSI_END}This help menu${ANSI_BEGIN}${ANSI_CLEAR}${ANSI_END}
+        ${ANSI_BEGIN}${ANSI_ITALLIC}${ANSI_END}-h${ANSI_BEGIN}${ANSI_CLEAR}${ANSI_END}
 
-    \033[3m--no-skip-ok\033[0m        \033[1mDisplay messages for all files checked (verbose)\033[0m
-    \033[3m-v\033[0m
+        ${ANSI_BEGIN}${ANSI_ITALLIC}${ANSI_END}--no-skip-ok${ANSI_BEGIN}${ANSI_CLEAR}${ANSI_END}        ${ANSI_BEGIN}${ANSI_BOLD}${ANSI_END}Display messages for all files checked (verbose)${ANSI_BEGIN}${ANSI_CLEAR}${ANSI_END}
+        ${ANSI_BEGIN}${ANSI_ITALLIC}${ANSI_END}-v${ANSI_BEGIN}${ANSI_CLEAR}${ANSI_END}
 
-    \033[3m--skip-ok\033[0m           \033[1mDon't display anything for files that do not exist (default)\033[0m
+        ${ANSI_BEGIN}${ANSI_ITALLIC}${ANSI_END}--skip-ok${ANSI_BEGIN}${ANSI_CLEAR}${ANSI_END}           ${ANSI_BEGIN}${ANSI_BOLD}${ANSI_END}Don't display anything for files that do not exist (default)${ANSI_BEGIN}${ANSI_CLEAR}${ANSI_END}
+        ${ANSI_BEGIN}${ANSI_ITALLIC}${ANSI_END}--color=WHEN${ANSI_BEGIN}${ANSI_CLEAR}${ANSI_END}        ${ANSI_BEGIN}${ANSI_BOLD}${ANSI_END}Color the output always, never, or auto (default)${ANSI_BEGIN}${ANSI_CLEAR}${ANSI_END}
 
 """
+printf "%b" "$HELPSTRING"
+exit
+}
 
 SKIP_OK=true
+COLOR=auto
 for i in "$@"; do
-    if [ "$i" = "--help" ] || [ "$i" = "-h" ]; then
-        printf "%b" "$HELPSTRING"
-        exit
-    elif [ "$i" = "--skip-ok" ]; then
-        SKIP_OK=true
-    elif [ "$i" = "--no-skip-ok" ]; then
-        SKIP_OK=false
-    elif [ "$i" = "-v" ]; then
-        SKIP_OK=false
-    fi
+    case $i in
+        --color=*)
+            COLOR="${i#*=}"
+            ;;
+        --help|-h)
+            help
+            ;;
+        --skip-ok)
+            SKIP_OK=true
+            ;;
+        --no-skip-ok|-v)
+            SKIP_OK=false
+            ;;
+    esac
 done
 
+set_colors
+
 if [ -z "${XDG_DATA_HOME}" ]; then
-    printf '\033[1;36m%s\033[1;0m\n' "The \$XDG_DATA_HOME environment variable is not set, make sure to add it to your shell's configuration before setting any of the other environment variables!"
-    printf "\033[1;36m    ⤷ \033[1mThe recommended value is: \033[1;3m\$HOME/.local/share\033[1;0m\n"
+    printf "${ANSI_BEGIN}${ANSI_BOLD}${ANSI_CYAN}${ANSI_END}%s${ANSI_BEGIN}${ANSI_BOLD}${ANSI_CLEAR}${ANSI_END}\n" "The \$XDG_DATA_HOME environment variable is not set, make sure to add it to your shell's configuration before setting any of the other environment variables!"
+    printf "${ANSI_BEGIN}${ANSI_BOLD}${ANSI_CYAN}${ANSI_END}    ⤷ ${ANSI_BEGIN}${ANSI_BOLD}${ANSI_END}The recommended value is: ${ANSI_BEGIN}${ANSI_BOLD}${ANSI_ITALLIC}${ANSI_END}\$HOME/.local/share${ANSI_BEGIN}${ANSI_BOLD}${ANSI_CLEAR}${ANSI_END}\n"
 fi
 if [ -z "${XDG_CONFIG_HOME}" ]; then
-    printf '\033[1;36m%s\033[1;0m\n' "The \$XDG_CONFIG_HOME environment variable is not set, make sure to add it to your shell's configuration before setting any of the other environment variables!"
-    printf "\033[1;36m    ⤷ \033[1mThe recommended value is: \033[1;3m\$HOME/.config\033[1;0m\n"
+    printf "${ANSI_BEGIN}${ANSI_BOLD}${ANSI_CYAN}${ANSI_END}%s${ANSI_BEGIN}${ANSI_BOLD}${ANSI_CLEAR}${ANSI_END}\n" "The \$XDG_CONFIG_HOME environment variable is not set, make sure to add it to your shell's configuration before setting any of the other environment variables!"
+    printf "${ANSI_BEGIN}${ANSI_BOLD}${ANSI_CYAN}${ANSI_END}    ⤷ ${ANSI_BEGIN}${ANSI_BOLD}${ANSI_END}The recommended value is: ${ANSI_BEGIN}${ANSI_BOLD}${ANSI_ITALLIC}${ANSI_END}\$HOME/.config${ANSI_BEGIN}${ANSI_BOLD}${ANSI_CLEAR}${ANSI_END}\n"
 fi
 if [ -z "${XDG_STATE_HOME}" ]; then
-    printf '\033[1;36m%s\033[1;0m\n' "The \$XDG_STATE_HOME environment variable is not set, make sure to add it to your shell's configuration before setting any of the other environment variables!"
-    printf "\033[1;36m    ⤷ \033[1mThe recommended value is: \033[1;3m\$HOME/.local/state\033[1;0m\n"
+    printf '${ANSI_BEGIN}${ANSI_BOLD}${ANSI_CYAN}${ANSI_END}%s${ANSI_BEGIN}${ANSI_BOLD}${ANSI_CLEAR}${ANSI_END}\n' "The \$XDG_STATE_HOME environment variable is not set, make sure to add it to your shell's configuration before setting any of the other environment variables!"
+    printf "${ANSI_BEGIN}${ANSI_BOLD}${ANSI_CYAN}${ANSI_END}    ⤷ ${ANSI_BEGIN}${ANSI_BOLD}${ANSI_END}The recommended value is: ${ANSI_BEGIN}${ANSI_BOLD}${ANSI_ITALLIC}${ANSI_END}\$HOME/.local/state${ANSI_BEGIN}${ANSI_BOLD}${ANSI_CLEAR}${ANSI_END}\n"
 fi
 if [ -z "${XDG_CACHE_HOME}" ]; then
-    printf '\033[1;36m%s\033[1;0m\n' "The \$XDG_CACHE_HOME environment variable is not set, make sure to add it to your shell's configuration before setting any of the other environment variables!"
-    printf "\033[1;36m    ⤷ \033[1mThe recommended value is: \033[1;3m\$HOME/.cache\033[1;0m\n"
+    printf '${ANSI_BEGIN}${ANSI_BOLD}${ANSI_CYAN}${ANSI_END}%s${ANSI_BEGIN}${ANSI_BOLD}${ANSI_CLEAR}${ANSI_END}\n' "The \$XDG_CACHE_HOME environment variable is not set, make sure to add it to your shell's configuration before setting any of the other environment variables!"
+    printf "${ANSI_BEGIN}${ANSI_BOLD}${ANSI_CYAN}${ANSI_END}    ⤷ ${ANSI_BEGIN}${ANSI_BOLD}${ANSI_END}The recommended value is: ${ANSI_BEGIN}${ANSI_BOLD}${ANSI_ITALLIC}${ANSI_END}\$HOME/.cache${ANSI_BEGIN}${ANSI_BOLD}${ANSI_CLEAR}${ANSI_END}\n"
 fi
 if [ -z "${XDG_RUNTIME_DIR}" ]; then
-    printf '\033[1;36m%s\033[1;0m\n' "The \$XDG_RUNTIME_DIR environment variable is not set, make sure to add it to your shell's configuration before setting any of the other environment variables!"
-    printf "\033[1;36m    ⤷ \033[1mThe recommended value is: \033[1;3m/run/user/\$UID\033[1;0m\n"
+    printf '${ANSI_BEGIN}${ANSI_BOLD}${ANSI_CYAN}${ANSI_END}%s${ANSI_BEGIN}${ANSI_BOLD}${ANSI_CLEAR}${ANSI_END}\n' "The \$XDG_RUNTIME_DIR environment variable is not set, make sure to add it to your shell's configuration before setting any of the other environment variables!"
+    printf "${ANSI_BEGIN}${ANSI_BOLD}${ANSI_CYAN}${ANSI_END}    ⤷ ${ANSI_BEGIN}${ANSI_BOLD}${ANSI_END}The recommended value is: ${ANSI_BEGIN}${ANSI_BOLD}${ANSI_ITALLIC}${ANSI_END}/run/user/\$UID${ANSI_BEGIN}${ANSI_BOLD}${ANSI_CLEAR}${ANSI_END}\n"
 fi
 
 if ! command -v jq >/dev/null 2>/dev/null; then
@@ -128,20 +171,20 @@ log() {
     case "$MODE" in
 
     ERR)
-        printf '[\033[1;31m%s\033[1;0m]: \033[1;3m%s\033[1;0m\n' "$NAME" "$FILENAME"
+        printf "[${ANSI_BEGIN}${ANSI_BOLD}${ANSI_RED}${ANSI_END}%s${ANSI_BEGIN}${ANSI_BOLD}${ANSI_CLEAR}${ANSI_END}]: ${ANSI_BEGIN}${ANSI_BOLD}${ANSI_ITALLIC}${ANSI_END}%s${ANSI_BEGIN}${ANSI_BOLD}${ANSI_CLEAR}${ANSI_END}\n" "$NAME" "$FILENAME"
         ;;
 
     WARN)
-        printf '[\033[1;33m%s\033[1;0m]: \033[1;3m%s\033[1;0m\n' "$NAME" "$FILENAME"
+        printf "[${ANSI_BEGIN}${ANSI_BOLD}${ANSI_YELLOW}${ANSI_END}%s${ANSI_BEGIN}${ANSI_BOLD}${ANSI_CLEAR}${ANSI_END}]: ${ANSI_BEGIN}${ANSI_BOLD}${ANSI_ITALLIC}${ANSI_END}%s${ANSI_BEGIN}${ANSI_BOLD}${ANSI_CLEAR}${ANSI_END}\n" "$NAME" "$FILENAME"
         ;;
 
     INFO)
-        printf '[\033[1;36m%s\033[1;0m]: \033[1;3m%s\033[1;0m\n' "$NAME" "$FILENAME"
+        printf "[${ANSI_BEGIN}${ANSI_BOLD}${ANSI_CYAN}${ANSI_END}%s${ANSI_BEGIN}${ANSI_BOLD}${ANSI_CLEAR}${ANSI_END}]: ${ANSI_BEGIN}${ANSI_BOLD}${ANSI_ITALLIC}${ANSI_END}%s${ANSI_BEGIN}${ANSI_BOLD}${ANSI_CLEAR}${ANSI_END}\n" "$NAME" "$FILENAME"
         ;;
 
     SUCS)
         [ "$SKIP_OK" = false ] &&
-            printf '[\033[1;32m%s\033[1;0m]: \033[1;3m%s\033[1;0m\n' "$NAME" "$FILENAME"
+            printf "[${ANSI_BEGIN}${ANSI_BOLD}${ANSI_GREEN}${ANSI_END}%s${ANSI_BEGIN}${ANSI_BOLD}${ANSI_CLEAR}${ANSI_END}]: ${ANSI_BEGIN}${ANSI_BOLD}${ANSI_ITALLIC}${ANSI_END}%s${ANSI_BEGIN}${ANSI_BOLD}${ANSI_CLEAR}${ANSI_END}\n" "$NAME" "$FILENAME"
         ;;
 
     HELP)
@@ -205,12 +248,12 @@ EOF
 }
 
 check_programs() {
-    printf "\033[1;3mStarting to check your \033[1;36m\$HOME.\033[1;0m\n"
+    printf "${ANSI_BEGIN}${ANSI_BOLD}${ANSI_ITALLIC}${ANSI_END}Starting to check your ${ANSI_BEGIN}${ANSI_BOLD}${ANSI_CYAN}${ANSI_END}\$HOME.${ANSI_BEGIN}${ANSI_BOLD}${ANSI_CLEAR}${ANSI_END}\n"
     printf "\n"
     do_check_programs
-    printf "\033[1;3mDone checking your \033[1;36m\$HOME.\033[1;0m\n"
+    printf "${ANSI_BEGIN}${ANSI_BOLD}${ANSI_ITALLIC}${ANSI_END}Done checking your ${ANSI_BEGIN}${ANSI_BOLD}${ANSI_CYAN}${ANSI_END}\$HOME.${ANSI_BEGIN}${ANSI_BOLD}${ANSI_CLEAR}${ANSI_END}\n"
     printf "\n"
-    printf "\033[3mIf you have files in your \033[1;36m\$HOME\033[1;0m that shouldn't be there, but weren't recognised by xdg-ninja, please consider creating a configuration file for it and opening a pull request on github.\033[1;0m\n"
+    printf "${ANSI_BEGIN}${ANSI_ITALLIC}${ANSI_END}If you have files in your ${ANSI_BEGIN}${ANSI_BOLD}${ANSI_CYAN}${ANSI_END}\$HOME${ANSI_BEGIN}${ANSI_BOLD}${ANSI_CLEAR}${ANSI_END} that shouldn't be there, but weren't recognised by xdg-ninja, please consider creating a configuration file for it and opening a pull request on github.${ANSI_BEGIN}${ANSI_BOLD}${ANSI_CLEAR}${ANSI_END}\n"
     printf "\n"
 }
 
