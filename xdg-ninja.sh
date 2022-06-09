@@ -78,6 +78,7 @@ help() {
         ${ANSI_BEGIN}${ANSI_ITALLIC}${ANSI_END}--skip-ok${ANSI_BEGIN}${ANSI_CLEAR}${ANSI_END}           ${ANSI_BEGIN}${ANSI_BOLD}${ANSI_END}Don't display anything for files that do not exist (default)${ANSI_BEGIN}${ANSI_CLEAR}${ANSI_END}
         ${ANSI_BEGIN}${ANSI_ITALLIC}${ANSI_END}--color=WHEN${ANSI_BEGIN}${ANSI_CLEAR}${ANSI_END}        ${ANSI_BEGIN}${ANSI_BOLD}${ANSI_END}Color the output always, never, or auto (default)${ANSI_BEGIN}${ANSI_CLEAR}${ANSI_END}
         ${ANSI_BEGIN}${ANSI_ITALLIC}${ANSI_END}--decoder=DECODER${ANSI_BEGIN}${ANSI_CLEAR}${ANSI_END}   ${ANSI_BEGIN}${ANSI_BOLD}${ANSI_END}Manually set the decoder used for markdown.${ANSI_BEGIN}${ANSI_CLEAR}${ANSI_END}
+        ${ANSI_BEGIN}${ANSI_ITALLIC}${ANSI_END}--json${ANSI_BEGIN}${ANSI_CLEAR}${ANSI_END}              ${ANSI_BEGIN}${ANSI_BOLD}${ANSI_END}Output json${ANSI_BEGIN}${ANSI_CLEAR}${ANSI_END}
 
 """
 printf "%b" "$HELPSTRING"
@@ -86,6 +87,7 @@ exit
 
 SKIP_OK=true
 COLOR=auto
+JSON=false
 for i in "$@"; do
     case $i in
         --color=*)
@@ -102,6 +104,9 @@ for i in "$@"; do
             ;;
         --decoder=*)
             DECODER="${i#*=}"
+            ;;
+        --json)
+            JSON=true
             ;;
     esac
 done
@@ -202,16 +207,19 @@ check_file() {
     FILENAME="$2"
     MOVABLE="$3"
     HELP="$4"
+	JSON_FILE="$5"
 
     check_if_file_exists "$FILENAME"
 
     case $? in
 
     0)
+        [ "$SKIP_OK" = false ] && [ "$JSON" = true ] && cat "$JSON_FILE" && return
         log SUCS "$NAME" "$FILENAME" "$HELP"
         ;;
 
     1)
+        [ "$JSON" = true ] && cat "$JSON_FILE" && return
         if [ "$MOVABLE" = true ]; then
             log ERR "$NAME" "$FILENAME" "$HELP"
         else
@@ -230,10 +238,10 @@ check_file() {
 # Reads files from programs/, calls check_file on each file specified for each program
 do_check_programs() {
     while IFS="
-" read -r name; read -r filename; read -r movable; read -r help; do
-        check_file "$name" "$filename" "$movable" "$help"
+" read -r name; read -r filename; read -r movable; read -r help; read -r json_file;  do
+        check_file "$name" "$filename" "$movable" "$help" "$json_file"
     done <<EOF
-$(jq 'inputs as $input | $input.files[] as $file | $input.name, $file.path, $file.movable, $file.help' "$(dirname "$0")"/programs/* | sed -e 's/^"//' -e 's/"$//')
+$(jq 'inputs as $input | $input.files[] as $file | $input.name, $file.path, $file.movable, $file.help, input_filename' "$(dirname "$0")"/programs/* | sed -e 's/^"//' -e 's/"$//')
 EOF
 # sed is to trim quotes
 }
