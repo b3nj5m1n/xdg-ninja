@@ -6,5 +6,5 @@
 			"movable": true,
 			"help": "Supported\n\nThe file ${HOME}/.pandoc can be moved to ${XDG_DATA_HOME}/pandoc.\n"
 		}
-	],
+	]
 }
