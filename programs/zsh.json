@@ -27,7 +27,7 @@
         },
         {
             "path": "$HOME/.zshenv",
-            "movable": true,
+            "movable": false,
             "help": "You can remove this file and instead use _/etc/zsh/zshenv_.\n\n_Note: this requires sudo privileges._\n"
         },
         {
