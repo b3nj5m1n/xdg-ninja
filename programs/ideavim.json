@@ -1,0 +1,10 @@
+{
+    "name": "ideavim",
+    "files": [
+        {
+            "path": "$HOME/.ideavimrc",
+            "movable": true,
+            "help": "Supported since version 0.55. You can simply move the file to _XDG_CONFIG_HOME/ideavim/ideavimrc_.\n"
+        }
+    ]
+}
