@@ -33,11 +33,13 @@ set_colors() {
     case $COLOR in
         never)
             DECODER="cat"
+            JQ_COLOR_VAR="-M"
             return
         ;;
         auto)
             if [ ! -t 1 ] || [ $NO_COLOR ];then # Check if used in a pipe or if the NO_COLOR env variable is set.
                 DECODER="cat" 
+                JQ_COLOR_VAR="-M"
                 return
             fi
         ;;
@@ -69,17 +71,17 @@ help() {
 
         ────────────────────────────────────
 
-        ${ANSI_BEGIN}${ANSI_ITALLIC}${ANSI_END}--help${ANSI_BEGIN}${ANSI_CLEAR}${ANSI_END}              ${ANSI_BEGIN}${ANSI_BOLD}${ANSI_END}This help menu${ANSI_BEGIN}${ANSI_CLEAR}${ANSI_END}
+        ${ANSI_BEGIN}${ANSI_ITALLIC}${ANSI_END}--help${ANSI_BEGIN}${ANSI_CLEAR}${ANSI_END}               ${ANSI_BEGIN}${ANSI_BOLD}${ANSI_END}This help menu${ANSI_BEGIN}${ANSI_CLEAR}${ANSI_END}
         ${ANSI_BEGIN}${ANSI_ITALLIC}${ANSI_END}-h${ANSI_BEGIN}${ANSI_CLEAR}${ANSI_END}
 
-        ${ANSI_BEGIN}${ANSI_ITALLIC}${ANSI_END}--no-skip-ok${ANSI_BEGIN}${ANSI_CLEAR}${ANSI_END}        ${ANSI_BEGIN}${ANSI_BOLD}${ANSI_END}Display messages for all files checked (verbose)${ANSI_BEGIN}${ANSI_CLEAR}${ANSI_END}
+        ${ANSI_BEGIN}${ANSI_ITALLIC}${ANSI_END}--no-skip-ok${ANSI_BEGIN}${ANSI_CLEAR}${ANSI_END}         ${ANSI_BEGIN}${ANSI_BOLD}${ANSI_END}Display messages for all files checked (verbose)${ANSI_BEGIN}${ANSI_CLEAR}${ANSI_END}
         ${ANSI_BEGIN}${ANSI_ITALLIC}${ANSI_END}-v${ANSI_BEGIN}${ANSI_CLEAR}${ANSI_END}
 
-        ${ANSI_BEGIN}${ANSI_ITALLIC}${ANSI_END}--skip-ok${ANSI_BEGIN}${ANSI_CLEAR}${ANSI_END}           ${ANSI_BEGIN}${ANSI_BOLD}${ANSI_END}Don't display anything for files that do not exist (default)${ANSI_BEGIN}${ANSI_CLEAR}${ANSI_END}
-        ${ANSI_BEGIN}${ANSI_ITALLIC}${ANSI_END}--skip-warn${ANSI_BEGIN}${ANSI_CLEAR}${ANSI_END}         ${ANSI_BEGIN}${ANSI_BOLD}${ANSI_END}Don't display anything for files that cannot be fixed.${ANSI_BEGIN}${ANSI_CLEAR}${ANSI_END}
-        ${ANSI_BEGIN}${ANSI_ITALLIC}${ANSI_END}--color=WHEN${ANSI_BEGIN}${ANSI_CLEAR}${ANSI_END}        ${ANSI_BEGIN}${ANSI_BOLD}${ANSI_END}Color the output always, never, or auto (default)${ANSI_BEGIN}${ANSI_CLEAR}${ANSI_END}
-        ${ANSI_BEGIN}${ANSI_ITALLIC}${ANSI_END}--decoder=DECODER${ANSI_BEGIN}${ANSI_CLEAR}${ANSI_END}   ${ANSI_BEGIN}${ANSI_BOLD}${ANSI_END}Manually set the decoder used for markdown.${ANSI_BEGIN}${ANSI_CLEAR}${ANSI_END}
-        ${ANSI_BEGIN}${ANSI_ITALLIC}${ANSI_END}--json${ANSI_BEGIN}${ANSI_CLEAR}${ANSI_END}              ${ANSI_BEGIN}${ANSI_BOLD}${ANSI_END}Output json${ANSI_BEGIN}${ANSI_CLEAR}${ANSI_END}
+        ${ANSI_BEGIN}${ANSI_ITALLIC}${ANSI_END}--skip-ok${ANSI_BEGIN}${ANSI_CLEAR}${ANSI_END}            ${ANSI_BEGIN}${ANSI_BOLD}${ANSI_END}Don't display anything for files that do not exist (default)${ANSI_BEGIN}${ANSI_CLEAR}${ANSI_END}
+        ${ANSI_BEGIN}${ANSI_ITALLIC}${ANSI_END}--skip-warn${ANSI_BEGIN}${ANSI_CLEAR}${ANSI_END}          ${ANSI_BEGIN}${ANSI_BOLD}${ANSI_END}Don't display anything for files that cannot be fixed.${ANSI_BEGIN}${ANSI_CLEAR}${ANSI_END}
+        ${ANSI_BEGIN}${ANSI_ITALLIC}${ANSI_END}--color=WHEN${ANSI_BEGIN}${ANSI_CLEAR}${ANSI_END}         ${ANSI_BEGIN}${ANSI_BOLD}${ANSI_END}Color the output always, never, or auto (default)${ANSI_BEGIN}${ANSI_CLEAR}${ANSI_END}
+        ${ANSI_BEGIN}${ANSI_ITALLIC}${ANSI_END}--decoder=DECODER${ANSI_BEGIN}${ANSI_CLEAR}${ANSI_END}    ${ANSI_BEGIN}${ANSI_BOLD}${ANSI_END}Manually set the decoder used for markdown.${ANSI_BEGIN}${ANSI_CLEAR}${ANSI_END}
+        ${ANSI_BEGIN}${ANSI_ITALLIC}${ANSI_END}--output-style=STYLE${ANSI_BEGIN}${ANSI_CLEAR}${ANSI_END} ${ANSI_BEGIN}${ANSI_BOLD}${ANSI_END}Style of ouptut, either normal (defualt) or json${ANSI_BEGIN}${ANSI_CLEAR}${ANSI_END}
 
 """
 printf "%b" "$HELPSTRING"
@@ -89,7 +91,7 @@ exit
 SKIP_OK=true
 SKIP_WARN=false
 COLOR=auto
-JSON=false
+OUTPUT_STYLE=normal
 EXIT_STATUS=0
 for i in "$@"; do
     case $i in
@@ -111,8 +113,8 @@ for i in "$@"; do
         --decoder=*)
             DECODER="${i#*=}"
             ;;
-        --json)
-            JSON=true
+        --output-style=*)
+            OUTPUT_STYLE="${i#*=}"
             ;;
     esac
 done
@@ -136,6 +138,7 @@ if [ -z "${XDG_CACHE_HOME}" ]; then
     printf "${ANSI_BEGIN}${ANSI_BOLD}${ANSI_CYAN}${ANSI_END}    ⤷ ${ANSI_BEGIN}${ANSI_BOLD}${ANSI_END}The recommended value is: ${ANSI_BEGIN}${ANSI_BOLD}${ANSI_ITALLIC}${ANSI_END}\$HOME/.cache${ANSI_BEGIN}${ANSI_BOLD}${ANSI_CLEAR}${ANSI_END}\n"
 fi
 if [ -z "${XDG_RUNTIME_DIR}" ]; then
+    XDG_RUNTIME_DIR=/tmp/
     printf '${ANSI_BEGIN}${ANSI_BOLD}${ANSI_CYAN}${ANSI_END}%s${ANSI_BEGIN}${ANSI_BOLD}${ANSI_CLEAR}${ANSI_END}\n' "The \$XDG_RUNTIME_DIR environment variable is not set, make sure to add it to your shell's configuration before setting any of the other environment variables!"
     printf "${ANSI_BEGIN}${ANSI_BOLD}${ANSI_CYAN}${ANSI_END}    ⤷ ${ANSI_BEGIN}${ANSI_BOLD}${ANSI_END}The recommended value is: ${ANSI_BEGIN}${ANSI_BOLD}${ANSI_ITALLIC}${ANSI_END}/run/user/\$UID${ANSI_BEGIN}${ANSI_BOLD}${ANSI_CLEAR}${ANSI_END}\n"
 fi
@@ -220,18 +223,18 @@ check_file() {
     case $? in
 
     0)
-        [ "$SKIP_OK" = false ] && [ "$JSON" = true ] && cat "$JSON_FILE" && return
+        [ "$SKIP_OK" = false ] && [ "$OUTPUT_STYLE" = "json" ] && cat "$JSON_FILE" && return
         log SUCS "$NAME" "$FILENAME" "$HELP"
         ;;
 
     1)
         if [ "$MOVABLE" = true ]; then
             EXIT_STATUS=$(expr $EXIT_STATUS + 1)
-            [ "$JSON" = true ] && cat "$JSON_FILE" && return
+            [ "$OUTPUT_STYLE" = "json" ] && cat "$JSON_FILE" > "$XDG_RUNTIME_DIR"/xdg-ninja"$NAME".json && return
             log ERR "$NAME" "$FILENAME" "$HELP"
         else
             [ "$SKIP_WARN" = true ] && return
-            [ "$JSON" = true ] && cat "$JSON_FILE" && return
+            [ "$OUTPUT_STYLE" = "json" ] && cat "$JSON_FILE" > "$XDG_RUNTIME_DIR"/xdg-ninja/"$NAME".json && return
             log WARN "$NAME" "$FILENAME" "$HELP"
         fi
         if [ "$HELP" ]; then
@@ -246,12 +249,14 @@ check_file() {
 
 # Reads files from programs/, calls check_file on each file specified for each program
 do_check_programs() {
+    [ "$OUTPUT_STYLE" = "json" ] && mkdir "$XDG_RUNTIME_DIR"/xdg-ninja/
     while IFS="
 " read -r name; read -r filename; read -r movable; read -r help; read -r json_file;  do
         check_file "$name" "$filename" "$movable" "$help" "$json_file"
     done <<EOF
 $(jq 'inputs as $input | $input.files[] as $file | $input.name, $file.path, $file.movable, $file.help, input_filename' "$(dirname "$0")"/programs/* | sed -e 's/^"//' -e 's/"$//')
 EOF
+    [ "$OUTPUT_STYLE" = "json" ] && jq $JQ_COLOR_VAR -s . "$XDG_RUNTIME_DIR"/xdg-ninja/* && rm -rf "$XDG_RUNTIME_DIR/xdg-ninja"
 # sed is to trim quotes
 }
 
