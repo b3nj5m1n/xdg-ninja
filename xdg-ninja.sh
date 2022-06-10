@@ -16,27 +16,24 @@ set_colors() {
             return
         ;;
         auto)
-            if [ ! -t 1 ] || [ $NO_COLOR ];then # Check if used in a pipe or if the NO_COLOR env variable is set.
+            if [ ! -t 1 ] || [ "$NO_COLOR" ];then # Check if used in a pipe or if the NO_COLOR env variable is set.
                 DECODER="cat" 
                 JQ_COLOR_VAR="-M"
                 return
             fi
         ;;
     esac
-    ANSI_BEGIN="\033["
-    ANSI_END="m"
 
-    ANSI_CLEAR=";0"
-    ANSI_BOLD=";1"
-    ANSI_ITALLIC=";3"
-
-    ANSI_RED=";31"
-    ANSI_GREEN=";32"
-    ANSI_YELLOW=";33"
-    ANSI_CYAN=";36"
-    ANSI_WHITE=";37"
-
-    ANSI_BACKGROUND_PURPLE=";45"
+    ANSI_CLEAR="\033[;0m"
+    ANSI_BOLD="\033[;1m"
+    ANSI_ITALIC="\033[;3m"
+    ANSI_BOLD_CLEAR="\033[;1;0m"
+    ANSI_BOLD_CYAN="\033[;1;37m"
+    ANSI_BOLD_GREEN="\033[;1;32m"
+    ANSI_BOLD_ITALIC="\033[;1;3m"
+    ANSI_BOLD_RED="\033[;1;31m"
+    ANSI_BOLD_WHITE_BACKGROUND_PURPLE="\033[;1;37;45m"
+    ANSI_BOLD_YELLOW="\033[;1;33m"
 }
 
 help() {
@@ -44,28 +41,30 @@ help() {
     HELPSTRING="""\
 
 
-        ${ANSI_BEGIN}${ANSI_BOLD}${ANSI_WHITE}${ANSI_BACKGROUND_PURPLE}${ANSI_END}xdg-ninja${ANSI_BEGIN}${ANSI_CLEAR}${ANSI_END}
+        ${ANSI_BOLD_WHITE_BACKGROUND_PURPLE}xdg-ninja${ANSI_CLEAR}
 
-        ${ANSI_BEGIN}${ANSI_BOLD}${ANSI_ITALLIC}${ANSI_END}Check your \$HOME for unwanted files.${ANSI_BEGIN}${ANSI_BOLD}${ANSI_CLEAR}${ANSI_END}
+        ${ANSI_BOLD_ITALIC}Check your \$HOME for unwanted files.${ANSI_BOLD_CLEAR}
 
         ────────────────────────────────────
 
-        ${ANSI_BEGIN}${ANSI_ITALLIC}${ANSI_END}--help${ANSI_BEGIN}${ANSI_CLEAR}${ANSI_END}               ${ANSI_BEGIN}${ANSI_BOLD}${ANSI_END}This help menu${ANSI_BEGIN}${ANSI_CLEAR}${ANSI_END}
-        ${ANSI_BEGIN}${ANSI_ITALLIC}${ANSI_END}-h${ANSI_BEGIN}${ANSI_CLEAR}${ANSI_END}
+        ${ANSI_ITALIC}--help${ANSI_CLEAR}               ${ANSI_BOLD}This help menu${ANSI_CLEAR}
+        ${ANSI_ITALIC}-h${ANSI_CLEAR}
 
-        ${ANSI_BEGIN}${ANSI_ITALLIC}${ANSI_END}--no-skip-ok${ANSI_BEGIN}${ANSI_CLEAR}${ANSI_END}         ${ANSI_BEGIN}${ANSI_BOLD}${ANSI_END}Display messages for all files checked (verbose)${ANSI_BEGIN}${ANSI_CLEAR}${ANSI_END}
-        ${ANSI_BEGIN}${ANSI_ITALLIC}${ANSI_END}-v${ANSI_BEGIN}${ANSI_CLEAR}${ANSI_END}
+        ${ANSI_ITALIC}--skip-ok${ANSI_CLEAR}            ${ANSI_BOLD}Don't display anything for files that do not exist (default)${ANSI_CLEAR}
+        ${ANSI_ITALIC}--skip-warn${ANSI_CLEAR}          ${ANSI_BOLD}Don't display anything for files that cannot be fixed.${ANSI_CLEAR}
+        ${ANSI_ITALIC}--no-skip-ok${ANSI_CLEAR}         ${ANSI_BOLD}Display messages for all files checked${ANSI_CLEAR}
+        ${ANSI_ITALIC}--no-skip-warn${ANSI_CLEAR}       ${ANSI_BOLD}Don't display anything for files that cannot be fixed.${ANSI_CLEAR}
+        ${ANSI_ITALIC}--color=WHEN${ANSI_CLEAR}         ${ANSI_BOLD}Color the output always, never, or auto (default)${ANSI_CLEAR}
+        ${ANSI_ITALIC}--decoder=DECODER${ANSI_CLEAR}    ${ANSI_BOLD}Manually set the decoder used for markdown.${ANSI_CLEAR}
+        ${ANSI_ITALIC}--output-style=STYLE${ANSI_CLEAR} ${ANSI_BOLD}Style of ouptut, either normal (defualt) or json${ANSI_CLEAR}
 
-        ${ANSI_BEGIN}${ANSI_ITALLIC}${ANSI_END}--skip-ok${ANSI_BEGIN}${ANSI_CLEAR}${ANSI_END}            ${ANSI_BEGIN}${ANSI_BOLD}${ANSI_END}Don't display anything for files that do not exist (default)${ANSI_BEGIN}${ANSI_CLEAR}${ANSI_END}
-        ${ANSI_BEGIN}${ANSI_ITALLIC}${ANSI_END}--skip-warn${ANSI_BEGIN}${ANSI_CLEAR}${ANSI_END}          ${ANSI_BEGIN}${ANSI_BOLD}${ANSI_END}Don't display anything for files that cannot be fixed.${ANSI_BEGIN}${ANSI_CLEAR}${ANSI_END}
-        ${ANSI_BEGIN}${ANSI_ITALLIC}${ANSI_END}--color=WHEN${ANSI_BEGIN}${ANSI_CLEAR}${ANSI_END}         ${ANSI_BEGIN}${ANSI_BOLD}${ANSI_END}Color the output always, never, or auto (default)${ANSI_BEGIN}${ANSI_CLEAR}${ANSI_END}
-        ${ANSI_BEGIN}${ANSI_ITALLIC}${ANSI_END}--decoder=DECODER${ANSI_BEGIN}${ANSI_CLEAR}${ANSI_END}    ${ANSI_BEGIN}${ANSI_BOLD}${ANSI_END}Manually set the decoder used for markdown.${ANSI_BEGIN}${ANSI_CLEAR}${ANSI_END}
-        ${ANSI_BEGIN}${ANSI_ITALLIC}${ANSI_END}--output-style=STYLE${ANSI_BEGIN}${ANSI_CLEAR}${ANSI_END} ${ANSI_BEGIN}${ANSI_BOLD}${ANSI_END}Style of ouptut, either normal (defualt) or json${ANSI_BEGIN}${ANSI_CLEAR}${ANSI_END}
+        ${ANSI_ITALIC}--quiet${ANSI_CLEAR}              ${ANSI_BOLD}Causes program to run quietely${ANSI_CLEAR}
+        ${ANSI_ITALIC}-q${ANSI_CLEAR}
 
-        ${ANSI_BEGIN}${ANSI_ITALLIC}${ANSI_END}--quiet${ANSI_BEGIN}${ANSI_CLEAR}${ANSI_END}               ${ANSI_BEGIN}${ANSI_BOLD}${ANSI_END}Causes program to run quietely${ANSI_BEGIN}${ANSI_CLEAR}${ANSI_END}
-        ${ANSI_BEGIN}${ANSI_ITALLIC}${ANSI_END}-q${ANSI_BEGIN}${ANSI_CLEAR}${ANSI_END}
+        ${ANSI_ITALIC}--loud${ANSI_CLEAR}               ${ANSI_BOLD}Causes program to not run quietely${ANSI_CLEAR}
 
-        ${ANSI_BEGIN}${ANSI_ITALLIC}${ANSI_END}--loud${ANSI_BEGIN}${ANSI_CLEAR}${ANSI_END}               ${ANSI_BEGIN}${ANSI_BOLD}${ANSI_END}Causes program to not run quietely${ANSI_BEGIN}${ANSI_CLEAR}${ANSI_END}
+        ${ANSI_ITALIC}--verbose${ANSI_CLEAR}            ${ANSI_BOLD}Combines --no-skip-warn and --no-skip-ok${ANSI_CLEAR}
+        ${ANSI_ITALIC}-v${ANSI_CLEAR}
 
 """
 printf "%b" "$HELPSTRING"
@@ -93,8 +92,15 @@ for i in "$@"; do
         --skip-warn)
             SKIP_WARN=true
             ;;
-        --no-skip-ok|-v)
+        --no-skip-warn)
+            SKIP_WARN=false
+            ;;
+        --no-skip-ok)
             SKIP_OK=false
+            ;;
+        --verbose|-v)
+            SKIP_OK=false
+            SKIP_WARN=false
             ;;
         --decoder=*)
             DECODER="${i#*=}"
@@ -138,25 +144,25 @@ set_colors
 [ $HELP = "true" ] && help
 
 if [ -z "${XDG_DATA_HOME}" ]; then
-    printf "${ANSI_BEGIN}${ANSI_BOLD}${ANSI_CYAN}${ANSI_END}%s${ANSI_BEGIN}${ANSI_BOLD}${ANSI_CLEAR}${ANSI_END}\n" "The \$XDG_DATA_HOME environment variable is not set, make sure to add it to your shell's configuration before setting any of the other environment variables!"
-    printf "${ANSI_BEGIN}${ANSI_BOLD}${ANSI_CYAN}${ANSI_END}    ⤷ ${ANSI_BEGIN}${ANSI_BOLD}${ANSI_END}The recommended value is: ${ANSI_BEGIN}${ANSI_BOLD}${ANSI_ITALLIC}${ANSI_END}\$HOME/.local/share${ANSI_BEGIN}${ANSI_BOLD}${ANSI_CLEAR}${ANSI_END}\n"
+    printf "${ANSI_BOLD_CYAN}%s${ANSI_BOLD_CLEAR}\n" "The \$XDG_DATA_HOME environment variable is not set, make sure to add it to your shell's configuration before setting any of the other environment variables!"
+    printf "${ANSI_BOLD_CYAN}    ⤷ ${ANSI_BOLD}The recommended value is: ${ANSI_BOLD_ITALIC}\$HOME/.local/share${ANSI_BOLD_CLEAR}\n"
 fi
 if [ -z "${XDG_CONFIG_HOME}" ]; then
-    loudprintf "${ANSI_BEGIN}${ANSI_BOLD}${ANSI_CYAN}${ANSI_END}%s${ANSI_BEGIN}${ANSI_BOLD}${ANSI_CLEAR}${ANSI_END}\n" "The \$XDG_CONFIG_HOME environment variable is not set, make sure to add it to your shell's configuration before setting any of the other environment variables!"
-    loudprintf "${ANSI_BEGIN}${ANSI_BOLD}${ANSI_CYAN}${ANSI_END}    ⤷ ${ANSI_BEGIN}${ANSI_BOLD}${ANSI_END}The recommended value is: ${ANSI_BEGIN}${ANSI_BOLD}${ANSI_ITALLIC}${ANSI_END}\$HOME/.config${ANSI_BEGIN}${ANSI_BOLD}${ANSI_CLEAR}${ANSI_END}\n"
+    loudprintf "${ANSI_BOLD_CYAN}%s${ANSI_BOLD_CLEAR}\n" "The \$XDG_CONFIG_HOME environment variable is not set, make sure to add it to your shell's configuration before setting any of the other environment variables!"
+    loudprintf "${ANSI_BOLD_CYAN}    ⤷ ${ANSI_BOLD}The recommended value is: ${ANSI_BOLD_ITALIC}\$HOME/.config${ANSI_BOLD_CLEAR}\n"
 fi
 if [ -z "${XDG_STATE_HOME}" ]; then
-    loudprintf "${ANSI_BEGIN}${ANSI_BOLD}${ANSI_CYAN}${ANSI_END}%s${ANSI_BEGIN}${ANSI_BOLD}${ANSI_CLEAR}${ANSI_END}\n" "The \$XDG_STATE_HOME environment variable is not set, make sure to add it to your shell's configuration before setting any of the other environment variables!"
-    loudprintf "${ANSI_BEGIN}${ANSI_BOLD}${ANSI_CYAN}${ANSI_END}    ⤷ ${ANSI_BEGIN}${ANSI_BOLD}${ANSI_END}The recommended value is: ${ANSI_BEGIN}${ANSI_BOLD}${ANSI_ITALLIC}${ANSI_END}\$HOME/.local/state${ANSI_BEGIN}${ANSI_BOLD}${ANSI_CLEAR}${ANSI_END}\n"
+    loudprintf "${ANSI_BOLD_CYAN}%s${ANSI_BOLD_CLEAR}\n" "The \$XDG_STATE_HOME environment variable is not set, make sure to add it to your shell's configuration before setting any of the other environment variables!"
+    loudprintf "${ANSI_BOLD_CYAN}    ⤷ ${ANSI_BOLD}The recommended value is: ${ANSI_BOLD_ITALIC}\$HOME/.local/state${ANSI_BOLD_CLEAR}\n"
 fi
 if [ -z "${XDG_CACHE_HOME}" ]; then
-    loudprintf "${ANSI_BEGIN}${ANSI_BOLD}${ANSI_CYAN}${ANSI_END}%s${ANSI_BEGIN}${ANSI_BOLD}${ANSI_CLEAR}${ANSI_END}\n" "The \$XDG_CACHE_HOME environment variable is not set, make sure to add it to your shell's configuration before setting any of the other environment variables!"
-    loudprintf "${ANSI_BEGIN}${ANSI_BOLD}${ANSI_CYAN}${ANSI_END}    ⤷ ${ANSI_BEGIN}${ANSI_BOLD}${ANSI_END}The recommended value is: ${ANSI_BEGIN}${ANSI_BOLD}${ANSI_ITALLIC}${ANSI_END}\$HOME/.cache${ANSI_BEGIN}${ANSI_BOLD}${ANSI_CLEAR}${ANSI_END}\n"
+    loudprintf "${ANSI_BOLD_CYAN}%s${ANSI_BOLD_CLEAR}\n" "The \$XDG_CACHE_HOME environment variable is not set, make sure to add it to your shell's configuration before setting any of the other environment variables!"
+    loudprintf "${ANSI_BOLD_CYAN}    ⤷ ${ANSI_BOLD}The recommended value is: ${ANSI_BOLD_ITALIC}\$HOME/.cache${ANSI_BOLD_CLEAR}\n"
 fi
 if [ -z "${XDG_RUNTIME_DIR}" ]; then
     XDG_RUNTIME_DIR=/tmp/
-    loudprintf "${ANSI_BEGIN}${ANSI_BOLD}${ANSI_CYAN}${ANSI_END}%s${ANSI_BEGIN}${ANSI_BOLD}${ANSI_CLEAR}${ANSI_END}\n" "The \$XDG_RUNTIME_DIR environment variable is not set, make sure to add it to your shell's configuration before setting any of the other environment variables!"
-    loudprintf "${ANSI_BEGIN}${ANSI_BOLD}${ANSI_CYAN}${ANSI_END}    ⤷ ${ANSI_BEGIN}${ANSI_BOLD}${ANSI_END}The recommended value is: ${ANSI_BEGIN}${ANSI_BOLD}${ANSI_ITALLIC}${ANSI_END}/run/user/\$UID${ANSI_BEGIN}${ANSI_BOLD}${ANSI_CLEAR}${ANSI_END}\n"
+    loudprintf "${ANSI_BOLD_CYAN}%s${ANSI_BOLD_CLEAR}\n" "The \$XDG_RUNTIME_DIR environment variable is not set, make sure to add it to your shell's configuration before setting any of the other environment variables!"
+    loudprintf "${ANSI_BOLD_CYAN}    ⤷ ${ANSI_BOLD}The recommended value is: ${ANSI_BOLD_ITALIC}/run/user/\$UID${ANSI_BOLD_CLEAR}\n"
 fi
 
 if ! command -v jq >/dev/null 2>/dev/null; then
@@ -203,20 +209,20 @@ log() {
     case "$MODE" in
 
     ERR)
-        printf "[${ANSI_BEGIN}${ANSI_BOLD}${ANSI_RED}${ANSI_END}%s${ANSI_BEGIN}${ANSI_BOLD}${ANSI_CLEAR}${ANSI_END}]: ${ANSI_BEGIN}${ANSI_BOLD}${ANSI_ITALLIC}${ANSI_END}%s${ANSI_BEGIN}${ANSI_BOLD}${ANSI_CLEAR}${ANSI_END}\n" "$NAME" "$FILENAME"
+        printf "[${ANSI_BOLD_RED}%s${ANSI_BOLD_CLEAR}]: ${ANSI_BOLD_ITALIC}%s${ANSI_BOLD_CLEAR}\n" "$NAME" "$FILENAME"
         ;;
 
     WARN)
-        printf "[${ANSI_BEGIN}${ANSI_BOLD}${ANSI_YELLOW}${ANSI_END}%s${ANSI_BEGIN}${ANSI_BOLD}${ANSI_CLEAR}${ANSI_END}]: ${ANSI_BEGIN}${ANSI_BOLD}${ANSI_ITALLIC}${ANSI_END}%s${ANSI_BEGIN}${ANSI_BOLD}${ANSI_CLEAR}${ANSI_END}\n" "$NAME" "$FILENAME"
+        printf "[${ANSI_BOLD_YELLOW}%s${ANSI_BOLD_CLEAR}]: ${ANSI_BOLD_ITALIC}%s${ANSI_BOLD_CLEAR}\n" "$NAME" "$FILENAME"
         ;;
 
     INFO)
-        printf "[${ANSI_BEGIN}${ANSI_BOLD}${ANSI_CYAN}${ANSI_END}%s${ANSI_BEGIN}${ANSI_BOLD}${ANSI_CLEAR}${ANSI_END}]: ${ANSI_BEGIN}${ANSI_BOLD}${ANSI_ITALLIC}${ANSI_END}%s${ANSI_BEGIN}${ANSI_BOLD}${ANSI_CLEAR}${ANSI_END}\n" "$NAME" "$FILENAME"
+        printf "[${ANSI_BOLD_CYAN}%s${ANSI_BOLD_CLEAR}]: ${ANSI_BOLD_ITALIC}%s${ANSI_BOLD_CLEAR}\n" "$NAME" "$FILENAME"
         ;;
 
     SUCS)
         [ "$SKIP_OK" = false ] &&
-            printf "[${ANSI_BEGIN}${ANSI_BOLD}${ANSI_GREEN}${ANSI_END}%s${ANSI_BEGIN}${ANSI_BOLD}${ANSI_CLEAR}${ANSI_END}]: ${ANSI_BEGIN}${ANSI_BOLD}${ANSI_ITALLIC}${ANSI_END}%s${ANSI_BEGIN}${ANSI_BOLD}${ANSI_CLEAR}${ANSI_END}\n" "$NAME" "$FILENAME"
+            printf "[${ANSI_BOLD_GREEN}%s${ANSI_BOLD_CLEAR}]: ${ANSI_BOLD_ITALIC}%s${ANSI_BOLD_CLEAR}\n" "$NAME" "$FILENAME"
         ;;
 
     HELP)
@@ -277,12 +283,12 @@ EOF
 }
 
 check_programs() {
-    loudprintf "${ANSI_BEGIN}${ANSI_BOLD}${ANSI_ITALLIC}${ANSI_END}Starting to check your ${ANSI_BEGIN}${ANSI_BOLD}${ANSI_CYAN}${ANSI_END}\$HOME.${ANSI_BEGIN}${ANSI_BOLD}${ANSI_CLEAR}${ANSI_END}\n"
+    loudprintf "${ANSI_BOLD_ITALIC}Starting to check your ${ANSI_BOLD_CYAN}\$HOME.${ANSI_BOLD_CLEAR}\n"
     loudprintf "\n"
     do_check_programs
-    loudprintf "${ANSI_BEGIN}${ANSI_BOLD}${ANSI_ITALLIC}${ANSI_END}Done checking your ${ANSI_BEGIN}${ANSI_BOLD}${ANSI_CYAN}${ANSI_END}\$HOME.${ANSI_BEGIN}${ANSI_BOLD}${ANSI_CLEAR}${ANSI_END}\n"
+    loudprintf "${ANSI_BOLD_ITALIC}Done checking your ${ANSI_BOLD_CYAN}\$HOME.${ANSI_BOLD_CLEAR}\n"
     loudprintf "\n"
-    loudprintf "${ANSI_BEGIN}${ANSI_ITALLIC}${ANSI_END}If you have files in your ${ANSI_BEGIN}${ANSI_BOLD}${ANSI_CYAN}${ANSI_END}\$HOME${ANSI_BEGIN}${ANSI_BOLD}${ANSI_CLEAR}${ANSI_END} that shouldn't be there, but weren't recognised by xdg-ninja, please consider creating a configuration file for it and opening a pull request on github.${ANSI_BEGIN}${ANSI_BOLD}${ANSI_CLEAR}${ANSI_END}\n"
+    loudprintf "${ANSI_ITALIC}If you have files in your ${ANSI_BOLD_CYAN}\$HOME${ANSI_BOLD_CLEAR} that shouldn't be there, but weren't recognised by xdg-ninja, please consider creating a configuration file for it and opening a pull request on github.${ANSI_BOLD_CLEAR}\n"
     loudprintf "\n"
 }
 
