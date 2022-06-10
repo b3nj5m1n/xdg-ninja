@@ -1,0 +1,10 @@
+{
+    "files": [
+        {
+            "path": "$HOME/.everdev",
+            "movable": false,
+            "help": "Currently not supported, see [https://github.com/tonlabs/everdev/blob/main/src/core/index.ts](https://github.com/tonlabs/everdev/blob/main/src/core/index.ts)."
+        }
+    ],
+    "name": "everdev"
+}
