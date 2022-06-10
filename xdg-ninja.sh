@@ -90,6 +90,7 @@ SKIP_OK=true
 SKIP_WARN=false
 COLOR=auto
 JSON=false
+EXIT_STATUS=0
 for i in "$@"; do
     case $i in
         --color=*)
@@ -225,6 +226,7 @@ check_file() {
 
     1)
         if [ "$MOVABLE" = true ]; then
+            EXIT_STATUS=$(expr $EXIT_STATUS + 1)
             [ "$JSON" = true ] && cat "$JSON_FILE" && return
             log ERR "$NAME" "$FILENAME" "$HELP"
         else
@@ -264,3 +266,4 @@ check_programs() {
 }
 
 check_programs
+exit $EXIT_STATUS
