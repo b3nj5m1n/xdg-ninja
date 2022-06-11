@@ -23,17 +23,17 @@
         {
             "path": "$HOME/.zlogin",
             "movable": true,
-            "help": "Export the following environment variable:\n\n```bash\nexport ZDOTDIR=$HOME/.config/zsh\n```\nYou can do this in _/etc/zsh/zshenv_.\n"
+            "help": "Move file to _\"$HOME\"/.config/zsh/.zlogin_ and export the following environment variable:\n\n```bash\nexport ZDOTDIR=$HOME/.config/zsh\n```\nYou can do this in _/etc/zsh/zshenv_.\n"
         },
         {
             "path": "$HOME/.zshenv",
             "movable": true,
-            "help": "Export the following environment variable in _/etc/zsh/zshenv_:\n\n```bash\nexport ZDOTDIR=$HOME/.config/zsh\n```"
+            "help": "Move file to _\"$HOME\"/.config/zsh/.zshenv_ and export the following environment variable in _/etc/zsh/zshenv_:\n\n```bash\nexport ZDOTDIR=$HOME/.config/zsh\n```"
         },
         {
             "path": "$HOME/.zshrc",
             "movable": true,
-            "help": "Export the following environment variable:\n\n```bash\nexport ZDOTDIR=$HOME/.config/zsh\n```\nYou can do this in _/etc/zsh/zshenv_.\n"
+            "help": "Move file to _\"$HOME\"/.config/zsh/.zshrc_ and export the following environment variable:\n\n```bash\nexport ZDOTDIR=$HOME/.config/zsh\n```\nYou can do this in _/etc/zsh/zshenv_.\n"
         }
     ],
     "name": "zsh"
