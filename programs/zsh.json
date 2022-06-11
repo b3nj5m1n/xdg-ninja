@@ -3,12 +3,12 @@
         {
             "path": "$HOME/.zcompcache",
             "movable": true,
-            "help": "Set this in your zshrc:\n\n```bash\nzstyle ':completion:*' cache-path $XDG_CACHE_HOME/zsh/zcompcache\n```\n"
+            "help": "Set this in your zshrc:\n\n```bash\nzstyle ':completion:*' cache-path \"$XDG_CACHE_HOME\"/zsh/zcompcache\n```\n"
         },
         {
             "path": "$HOME/.zcompdump",
             "movable": true,
-            "help": "Set this in your zshrc:\n\n```bash\ncompinit -d $XDG_CACHE_HOME/zsh/zcompdump-$ZSH_VERSION\n```\n"
+            "help": "Set this in your zshrc:\n\n```bash\ncompinit -d \"$XDG_CACHE_HOME\"/zsh/zcompdump-\"$ZSH_VERSION\"\n```\n"
         },
         {
             "path": "$HOME/.histfile",
@@ -23,17 +23,17 @@
         {
             "path": "$HOME/.zlogin",
             "movable": true,
-            "help": "Move file to _\"$HOME\"/.config/zsh/.zlogin_ and export the following environment variable:\n\n```bash\nexport ZDOTDIR=$HOME/.config/zsh\n```\nYou can do this in _/etc/zsh/zshenv_.\n"
+            "help": "Move file to _\"$HOME\"/.config/zsh/.zlogin_ and export the following environment variable:\n\n```bash\nexport ZDOTDIR=\"$HOME\"/.config/zsh\n```\nYou can do this in _/etc/zsh/zshenv_.\n"
         },
         {
             "path": "$HOME/.zshenv",
             "movable": true,
-            "help": "Move file to _\"$HOME\"/.config/zsh/.zshenv_ and export the following environment variable in _/etc/zsh/zshenv_:\n\n```bash\nexport ZDOTDIR=$HOME/.config/zsh\n```"
+            "help": "Move file to _\"$HOME\"/.config/zsh/.zshenv_ and export the following environment variable in _/etc/zsh/zshenv_:\n\n```bash\nexport ZDOTDIR=\"$HOME\"/.config/zsh\n```"
         },
         {
             "path": "$HOME/.zshrc",
             "movable": true,
-            "help": "Move file to _\"$HOME\"/.config/zsh/.zshrc_ and export the following environment variable:\n\n```bash\nexport ZDOTDIR=$HOME/.config/zsh\n```\nYou can do this in _/etc/zsh/zshenv_.\n"
+            "help": "Move file to _\"$HOME\"/.config/zsh/.zshrc_ and export the following environment variable:\n\n```bash\nexport ZDOTDIR=\"$HOME\"/.config/zsh\n```\nYou can do this in _/etc/zsh/zshenv_.\n"
         }
     ],
     "name": "zsh"
