@@ -3,12 +3,12 @@
         {
             "path": "$HOME/.xserverrc",
             "movable": false,
-            "help": "**Disclaimer: this works only with xinit, not with startx.**\n\nExport the following environment variables:\n\n```bash\nexport XSERVERRC=\"$XDG_CONFIG_HOME\"/X11/xserverrc\n```\n"
+            "help": "**Disclaimer: this works only with xinit, not with startx.**\n\nExport the following environment variable:\n\n```bash\nexport XSERVERRC=\"$XDG_CONFIG_HOME\"/X11/xserverrc\n```\n"
         },
         {
             "path": "$HOME/.xinitrc",
             "movable": false,
-            "help": "**Disclaimer: this works only with xinit, not with startx.**\n\nExport the following environment variables:\n\n```bash\nexport XINITRC=\"$XDG_CONFIG_HOME\"/X11/xinitrc\n```\n"
+            "help": "**Disclaimer: this works only with xinit, not with startx.**\n\nExport the following environment variable:\n\n```bash\nexport XINITRC=\"$XDG_CONFIG_HOME\"/X11/xinitrc\n```\n"
         }
     ],
     "name": "xinit"
