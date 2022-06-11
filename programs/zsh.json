@@ -28,7 +28,7 @@
         {
             "path": "$HOME/.zshenv",
             "movable": true,
-            "help": "Export the following environment variable in _/etc/zsh/zshenv_:\n\n```bash\nexport ZDOTDIR=$HOME/.config/zsh\n```\n_Note: this requires sudo privileges._\n"
+            "help": "Export the following environment variable in _/etc/zsh/zshenv_:\n\n```bash\nexport ZDOTDIR=$HOME/.config/zsh\n```"
         },
         {
             "path": "$HOME/.zshrc",
