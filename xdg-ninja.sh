@@ -30,29 +30,48 @@ fi
 
 unalias -a
 
-HELPSTRING="""\
+init_constants() {
+    FX_RESET="\033[0m"
+    FX_BOLD="\033[1m"
+    FX_ITALIC="\033[3m"
+
+    FG_RED="\033[31m"
+    FG_GREEN="\033[32m"
+    FG_YELLOW="\033[33m"
+    FG_CYAN="\033[36m"
+    FG_WHITE="\033[37m"
+
+    BG_MAGENTA="\033[45m"
+}
+init_constants
+
+help() {
+    init_constants
+    HELPSTRING="""\
 
 
-    \033[37;45;1mxdg-ninja\033[0m
+    ${FG_WHITE}${BG_MAGENTA}${FX_BOLD}xdg-ninja${FX_RESET}
 
-    \033[1;3mCheck your \$HOME for unwanted files.\033[1;0m
+    ${FX_BOLD}${FX_ITALIC}Check your \$HOME for unwanted files.${FX_RESET}
 
     ────────────────────────────────────
 
-    \033[3m--help\033[0m              \033[1mThis help menu\033[0m
-    \033[3m-h\033[0m
+    ${FX_ITALIC}--help${FX_RESET}              ${FX_BOLD}This help menu${FX_RESET}
+    ${FX_ITALIC}-h\033${FX_RESET}
 
-    \033[3m--no-skip-ok\033[0m        \033[1mDisplay messages for all files checked (verbose)\033[0m
-    \033[3m-v\033[0m
+    ${FX_ITALIC}--no-skip-ok${FX_RESET}        ${FX_BOLD}Display messages for all files checked (verbose)${FX_RESET}
+    ${FX_ITALIC}-v${FX_RESET}
 
-    \033[3m--skip-ok\033[0m           \033[1mDon't display anything for files that do not exist (default)\033[0m
+    ${FX_ITALIC}--skip-ok${FX_RESET}           ${FX_BOLD}Don't display anything for files that do not exist (default)${FX_RESET}
 
-"""
+    """
+    printf "%b" "$HELPSTRING"
+}
 
 SKIP_OK=true
 for i in "$@"; do
     if [ "$i" = "--help" ] || [ "$i" = "-h" ]; then
-        printf "%b" "$HELPSTRING"
+        help
         exit
     elif [ "$i" = "--skip-ok" ]; then
         SKIP_OK=true
@@ -64,24 +83,24 @@ for i in "$@"; do
 done
 
 if [ -z "${XDG_DATA_HOME}" ]; then
-    printf '\033[1;36m%s\033[1;0m\n' "The \$XDG_DATA_HOME environment variable is not set, make sure to add it to your shell's configuration before setting any of the other environment variables!"
-    printf "\033[1;36m    ⤷ \033[1mThe recommended value is: \033[1;3m\$HOME/.local/share\033[1;0m\n"
+    printf '%b%s%b\n' "${FX_BOLD}${FG_CYAN}" "The \$XDG_DATA_HOME environment variable is not set, make sure to add it to your shell's configuration before setting any of the other environment variables!" "${FX_RESET}"
+    printf "%b    ⤷ The recommended value is: %b\$HOME/.local/share%b\n" "${FX_BOLD}${FG_CYAN}" "${FX_BOLD}${FX_ITALIC}" "${FX_RESET}"
 fi
 if [ -z "${XDG_CONFIG_HOME}" ]; then
-    printf '\033[1;36m%s\033[1;0m\n' "The \$XDG_CONFIG_HOME environment variable is not set, make sure to add it to your shell's configuration before setting any of the other environment variables!"
-    printf "\033[1;36m    ⤷ \033[1mThe recommended value is: \033[1;3m\$HOME/.config\033[1;0m\n"
+    printf '%b%s%b\n' "${FX_BOLD}${FG_CYAN}" "The \$XDG_CONFIG_HOME environment variable is not set, make sure to add it to your shell's configuration before setting any of the other environment variables!" "${FX_RESET}"
+    printf "%b    ⤷ The recommended value is: %b\$HOME/.config%b\n" "${FX_BOLD}${FG_CYAN}" "${FX_BOLD}${FX_ITALIC}" "${FX_RESET}"
 fi
 if [ -z "${XDG_STATE_HOME}" ]; then
-    printf '\033[1;36m%s\033[1;0m\n' "The \$XDG_STATE_HOME environment variable is not set, make sure to add it to your shell's configuration before setting any of the other environment variables!"
-    printf "\033[1;36m    ⤷ \033[1mThe recommended value is: \033[1;3m\$HOME/.local/state\033[1;0m\n"
+    printf '%b%s%b\n' "${FX_BOLD}${FG_CYAN}" "The \$XDG_STATE_HOME environment variable is not set, make sure to add it to your shell's configuration before setting any of the other environment variables!" "${FX_RESET}"
+    printf "%b    ⤷ The recommended value is: %b\$HOME/.local/state%b\n" "${FX_BOLD}${FG_CYAN}" "${FX_BOLD}${FX_ITALIC}" "${FX_RESET}"
 fi
 if [ -z "${XDG_CACHE_HOME}" ]; then
-    printf '\033[1;36m%s\033[1;0m\n' "The \$XDG_CACHE_HOME environment variable is not set, make sure to add it to your shell's configuration before setting any of the other environment variables!"
-    printf "\033[1;36m    ⤷ \033[1mThe recommended value is: \033[1;3m\$HOME/.cache\033[1;0m\n"
+    printf '%b%s%b\n' "${FX_BOLD}${FG_CYAN}" "The \$XDG_CACHE_HOME environment variable is not set, make sure to add it to your shell's configuration before setting any of the other environment variables!" "${FX_RESET}"
+    printf "%b    ⤷ The recommended value is: %b\$HOME/.cache%b\n" "${FX_BOLD}${FG_CYAN}" "${FX_BOLD}${FX_ITALIC}" "${FX_RESET}"
 fi
 if [ -z "${XDG_RUNTIME_DIR}" ]; then
-    printf '\033[1;36m%s\033[1;0m\n' "The \$XDG_RUNTIME_DIR environment variable is not set, make sure to add it to your shell's configuration before setting any of the other environment variables!"
-    printf "\033[1;36m    ⤷ \033[1mThe recommended value is: \033[1;3m/run/user/\$UID\033[1;0m\n"
+    printf '%b%s%b\n' "${FX_BOLD}${FG_CYAN}" "The \$XDG_RUNTIME_DIR environment variable is not set, make sure to add it to your shell's configuration before setting any of the other environment variables!" "${FX_RESET}"
+    printf "%b    ⤷ The recommended value is: %b/run/user/\$UID%b\n" "${FX_BOLD}${FG_CYAN}" "${FX_BOLD}${FX_ITALIC}" "${FX_RESET}"
 fi
 
 if ! command -v jq >/dev/null 2>/dev/null; then
@@ -128,20 +147,20 @@ log() {
     case "$MODE" in
 
     ERR)
-        printf '[\033[1;31m%s\033[1;0m]: \033[1;3m%s\033[1;0m\n' "$NAME" "$FILENAME"
+        printf '[%b%s%b]: %b%s%b\n' "${FX_BOLD}${FG_RED}" "$NAME" "${FX_RESET}" "${FX_BOLD}${FX_ITALIC}" "$FILENAME" "${FX_RESET}"
         ;;
 
     WARN)
-        printf '[\033[1;33m%s\033[1;0m]: \033[1;3m%s\033[1;0m\n' "$NAME" "$FILENAME"
+        printf '[%b%s%b]: %b%s%b\n' "${FX_BOLD}${FG_YELLOW}" "$NAME" "${FX_RESET}" "${FX_BOLD}${FX_ITALIC}" "$FILENAME" "${FX_RESET}"
         ;;
 
     INFO)
-        printf '[\033[1;36m%s\033[1;0m]: \033[1;3m%s\033[1;0m\n' "$NAME" "$FILENAME"
+        printf '[%b%s%b]: %b%s%b\n' "${FX_BOLD}${FG_CYAN}" "$NAME" "${FX_RESET}" "${FX_BOLD}${FX_ITALIC}" "$FILENAME" "${FX_RESET}"
         ;;
 
     SUCS)
         [ "$SKIP_OK" = false ] &&
-            printf '[\033[1;32m%s\033[1;0m]: \033[1;3m%s\033[1;0m\n' "$NAME" "$FILENAME"
+            printf '[%b%s%b]: %b%s%b\n' "${FX_BOLD}${FG_GREEN}" "$NAME" "${FX_RESET}" "${FX_BOLD}${FX_ITALIC}" "$FILENAME" "${FX_RESET}"
         ;;
 
     HELP)
@@ -205,13 +224,14 @@ EOF
 }
 
 check_programs() {
-    printf "\033[1;3mStarting to check your \033[1;36m\$HOME.\033[1;0m\n"
+    printf "%bStarting to check your %b\$HOME%b.\n" "${FX_BOLD}${FX_ITALIC}" "${FG_CYAN}" "${FX_RESET}"
     printf "\n"
     do_check_programs
-    printf "\033[1;3mDone checking your \033[1;36m\$HOME.\033[1;0m\n"
+    printf "%bDone checking your %b\$HOME.%b\n" "${FX_BOLD}${FX_ITALIC}" "${FG_CYAN}" "${FX_RESET}"
     printf "\n"
-    printf "\033[3mIf you have files in your \033[1;36m\$HOME\033[1;0m that shouldn't be there, but weren't recognised by xdg-ninja, please consider creating a configuration file for it and opening a pull request on github.\033[1;0m\n"
+    printf "%bIf you have files in your %b\$HOME%b that shouldn't be there, but weren't recognised by xdg-ninja, please consider creating a configuration file for it and opening a pull request on github.%b\n" "${FX_ITALIC}" "${FG_CYAN}" "${FX_RESET}${FX_ITALIC}" "${FX_RESET}"
     printf "\n"
 }
+
 
 check_programs
