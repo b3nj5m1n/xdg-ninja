@@ -1,4 +1,5 @@
 {
+	"name": "zoom",
 	"files": [
 		{
 			"path": "$HOME/.zoom",
