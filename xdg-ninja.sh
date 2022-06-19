@@ -23,7 +23,6 @@ init_constants() {
 init_constants
 
 help() {
-    init_constants
     HELPSTRING="""\
 
 
@@ -135,7 +134,33 @@ auto_set_decoder() {
     fi
 }
 
-auto_set_decoder
+set_colors() {
+    case "$COLOR" in
+        "always")
+            return
+            ;;
+        "auto")
+            if [ -t 1 ] && [ "$NO_COLOR" != false ]; then # Check if used in a pipe or if the NO_COLOR env variable is set.
+                return
+            fi
+            ;;
+    esac
+    DECODER="cat"
+    JQ_COLOR_VAR="-M"
+
+    FX_RESET=""
+    FX_BOLD=""
+    FX_ITALIC=""
+
+    FG_RED=""
+    FG_GREEN=""
+    FG_YELLOW=""
+    FG_CYAN=""
+    FG_WHITE=""
+
+    BG_MAGENTA=""
+}
+
 [ $HELP = "true" ] && help
 
 if [ -z "${XDG_DATA_HOME}" ] && [ "$QUIET" != false ]; then
@@ -275,7 +300,6 @@ do_check_programs() {
 $(jq 'inputs as $input | $input.files[] as $file | $input.name, $file.path, $file.movable, $file.help, input_filename' "$(dirname "$0")"/programs/* | sed -e 's/^"//' -e 's/"$//')
 EOF
     [ "$OUTPUT_STYLE" = "json" ] && jq "$JQ_COLOR_VAR" -s . "$XDG_RUNTIME_DIR"/xdg-ninja/* && rm -rf "$XDG_RUNTIME_DIR/xdg-ninja"
-# sed is to trim quotes
 }
 
 check_programs() {
@@ -293,5 +317,7 @@ check_programs() {
 }
 
 
+auto_set_decoder
+set_colors
 check_programs
 exit "$EXIT_STATUS"
