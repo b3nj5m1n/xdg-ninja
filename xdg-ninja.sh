@@ -52,10 +52,9 @@ help() {
 
     ${FX_ITALIC}--verbose${FX_RESET}           ${FX_BOLD}Alias for --no-skip-warn and --no-skip-ok${FX_RESET}
     ${FX_ITALIC}-v${FX_RESET}
-
-
     """
-    printf "%b" "$HELPSTRING"
+    printf "%b\n" "$HELPSTRING"
+    exit 0
 }
 
 SKIP_OK=true
@@ -137,26 +136,25 @@ auto_set_decoder() {
 }
 
 auto_set_decoder
-set_colors
 [ $HELP = "true" ] && help
 
-if [ -z "${XDG_DATA_HOME}" -a "$QUIET" != false ]; then
+if [ -z "${XDG_DATA_HOME}" ] && [ "$QUIET" != false ]; then
     printf '%b%s%b\n' "${FX_BOLD}${FG_CYAN}" "The \$XDG_DATA_HOME environment variable is not set, make sure to add it to your shell's configuration before setting any of the other environment variables!" "${FX_RESET}"
     printf "%b    ⤷ The recommended value is: %b\$HOME/.local/share%b\n" "${FX_BOLD}${FG_CYAN}" "${FX_BOLD}${FX_ITALIC}" "${FX_RESET}"
 fi
-if [ -z "${XDG_CONFIG_HOME}" -a "$QUIET" != false ]; then
+if [ -z "${XDG_CONFIG_HOME}" ] && [ "$QUIET" != false ]; then
     printf '%b%s%b\n' "${FX_BOLD}${FG_CYAN}" "The \$XDG_CONFIG_HOME environment variable is not set, make sure to add it to your shell's configuration before setting any of the other environment variables!" "${FX_RESET}"
     printf "%b    ⤷ The recommended value is: %b\$HOME/.config%b\n" "${FX_BOLD}${FG_CYAN}" "${FX_BOLD}${FX_ITALIC}" "${FX_RESET}"
 fi
-if [ -z "${XDG_STATE_HOME}" -a "$QUIET" != false ]; then
+if [ -z "${XDG_STATE_HOME}" ] && [ "$QUIET" != false ]; then
     printf '%b%s%b\n' "${FX_BOLD}${FG_CYAN}" "The \$XDG_STATE_HOME environment variable is not set, make sure to add it to your shell's configuration before setting any of the other environment variables!" "${FX_RESET}"
     printf "%b    ⤷ The recommended value is: %b\$HOME/.local/state%b\n" "${FX_BOLD}${FG_CYAN}" "${FX_BOLD}${FX_ITALIC}" "${FX_RESET}"
 fi
-if [ -z "${XDG_CACHE_HOME}" -a "$QUIET" != false ]; then
+if [ -z "${XDG_CACHE_HOME}" ] && [ "$QUIET" != false ]; then
     printf '%b%s%b\n' "${FX_BOLD}${FG_CYAN}" "The \$XDG_CACHE_HOME environment variable is not set, make sure to add it to your shell's configuration before setting any of the other environment variables!" "${FX_RESET}"
     printf "%b    ⤷ The recommended value is: %b\$HOME/.cache%b\n" "${FX_BOLD}${FG_CYAN}" "${FX_BOLD}${FX_ITALIC}" "${FX_RESET}"
 fi
-if [ -z "${XDG_RUNTIME_DIR}" -a "$QUIET" != false ]; then
+if [ -z "${XDG_RUNTIME_DIR}" ] && [ "$QUIET" != false ]; then
     printf '%b%s%b\n' "${FX_BOLD}${FG_CYAN}" "The \$XDG_RUNTIME_DIR environment variable is not set, make sure to add it to your shell's configuration before setting any of the other environment variables!" "${FX_RESET}"
     printf "%b    ⤷ The recommended value is: %b/run/user/\$UID%b\n" "${FX_BOLD}${FG_CYAN}" "${FX_BOLD}${FX_ITALIC}" "${FX_RESET}"
 fi
@@ -249,7 +247,7 @@ check_file() {
 
     1)
         if [ "$MOVABLE" = true ]; then
-            EXIT_STATUS=$(expr $EXIT_STATUS + 1)
+            EXIT_STATUS=$((EXIT_STATUS + 1))
             [ "$OUTPUT_STYLE" = "json" ] && cat "$JSON_FILE" > "$XDG_RUNTIME_DIR"/xdg-ninja"$NAME".json && return
             log ERR "$NAME" "$FILENAME" "$HELP"
         else
@@ -276,7 +274,7 @@ do_check_programs() {
     done <<EOF
 $(jq 'inputs as $input | $input.files[] as $file | $input.name, $file.path, $file.movable, $file.help, input_filename' "$(dirname "$0")"/programs/* | sed -e 's/^"//' -e 's/"$//')
 EOF
-    [ "$OUTPUT_STYLE" = "json" ] && jq $JQ_COLOR_VAR -s . "$XDG_RUNTIME_DIR"/xdg-ninja/* && rm -rf "$XDG_RUNTIME_DIR/xdg-ninja"
+    [ "$OUTPUT_STYLE" = "json" ] && jq "$JQ_COLOR_VAR" -s . "$XDG_RUNTIME_DIR"/xdg-ninja/* && rm -rf "$XDG_RUNTIME_DIR/xdg-ninja"
 # sed is to trim quotes
 }
 
@@ -296,4 +294,4 @@ check_programs() {
 
 
 check_programs
-exit $EXIT_STATUS
+exit "$EXIT_STATUS"
