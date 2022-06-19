@@ -7,68 +7,55 @@ has_command() {
 
 unalias -a
 
-#Set ansi color code variables
-set_colors() {
-    case $COLOR in
-        never)
-            DECODER="cat"
-            JQ_COLOR_VAR="-M"
-            return
-        ;;
-        auto)
-            if [ ! -t 1 ] || [ "$NO_COLOR" ];then # Check if used in a pipe or if the NO_COLOR env variable is set.
-                DECODER="cat" 
-                JQ_COLOR_VAR="-M"
-                return
-            fi
-        ;;
-    esac
+init_constants() {
+    FX_RESET="\033[0m"
+    FX_BOLD="\033[1m"
+    FX_ITALIC="\033[3m"
 
-    ANSI_CLEAR="\033[;0m"
-    ANSI_BOLD="\033[;1m"
-    ANSI_ITALIC="\033[;3m"
-    ANSI_BOLD_CLEAR="\033[;1;0m"
-    ANSI_BOLD_CYAN="\033[;1;37m"
-    ANSI_BOLD_GREEN="\033[;1;32m"
-    ANSI_BOLD_ITALIC="\033[;1;3m"
-    ANSI_BOLD_RED="\033[;1;31m"
-    ANSI_BOLD_WHITE_BACKGROUND_PURPLE="\033[;1;37;45m"
-    ANSI_BOLD_YELLOW="\033[;1;33m"
+    FG_RED="\033[31m"
+    FG_GREEN="\033[32m"
+    FG_YELLOW="\033[33m"
+    FG_CYAN="\033[36m"
+    FG_WHITE="\033[37m"
+
+    BG_MAGENTA="\033[45m"
 }
+init_constants
 
 help() {
-    set_colors
+    init_constants
     HELPSTRING="""\
 
 
-        ${ANSI_BOLD_WHITE_BACKGROUND_PURPLE}xdg-ninja${ANSI_CLEAR}
+    ${FG_WHITE}${BG_MAGENTA}${FX_BOLD}xdg-ninja${FX_RESET}
 
-        ${ANSI_BOLD_ITALIC}Check your \$HOME for unwanted files.${ANSI_BOLD_CLEAR}
+    ${FX_BOLD}${FX_ITALIC}Check your \$HOME for unwanted files.${FX_RESET}
 
-        ────────────────────────────────────
 
-        ${ANSI_ITALIC}--help${ANSI_CLEAR}               ${ANSI_BOLD}This help menu${ANSI_CLEAR}
-        ${ANSI_ITALIC}-h${ANSI_CLEAR}
+    ${FX_ITALIC}--help${FX_RESET}              ${FX_BOLD}This help menu${FX_RESET}
+    ${FX_ITALIC}-h\033${FX_RESET}
 
-        ${ANSI_ITALIC}--skip-ok${ANSI_CLEAR}            ${ANSI_BOLD}Don't display anything for files that do not exist (default)${ANSI_CLEAR}
-        ${ANSI_ITALIC}--skip-warn${ANSI_CLEAR}          ${ANSI_BOLD}Don't display anything for files that cannot be fixed.${ANSI_CLEAR}
-        ${ANSI_ITALIC}--no-skip-ok${ANSI_CLEAR}         ${ANSI_BOLD}Display messages for all files checked${ANSI_CLEAR}
-        ${ANSI_ITALIC}--no-skip-warn${ANSI_CLEAR}       ${ANSI_BOLD}Don't display anything for files that cannot be fixed.${ANSI_CLEAR}
-        ${ANSI_ITALIC}--color=WHEN${ANSI_CLEAR}         ${ANSI_BOLD}Color the output always, never, or auto (default)${ANSI_CLEAR}
-        ${ANSI_ITALIC}--decoder=DECODER${ANSI_CLEAR}    ${ANSI_BOLD}Manually set the decoder used for markdown.${ANSI_CLEAR}
-        ${ANSI_ITALIC}--output-style=STYLE${ANSI_CLEAR} ${ANSI_BOLD}Style of ouptut, either normal (defualt) or json${ANSI_CLEAR}
+    ${FX_ITALIC}--skip-ok${FX_RESET}           ${FX_BOLD}Don't display anything for files that do not exist (default)${FX_RESET}
+    ${FX_ITALIC}--no-skip-ok${FX_RESET}        ${FX_BOLD}Display messages for all files checked${FX_RESET}
 
-        ${ANSI_ITALIC}--quiet${ANSI_CLEAR}              ${ANSI_BOLD}Causes program to run quietely${ANSI_CLEAR}
-        ${ANSI_ITALIC}-q${ANSI_CLEAR}
+    ${FX_ITALIC}--skip-warn${FX_RESET}         ${FX_BOLD}Don't display anything for files that cannot be fixed${FX_RESET}
+    ${FX_ITALIC}--no-skip-warn${FX_RESET}      ${FX_BOLD}Display help for files that cannot be fixed (default)${FX_RESET}
 
-        ${ANSI_ITALIC}--loud${ANSI_CLEAR}               ${ANSI_BOLD}Causes program to not run quietely${ANSI_CLEAR}
+    ${FX_ITALIC}--color=WHEN${FX_RESET}        ${FX_BOLD}Color the output always, never, or auto (default)${FX_RESET}
 
-        ${ANSI_ITALIC}--verbose${ANSI_CLEAR}            ${ANSI_BOLD}Combines --no-skip-warn and --no-skip-ok${ANSI_CLEAR}
-        ${ANSI_ITALIC}-v${ANSI_CLEAR}
+    ${FX_ITALIC}--decoder=X${FX_RESET}         ${FX_BOLD}Manually set the decoder used for markdown${FX_RESET}
 
-"""
-printf "%b" "$HELPSTRING"
-exit
+    ${FX_ITALIC}--output-style=X${FX_RESET}    ${FX_BOLD}Style of output; normal (default) or json${FX_RESET}
+
+    ${FX_ITALIC}--quiet${FX_RESET}             ${FX_BOLD}Run script quietly${FX_RESET}
+    ${FX_ITALIC}-q${FX_RESET}
+
+    ${FX_ITALIC}--verbose${FX_RESET}           ${FX_BOLD}Alias for --no-skip-warn and --no-skip-ok${FX_RESET}
+    ${FX_ITALIC}-v${FX_RESET}
+
+
+    """
+    printf "%b" "$HELPSTRING"
 }
 
 SKIP_OK=true
@@ -77,7 +64,7 @@ COLOR=auto
 OUTPUT_STYLE=normal
 EXIT_STATUS=0
 HELP=false
-alias loudprintf="printf"
+QUIET=false
 for i in "$@"; do
     case $i in
         --color=*)
@@ -109,10 +96,10 @@ for i in "$@"; do
             OUTPUT_STYLE="${i#*=}"
             ;;
         --quiet|-q)
-            alias loudprintf="true"
+            QUIET=true
             ;;
         --loud)
-            alias loudprintf="printf"
+            QUIET=false
             ;;
     esac
 done
@@ -124,18 +111,28 @@ auto_set_decoder() {
     else
         if has_command bat; then
             DECODER="bat -pp --decorations=always --color=always --language markdown"
-            loudprintf "Markdown rendering will be done by bat. (Glow is recommended)\n"
+            if [ "$QUIET" != false ]; then
+                printf "Markdown rendering will be done by bat. (Glow is recommended)\n"
+            fi
         elif has_command pygmentize; then
             DECODER="pygmentize -l markdown"
-            loudprintf "Markdown rendering will be done by pygmentize. (Glow is recommended)\n"
+            if [ "$QUIET" != false ]; then
+                printf "Markdown rendering will be done by pygmentize. (Glow is recommended)\n"
+            fi
         elif has_command highlight; then
             DECODER="highlight --out-format ansi --syntax markdown"
-            loudprintf "Markdown rendering will be done by highlight. (Glow is recommended)\n"
+            if [ "$QUIET" != false ]; then
+                printf "Markdown rendering will be done by highlight. (Glow is recommended)\n"
+            fi
         else
-            loudprintf "Markdown rendering not available. (Glow is recommended)\n"
-            loudprintf "Output will be raw markdown and might look weird.\n"
+            if [ "$QUIET" != false ]; then
+                printf "Markdown rendering not available. (Glow is recommended)\n"
+                printf "Output will be raw markdown and might look weird.\n"
+            fi
         fi
-        loudprintf "Install glow for easier reading & copy-paste.\n"
+        if [ "$QUIET" != false ]; then
+            printf "Install glow for easier reading & copy-paste.\n"
+        fi
     fi
 }
 
@@ -143,26 +140,25 @@ auto_set_decoder
 set_colors
 [ $HELP = "true" ] && help
 
-if [ -z "${XDG_DATA_HOME}" ]; then
-    printf "${ANSI_BOLD_CYAN}%s${ANSI_BOLD_CLEAR}\n" "The \$XDG_DATA_HOME environment variable is not set, make sure to add it to your shell's configuration before setting any of the other environment variables!"
-    printf "${ANSI_BOLD_CYAN}    ⤷ ${ANSI_BOLD}The recommended value is: ${ANSI_BOLD_ITALIC}\$HOME/.local/share${ANSI_BOLD_CLEAR}\n"
+if [ -z "${XDG_DATA_HOME}" -a "$QUIET" != false ]; then
+    printf '%b%s%b\n' "${FX_BOLD}${FG_CYAN}" "The \$XDG_DATA_HOME environment variable is not set, make sure to add it to your shell's configuration before setting any of the other environment variables!" "${FX_RESET}"
+    printf "%b    ⤷ The recommended value is: %b\$HOME/.local/share%b\n" "${FX_BOLD}${FG_CYAN}" "${FX_BOLD}${FX_ITALIC}" "${FX_RESET}"
 fi
-if [ -z "${XDG_CONFIG_HOME}" ]; then
-    loudprintf "${ANSI_BOLD_CYAN}%s${ANSI_BOLD_CLEAR}\n" "The \$XDG_CONFIG_HOME environment variable is not set, make sure to add it to your shell's configuration before setting any of the other environment variables!"
-    loudprintf "${ANSI_BOLD_CYAN}    ⤷ ${ANSI_BOLD}The recommended value is: ${ANSI_BOLD_ITALIC}\$HOME/.config${ANSI_BOLD_CLEAR}\n"
+if [ -z "${XDG_CONFIG_HOME}" -a "$QUIET" != false ]; then
+    printf '%b%s%b\n' "${FX_BOLD}${FG_CYAN}" "The \$XDG_CONFIG_HOME environment variable is not set, make sure to add it to your shell's configuration before setting any of the other environment variables!" "${FX_RESET}"
+    printf "%b    ⤷ The recommended value is: %b\$HOME/.config%b\n" "${FX_BOLD}${FG_CYAN}" "${FX_BOLD}${FX_ITALIC}" "${FX_RESET}"
 fi
-if [ -z "${XDG_STATE_HOME}" ]; then
-    loudprintf "${ANSI_BOLD_CYAN}%s${ANSI_BOLD_CLEAR}\n" "The \$XDG_STATE_HOME environment variable is not set, make sure to add it to your shell's configuration before setting any of the other environment variables!"
-    loudprintf "${ANSI_BOLD_CYAN}    ⤷ ${ANSI_BOLD}The recommended value is: ${ANSI_BOLD_ITALIC}\$HOME/.local/state${ANSI_BOLD_CLEAR}\n"
+if [ -z "${XDG_STATE_HOME}" -a "$QUIET" != false ]; then
+    printf '%b%s%b\n' "${FX_BOLD}${FG_CYAN}" "The \$XDG_STATE_HOME environment variable is not set, make sure to add it to your shell's configuration before setting any of the other environment variables!" "${FX_RESET}"
+    printf "%b    ⤷ The recommended value is: %b\$HOME/.local/state%b\n" "${FX_BOLD}${FG_CYAN}" "${FX_BOLD}${FX_ITALIC}" "${FX_RESET}"
 fi
-if [ -z "${XDG_CACHE_HOME}" ]; then
-    loudprintf "${ANSI_BOLD_CYAN}%s${ANSI_BOLD_CLEAR}\n" "The \$XDG_CACHE_HOME environment variable is not set, make sure to add it to your shell's configuration before setting any of the other environment variables!"
-    loudprintf "${ANSI_BOLD_CYAN}    ⤷ ${ANSI_BOLD}The recommended value is: ${ANSI_BOLD_ITALIC}\$HOME/.cache${ANSI_BOLD_CLEAR}\n"
+if [ -z "${XDG_CACHE_HOME}" -a "$QUIET" != false ]; then
+    printf '%b%s%b\n' "${FX_BOLD}${FG_CYAN}" "The \$XDG_CACHE_HOME environment variable is not set, make sure to add it to your shell's configuration before setting any of the other environment variables!" "${FX_RESET}"
+    printf "%b    ⤷ The recommended value is: %b\$HOME/.cache%b\n" "${FX_BOLD}${FG_CYAN}" "${FX_BOLD}${FX_ITALIC}" "${FX_RESET}"
 fi
-if [ -z "${XDG_RUNTIME_DIR}" ]; then
-    XDG_RUNTIME_DIR=/tmp/
-    loudprintf "${ANSI_BOLD_CYAN}%s${ANSI_BOLD_CLEAR}\n" "The \$XDG_RUNTIME_DIR environment variable is not set, make sure to add it to your shell's configuration before setting any of the other environment variables!"
-    loudprintf "${ANSI_BOLD_CYAN}    ⤷ ${ANSI_BOLD}The recommended value is: ${ANSI_BOLD_ITALIC}/run/user/\$UID${ANSI_BOLD_CLEAR}\n"
+if [ -z "${XDG_RUNTIME_DIR}" -a "$QUIET" != false ]; then
+    printf '%b%s%b\n' "${FX_BOLD}${FG_CYAN}" "The \$XDG_RUNTIME_DIR environment variable is not set, make sure to add it to your shell's configuration before setting any of the other environment variables!" "${FX_RESET}"
+    printf "%b    ⤷ The recommended value is: %b/run/user/\$UID%b\n" "${FX_BOLD}${FG_CYAN}" "${FX_BOLD}${FX_ITALIC}" "${FX_RESET}"
 fi
 
 if ! command -v jq >/dev/null 2>/dev/null; then
@@ -170,7 +166,9 @@ if ! command -v jq >/dev/null 2>/dev/null; then
     exit
 fi
 
-loudprintf "\n"
+if [ "$QUIET" != false ]; then
+    printf "\n"
+fi
 
 # Function to expand environment variables in string
 # https://stackoverflow.com/a/20316582/11110290
@@ -209,20 +207,20 @@ log() {
     case "$MODE" in
 
     ERR)
-        printf "[${ANSI_BOLD_RED}%s${ANSI_BOLD_CLEAR}]: ${ANSI_BOLD_ITALIC}%s${ANSI_BOLD_CLEAR}\n" "$NAME" "$FILENAME"
+        printf '[%b%s%b]: %b%s%b\n' "${FX_BOLD}${FG_RED}" "$NAME" "${FX_RESET}" "${FX_BOLD}${FX_ITALIC}" "$FILENAME" "${FX_RESET}"
         ;;
 
     WARN)
-        printf "[${ANSI_BOLD_YELLOW}%s${ANSI_BOLD_CLEAR}]: ${ANSI_BOLD_ITALIC}%s${ANSI_BOLD_CLEAR}\n" "$NAME" "$FILENAME"
+        printf '[%b%s%b]: %b%s%b\n' "${FX_BOLD}${FG_YELLOW}" "$NAME" "${FX_RESET}" "${FX_BOLD}${FX_ITALIC}" "$FILENAME" "${FX_RESET}"
         ;;
 
     INFO)
-        printf "[${ANSI_BOLD_CYAN}%s${ANSI_BOLD_CLEAR}]: ${ANSI_BOLD_ITALIC}%s${ANSI_BOLD_CLEAR}\n" "$NAME" "$FILENAME"
+        printf '[%b%s%b]: %b%s%b\n' "${FX_BOLD}${FG_CYAN}" "$NAME" "${FX_RESET}" "${FX_BOLD}${FX_ITALIC}" "$FILENAME" "${FX_RESET}"
         ;;
 
     SUCS)
         [ "$SKIP_OK" = false ] &&
-            printf "[${ANSI_BOLD_GREEN}%s${ANSI_BOLD_CLEAR}]: ${ANSI_BOLD_ITALIC}%s${ANSI_BOLD_CLEAR}\n" "$NAME" "$FILENAME"
+            printf '[%b%s%b]: %b%s%b\n' "${FX_BOLD}${FG_GREEN}" "$NAME" "${FX_RESET}" "${FX_BOLD}${FX_ITALIC}" "$FILENAME" "${FX_RESET}"
         ;;
 
     HELP)
@@ -283,14 +281,19 @@ EOF
 }
 
 check_programs() {
-    loudprintf "${ANSI_BOLD_ITALIC}Starting to check your ${ANSI_BOLD_CYAN}\$HOME.${ANSI_BOLD_CLEAR}\n"
-    loudprintf "\n"
+    if [ "$QUIET" != false ]; then
+        printf "%bStarting to check your %b\$HOME%b.\n" "${FX_BOLD}${FX_ITALIC}" "${FG_CYAN}" "${FX_RESET}"
+        printf "\n"
+    fi
     do_check_programs
-    loudprintf "${ANSI_BOLD_ITALIC}Done checking your ${ANSI_BOLD_CYAN}\$HOME.${ANSI_BOLD_CLEAR}\n"
-    loudprintf "\n"
-    loudprintf "${ANSI_ITALIC}If you have files in your ${ANSI_BOLD_CYAN}\$HOME${ANSI_BOLD_CLEAR} that shouldn't be there, but weren't recognised by xdg-ninja, please consider creating a configuration file for it and opening a pull request on github.${ANSI_BOLD_CLEAR}\n"
-    loudprintf "\n"
+    if [ "$QUIET" != false ]; then
+        printf "%bDone checking your %b\$HOME.%b\n" "${FX_BOLD}${FX_ITALIC}" "${FG_CYAN}" "${FX_RESET}"
+        printf "\n"
+        printf "%bIf you have files in your %b\$HOME%b that shouldn't be there, but weren't recognised by xdg-ninja, please consider creating a configuration file for it and opening a pull request on github.%b\n" "${FX_ITALIC}" "${FG_CYAN}" "${FX_RESET}${FX_ITALIC}" "${FX_RESET}"
+        printf "\n"
+    fi
 }
+
 
 check_programs
 exit $EXIT_STATUS
