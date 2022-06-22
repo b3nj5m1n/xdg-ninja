@@ -5,6 +5,11 @@
             "path": "${HOME}/.gdbinit",
             "movable": true,
             "help": "Alias gdb to use custom locations:\n\n```bash\nalias gdb=gdb -n -x $XDG_CONFIG_HOME/gdb/init```\n"
+        },
+        {
+            "path": "$HOME/.gdb_history",
+            "movable": true,
+            "help": "GDB supports setting it's config file path through an environment variable. Simply move your _.gdb_history_ file to _XDG_CONFIG_HOME/gdb_ and export the follwing:\n\n```bash\nexport GDBHISTFILE=\"$XDG_CONFIG_HOME\"/gdb/.gdb_history \n```\n\nNote: If you are using GEF this does not work, as GEF overwrites the filepath. In order to use the correct path again, you have to call ```set history filename ~/.config/gdb/.gdb_history``` after you source _gef.py_ in your gdb init file.\n"
         }
     ]
 }
