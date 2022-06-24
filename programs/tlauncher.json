@@ -1,0 +1,15 @@
+{
+    "name": "tlauncher",
+    "files": [
+        {
+            "path": "$HOME/.tlauncher",
+            "movable": false,
+            "help": ""
+        },
+        {
+            "path": "$HOME/.tl",
+            "movable": false,
+            "help": ""
+        }
+    ]
+}
