@@ -3,7 +3,7 @@
         {
             "path": "$HOME/.java",
             "movable": false,
-            "help": "**Disclaimer: some applications don't respect this setting.**\n\nExport the following environment variables:\n\n```bash\nexport _JAVA_OPTIONS=-Djava.util.prefs.userRoot=\"$XDG_CONFIG_HOME\"/java\n```\n"
+            "help": "**Disclaimer: some applications don't respect this setting.**\n\nExport the following environment variable:\n\n```bash\nexport _JAVA_OPTIONS=-Djava.util.prefs.userRoot=\"$XDG_CONFIG_HOME\"/java\n```\n"
         }
     ],
     "name": "openjdk"
