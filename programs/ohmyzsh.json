@@ -1,0 +1,10 @@
+{
+    "files": [
+        {
+            "path": "$HOME/.oh-my-zsh",
+            "movable": true,
+            "help": "See the relevant [issue](https://github.com/ohmyzsh/ohmyzsh/issues/9543).\n\nExport the following environment variables:\n\n```bash\nexport ZSH=\"$XDG_DATA_HOME\"/oh-my-zsh \n```\n"
+        }
+    ],
+    "name": "ohmyzsh"
+}
