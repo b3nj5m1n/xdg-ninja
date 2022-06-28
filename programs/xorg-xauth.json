@@ -3,7 +3,7 @@
         {
             "path": "$HOME/.Xauthority",
             "movable": true,
-            "help": "Export the following environment variables:\n\n```bash\nexport XAUTHORITY=\"$XDG_RUNTIME_DIR\"/Xauthority\n```\n\n- **LightDM does not allow you to do this.** See [here](https://askubuntu.com/a/961459) for workaround.\n- SLiM has _~/.Xauthority_ hardcoded\n\n_Note: this might not work as expected, so be careful._\n"
+            "help": "Export the following environment variables:\n\n```bash\nexport XAUTHORITY=\"$XDG_RUNTIME_DIR\"/Xauthority\n```\n\n- **LightDM does not allow you to do this.** See [here](https://askubuntu.com/a/961459) for workaround.\n- SLiM has _~/.Xauthority_ hardcoded\n\n- SDDM uses its own config to set XAUTHORITY variable. **Do not set it manually.**\nExample `/etc/sddm.conf.d/xorg_settings.conf`:\n```ini\n[X11]\nUserAuthFile=.local/share/sddm/Xauthority\n```\n_Note: this might not work as expected, so be careful._\n"
         }
     ],
     "name": "xorg-xauth"
