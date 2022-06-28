@@ -163,7 +163,7 @@ log() {
         ;;
 
     HELP)
-        decode_string "$HELP" | $DECODER
+        decode_string "$HELP" | PAGER="cat" $DECODER
         ;;
 
     esac
