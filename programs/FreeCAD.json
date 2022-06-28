@@ -1,0 +1,30 @@
+{
+    "files": [
+        {
+            "help": "Supported since 0.20, this location is no longer used.\n\nYou can move the directory to $XDG_DATA_HOME/FreeCAD/Gui\n",
+            "movable": true,
+            "path": "$HOME/.FreeCAD/Gui"
+        },
+        {
+            "help": "Supported since 0.20, this location is no longer used.\n\nYou can move the directory to $XDG_DATA_HOME/FreeCAD/Macro\n",
+            "movable": true,
+            "path": "$HOME/.FreeCAD/Macro"
+        },
+        {
+            "help": "Supported since 0.20, this location is no longer used.\n\nYou can move the directory to $XDG_DATA_HOME/FreeCAD/Mod\n",
+            "movable": true,
+            "path": "$HOME/.FreeCAD/Mod"
+        },
+        {
+            "help": "Supported since 0.20, this location is no longer used.\n\nYou can move the file to $XDG_CONFIG_HOME/FreeCAD/system.cfg\n",
+            "movable": true,
+            "path": "$HOME/.FreeCAD/system.cfg"
+        },
+        {
+            "help": "Supported since 0.20, this location is no longer used.\n\nYou can move the file to $XDG_CONFIG_HOME/FreeCAD/user.cfg\n",
+            "movable": true,
+            "path": "$HOME/.FreeCAD/user.cfg"
+        }
+    ],
+    "name": "FreeCAD"
+}
