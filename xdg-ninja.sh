@@ -5,29 +5,6 @@ has_command() {
     return $?
 }
 
-USE_GLOW=false
-USE_BAT=false
-USE_PYGMENTIZE=false
-USE_HIGHLIGHT=false
-if has_command glow; then
-    USE_GLOW=true
-else
-    if has_command bat; then
-        USE_BAT=true
-        printf "Markdown rendering will be done by bat. (Glow is recommended)\n"
-    elif has_command pygmentize; then
-        printf "Markdown rendering will be done by pygmentize. (Glow is recommended)\n"
-        USE_PYGMENTIZE=true
-    elif has_command highlight; then
-        printf "Markdown rendering will be done by highlight. (Glow is recommended)\n"
-        USE_HIGHLIGHT=true
-    else
-        printf "Markdown rendering not available. (Glow is recommended)\n"
-        printf "Output will be raw markdown and might look weird.\n"
-    fi
-    printf "Install glow for easier reading & copy-paste.\n"
-fi
-
 unalias -a
 
 init_constants() {
@@ -46,7 +23,6 @@ init_constants() {
 init_constants
 
 help() {
-    init_constants
     HELPSTRING="""\
 
 
@@ -54,51 +30,156 @@ help() {
 
     ${FX_BOLD}${FX_ITALIC}Check your \$HOME for unwanted files.${FX_RESET}
 
-    ────────────────────────────────────
 
     ${FX_ITALIC}--help${FX_RESET}              ${FX_BOLD}This help menu${FX_RESET}
     ${FX_ITALIC}-h\033${FX_RESET}
 
-    ${FX_ITALIC}--no-skip-ok${FX_RESET}        ${FX_BOLD}Display messages for all files checked (verbose)${FX_RESET}
-    ${FX_ITALIC}-v${FX_RESET}
-
     ${FX_ITALIC}--skip-ok${FX_RESET}           ${FX_BOLD}Don't display anything for files that do not exist (default)${FX_RESET}
+    ${FX_ITALIC}--no-skip-ok${FX_RESET}        ${FX_BOLD}Display messages for all files checked${FX_RESET}
 
+    ${FX_ITALIC}--skip-warn${FX_RESET}         ${FX_BOLD}Don't display anything for files that cannot be fixed${FX_RESET}
+    ${FX_ITALIC}--no-skip-warn${FX_RESET}      ${FX_BOLD}Display help for files that cannot be fixed (default)${FX_RESET}
+
+    ${FX_ITALIC}--color=WHEN${FX_RESET}        ${FX_BOLD}Color the output always, never, or auto (default)${FX_RESET}
+
+    ${FX_ITALIC}--decoder=X${FX_RESET}         ${FX_BOLD}Manually set the decoder used for markdown${FX_RESET}
+
+    ${FX_ITALIC}--output-style=X${FX_RESET}    ${FX_BOLD}Style of output; normal (default) or json${FX_RESET}
+
+    ${FX_ITALIC}--quiet${FX_RESET}             ${FX_BOLD}Run script quietly${FX_RESET}
+    ${FX_ITALIC}-q${FX_RESET}
+
+    ${FX_ITALIC}--verbose${FX_RESET}           ${FX_BOLD}Alias for --no-skip-warn and --no-skip-ok${FX_RESET}
+    ${FX_ITALIC}-v${FX_RESET}
     """
-    printf "%b" "$HELPSTRING"
+    printf "%b\n" "$HELPSTRING"
+    exit 0
 }
 
 SKIP_OK=true
+SKIP_WARN=false
+COLOR=auto
+OUTPUT_STYLE=normal
+EXIT_STATUS=0
+HELP=false
+QUIET=false
 for i in "$@"; do
-    if [ "$i" = "--help" ] || [ "$i" = "-h" ]; then
-        help
-        exit
-    elif [ "$i" = "--skip-ok" ]; then
-        SKIP_OK=true
-    elif [ "$i" = "--no-skip-ok" ]; then
-        SKIP_OK=false
-    elif [ "$i" = "-v" ]; then
-        SKIP_OK=false
-    fi
+    case $i in
+        --color=*)
+            COLOR="${i#*=}"
+            ;;
+        --help|-h)
+            HELP=true
+            ;;
+        --skip-ok)
+            SKIP_OK=true
+            ;;
+        --skip-warn)
+            SKIP_WARN=true
+            ;;
+        --no-skip-warn)
+            SKIP_WARN=false
+            ;;
+        --no-skip-ok)
+            SKIP_OK=false
+            ;;
+        --verbose|-v)
+            SKIP_OK=false
+            SKIP_WARN=false
+            ;;
+        --decoder=*)
+            DECODER="${i#*=}"
+            ;;
+        --output-style=*)
+            OUTPUT_STYLE="${i#*=}"
+            ;;
+        --quiet|-q)
+            QUIET=true
+            ;;
+        --loud)
+            QUIET=false
+            ;;
+    esac
 done
 
-if [ -z "${XDG_DATA_HOME}" ]; then
+auto_set_decoder() {
+    DECODER="cat"
+    if has_command glow; then
+        DECODER="glow -"
+    else
+        if has_command bat; then
+            DECODER="bat -pp --decorations=always --color=always --language markdown"
+            if [ "$QUIET" != false ]; then
+                printf "Markdown rendering will be done by bat. (Glow is recommended)\n"
+            fi
+        elif has_command pygmentize; then
+            DECODER="pygmentize -l markdown"
+            if [ "$QUIET" != false ]; then
+                printf "Markdown rendering will be done by pygmentize. (Glow is recommended)\n"
+            fi
+        elif has_command highlight; then
+            DECODER="highlight --out-format ansi --syntax markdown"
+            if [ "$QUIET" != false ]; then
+                printf "Markdown rendering will be done by highlight. (Glow is recommended)\n"
+            fi
+        else
+            if [ "$QUIET" != false ]; then
+                printf "Markdown rendering not available. (Glow is recommended)\n"
+                printf "Output will be raw markdown and might look weird.\n"
+            fi
+        fi
+        if [ "$QUIET" != false ]; then
+            printf "Install glow for easier reading & copy-paste.\n"
+        fi
+    fi
+}
+
+set_colors() {
+    case "$COLOR" in
+        "always")
+            return
+            ;;
+        "auto")
+            if [ -t 1 ] && [ "$NO_COLOR" != false ]; then # Check if used in a pipe or if the NO_COLOR env variable is set.
+                return
+            fi
+            ;;
+    esac
+    DECODER="cat"
+    JQ_COLOR_VAR="-M"
+
+    FX_RESET=""
+    FX_BOLD=""
+    FX_ITALIC=""
+
+    FG_RED=""
+    FG_GREEN=""
+    FG_YELLOW=""
+    FG_CYAN=""
+    FG_WHITE=""
+
+    BG_MAGENTA=""
+}
+
+[ $HELP = "true" ] && help
+
+if [ -z "${XDG_DATA_HOME}" ] && [ "$QUIET" != false ]; then
     printf '%b%s%b\n' "${FX_BOLD}${FG_CYAN}" "The \$XDG_DATA_HOME environment variable is not set, make sure to add it to your shell's configuration before setting any of the other environment variables!" "${FX_RESET}"
     printf "%b    ⤷ The recommended value is: %b\$HOME/.local/share%b\n" "${FX_BOLD}${FG_CYAN}" "${FX_BOLD}${FX_ITALIC}" "${FX_RESET}"
 fi
-if [ -z "${XDG_CONFIG_HOME}" ]; then
+if [ -z "${XDG_CONFIG_HOME}" ] && [ "$QUIET" != false ]; then
     printf '%b%s%b\n' "${FX_BOLD}${FG_CYAN}" "The \$XDG_CONFIG_HOME environment variable is not set, make sure to add it to your shell's configuration before setting any of the other environment variables!" "${FX_RESET}"
     printf "%b    ⤷ The recommended value is: %b\$HOME/.config%b\n" "${FX_BOLD}${FG_CYAN}" "${FX_BOLD}${FX_ITALIC}" "${FX_RESET}"
 fi
-if [ -z "${XDG_STATE_HOME}" ]; then
+if [ -z "${XDG_STATE_HOME}" ] && [ "$QUIET" != false ]; then
     printf '%b%s%b\n' "${FX_BOLD}${FG_CYAN}" "The \$XDG_STATE_HOME environment variable is not set, make sure to add it to your shell's configuration before setting any of the other environment variables!" "${FX_RESET}"
     printf "%b    ⤷ The recommended value is: %b\$HOME/.local/state%b\n" "${FX_BOLD}${FG_CYAN}" "${FX_BOLD}${FX_ITALIC}" "${FX_RESET}"
 fi
-if [ -z "${XDG_CACHE_HOME}" ]; then
+if [ -z "${XDG_CACHE_HOME}" ] && [ "$QUIET" != false ]; then
     printf '%b%s%b\n' "${FX_BOLD}${FG_CYAN}" "The \$XDG_CACHE_HOME environment variable is not set, make sure to add it to your shell's configuration before setting any of the other environment variables!" "${FX_RESET}"
     printf "%b    ⤷ The recommended value is: %b\$HOME/.cache%b\n" "${FX_BOLD}${FG_CYAN}" "${FX_BOLD}${FX_ITALIC}" "${FX_RESET}"
 fi
-if [ -z "${XDG_RUNTIME_DIR}" ]; then
+if [ -z "${XDG_RUNTIME_DIR}" ] && [ "$QUIET" != false ]; then
     printf '%b%s%b\n' "${FX_BOLD}${FG_CYAN}" "The \$XDG_RUNTIME_DIR environment variable is not set, make sure to add it to your shell's configuration before setting any of the other environment variables!" "${FX_RESET}"
     printf "%b    ⤷ The recommended value is: %b/run/user/\$UID%b\n" "${FX_BOLD}${FG_CYAN}" "${FX_BOLD}${FX_ITALIC}" "${FX_RESET}"
 fi
@@ -108,7 +189,9 @@ if ! command -v jq >/dev/null 2>/dev/null; then
     exit
 fi
 
-printf "\n"
+if [ "$QUIET" != false ]; then
+    printf "\n"
+fi
 
 # Function to expand environment variables in string
 # https://stackoverflow.com/a/20316582/11110290
@@ -164,18 +247,7 @@ log() {
         ;;
 
     HELP)
-        if [ "$USE_GLOW" = true ]; then
-            decode_string "$HELP" | glow -
-        elif [ "$USE_BAT" = true ]; then
-            decode_string "$HELP" | bat -pp --decorations=always --color=always --language markdown
-        elif [ $USE_PYGMENTIZE = true ]; then
-            decode_string "$HELP" | pygmentize -l markdown
-            printf "\n"
-        elif [ $USE_HIGHLIGHT = true ]; then
-            decode_string "$HELP" | highlight --out-format ansi --syntax markdown
-        else
-            decode_string "$HELP"
-        fi
+        decode_string "$HELP" | $DECODER
         ;;
 
     esac
@@ -187,19 +259,25 @@ check_file() {
     FILENAME="$2"
     MOVABLE="$3"
     HELP="$4"
+    JSON_FILE="$5"
 
     check_if_file_exists "$FILENAME"
 
     case $? in
 
     0)
+        [ "$SKIP_OK" = false ] && [ "$OUTPUT_STYLE" = "json" ] && cat "$JSON_FILE" && return
         log SUCS "$NAME" "$FILENAME" "$HELP"
         ;;
 
     1)
         if [ "$MOVABLE" = true ]; then
+            EXIT_STATUS=$((EXIT_STATUS + 1))
+            [ "$OUTPUT_STYLE" = "json" ] && cat "$JSON_FILE" > "$XDG_RUNTIME_DIR"/xdg-ninja"$NAME".json && return
             log ERR "$NAME" "$FILENAME" "$HELP"
         else
+            [ "$SKIP_WARN" = true ] && return
+            [ "$OUTPUT_STYLE" = "json" ] && cat "$JSON_FILE" > "$XDG_RUNTIME_DIR"/xdg-ninja/"$NAME".json && return
             log WARN "$NAME" "$FILENAME" "$HELP"
         fi
         if [ "$HELP" ]; then
@@ -214,24 +292,32 @@ check_file() {
 
 # Reads files from programs/, calls check_file on each file specified for each program
 do_check_programs() {
+    [ "$OUTPUT_STYLE" = "json" ] && mkdir "$XDG_RUNTIME_DIR"/xdg-ninja/
     while IFS="
-" read -r name; read -r filename; read -r movable; read -r help; do
-        check_file "$name" "$filename" "$movable" "$help"
+" read -r name; read -r filename; read -r movable; read -r help; read -r json_file;  do
+        check_file "$name" "$filename" "$movable" "$help" "$json_file"
     done <<EOF
-$(jq 'inputs as $input | $input.files[] as $file | $input.name, $file.path, $file.movable, $file.help' "$(dirname "$0")"/programs/* | sed -e 's/^"//' -e 's/"$//')
+$(jq 'inputs as $input | $input.files[] as $file | $input.name, $file.path, $file.movable, $file.help, input_filename' "$(dirname "$0")"/programs/* | sed -e 's/^"//' -e 's/"$//')
 EOF
-# sed is to trim quotes
+    [ "$OUTPUT_STYLE" = "json" ] && jq "$JQ_COLOR_VAR" -s . "$XDG_RUNTIME_DIR"/xdg-ninja/* && rm -rf "$XDG_RUNTIME_DIR/xdg-ninja"
 }
 
 check_programs() {
-    printf "%bStarting to check your %b\$HOME%b.\n" "${FX_BOLD}${FX_ITALIC}" "${FG_CYAN}" "${FX_RESET}"
-    printf "\n"
+    if [ "$QUIET" != false ]; then
+        printf "%bStarting to check your %b\$HOME%b.\n" "${FX_BOLD}${FX_ITALIC}" "${FG_CYAN}" "${FX_RESET}"
+        printf "\n"
+    fi
     do_check_programs
-    printf "%bDone checking your %b\$HOME.%b\n" "${FX_BOLD}${FX_ITALIC}" "${FG_CYAN}" "${FX_RESET}"
-    printf "\n"
-    printf "%bIf you have files in your %b\$HOME%b that shouldn't be there, but weren't recognised by xdg-ninja, please consider creating a configuration file for it and opening a pull request on github.%b\n" "${FX_ITALIC}" "${FG_CYAN}" "${FX_RESET}${FX_ITALIC}" "${FX_RESET}"
-    printf "\n"
+    if [ "$QUIET" != false ]; then
+        printf "%bDone checking your %b\$HOME.%b\n" "${FX_BOLD}${FX_ITALIC}" "${FG_CYAN}" "${FX_RESET}"
+        printf "\n"
+        printf "%bIf you have files in your %b\$HOME%b that shouldn't be there, but weren't recognised by xdg-ninja, please consider creating a configuration file for it and opening a pull request on github.%b\n" "${FX_ITALIC}" "${FG_CYAN}" "${FX_RESET}${FX_ITALIC}" "${FX_RESET}"
+        printf "\n"
+    fi
 }
 
 
+auto_set_decoder
+set_colors
 check_programs
+exit "$EXIT_STATUS"
