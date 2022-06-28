@@ -5,6 +5,11 @@ has_command() {
     return $?
 }
 
+# Special Handling for Debian-based Distros
+if has_command batcat; then
+	bat() { batcat "$@"; }
+fi
+
 USE_GLOW=false
 USE_BAT=false
 USE_PYGMENTIZE=false
