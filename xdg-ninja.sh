@@ -5,28 +5,24 @@ has_command() {
     return $?
 }
 
-USE_GLOW=false
-USE_BAT=false
-USE_PYGMENTIZE=false
-USE_HIGHLIGHT=false
-if has_command glow; then
-    USE_GLOW=true
-else
-    if has_command bat; then
-        USE_BAT=true
+auto_set_decoder() {
+    DECODER="cat"
+    if has_command glow; then
+        DECODER="glow -"
+    elif has_command bat; then
+        DECODER="bat -pp --decorations=always --color=always --language markdown"
         printf "Markdown rendering will be done by bat. (Glow is recommended)\n"
     elif has_command pygmentize; then
+        DECODER="pygmentize -l markdown"
         printf "Markdown rendering will be done by pygmentize. (Glow is recommended)\n"
-        USE_PYGMENTIZE=true
     elif has_command highlight; then
+        DECODER="highlight --out-format ansi --syntax markdown"
         printf "Markdown rendering will be done by highlight. (Glow is recommended)\n"
-        USE_HIGHLIGHT=true
     else
-        printf "Markdown rendering not available. (Glow is recommended)\n"
-        printf "Output will be raw markdown and might look weird.\n"
+        printf "Install glow for easier reading & copy-paste.\n"
     fi
-    printf "Install glow for easier reading & copy-paste.\n"
-fi
+}
+auto_set_decoder
 
 unalias -a
 
@@ -164,18 +160,7 @@ log() {
         ;;
 
     HELP)
-        if [ "$USE_GLOW" = true ]; then
-            decode_string "$HELP" | glow -
-        elif [ "$USE_BAT" = true ]; then
-            decode_string "$HELP" | bat -pp --decorations=always --color=always --language markdown
-        elif [ $USE_PYGMENTIZE = true ]; then
-            decode_string "$HELP" | pygmentize -l markdown
-            printf "\n"
-        elif [ $USE_HIGHLIGHT = true ]; then
-            decode_string "$HELP" | highlight --out-format ansi --syntax markdown
-        else
-            decode_string "$HELP"
-        fi
+        decode_string "$HELP" | $DECODER
         ;;
 
     esac
