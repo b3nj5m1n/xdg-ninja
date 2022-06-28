@@ -206,7 +206,7 @@ do_check_programs() {
 " read -r name; read -r filename; read -r movable; read -r help; do
         check_file "$name" "$filename" "$movable" "$help"
     done <<EOF
-$(jq 'inputs as $input | $input.files[] as $file | $input.name, $file.path, $file.movable, $file.help' "$(realpath "$0" | dirname -)"/programs/* | sed -e 's/^"//' -e 's/"$//')
+$(jq 'inputs as $input | $input.files[] as $file | $input.name, $file.path, $file.movable, $file.help' "$(realpath "$0" | xargs dirname)"/programs/* | sed -e 's/^"//' -e 's/"$//')
 EOF
 # sed is to trim quotes
 }
