@@ -1,0 +1,11 @@
+
+{
+    "files": [
+        {
+            "path": "$HOME/.mcfly/history.db",
+            "movable": true,
+            "help": "Luckily, the XDG spec is supported by mcfly, so we can simply move the file to _XDG_DATA_DIR/mcfly/config_.\n"
+        }
+    ],
+    "name": "mcfly"
+}
