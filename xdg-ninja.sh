@@ -9,6 +9,9 @@ auto_set_decoder() {
     DECODER="cat"
     if has_command glow; then
         DECODER="glow -"
+    elif has_command batcat; then
+        DECODER="batcat -pp --decorations=always --color=always --language markdown"
+        printf "Markdown rendering will be done by bat. (Glow is recommended)\n"
     elif has_command bat; then
         DECODER="bat -pp --decorations=always --color=always --language markdown"
         printf "Markdown rendering will be done by bat. (Glow is recommended)\n"
