@@ -1,0 +1,10 @@
+{
+  "files": [
+        {
+            "path": "$HOME/.ftba",
+            "movable": false,
+            "help": "Only the instances folder in it is movable.\n"
+        }
+    ],
+    "name": "Feed the Beast"
+}
