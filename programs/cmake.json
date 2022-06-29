@@ -6,5 +6,5 @@
             "help": "Currently unsupported.\n\n_Relevant issue:_ https://gitlab.kitware.com/cmake/cmake/-/issues/22480\n"
         }
     ],
-    "name": "fltk"
+    "name": "cmake"
 }
