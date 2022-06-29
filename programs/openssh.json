@@ -3,7 +3,7 @@
         {
             "path": "$HOME/.ssh",
             "movable": false,
-            "help": ""
+            "help": "Assumed to be present by many ssh daemons and clients such as **DropBear** and **OpenSSH**."
         }
     ],
     "name": "openssh"
