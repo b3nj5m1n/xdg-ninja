@@ -1,0 +1,10 @@
+{
+    "files": [
+        {
+            "path": "$HOME/.fltk",
+            "movable": false,
+            "help": "Currently unsupported.\n\n_Relevant issue:_ https://www.fltk.org/str.php?L3370+P0+S0+C0+I0+E0+V%25+Qxdg\n"
+        }
+    ],
+    "name": "fltk"
+}
