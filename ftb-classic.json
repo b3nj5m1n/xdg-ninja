@@ -1,0 +1,15 @@
+{
+  "files": [
+        {
+            "path": "$HOME/.ftb",
+            "movable": true,
+            "help": "Change directory path in options.\n"
+        },
+        {
+            "path": "$HOME/.ftblauncher",
+            "movable": false,
+            "help": "Switch to an alternative launcher.\n"
+        }
+    ],
+    "name": "Feed the Beast Classic"
+}
