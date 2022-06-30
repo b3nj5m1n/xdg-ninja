@@ -2,8 +2,8 @@
     "files": [
         {
             "path": "$HOME/.android",
-            "movable": true,
-            "help": "Export the following environment variables:\n\n```bash\nexport ANDROID_HOME=\"$XDG_DATA_HOME\"/android\n```\n"
+            "movable": false,
+            "help": "**adb** will always generate \"$HOME/.android/adbkeys\"."
         }
     ],
     "name": "android-studio"
