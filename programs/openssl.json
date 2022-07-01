@@ -1,0 +1,10 @@
+{
+    "files": [
+        {
+            "path": "$HOME/.rnd",
+            "movable": true,
+            "help": "Export variable RANDFILE for location of random seed file"
+        }
+    ],
+    "name": "openssl"
+}
