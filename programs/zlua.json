@@ -1,0 +1,10 @@
+{
+    "files": [
+        {
+            "path": "$HOME/.zlua",
+            "movable": true,
+            "help": "Export the following environment variables:\n\n```bash\nexport _ZL_DATA=\"$XDG_DATA_HOME/zlua\"\n```\n"
+        }
+    ],
+    "name": "zlua"
+}
