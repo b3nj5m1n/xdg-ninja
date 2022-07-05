@@ -59,7 +59,7 @@ You can use `cabal build`, `stack build`, or the provided dockerfile in _build/_
 
 We're going to use _git_ as an example.
 
-It puts the file _.gitconfig_ into _$HOME.
+It puts the file _.gitconfig_ into _$HOME_.
 
 Luckily, the XDG spec is supported by git, so we can simply move the file to _XDG_CONFIG_HOME/git/config_.
 
