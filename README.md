@@ -26,7 +26,7 @@ This will run every test in the default configuration.
 
 ### Optional
 
-- [glow](https://repology.org/project/glow/packages) for rendering markdown in the terminal ([bat](https://repology.org/project/bat-cat/packages), [pygmentize](https://repology.org/project/pygments/versions) or [highlight](https://repology.org/project/highlight/packages) can be used as fallback, but glow's output is clearer and therefore glow is recommended)
+- [glow](https://repology.org/project/glow/packages) for rendering Markdown in the terminal ([bat](https://repology.org/project/bat-cat/packages), [pygmentize](https://repology.org/project/pygments/versions) or [highlight](https://repology.org/project/highlight/packages) can be used as fallback, but glow's output is clearer and therefore glow is recommended)
 
 ## Configuration
 
@@ -36,7 +36,7 @@ You define a program, and then a list of files and directories which this progra
 
 For each file/directory, you specify if it can be (re)moved.
 
-If this is the case, you also specify instructions on how to accomplish this in markdown.
+If this is the case, you also specify instructions on how to accomplish this in Markdown.
 
 Files in this directory can have any name, but using the name of the program is encouraged.
 
@@ -59,7 +59,7 @@ You can use `cabal build`, `stack build`, or the provided dockerfile in _build/_
 
 We're going to use _git_ as an example.
 
-It puts the file _.gitconfig_ into _$HOME.
+It puts the file _.gitconfig_ into _$HOME_.
 
 Luckily, the XDG spec is supported by git, so we can simply move the file to _XDG_CONFIG_HOME/git/config_.
 
