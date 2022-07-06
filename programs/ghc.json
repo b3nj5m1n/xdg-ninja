@@ -1,0 +1,10 @@
+{
+    "files": [
+        {
+            "path": "$HOME/.ghc",
+            "movable": false,
+            "help": "Currently unsupported.\n"
+        }
+    ],
+    "name": "GHC"
+}
