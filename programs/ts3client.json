@@ -1,0 +1,10 @@
+{
+    "files": [
+        {
+            "path": "$HOME/.ts3client",
+            "movable": true,
+            "help": "Export the following environment variables:\n\n```bash\nexport TS3_CONFIG_DIR=$XDG_CONFIG_HOME/ts3client```\n"
+        }
+    ],
+    "name": "ts3client"
+}
