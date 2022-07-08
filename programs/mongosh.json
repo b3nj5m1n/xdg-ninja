@@ -1,0 +1,10 @@
+{
+    "files": [
+        {
+            "help": "Currently unsupported.\n\n_Relevant issue:_ https://jira.mongodb.org/browse/MONGOSH-1070\n",
+            "movable": false,
+            "path": "$HOME/.mongodb"
+        }
+    ],
+    "name": "mongosh"
+}
