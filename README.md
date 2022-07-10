@@ -15,9 +15,15 @@ The configurations are from the [arch wiki page on XDG_BASE_DIR](https://wiki.ar
 
 ## Running
 
+### Cloning Manually
+
 Clone the repository somewhere, then run the _./xdg-ninja.sh_ script.
 
 This will run every test in the default configuration.
+
+### Installing with Homebrew
+
+To install xdg-ninja with [Homebrew](https://brew.sh), run `brew install xdg-ninja` to install the script and all of its dependencies, then run the `xdg-ninja` command.
 
 ## Dependencies
 
