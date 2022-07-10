@@ -15,9 +15,15 @@ The configurations are from the [arch wiki page on XDG_BASE_DIR](https://wiki.ar
 
 ## Running
 
+### Cloning Manually
+
 Clone the repository somewhere, then run the _./xdg-ninja.sh_ script.
 
 This will run every test in the default configuration.
+
+### Installing with Homebrew
+
+To install xdg-ninja with [Homebrew](https://brew.sh), run `brew install xdg-ninja` to install the script and all of its dependencies, then run the `xdg-ninja` command.
 
 ## Dependencies
 
@@ -27,6 +33,8 @@ This will run every test in the default configuration.
 ### Optional
 
 - [glow](https://repology.org/project/glow/packages) for rendering markdown in the terminal ([bat](https://repology.org/project/bat-cat/packages), [pygmentize](https://repology.org/project/pygments/versions) or [highlight](https://repology.org/project/highlight/packages) can be used as fallback, but glow's output is clearer and therefore glow is recommended)
+
+All dependencies are automatically installed if `xdg-ninja` is installed with Homebrew.
 
 ## Configuration
 
