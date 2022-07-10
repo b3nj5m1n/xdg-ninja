@@ -34,8 +34,6 @@ To install xdg-ninja with [Homebrew](https://brew.sh), run `brew install xdg-nin
 
 - [glow](https://repology.org/project/glow/packages) for rendering markdown in the terminal ([bat](https://repology.org/project/bat-cat/packages), [pygmentize](https://repology.org/project/pygments/versions) or [highlight](https://repology.org/project/highlight/packages) can be used as fallback, but glow's output is clearer and therefore glow is recommended)
 
-All dependencies are automatically installed if `xdg-ninja` is installed with Homebrew.
-
 ## Configuration
 
 The configuration is done in the _programs/_ directory.
