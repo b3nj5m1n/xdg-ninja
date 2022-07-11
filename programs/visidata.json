@@ -1,0 +1,15 @@
+{
+    "files": [
+        {
+            "help": "Supported since version 2.9.\n\nYou can move the folder to _XDG_CACHE_HOME/visidata.\n",
+            "movable": true,
+            "path": "$HOME/.visidata/"
+        },
+        {
+            "help": "Supported since version 2.9.\n\nYou can move the file to _XDG_CONFIG_HOME/visidata/config.py.\n",
+            "movable": true,
+            "path": "$HOME/.visidatarc"
+        }
+    ],
+    "name": "visidata"
+}
