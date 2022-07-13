@@ -1,0 +1,10 @@
+{
+    "name": "jdownloader",
+    "files": [
+        {
+            "path": "$HOME/.jd",
+            "movable": false,
+            "help": "Currently unsupported.\n\n_Relevant issue:_ https://board.jdownloader.org/showthread.php?t=15157&highlight=xdg\n"
+        }
+    ]
+}

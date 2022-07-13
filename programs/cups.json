@@ -1,0 +1,10 @@
+{
+    "name": "CUPS",
+    "files": [
+        {
+            "path": "$HOME/.cups",
+	    "movable": false,
+	    "help": "Currently unsupported.\n\n_Relevant issue:_ https://github.com/OpenPrinting/cups/issues/10\n"
+        }
+    ]
+}

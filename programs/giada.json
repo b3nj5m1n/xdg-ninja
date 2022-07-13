@@ -1,0 +1,10 @@
+{
+    "name": "giada",
+    "files": [
+        {
+            "path": "$HOME/.giada",
+            "movable": false,
+            "help": "Currently unsupported.\n\n_Relevant issue:_ https://github.com/monocasual/giada/issues/338\n"
+        }
+    ]
+}

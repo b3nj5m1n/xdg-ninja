@@ -1,0 +1,10 @@
+{
+    "name": "hplip",
+    "files": [
+        {
+            "path": "$HOME/.hplip",
+            "movable": false,
+            "help": "Currently unsupported.\n\n_Relevant issue:_ https://bugs.launchpad.net/hplip/+bug/307152\n"
+        }
+    ]
+}
