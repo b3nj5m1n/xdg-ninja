@@ -1,0 +1,10 @@
+{
+    "name": "dub package manager",
+    "files": [
+        {
+            "path": "$HOME/.dub",
+            "movable": false,
+            "help": "Currently unsupported.\n\n_Relevant issue:_ https://github.com/dlang/dub/issues/341\n"
+        }
+    ]
+}
