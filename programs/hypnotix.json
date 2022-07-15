@@ -1,0 +1,10 @@
+{
+    "name": "hypnotix",
+    "files": [
+        {
+            "path": "$HOME/.hypnotix",
+            "movable": true,
+            "help": "Old versions of Hypnotix used to store cache data to this directory.\nIf Hypnotix version is 2.7 or higher the directory can be safely deleted since it now uses _\"$XDG_CACHE_HOME/hypnotix\"_\n"
+        }
+    ]
+}
