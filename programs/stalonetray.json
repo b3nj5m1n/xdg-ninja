@@ -1,0 +1,10 @@
+{
+    "name": "stalonetray",
+    "files": [
+        {
+            "path": "$HOME/.stalonetrayrc",
+            "movable": true,
+            "help": "Move file to _\"$XDG_CONFIG_HOME/stalonetrayrc\"_\n"
+        }
+    ]
+}
