@@ -1,0 +1,10 @@
+{
+    "name": "tt",
+    "files": [
+        {
+        "path": "$HOME/.tt",
+	    "movable": false,
+	    "help": "Currently unsupported."
+        }
+    ]
+}
