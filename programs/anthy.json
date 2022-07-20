@@ -1,0 +1,10 @@
+{
+  "files": [
+        {
+            "path": "$HOME/.anthy",
+            "movable": false,
+            "help": "Currently unsupported.\n\n_Relevant issue:_ https://osdn.net/ticket/browse.php?group_id=14&tid=28397\n"
+        }
+    ],
+    "name": "anthy"
+}
