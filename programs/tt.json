@@ -1,0 +1,10 @@
+{
+    "files": [
+        {
+            "help": "Currently unsupported.\n\n_Currently no relevant issue, see issue tracker here:_ https://github.com/lemnos/tt/issues?q=\n",
+            "movable": false,
+            "path": "$HOME/.tt"
+        }
+    ],
+    "name": "tt"
+}
