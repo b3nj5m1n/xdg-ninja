@@ -11,6 +11,11 @@
             "help": "Set this in your zshrc:\n\n```bash\ncompinit -d \"$XDG_CACHE_HOME\"/zsh/zcompdump-\"$ZSH_VERSION\"\n```\n"
         },
         {
+            "path": "$HOME/.zhistory",
+            "movable": true,
+            "help": "Export the following environment variable:\n\n```bash\nexport HISTFILE=\"$XDG_STATE_HOME\"/zsh/history\n```\n"
+        },
+        {
             "path": "$HOME/.histfile",
             "movable": true,
             "help": "Export the following environment variable:\n\n```bash\nexport HISTFILE=\"$XDG_STATE_HOME\"/zsh/history\n```\n"
