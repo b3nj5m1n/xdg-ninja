@@ -1,0 +1,10 @@
+{
+    "files": [
+        {
+            "path": "$HOME/.carbon-now.json",
+            "movable": true,
+            "help": "Alias carbon-now to use a custom configuration file location:\n\n```bash\nalias carbon-now=carbon-now --config=\"$XDG_CONFIG_HOME/carbon-now.json\"\n```\n"
+        }
+    ],
+    "name": "carbon-now-cli"
+}
