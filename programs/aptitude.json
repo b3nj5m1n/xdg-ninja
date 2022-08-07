@@ -1,0 +1,10 @@
+{
+    "files": [
+        {
+            "path": "$HOME/.aptitude/config",
+            "movable": false,
+            "help": "Currently unsupported.\n\n_Relevant issue:_ https://bugs.debian.org/cgi-bin/bugreport.cgi?bug=894332\n"
+        }
+    ],
+    "name": "aptitude"
+}
