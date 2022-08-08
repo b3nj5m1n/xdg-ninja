@@ -24,8 +24,8 @@ getInputMarkdown placeholder = do
 getProp :: T.Text -> T.Text -> IO String
 getProp prompt placeholder = do
   let string_prompt = T.unpack prompt
-  let string_placholder = T.unpack placeholder
-  x <- runInputT defaultSettings (getInputLineWithInitial string_prompt (string_placholder, ""))
+  let string_placeholder = T.unpack placeholder
+  x <- runInputT defaultSettings (getInputLineWithInitial string_prompt (string_placeholder, ""))
   case x of
     Just s  -> return s
     Nothing -> return ""

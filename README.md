@@ -108,4 +108,4 @@ Now, we can assemble our final json file:
 
 Saving this as _git.json_ in the _programs/_ directory will result in the script picking it up and checking the file.
 
-If you've created a configuration for a file that isn't in the offical repository yet, make sure to create a pull request so that other people can benefit from it as well.
+If you've created a configuration for a file that isn't in the official repository yet, make sure to create a pull request so that other people can benefit from it as well.

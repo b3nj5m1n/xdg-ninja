@@ -78,7 +78,7 @@ getProgram = do
           >> getProp (yellow "Program name: ") ""
   files <- printf "%s\n" (T.unpack (faint (italic (cyan "Alright, now let's configure which files belong to this program."))))
            >> printf "%s\n" (T.unpack (faint (italic (cyan "I'm going to ask you for the path to the file, please use $HOME instead of ~."))))
-           >> printf "%s\n" (T.unpack (faint (italic (cyan "I'll then ask you wether or not this file can be moved to a different directory."))))
+           >> printf "%s\n" (T.unpack (faint (italic (cyan "I'll then ask you whether or not this file can be moved to a different directory."))))
            >> printf "%s\n" (T.unpack (faint (italic (cyan "Finally, your editor is going to open a markdown document. Enter instructions on moving the file in question, then save and close."))))
            >> getFiles []
   return Program {name = T.pack name, files = files}
