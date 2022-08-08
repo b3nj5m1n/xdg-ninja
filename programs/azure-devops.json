@@ -1,0 +1,10 @@
+{
+    "files": [
+        {
+            "path": "$HOME/.azure-devops",
+            "movable": true,
+            "help": "Export the following environment variables:\n\n```bash\nexport AZURE_DEVOPS_CACHE_DIR=\"$XDG_CACHE_HOME\"/azure-devops \n```\n"
+        }
+    ],
+    "name": "azure-devops"
+}
