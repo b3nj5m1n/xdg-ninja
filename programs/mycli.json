@@ -1,0 +1,15 @@
+{
+    "files": [
+        {
+            "path": "$HOME/.myclirc",
+            "movable": true,
+            "help": "Supported since version _1.21.0_. You can move the file to $XDG_CONFIG_HOME/mycli/myclirc\n"
+        },
+        {
+            "path": "$HOME/.mycli-history",
+            "movable": true,
+            "help": "Supported since version _1.8.0_. Export the following environment variables:\n\n```bash\nexport MYCLI_HISTFILE=\"$XDG_DATA_HOME/mycli/history\"\n```\n"
+        }
+    ],
+    "name": "mycli"
+}
