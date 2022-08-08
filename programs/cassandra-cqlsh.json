@@ -1,0 +1,15 @@
+{
+    "files": [
+        {
+            "path": "$HOME/.cassandra/cqlshrc",
+            "movable": true,
+            "help": "Alias cqlsh to use a custom configuration location:\n\n```bash\nalias cqlsh=\"cqlsh --cqlshrc=$XDG_CONFIG_HOME/cassandra/cqlshrc\"\n```\n"
+        },
+        {
+            "path": "$HOME/.cassandra/cqlsh_history",
+            "movable": true,
+            "help": "Supported since version _6.20_. Export the following environment variables:\n\n```bash\nexport CQL_HISTORY=\"$XDG_DATA_HOME/cassandra/cqlsh_history\"\n```\n"
+        }
+    ],
+    "name": "cassandra-cqlsh"
+}
