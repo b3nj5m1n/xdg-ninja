@@ -1,0 +1,10 @@
+{
+    "files": [
+        {
+            "path": "$HOME/.gitmoji/gitmojis.json",
+            "movable": false,
+            "help": "Currently unsupported\n\n_Relevant issue:_ https://github.com/carloscuesta/gitmoji-cli/issues/893\n"
+        }
+    ],
+    "name": "gitmoji-cli"
+}
