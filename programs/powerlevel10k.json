@@ -1,0 +1,10 @@
+{
+    "files": [
+        {
+            "help": "Move file to \"$HOME\"/.config/zsh/.p10k.zsh and export the following environment variable:\n\n```bash\nexport ZDOTDIR=\"$HOME\"/.config/zsh\n```\nYou can do this in _/etc/zsh/zshenv_.\n\nThen, in your _.zshrc_ file, edit the following line:\n```diff\n-[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh\n+[[ ! -f ${ZDOTDIR:-~}/.p10k.zsh ]] || source ${ZDOTDIR:-~}/.p10k.zsh\n```\n",
+            "movable": true,
+            "path": "$HOME/.p10k.zsh"
+        }
+    ],
+    "name": "powerlevel10k"
+}
