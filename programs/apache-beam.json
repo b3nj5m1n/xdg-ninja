@@ -1,0 +1,10 @@
+{
+    "files": [
+        {
+            "path": "$HOME/.apache_beam",
+            "movable": false,
+            "help": "Currently unsupported.\n\n_Relevant issue:_ https://issues.apache.org/jira/browse/BEAM-12534\n"
+        }
+    ],
+    "name": "apache_beam"
+}
