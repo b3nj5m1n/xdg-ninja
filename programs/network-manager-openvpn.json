@@ -1,0 +1,10 @@
+{
+    "files": [
+        {
+            "path": "$HOME/.cert",
+            "movable": false,
+            "help": "Currently unsupported.\n\n_Relevant issue:_ https://gitlab.gnome.org/GNOME/NetworkManager-openvpn/-/issues/35\n"
+        }
+    ],
+    "name": "network-manager-openvpn"
+}
