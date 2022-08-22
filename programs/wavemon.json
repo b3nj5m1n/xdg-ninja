@@ -1,0 +1,10 @@
+{
+    "files": [
+        {
+            "path": "$HOME/.wavemonrc",
+            "movable": true,
+            "help": "Supported since 2021-09-22 in the _master_ branch (commit _6ac534c_).\n\nThe file is automatically moved to the correct location if it exists at startup.\n"
+        }
+    ],
+    "name": "wavemon"
+}
