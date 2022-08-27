@@ -1,0 +1,10 @@
+{
+    "name": "netrc",
+    "files": [
+        {
+            "path": "$HOME/.netrc",
+            "movable": false,
+            "help": "By default it is expected to be in $HOME, but some programs support specifying custom location for the netrc file. Check the appropriate man pages.\n\n- For ftp `-N` or `--netrc`.\n- For yt-dlp `--netrc-location`."
+        }
+    ]
+}
