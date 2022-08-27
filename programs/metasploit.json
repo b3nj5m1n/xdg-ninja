@@ -1,0 +1,10 @@
+{
+    "files": [
+        {
+            "path": "$HOME/.msf4",
+            "movable": false,
+            "help": "Currently not supported, see [this](https://github.com/rapid7/metasploit-framework/issues/11367) issue.\n"
+        }
+    ],
+    "name": "metasploit"
+}
