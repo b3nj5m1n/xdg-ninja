@@ -1,0 +1,10 @@
+{
+    "files": [
+        {
+            "path": "$HOME/.nodenv",
+            "movable": true,
+            "help": "Export the following environment variables:\n\n```bash\nexport NODENV_ROOT=\"$XDG_DATA_HOME\"/nodenv \n```\n"
+        }
+    ],
+    "name": "nodenv"
+}

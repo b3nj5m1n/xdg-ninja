@@ -1,0 +1,10 @@
+{
+    "files": [
+        {
+            "path": "$HOME/.alacritty.yml",
+            "movable": true,
+            "help": "Supported out of the box, just move the file to:\n\n```bash\n$XDG_CONFIG_HOME/alacritty/alacritty.yml \n```\n"
+        }
+    ],
+    "name": "alacritty"
+}
