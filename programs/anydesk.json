@@ -1,0 +1,10 @@
+{
+    "name": "anydesk",
+    "files": [
+        {
+            "path": "$HOME/.anydesk",
+            "movable": false,
+            "help": "Currently unsupported.\n\nIt can only be fixed by the company, since it's closed source."
+        }
+    ]
+}
