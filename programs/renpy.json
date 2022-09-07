@@ -1,0 +1,10 @@
+{
+    "name": "Ren'Py",
+    "files": [
+        {
+            "path": "$HOME/.renpy",
+            "movable": false,
+            "help": "Not going to be supported. See the relevant [issue](https://github.com/renpy/renpy/issues/1377).\n\nThere's a workaround in the comments that needs to be applied to every game."
+        }
+    ]
+}

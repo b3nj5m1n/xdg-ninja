@@ -1,0 +1,10 @@
+{
+    "files": [
+        {
+            "path": "$HOME/.selected_editor",
+            "movable": true,
+            "help": "Configure what editor to use:\n\n```bash\nupdate-alternatives --config editor\n```\n"
+        }
+    ],
+    "name": "editor"
+}

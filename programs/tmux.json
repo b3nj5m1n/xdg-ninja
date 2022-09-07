@@ -5,6 +5,11 @@
             "path": "$HOME/.tmux.conf",
             "movable": true,
             "help": "Supported since _v3.2_ (Partial support since _v3.1_).\n\nYou can move the file to _XDG_CONFIG_HOME/tmux/tmux.conf_.\n"
+        },
+        {
+            "path": "$HOME/.tmux",
+            "movable": true,
+            "help": "Set this in your tmux.conf:\n\n```set-environment -g TMUX_PLUGIN_MANAGER_PATH '~/.local/share/tmux/plugins'```\n\nThen update the path to tpm to:\n\n```run '~/.local/share/tmux/plugins/tpm/tpm'```\n\nNow move .tmux to _XDG_CONFIG_HOME_/tmux.\n"
         }
     ]
 }

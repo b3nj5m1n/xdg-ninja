@@ -1,7 +1,7 @@
 {
     "files": [
         {
-            "help": "Currently unsupported. Harcoded value.\n",
+            "help": "Currently unsupported. Hardcoded value.\n",
             "movable": false,
             "path": "$HOME/.sdirs"
         }
