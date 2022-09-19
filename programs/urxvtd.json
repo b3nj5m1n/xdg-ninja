@@ -1,9 +1,9 @@
 {
     "files": [
         {
-            "path": "$HOME/.urxvt/urxvtd-hostname",
+            "path": "$HOME/.urxvt",
             "movable": true,
-            "help": "Export the following environment variables:\n\n```bash\nexport RXVT_SOCKET=\"$XDG_RUNTIME_DIR\"/urxvtd\n```\n"
+            "help": "Export the following environment variables:\n\n```bash\nexport RXVT_SOCKET=\"$XDG_RUNTIME_DIR\"/urxvtd\n```\n\nIf the ```$HOME/.urxvt``` folder still shows up, try adding ```RXVT_SOCKET=$XDG_DATA_HOME/urxvtd``` before the ```urxvtd``` command:\n\n```bash\nRXVT_SOCKET=\"$XDG_DATA_HOME\"/urxvtd urxvtd -q -o -f\n```\nIf that doesn't work either, try changing ```\"$XDG_DATA_HOME\"/urxvtd``` to ```/tmp/urxvt-socket```\n"
         }
     ],
     "name": "urxvtd"
