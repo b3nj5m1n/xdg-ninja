@@ -1,0 +1,10 @@
+{
+    "files": [
+        {
+            "path": "$HOME/.lunarclient",
+            "movable": false,
+            "help": "Currently unsupported. Perhaps it will be in the future.\n"
+        }
+    ],
+    "name": "Lunar Client"
+}
