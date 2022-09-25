@@ -1,0 +1,10 @@
+{
+    "files": [
+        {
+            "path": "$HOME/.omnisharp",
+            "movable": true,
+            "help": "Export the following environment variables:\n\n```bash\nexport OMNISHARPHOME=\"$XDG_CONFIG_HOME\"/omnisharp \n````\n"
+        }
+    ],
+    "name": "OmniSharp"
+}
