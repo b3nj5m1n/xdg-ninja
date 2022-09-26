@@ -1,0 +1,10 @@
+{
+  "files": [
+        {
+            "path": "$HOME/.technic",
+            "movable": false,
+            "help": "Directory path can be changed in the setting, but one config file remains in the directory.\n"
+        }
+    ],
+    "name": "Technic Launcher"
+}
