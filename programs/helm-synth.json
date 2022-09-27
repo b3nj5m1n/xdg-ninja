@@ -1,0 +1,15 @@
+{
+    "files": [
+        {
+            "path": "$HOME/.helm",
+            "movable": false,
+            "help": "Currently unsupported.\n\n_Relevant issue:_ https://github.com/mtytel/helm/issues/70\n"
+        },
+        {
+            "path": "$HOME/.helm-synth",
+            "movable": false,
+            "help": "Currently unsupported.\n\n_Relevant issue:_ https://github.com/mtytel/helm/issues/70\n"
+        }
+    ],
+    "name": "helm-synth"
+}
