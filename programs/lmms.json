@@ -1,0 +1,10 @@
+{
+    "name": "LMMS",
+    "files": [
+        {
+            "path": "$HOME/.lmmsrc.xml",
+            "movable": true,
+            "help": "Alias LMMS to use a custom configuration file:\n\n```bash\nlmms -c \"$XDG_CONFIG_HOME/lmms/lmmsrc.xml\"\n```\n"
+        }
+    ]
+}
