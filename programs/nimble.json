@@ -1,0 +1,10 @@
+{
+    "name": "nimble",
+    "files": [
+        {
+            "path": "$HOME/.nimble",
+            "movable": true,
+            "help": "Export the following environment variable:\n\n```bash\nexport NIMBLE_DIR=\"$XDG_DATA_HOME/nimble\"\n```\n"
+        }
+    ]
+}
