@@ -1,0 +1,10 @@
+{
+    "files": [
+        {
+            "help": "This file is created when _/run/user/1000_ is inaccesible. Consider fixing this. As a workaround, one can alias rofi to use a pidfile that is not in $HOME but is not in $XDG_RUNTIME_DIR either:\n\n```bash\nalias rofi=\"rofi -pid $XDG_STATE_DIR/rofi\"\n```\n",
+            "movable": true,
+            "path": "$HOME/.rofi.pid"
+        }
+    ],
+    "name": "rofi"
+}
