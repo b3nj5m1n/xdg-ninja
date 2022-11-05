@@ -136,6 +136,9 @@ decode_string() {
 /' # Replace \n with literal newline and \" with ", normalize number of trailing newlines to 2
 }
 
+# Counter to keep track of how many files can be moved
+FIXABLE=0
+
 # Function to handle the formatting of output
 log() {
     MODE="$1"
@@ -147,6 +150,7 @@ log() {
 
     ERR)
         printf '[%b%s%b]: %b%s%b\n' "${FX_BOLD}${FG_RED}" "$NAME" "${FX_RESET}" "${FX_BOLD}${FX_ITALIC}" "$FILENAME" "${FX_RESET}"
+        FIXABLE=$((FIXABLE+1))
         ;;
 
     WARN)
@@ -223,3 +227,4 @@ check_programs() {
 
 
 check_programs
+exit $FIXABLE
