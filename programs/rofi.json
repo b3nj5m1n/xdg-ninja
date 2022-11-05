@@ -1,7 +1,7 @@
 {
     "files": [
         {
-            "help": "This file is created when _/run/user/1000_ is inaccesible, which usually only happens on non-systemd systems. To fix this, do the following:\n\n**a)**\n\nCheck if _/run/user_ exists.\nIf it does not, skip to part **b)**.\n\nAdd the following to your login shell's login file (_.zlogin_ for zsh, _.bash_login_ for bash):\n```bash\nif test -z \"${XDG_RUNTIME_DIR}\"; then\n    export XDG_RUNTIME_DIR=\"/run/user/${UID}\"\n    if ! test -d \"$XDG_RUNTIME_DIR}\"; then\n        mkdir \"$XDG_RUNTIME_DIR}\"\n        chmod 0700 \"${XDG_RUNTIME_DIR}\"\n    fi\nfi\n```\n\n**b)**\n\n**The following is OpenRC specific**, but one can still implement this fix if they are to translate the given directory and filename to the appropriate rc directory in their init system, the contents should be the same.\n\nCreate the file _/etc/local.d/runuser.start_ and put the following content into it:\n```bash\n#!/bin/sh\nmkdir -p /run/user/1000\nchown YOUR_USERNAME_HERE:users /run/user/1000\nchmod 0700 /run/user/1000\n```\n\nAfter this, make the file executable with:\n```bash\nchmod +x /etc/local.d/runuser.start\n```\n\n**or,**\n\nAs a workaround, one can alias rofi to use a pidfile that is not $HOME but is not $XDG_RUNTIME_DIR either:\n\n```bash\nalias rofi=\"rofi -pid $XDG_STATE_DIR/rofi\"\n```\n",
+            "help": "This file is created when _/run/user/1000_ is inaccesible. Consider fixing this. As a workaround, one can alias rofi to use a pidfile that is not in $HOME but is not in $XDG_RUNTIME_DIR either:\n\n```bash\nalias rofi=\"rofi -pid $XDG_STATE_DIR/rofi\"\n```\n",
             "movable": true,
             "path": "$HOME/.rofi.pid"
         }
