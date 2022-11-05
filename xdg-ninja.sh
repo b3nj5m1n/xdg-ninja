@@ -201,7 +201,9 @@ check_file() {
             log WARN "$NAME" "$FILENAME" "$HELP"
         fi
         if [ "$HELP" ]; then
-            log HELP "$NAME" "$FILENAME" "$HELP"
+            if [ "$MOVABLE" = true ] || [ "$SKIP_UNSUPPORTED" = false ]; then
+                log HELP "$NAME" "$FILENAME" "$HELP"
+            fi
         else
             log HELP "$NAME" "$FILENAME" "_No help available._"
         fi
