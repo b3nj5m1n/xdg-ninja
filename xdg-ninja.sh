@@ -63,11 +63,14 @@ help() {
 
     ${FX_ITALIC}--skip-ok${FX_RESET}           ${FX_BOLD}Don't display anything for files that do not exist (default)${FX_RESET}
 
+    ${FX_ITALIC}--skip-unsupported${FX_RESET}  ${FX_BOLD}Don't display anything for files that do not have fixes available${FX_RESET}
+
     """
     printf "%b" "$HELPSTRING"
 }
 
 SKIP_OK=true
+SKIP_UNSUPPORTED=false
 for i in "$@"; do
     if [ "$i" = "--help" ] || [ "$i" = "-h" ]; then
         help
@@ -76,6 +79,8 @@ for i in "$@"; do
         SKIP_OK=true
     elif [ "$i" = "--no-skip-ok" ]; then
         SKIP_OK=false
+    elif [ "$i" = "--skip-unsupported" ]; then
+        SKIP_UNSUPPORTED=true
     elif [ "$i" = "-v" ]; then
         SKIP_OK=false
     fi
@@ -154,7 +159,8 @@ log() {
         ;;
 
     WARN)
-        printf '[%b%s%b]: %b%s%b\n' "${FX_BOLD}${FG_YELLOW}" "$NAME" "${FX_RESET}" "${FX_BOLD}${FX_ITALIC}" "$FILENAME" "${FX_RESET}"
+        [ "$SKIP_UNSUPPORTED" = false ] &&
+            printf '[%b%s%b]: %b%s%b\n' "${FX_BOLD}${FG_YELLOW}" "$NAME" "${FX_RESET}" "${FX_BOLD}${FX_ITALIC}" "$FILENAME" "${FX_RESET}"
         ;;
 
     INFO)
