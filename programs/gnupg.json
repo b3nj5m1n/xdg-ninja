@@ -1,9 +1,9 @@
 {
     "files": [
         {
-            "path": "$HOME/.gnupg",
+            "help": "Export the following environment variables:\n\n```bash\nexport GNUPGHOME=\"$XDG_DATA_HOME\"/gnupg\n```\n\n_Note: from the archwiki:_\n> If you use non-default GnuPG Home directory, you will need to edit all socket files to use the values of gpgconf --list-dirs.\n> If you set your SSH_AUTH_SOCK manually, keep in mind that your socket location may be different if you are using a custom GNUPGHOME\n",
             "movable": true,
-            "help": "Export the following environment variables:\n\n```bash\nexport GNUPGHOME=\"$XDG_DATA_HOME\"/gnupg\n```\n"
+            "path": "$HOME/.gnupg"
         }
     ],
     "name": "gnupg"
