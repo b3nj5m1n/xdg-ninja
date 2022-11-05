@@ -1,0 +1,10 @@
+{
+    "files": [
+        {
+            "help": "Export the following environment variables:\n\n```bash\nexport TS_NODE_HISTORY=\"$XDG_STATE_HOME\"/ts_node_repl_history\n```\n",
+            "movable": true,
+            "path": "$HOME/.ts_node_repl_history"
+        }
+    ],
+    "name": "ts-node"
+}

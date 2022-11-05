@@ -1,0 +1,10 @@
+{
+    "files": [
+        {
+            "help": "Matplotlib will use _XDG_CONFIG_HOME/matplotlib_ and _XDG_CACHE_HOME/matplotlib_ on linux by default if the directories are writable.\n\nYou can also set the _MPLCONFIGDIR_ environment variable, see the [documentation](https://matplotlib.org/stable/users/faq/environment_variables_faq.html#envvar-MPLCONFIGDIR).\n",
+            "movable": true,
+            "path": "$HOME/.matplotlib"
+        }
+    ],
+    "name": "matplotlib"
+}

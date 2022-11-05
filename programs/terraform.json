@@ -1,0 +1,10 @@
+{
+    "files": [
+        {
+            "help": "Currently unsupported.\n\n_Relevant issue:_ https://github.com/hashicorp/terraform/pull/31952\n",
+            "movable": false,
+            "path": "$HOME/.terraform.d"
+        }
+    ],
+    "name": "terraform"
+}
