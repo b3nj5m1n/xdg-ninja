@@ -1,0 +1,10 @@
+{
+    "files": [
+        {
+            "help": "Currently unsupported.\n\n_Relevant issue:_ https://gitlab.com/sane-project/frontend/xsane/-/issues/55\n",
+            "movable": false,
+            "path": "$HOME/.sane"
+        }
+    ],
+    "name": "xsane"
+}
