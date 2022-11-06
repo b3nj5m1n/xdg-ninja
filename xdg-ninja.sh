@@ -233,6 +233,9 @@ check_programs() {
     printf "\n"
 }
 
-
 check_programs
-exit $FIXABLE
+if [ $FIXABLE -gt 100 ]; then
+    exit 101
+else
+    exit $FIXABLE
+fi
