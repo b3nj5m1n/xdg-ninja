@@ -1,0 +1,10 @@
+{
+    "name": "conan",
+    "files": [
+        {
+            "path": "$HOME/.conan",
+            "movable": true,
+            "help": "Export the following environment variable:\n\n```bash\nexport CONAN_USER_HOME=\"$XDG_CONFIG_HOME\"\n```\nThis will set the directory in which `.conan` will be created.\n"
+        }
+    ]
+}
