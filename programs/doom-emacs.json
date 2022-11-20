@@ -1,0 +1,10 @@
+{
+    "files": [
+        {
+            "path": "$HOME/.doom.d",
+            "movable": true,
+            "help": "XDG is supported out-of-the-box. Simply move _~/.doom.d_ to _$XDG_CONFIG_HOME/doom_. Alternatively export _$DOOMDIR_ to point to your preferred location.\n"
+        }
+    ],
+    "name": "doom-emacs"
+}
