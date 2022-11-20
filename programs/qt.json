@@ -1,0 +1,10 @@
+{
+    "files": [
+        {
+            "help": "Currently unsupported.\nUsed by QT for storing some configuration options.\n",
+            "movable": false,
+            "path": "$HOME/.qt"
+        }
+    ],
+    "name": "qt"
+}

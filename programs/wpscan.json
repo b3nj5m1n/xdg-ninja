@@ -1,0 +1,10 @@
+{
+    "files": [
+        {
+            "path": "$HOME/.wpscan",
+            "movable": false,
+            "help": "Currently unsupported.\n\n_Relevant issue:_ https://github.com/wpscanteam/wpscan/issues/1586\n"
+        }
+    ],
+    "name": "wpscan"
+}
