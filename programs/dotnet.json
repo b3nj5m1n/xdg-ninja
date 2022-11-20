@@ -4,6 +4,11 @@
             "path": "$HOME/.dotnet",
             "movable": false,
             "help": "Currently unsupported.\n\n_Relevant issue:_ https://github.com/dotnet/sdk/issues/8678\n"
+        },
+        {
+            "path": "$HOME/.net",
+            "movable": false,
+            "help": "This directory is used by software written with .NET to store all the DLLs they need to work.\nSo it's pratically impossible to provide a general way to configure this specific behaviour.\n"
         }
     ],
     "name": "dotnet"
