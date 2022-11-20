@@ -1,0 +1,10 @@
+{
+    "files": [
+        {
+            "path": "$HOME/.parsec",
+            "movable": false,
+            "help": "Currently unsupported.\n\nIt can only be fixed by the company, since it's closed source.\n"
+        }
+    ],
+    "name": "parsec"
+}
