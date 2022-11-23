@@ -1,0 +1,46 @@
+{
+    "$schema": "../program-schema/program.json",
+    "name": "cinnamon",
+    "files": [
+        {
+            "path": "$HOME/.cinnamon/spices.cache/",
+            "movable": true,
+            "help": "Supported since _5.6.0_.\n\nYou can either delete or move the folder to _XDG_CONFIG_HOME/cinnamon/spices_.\n"
+        },
+        {
+            "path": "$HOME/.cinnamon/panel-launchers/",
+            "movable": true,
+            "help": "Supported since _5.6.0_.\n\nYou can move the folder to _XDG_DATA_HOME/cinnamon/panel-launchers_.\n"
+        },
+        {
+            "path": "$HOME/.cinnamon/backgrounds/",
+            "movable": true,
+            "help": "Supported since _5.6.0_.\n\nYou can move the folder to _XDG_DATA_HOME/cinnamon/backgrounds_.\n"
+        },
+        {
+            "path": "$HOME/.cinnamon/configs/",
+            "movable": true,
+            "help": "Supported since _5.6.0_.\n\nYou can move the folder to _XDG_CONFIG_HOME/cinnamon/spices_.\n"
+        },
+        {
+            "path": "$HOME/.themes/",
+            "movable": true,
+            "help": "Supported since _5.6.0_.\n\nYou can move the folder to _XGD_DATA_HOME/themes_.\n"
+        },
+        {
+            "path": "$HOME/.icons/",
+            "movable": true,
+            "help": "Supported since _5.6.0_.\n\nYou can move the folder to _XDG_DATA_HOME/icons_.\n"
+        },
+        {
+            "path": "$HOME/.cinnamon/glass.log",
+            "movable": true,
+            "help": "Supported since _5.6.0_.\n\nYou can either delete or move the file to _XDG_STATE_HOME/cinnamon/glass.log_.\n"
+        },
+        {
+            "path": "$HOME/.cinnamon/harvester.log",
+            "movable": true,
+            "help": "Supported since _5.6.0_.\n\nYou can either delete or move the file to _XDG_STATE_HOME/cinnamon/harvester.log_.\n"
+        }
+    ]
+}
