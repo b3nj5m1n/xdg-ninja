@@ -1,0 +1,24 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "Program",
+    "description": "Specification of files or folders in the $HOME folder for a program",
+    "properties": {
+        "name": {
+            "type": "string",
+            "description": "Name of the program",
+            "minLength": 1
+        },
+        "files": {
+            "description": "List of files (or folders) associated with the program",
+            "type": "array",
+            "items": {
+                "$ref": "file.json"
+            },
+            "minItems": 1
+        }
+    },
+    "required": [
+        "name",
+        "files"
+    ]
+}
