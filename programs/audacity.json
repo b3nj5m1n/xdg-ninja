@@ -2,8 +2,8 @@
     "files": [
         {
             "path": "$HOME/.audacity-data",
-            "movable": false,
-            "help": "Currently unsupported.\n\n_Relevant issue:_ https://github.com/audacity/audacity/issues/453\n"
+            "movable": true,
+            "help": "Supported since version 3.2.0\nYou can move these files.\n"
         }
     ],
     "name": "audacity"
