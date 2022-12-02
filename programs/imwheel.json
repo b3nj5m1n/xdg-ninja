@@ -1,0 +1,10 @@
+{
+    "name": "imwheel",
+    "files": [
+        {
+            "path": "$HOME/.imwheelrc",
+            "movable": false,
+            "help": "imwheel does not does not follow XDG.\n\nSee the imwheel manpage for information on where your system stores the global config." 
+        }
+    ]
+}
