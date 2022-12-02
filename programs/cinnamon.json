@@ -4,7 +4,7 @@
         {
             "path": "$HOME/.cinnamon/spices.cache/",
             "movable": true,
-            "help": "Supported since _5.6.0_.\n\nYou can either delete or move the folder to _XDG_CONFIG_HOME/cinnamon/spices_.\n"
+            "help": "Supported since _5.6.0_.\n\nYou can either delete or move the folder to _XDG_CACHE_HOME/cinnamon/spices_.\n"
         },
         {
             "path": "$HOME/.cinnamon/panel-launchers/",
