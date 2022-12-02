@@ -5,6 +5,11 @@
             "path": "$HOME/.minecraft",
             "movable": true,
             "help": "Most launchers support moving this directory:\n\n - Official launcher:\n\nSet directory path with --workDir flag.\n\n - TLauncher:\n\nChange directory path in settings.\n"
+        },
+        {
+            "path": "$HOME/.betacraft",
+            "movable": false,
+            "help": "Currently unsupported.\n\n_Relevant issue:_ https://github.com/Moresteck/BetaCraft-Launcher-Java/issues/193\n"
         }
     ]
 }
