@@ -1,0 +1,10 @@
+{
+    "name": "bytecode viewer",
+    "files": [
+        {
+            "path": "$HOME/.Bytecode-Viewer",
+            "movable": false,
+            "help": "Currently unsupported.\n\n_Relevant issue:_ https://github.com/Konloch/bytecode-viewer/issues/250\n"
+        }
+    ]
+}
