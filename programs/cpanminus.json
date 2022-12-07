@@ -1,0 +1,10 @@
+{
+    "files": [
+        {
+            "path": "$HOME/.cpanm",
+            "movable": true,
+            "help": "Export the following environment variables:\n\n```bash\nexport PERL_CPANM_HOME=\"${XDG_CACHE_HOME}\"/cpanm\n```\n"
+        }
+    ],
+    "name": "cpanminus"
+}

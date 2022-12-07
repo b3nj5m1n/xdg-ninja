@@ -1,0 +1,10 @@
+{
+    "files": [
+        {
+            "path": "$HOME/.bun",
+            "movable": false,
+            "help": "Currently not supported, see [this issue](https://github.com/oven-sh/bun/issues/696). \n"
+        }
+    ],
+    "name": "bun"
+}

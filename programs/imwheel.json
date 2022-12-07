@@ -1,0 +1,10 @@
+{
+    "name": "imwheel",
+    "files": [
+        {
+            "path": "$HOME/.imwheelrc",
+            "movable": false,
+            "help": "imwheel does not does not support changing the config file location, but you can configure it through a global config file, probably stored at `/etc/X11/imwheel/imwheelrc`.\n```\n" 
+        }
+    ]
+}

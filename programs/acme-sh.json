@@ -1,0 +1,10 @@
+{
+    "files": [
+        {
+            "path": "$HOME/.acme.sh",
+            "movable": true,
+            "help": "For now you can move `.acme.sh/` to `\"$XDG_CONFIG_HOME\"/acme.sh/` and alias `acme` to `acme.sh --home \"$XDG_CONFIG_HOME\"/acme.sh/`. See the [documentation](https://github.com/acmesh-official/acme.sh/wiki/How-to-install#4-advanced-installation) or [this issue](https://github.com/acmesh-official/acme.sh/issues/4408) for details. \n"
+        }
+    ],
+    "name": "acme.sh"
+}
