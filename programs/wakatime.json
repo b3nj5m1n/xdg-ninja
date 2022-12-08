@@ -1,0 +1,25 @@
+{
+    "name": "wakatime",
+    "files": [
+        {
+            "path": "$HOME/.wakatime.cfg",
+            "movable": true,
+            "help": "export WAKATIME_HOME='$XDG_CONFIG_HOME/wakatime'\n\nThe directory needs to be created manually\n\nmkdir '$XDG_CONFIG_HOME/wakatime'" 
+        },
+        {
+            "path": "$HOME/.wakatime.data",
+            "movable": true,
+            "help": "export WAKATIME_HOME='$XDG_CONFIG_HOME/wakatime'\n\nThe directory needs to be created manually\n\nmkdir '$XDG_CONFIG_HOME/wakatime'" 
+        },
+        {
+            "path": "$HOME/.wakatime.db",
+            "movable": true,
+            "help": "export WAKATIME_HOME='$XDG_CONFIG_HOME/wakatime'\n\nThe directory needs to be created manually\n\nmkdir '$XDG_CONFIG_HOME/wakatime'" 
+        },
+        {
+            "path": "$HOME/.wakatime.log",
+            "movable": true,
+            "help": "export WAKATIME_HOME='$XDG_CONFIG_HOME/wakatime'\n\nThe directory needs to be created manually\n\nmkdir '$XDG_CONFIG_HOME/wakatime'" 
+        }
+    ]
+}
