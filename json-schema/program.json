@@ -1,7 +1,7 @@
 {
-    "$schema": "http://json-schema.org/draft-07/schema#",
     "title": "Program",
     "description": "Specification of files or folders in the $HOME folder for a program",
+    "type": "object",
     "properties": {
         "name": {
             "type": "string",
@@ -12,7 +12,27 @@
             "description": "List of files (or folders) associated with the program",
             "type": "array",
             "items": {
-                "$ref": "file.json"
+                    "type": "object",
+                    "properties": {
+                        "path": {
+                            "type": "string",
+                            "description": "Path to file (or folder).",
+                            "minLength": 1
+                        },
+                        "movable": {
+                            "type": "boolean",
+                            "description": "Is file (or folder) movable to a place other than $HOME."
+                        },
+                        "help": {
+                            "type": "string",
+                            "description": "Help text for user. Supports markdown."
+                        }
+                    },
+                    "required": [
+                        "path",
+                        "movable",
+                        "help"
+                    ]
             },
             "minItems": 1
         }
