@@ -1,0 +1,10 @@
+{
+    "files": [
+        {
+            "path": "$HOME/.asy",
+            "movable": true,
+            "help": "Export the following environment variable:\n\n```bash\nexport ASYMPTOTE_HOME=\"$XDG_CONFIG_HOME\"/asymptote\n```\n"
+        }
+    ],
+    "name": "asymptote"
+}
