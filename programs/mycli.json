@@ -9,6 +9,11 @@
             "path": "$HOME/.mycli-history",
             "movable": true,
             "help": "Supported since version _1.8.0_. Export the following environment variables:\n\n```bash\nexport MYCLI_HISTFILE=\"$XDG_DATA_HOME/mycli/history\"\n```\n"
+        },
+        {
+            "path":"$HOME/.mycli.log",
+            "movable":true,
+            "help": "The location for the log file can be set in the config file. See https://www.mycli.net/config"
         }
     ],
     "name": "mycli"
