@@ -1,0 +1,20 @@
+{
+    "name": "flutter",
+    "files": [
+        {
+            "path": "$HOME/.flutter",
+            "movable": false,
+            "help": "Currently unsupported.\n\n_Relevant issue:_ https://github.com/flutter/flutter/issues/59430\n"
+        },
+        {
+            "path": "$HOME/.flutter_settings",
+            "movable": false,
+            "help": "Currently unsupported.\n\n_Relevant issue:_ https://github.com/flutter/flutter/issues/59430\n"
+        },
+        {
+            "path": "$HOME/.flutter_tool_state",
+            "movable": false,
+            "help": "Currently unsupported.\n\n_Relevant issue:_ https://github.com/flutter/flutter/issues/59430\n"
+        }
+    ]
+}
