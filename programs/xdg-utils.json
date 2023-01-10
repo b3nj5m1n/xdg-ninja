@@ -1,0 +1,11 @@
+{
+    "name": "xdg-utils",
+    "files": [
+        {
+            "path": "$HOME/.gnome",
+            "movable": false,
+            "help": "For some reason the script xdg-desktop-menu hard-codes gnome_user_dir=\"$HOME/.gnome/apps\". This is used by chromium among others. Bug discussion has moved to gitlab and PR with fix exists, however it is not merged yet.\n\n_Relevant Issues:_ https://gitlab.freedesktop.org/xdg/xdg-utils/-/issues/81\n\n_Merge Request:_ https://gitlab.freedesktop.org/xdg/xdg-utils/-/merge_requests/22\n"
+
+        }
+    ]
+}

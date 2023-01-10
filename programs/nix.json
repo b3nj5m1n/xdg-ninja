@@ -1,0 +1,20 @@
+{
+    "name": "nix",
+    "files": [
+        {
+            "path": "$HOME/.nix-channels",
+            "movable": false,
+            "help": "New nix command line interface supports XDG Base Directory but Old Commands will still create these directories.\n\n_Relevant Issue_: https://github.com/NixOS/nix/issues/1079\n\n"
+        },
+        {
+            "path": "$HOME/.nix-defexpr",
+            "movable": false,
+            "help": "New nix command line interface supports XDG Base Directory but Old Commands will still create these directories.\n\n_Relevant Issue_: https://github.com/NixOS/nix/issues/1079\n\n"
+        },
+        {
+            "path": "$HOME/.nix-profile",
+            "movable": false,
+            "help": "New nix command line interface supports XDG Base Directory but Old Commands will still create these directories.\n\n_Relevant Issue_: https://github.com/NixOS/nix/issues/1079\n\n"
+        }
+    ]
+}

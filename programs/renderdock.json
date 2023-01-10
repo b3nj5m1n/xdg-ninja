@@ -1,0 +1,10 @@
+{
+    "name": "renderdoc",
+    "files": [
+        {
+            "path": "$HOME/.renderdoc",
+            "movable": false,
+            "help": "Currently unsupported.\n\n_Relevant Issue_: https://github.com/baldurk/renderdoc/pull/1741\n"
+        }
+    ]
+}

@@ -1,0 +1,10 @@
+{
+    "name": "tldr",
+    "files": [
+        {
+            "path": "$HOME/.tldrc",
+            "movable": true,
+            "help": "Currently tldr-pages do not have any specification for clients on where to cache tldr-pages. See the relevant [issue](https://github.com/tldr-pages/tldr/issues/876) and [specification](https://github.com/tldr-pages/tldr/blob/main/CLIENT-SPECIFICATION.md)\n\nOfficial tldr-nodejs-client, tldr-python-client or tldr-c-client do not support XDG Base Directories.\n\n**Use [Tealdeer](https://github.com/dbrgn/tealdeer), a rust client for tldr that supports XDG Base Directories instead.**\n"
+        }
+    ]
+}
