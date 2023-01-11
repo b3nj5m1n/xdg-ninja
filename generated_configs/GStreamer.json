@@ -1,0 +1,10 @@
+{
+    "name": "GStreamer",
+    "files": [
+        {
+            "path": "~/.gstreamer-0.10",
+            "movable": true,
+            "help": "\n_Relevant issue_: https://bugzilla.gnome.org/show_bug.cgi?id=518597\n"
+        }
+    ]
+}

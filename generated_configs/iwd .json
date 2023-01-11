@@ -1,0 +1,10 @@
+{
+    "name": "iwd / iwctl",
+    "files": [
+        {
+            "path": "~/.iwctl_history",
+            "movable": true,
+            "help": "\n"
+        }
+    ]
+}

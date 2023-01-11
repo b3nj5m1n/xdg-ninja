@@ -1,0 +1,10 @@
+{
+    "name": "cataclysm-dda",
+    "files": [
+        {
+            "path": "~/.cataclysm-dda",
+            "movable": true,
+            "help": "partial support due to required compile time option\n_Relevant issue_: https://github.com/CleverRaven/Cataclysm-DDA/issues/12315\n"
+        }
+    ]
+}

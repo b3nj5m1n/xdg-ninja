@@ -1,0 +1,10 @@
+{
+    "name": "urlviewAUR",
+    "files": [
+        {
+            "path": "~/.urlview",
+            "movable": false,
+            "help": "Use fork urlview-xdg-gitAUR instead. The fork will use XDG_CONFIG_HOME/urlview/config\n"
+        }
+    ]
+}

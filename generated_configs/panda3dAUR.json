@@ -1,0 +1,10 @@
+{
+    "name": "panda3dAUR",
+    "files": [
+        {
+            "path": "~/.panda3d",
+            "movable": true,
+            "help": "\n"
+        }
+    ]
+}

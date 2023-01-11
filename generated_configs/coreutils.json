@@ -1,0 +1,10 @@
+{
+    "name": "coreutils",
+    "files": [
+        {
+            "path": "~/.dircolors",
+            "movable": true,
+            "help": "eval $(dircolors \"$XDG_CONFIG_HOME\"/dircolors)\n"
+        }
+    ]
+}

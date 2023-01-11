@@ -1,0 +1,10 @@
+{
+    "name": "Gajim",
+    "files": [
+        {
+            "path": "~/.gajim",
+            "movable": true,
+            "help": "\n_Relevant issue_: https://dev.gajim.org/gajim/gajim/issues/2149\n"
+        }
+    ]
+}

@@ -1,0 +1,10 @@
+{
+    "name": "procps-ng",
+    "files": [
+        {
+            "path": "~/.toprc",
+            "movable": true,
+            "help": "\n"
+        }
+    ]
+}

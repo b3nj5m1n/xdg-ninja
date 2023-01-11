@@ -1,0 +1,10 @@
+{
+    "name": "dropbox",
+    "files": [
+        {
+            "path": "~/.dropbox/",
+            "movable": false,
+            "help": "\n"
+        }
+    ]
+}

@@ -1,0 +1,10 @@
+{
+    "name": "htop",
+    "files": [
+        {
+            "path": "~/.htoprc",
+            "movable": true,
+            "help": "\n"
+        }
+    ]
+}

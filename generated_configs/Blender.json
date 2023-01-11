@@ -1,0 +1,10 @@
+{
+    "name": "Blender",
+    "files": [
+        {
+            "path": "~/.blender",
+            "movable": true,
+            "help": "\n_Relevant issue_: https://developer.blender.org/T28943\n"
+        }
+    ]
+}

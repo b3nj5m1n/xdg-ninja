@@ -1,0 +1,10 @@
+{
+    "name": "OfflineIMAP",
+    "files": [
+        {
+            "path": "~/.offlineimaprc",
+            "movable": true,
+            "help": "XDG_CONFIG_HOME/offlineimap/config\n_Relevant issue_: https://github.com/OfflineIMAP/offlineimap/issues/32\n"
+        }
+    ]
+}

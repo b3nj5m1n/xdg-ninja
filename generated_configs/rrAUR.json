@@ -1,0 +1,10 @@
+{
+    "name": "rrAUR",
+    "files": [
+        {
+            "path": "~/.rr",
+            "movable": true,
+            "help": "\n_Relevant issue_: https://github.com/mozilla/rr/issues/1455\n"
+        }
+    ]
+}

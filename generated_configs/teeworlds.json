@@ -1,0 +1,10 @@
+{
+    "name": "teeworlds",
+    "files": [
+        {
+            "path": "~/.teeworlds",
+            "movable": true,
+            "help": "\n"
+        }
+    ]
+}

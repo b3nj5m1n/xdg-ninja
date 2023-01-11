@@ -1,0 +1,10 @@
+{
+    "name": "vimperator",
+    "files": [
+        {
+            "path": "~/.vimperatorrc",
+            "movable": false,
+            "help": "export VIMPERATOR_INIT=\":source $XDG_CONFIG_HOME/vimperator/vimperatorrc\"\nexport VIMPERATOR_RUNTIME=\"$XDG_CONFIG_HOME\"/vimperator\n_Relevant issue_: https://web.archive.org/web/20200514081339/http://www.mozdev.org/pipermail/vimperator/2009-October/004848.html\n"
+        }
+    ]
+}

@@ -1,0 +1,10 @@
+{
+    "name": "ncmpcpp",
+    "files": [
+        {
+            "path": "~/.ncmpcpp",
+            "movable": true,
+            "help": "ncmpcpp_directory should be set to avoid an error.log file in ~/.ncmpcpp.\n"
+        }
+    ]
+}

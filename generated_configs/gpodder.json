@@ -1,0 +1,10 @@
+{
+    "name": "gpodder",
+    "files": [
+        {
+            "path": "~/gPodder",
+            "movable": true,
+            "help": "GPODDER_DOWNLOAD_DIR sets the download folder. GPODDER_HOME - where config and database files are stored, downloads also if GPODDER_DOWNLOAD_DIR is not set.\n"
+        }
+    ]
+}

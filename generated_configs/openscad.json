@@ -1,0 +1,10 @@
+{
+    "name": "openscad",
+    "files": [
+        {
+            "path": "~/.OpenSCAD",
+            "movable": true,
+            "help": "Does not fully honour XDG Base Directory Specification, see [203]\nCurrently it hard-codes[dead link 2022-09-23 ⓘ] ~/.local/share.\n_Relevant issue_: https://github.com/openscad/openscad/issues/125\n"
+        }
+    ]
+}

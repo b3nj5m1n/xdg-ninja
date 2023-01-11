@@ -1,0 +1,20 @@
+{
+    "name": "Octave",
+    "files": [
+        {
+            "path": "~/octave",
+            "movable": true,
+            "help": "export OCTAVE_HISTFILE=\"$XDG_CACHE_HOME/octave-hsts\", export OCTAVE_SITE_INITFILE=\"$XDG_CONFIG_HOME/octave/octaverc\"\n$XDG_CONFIG_HOME/octave/octaverc\nsource /usr/share/octave/site/m/startup/octaverc;\npkg prefix ~/.local/share/octave/packages ~/.local/share/octave/packages;\npkg local_list /home/<your username>/.local/share/octave/octave_packages;\n\nThe local_list option must be given an absolute path.\n"
+        },
+        {
+            "path": "~/.octave_packages",
+            "movable": true,
+            "help": "export OCTAVE_HISTFILE=\"$XDG_CACHE_HOME/octave-hsts\", export OCTAVE_SITE_INITFILE=\"$XDG_CONFIG_HOME/octave/octaverc\"\n$XDG_CONFIG_HOME/octave/octaverc\nsource /usr/share/octave/site/m/startup/octaverc;\npkg prefix ~/.local/share/octave/packages ~/.local/share/octave/packages;\npkg local_list /home/<your username>/.local/share/octave/octave_packages;\n\nThe local_list option must be given an absolute path.\n"
+        },
+        {
+            "path": "~/.octave_hist",
+            "movable": true,
+            "help": "export OCTAVE_HISTFILE=\"$XDG_CACHE_HOME/octave-hsts\", export OCTAVE_SITE_INITFILE=\"$XDG_CONFIG_HOME/octave/octaverc\"\n$XDG_CONFIG_HOME/octave/octaverc\nsource /usr/share/octave/site/m/startup/octaverc;\npkg prefix ~/.local/share/octave/packages ~/.local/share/octave/packages;\npkg local_list /home/<your username>/.local/share/octave/octave_packages;\n\nThe local_list option must be given an absolute path.\n"
+        }
+    ]
+}

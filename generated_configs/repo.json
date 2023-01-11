@@ -1,0 +1,10 @@
+{
+    "name": "repo",
+    "files": [
+        {
+            "path": "~/.repoconfig",
+            "movable": false,
+            "help": "\n_Relevant issue_: https://bugs.chromium.org/p/gerrit/issues/detail?id=13997\n"
+        }
+    ]
+}

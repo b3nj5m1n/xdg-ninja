@@ -1,0 +1,10 @@
+{
+    "name": "lynx",
+    "files": [
+        {
+            "path": "/etc/lynx.cfg",
+            "movable": true,
+            "help": "export LYNX_CFG_PATH=\"$XDG_CONFIG_HOME\"/lynx.cfg\n"
+        }
+    ]
+}

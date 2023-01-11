@@ -1,0 +1,10 @@
+{
+    "name": "pam-u2f",
+    "files": [
+        {
+            "path": "~/.config/Yubico/u2f_keys",
+            "movable": true,
+            "help": "XDG_CONFIG_HOME/Yubico/u2f_keys\n_Relevant issue_: https://github.com/Yubico/pam-u2f/issues/9\n"
+        }
+    ]
+}

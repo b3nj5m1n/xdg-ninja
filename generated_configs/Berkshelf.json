@@ -1,0 +1,10 @@
+{
+    "name": "Berkshelf",
+    "files": [
+        {
+            "path": "~/.berkshelf/",
+            "movable": false,
+            "help": "\n"
+        }
+    ]
+}

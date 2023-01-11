@@ -1,0 +1,10 @@
+{
+    "name": "apvlvAUR",
+    "files": [
+        {
+            "path": "~/.apvlvrc",
+            "movable": true,
+            "help": "Uses XDG_CONFIG_HOME/apvlv/apvlvrc now if it exist.\n_Relevant issue_: https://github.com/naihe2010/apvlv/issues/70\n"
+        }
+    ]
+}

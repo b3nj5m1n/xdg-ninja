@@ -1,0 +1,15 @@
+{
+    "name": "rpm",
+    "files": [
+        {
+            "path": "~/.rpmrc",
+            "movable": false,
+            "help": "Workaround is to use --rcfile and --macros however this come with sideeffects.\n_Relevant issue_: https://github.com/rpm-software-management/rpm/issues/2153\n"
+        },
+        {
+            "path": "~/.rpmmacros",
+            "movable": false,
+            "help": "Workaround is to use --rcfile and --macros however this come with sideeffects.\n_Relevant issue_: https://github.com/rpm-software-management/rpm/issues/2153\n"
+        }
+    ]
+}

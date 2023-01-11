@@ -1,0 +1,10 @@
+{
+    "name": "mypaint",
+    "files": [
+        {
+            "path": "~/.mypaint",
+            "movable": true,
+            "help": "\n"
+        }
+    ]
+}

@@ -1,0 +1,10 @@
+{
+    "name": "bitwarden-cli",
+    "files": [
+        {
+            "path": "~/.config/Bitwarden CLI",
+            "movable": true,
+            "help": "XDG_CONFIG_HOME/Bitwarden CLI\nXDG_DATA_HOME/audacity\n\nThe BITWARDENCLI_APPDATA_DIR environment variable takes precedence.\nCurrently contains a single data.json file with all the vault data, so it ought to belong in XDG_DATA_HOME\n_Relevant issue_: https://github.com/bitwarden/cli/pull/46\n"
+        }
+    ]
+}

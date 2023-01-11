@@ -1,0 +1,10 @@
+{
+    "name": "PCManFM",
+    "files": [
+        {
+            "path": "~/.thumbnails",
+            "movable": true,
+            "help": "\n"
+        }
+    ]
+}

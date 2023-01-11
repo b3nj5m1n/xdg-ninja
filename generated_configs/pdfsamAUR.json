@@ -1,0 +1,10 @@
+{
+    "name": "pdfsamAUR",
+    "files": [
+        {
+            "path": "~/.openjfx",
+            "movable": true,
+            "help": "export _JAVA_OPTIONS=-Djavafx.cachedir=\"$XDG_CACHE_HOME\"/openjfx\n"
+        }
+    ]
+}

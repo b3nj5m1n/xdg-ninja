@@ -1,0 +1,10 @@
+{
+    "name": "pacman",
+    "files": [
+        {
+            "path": "~/.makepkg.conf",
+            "movable": true,
+            "help": "\n_Relevant issue_: https://lists.archlinux.org/archives/list/pacman-dev@lists.archlinux.org/thread/KTD2FW7YKY724UB7PT3GGP5L7TNWZYEP/\n"
+        }
+    ]
+}

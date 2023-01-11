@@ -1,0 +1,10 @@
+{
+    "name": "gconfAUR",
+    "files": [
+        {
+            "path": "~/.gconf",
+            "movable": true,
+            "help": "\n_Relevant issue_: https://bugzilla.gnome.org/show_bug.cgi?id=674803\n"
+        }
+    ]
+}

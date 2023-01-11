@@ -1,9 +1,9 @@
 {
     "files": [
         {
-            "path": "$HOME/Anki",
+            "help": "Uses `$XDG_DATA_HOME/Anki2` by default.\n\nTo overwrite the location:\n\n```bash\nanki -b \"$XDG_DATA_HOME\"/Anki\n```\n",
             "movable": true,
-            "help": "Alias anki to use a custom data location:\n\n```bash\nanki -b \"$XDG_DATA_HOME\"/Anki\n```\n"
+            "path": "$HOME/Anki"
         }
     ],
     "name": "anki"

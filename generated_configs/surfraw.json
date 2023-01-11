@@ -1,0 +1,15 @@
+{
+    "name": "surfraw",
+    "files": [
+        {
+            "path": "~/.surfraw.conf",
+            "movable": true,
+            "help": "\n"
+        },
+        {
+            "path": "~/.surfraw.bookmarks",
+            "movable": true,
+            "help": "\n"
+        }
+    ]
+}

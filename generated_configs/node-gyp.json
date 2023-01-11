@@ -1,0 +1,10 @@
+{
+    "name": "node-gyp",
+    "files": [
+        {
+            "path": "~/.node-gyp",
+            "movable": true,
+            "help": "\n_Relevant issue_: https://github.com/nodejs/node-gyp/pull/1570\n"
+        }
+    ]
+}

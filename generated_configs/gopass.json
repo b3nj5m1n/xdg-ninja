@@ -1,0 +1,10 @@
+{
+    "name": "gopass",
+    "files": [
+        {
+            "path": "~/.password-store",
+            "movable": true,
+            "help": "Override settings in ~/.config/gopass/config.yml:\n~/.config/gopass/config.yml\nroot:\npath: gpgcli-gitcli-fs+file:///home/<userid>/.config/password-store\n"
+        }
+    ]
+}

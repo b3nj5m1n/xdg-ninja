@@ -1,0 +1,10 @@
+{
+    "name": "Fetchmail",
+    "files": [
+        {
+            "path": "~/.fetchmailrc",
+            "movable": false,
+            "help": "\n"
+        }
+    ]
+}

@@ -1,10 +1,10 @@
 {
-    "files": [
-        {
-            "path": "$HOME/.ackrc",
-            "movable": true,
-            "help": "Export the following environment variables:\n\n```bash\nexport ACKRC=\"$XDG_CONFIG_HOME/ack/ackrc\"\n```\n"
-        }
-    ],
-    "name": "ack"
+  "files": [
+    {
+      "path": "$HOME/.ackrc",
+      "movable": true,
+      "help": "Export the following environment variables:\n\n```bash\nexport ACKRC=\"$XDG_CONFIG_HOME/ack/ackrc\"\n```\n_Relevant issue_: https://github.com/beyondgrep/ack2/issues/516\n"
+    }
+  ],
+  "name": "ack"
 }

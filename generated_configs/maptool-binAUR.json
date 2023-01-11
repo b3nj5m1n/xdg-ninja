@@ -1,0 +1,10 @@
+{
+    "name": "maptool-binAUR",
+    "files": [
+        {
+            "path": "~/.maptool-rptools",
+            "movable": true,
+            "help": "/opt/maptool/lib/app/MapTool.cfg\n[JavaOptions]\n-DMAPTOOL_DATADIR=.local/share/maptool-rptools\nHowever, no way to change the location of this configuration file.\n_Relevant issue_: https://github.com/RPTools/maptool/issues/2786\n"
+        }
+    ]
+}

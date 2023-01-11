@@ -1,0 +1,10 @@
+{
+    "name": "Houdini",
+    "files": [
+        {
+            "path": "~/houdiniMAJOR.MINOR)",
+            "movable": true,
+            "help": "export HOUDINI_USER_PREF_DIR=\"$XDG_CACHE_HOME\"/houdini__HVER__\nThe value of this variable must include the substring __HVER__, which will be replaced at run time with the current MAJOR.MINOR version string.\n_Relevant issue_: https://forums.odforce.net/topic/43138-changing-home-location/\n"
+        }
+    ]
+}

@@ -1,0 +1,10 @@
+{
+    "name": "Java#OpenJDK",
+    "files": [
+        {
+            "path": "~/.java/.userPrefs",
+            "movable": true,
+            "help": "export _JAVA_OPTIONS=-Djava.util.prefs.userRoot=\"$XDG_CONFIG_HOME\"/java\n_Relevant issue_: https://bugzilla.redhat.com/show_bug.cgi?id=1154277\n"
+        }
+    ]
+}

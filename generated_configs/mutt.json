@@ -1,0 +1,10 @@
+{
+    "name": "mutt",
+    "files": [
+        {
+            "path": "~/.mutt",
+            "movable": true,
+            "help": "\n_Relevant issue_: https://gitlab.com/muttmua/trac-tickets/raw/master/tickets/closed/3207-Conform_to_XDG_Base_Directory_Specification.txt\n"
+        }
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "name": "fontforge",
+    "files": [
+        {
+            "path": "~/.FontForge",
+            "movable": true,
+            "help": "\n"
+        },
+        {
+            "path": "~/.PfaEdit",
+            "movable": true,
+            "help": "\n"
+        }
+    ]
+}

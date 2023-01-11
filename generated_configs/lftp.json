@@ -1,0 +1,10 @@
+{
+    "name": "lftp",
+    "files": [
+        {
+            "path": "~/.lftp",
+            "movable": true,
+            "help": "\n_Relevant issue_: https://www.mail-archive.com/lftp@uniyar.ac.ru/msg04301.html\n"
+        }
+    ]
+}

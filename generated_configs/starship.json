@@ -1,0 +1,15 @@
+{
+    "name": "starship",
+    "files": [
+        {
+            "path": "~/.config/starship",
+            "movable": true,
+            "help": "export STARSHIP_CONFIG=\"$XDG_CONFIG_HOME\"/starship.toml, export STARSHIP_CACHE=\"$XDG_CACHE_HOME\"/starship\n_Relevant issue_: https://github.com/starship/starship/issues/896#issuecomment-952402978\n"
+        },
+        {
+            "path": "~/.cache/starship",
+            "movable": true,
+            "help": "export STARSHIP_CONFIG=\"$XDG_CONFIG_HOME\"/starship.toml, export STARSHIP_CACHE=\"$XDG_CACHE_HOME\"/starship\n_Relevant issue_: https://github.com/starship/starship/issues/896#issuecomment-952402978\n"
+        }
+    ]
+}

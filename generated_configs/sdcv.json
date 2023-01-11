@@ -1,0 +1,15 @@
+{
+    "name": "sdcv",
+    "files": [
+        {
+            "path": "~/.stardict/",
+            "movable": true,
+            "help": "\n_Relevant issue_: https://github.com/Dushistov/sdcv/issues/51\n"
+        },
+        {
+            "path": "~/.sdcv_history",
+            "movable": true,
+            "help": "\n_Relevant issue_: https://github.com/Dushistov/sdcv/issues/51\n"
+        }
+    ]
+}

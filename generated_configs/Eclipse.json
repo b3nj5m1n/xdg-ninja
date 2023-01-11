@@ -1,0 +1,10 @@
+{
+    "name": "Eclipse",
+    "files": [
+        {
+            "path": "~/.eclipse/",
+            "movable": false,
+            "help": "Option -Dosgi.configuration.area=@user.home/.config/.. overrides but must be added to \"$ECLIPSE_HOME\"/eclipse.ini\" rather than command line which means you must have write access to $ECLIPSE_HOME. (Arch Linux hard-codes $ECLIPSE_HOME in /usr/bin/eclipse)\n_Relevant issue_: https://bugs.eclipse.org/bugs/show_bug.cgi?id=200809\n"
+        }
+    ]
+}

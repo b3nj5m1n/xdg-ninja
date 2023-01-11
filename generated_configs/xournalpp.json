@@ -1,0 +1,10 @@
+{
+    "name": "xournalpp",
+    "files": [
+        {
+            "path": "~/.xournalpp",
+            "movable": true,
+            "help": "\n"
+        }
+    ]
+}

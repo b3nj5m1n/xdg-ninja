@@ -1,0 +1,10 @@
+{
+    "name": "perf",
+    "files": [
+        {
+            "path": "~/.debug",
+            "movable": false,
+            "help": "Hardcoded in tools/perf/util/config.c. Commit: [310]\n"
+        }
+    ]
+}

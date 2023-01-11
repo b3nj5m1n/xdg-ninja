@@ -1,0 +1,10 @@
+{
+    "name": "citra-gitAUR",
+    "files": [
+        {
+            "path": "~/.citra-emu",
+            "movable": true,
+            "help": "\n_Relevant issue_: https://github.com/citra-emu/citra/pull/575\n"
+        }
+    ]
+}

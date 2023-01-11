@@ -1,0 +1,10 @@
+{
+    "name": "luarocks",
+    "files": [
+        {
+            "path": "~/.luarocks",
+            "movable": true,
+            "help": "XDG_CONFIG_HOME/luarocks\nXDG_CACHE_HOME/luarocks\n\nIf the legacy path ~/.luarocks is present, it will take precedence.\n_Relevant issue_: https://github.com/luarocks/luarocks/pull/1298\n"
+        }
+    ]
+}

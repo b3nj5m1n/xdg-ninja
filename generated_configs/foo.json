@@ -1,0 +1,10 @@
+{
+   "name":"anacondaAUR",
+   "files":[
+      {
+         "path":"~/.conda/.condarc",
+         "movable":true,
+         "help":"pkgs_dirs:\n  - ${XDG_CACHE_HOME}/conda/pkgs\n"
+      }
+   ]
+}

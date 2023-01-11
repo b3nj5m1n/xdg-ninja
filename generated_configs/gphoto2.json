@@ -1,0 +1,10 @@
+{
+    "name": "gphoto2",
+    "files": [
+        {
+            "path": "~/.gphoto",
+            "movable": false,
+            "help": "\n_Relevant issue_: https://github.com/gphoto/gphoto2/issues/249\n"
+        }
+    ]
+}

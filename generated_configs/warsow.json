@@ -1,0 +1,10 @@
+{
+    "name": "warsow",
+    "files": [
+        {
+            "path": "~/.warsow-2.x",
+            "movable": true,
+            "help": "\n_Relevant issue_: https://github.com/Qfusion/qfusion/issues/298\n"
+        }
+    ]
+}

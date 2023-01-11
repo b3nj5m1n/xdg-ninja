@@ -1,0 +1,10 @@
+{
+    "name": "mozc",
+    "files": [
+        {
+            "path": "~/.mozc",
+            "movable": true,
+            "help": "\n_Relevant issue_: https://github.com/google/mozc/issues/474\n"
+        }
+    ]
+}

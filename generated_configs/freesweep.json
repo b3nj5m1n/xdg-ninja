@@ -1,0 +1,10 @@
+{
+    "name": "freesweep",
+    "files": [
+        {
+            "path": "~/.sweeprc",
+            "movable": false,
+            "help": "\n_Relevant issue_: https://github.com/rwestlund/freesweep/issues/9\n"
+        }
+    ]
+}

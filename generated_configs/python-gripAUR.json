@@ -1,0 +1,10 @@
+{
+    "name": "python-gripAUR",
+    "files": [
+        {
+            "path": "~/.grip",
+            "movable": true,
+            "help": "export GRIPHOME=\"$XDG_CONFIG_HOME/grip\"\n"
+        }
+    ]
+}

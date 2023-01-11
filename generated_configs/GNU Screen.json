@@ -1,0 +1,10 @@
+{
+    "name": "GNU Screen",
+    "files": [
+        {
+            "path": "~/.screenrc",
+            "movable": true,
+            "help": "export SCREENRC=\"$XDG_CONFIG_HOME\"/screen/screenrc\n"
+        }
+    ]
+}

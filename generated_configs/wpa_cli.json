@@ -1,0 +1,10 @@
+{
+    "name": "wpa_cli",
+    "files": [
+        {
+            "path": "~/.wpa_cli_history",
+            "movable": false,
+            "help": "\n"
+        }
+    ]
+}

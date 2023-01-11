@@ -1,0 +1,10 @@
+{
+    "name": "lgogdownloaderAUR",
+    "files": [
+        {
+            "path": "~/.gogdownloader",
+            "movable": true,
+            "help": "\n_Relevant issue_: https://github.com/Sude-/lgogdownloader/issues/4\n"
+        }
+    ]
+}

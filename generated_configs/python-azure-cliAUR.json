@@ -1,0 +1,10 @@
+{
+    "name": "python-azure-cliAUR",
+    "files": [
+        {
+            "path": "~/.azure",
+            "movable": true,
+            "help": "export AZURE_CONFIG_DIR=$XDG_DATA_HOME/azure\n"
+        }
+    ]
+}

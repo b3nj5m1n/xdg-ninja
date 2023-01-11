@@ -1,0 +1,10 @@
+{
+    "name": "mc",
+    "files": [
+        {
+            "path": "~/.mc",
+            "movable": true,
+            "help": "\n_Relevant issue_: https://www.midnight-commander.org/ticket/1851\n"
+        }
+    ]
+}

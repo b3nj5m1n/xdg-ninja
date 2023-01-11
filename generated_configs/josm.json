@@ -1,0 +1,10 @@
+{
+    "name": "josm",
+    "files": [
+        {
+            "path": "~/.josm",
+            "movable": true,
+            "help": "\n_Relevant issue_: https://josm.openstreetmap.de/ticket/6664\n"
+        }
+    ]
+}

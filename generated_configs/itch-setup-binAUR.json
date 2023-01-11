@@ -1,0 +1,10 @@
+{
+    "name": "itch-setup-binAUR",
+    "files": [
+        {
+            "path": "~/.itch",
+            "movable": false,
+            "help": "You can move the Game install location in the app settings.\n_Relevant issue_: https://github.com/itchio/itch/issues/2356\n"
+        }
+    ]
+}

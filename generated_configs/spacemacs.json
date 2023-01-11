@@ -1,0 +1,15 @@
+{
+    "name": "spacemacs",
+    "files": [
+        {
+            "path": "~/.spacemacs",
+            "movable": true,
+            "help": "Move the ~/.spacemacs file.\nexport SPACEMACSDIR=\"$XDG_CONFIG_HOME\"/spacemacs, mv ~/.spacemacs \"$SPACEMACSDIR\"/init.el\nOther files need to be configured like Emacs.\n_Relevant issue_: https://github.com/syl20bnr/spacemacs/issues/3589\n"
+        },
+        {
+            "path": "~/.spacemacs.d",
+            "movable": true,
+            "help": "Move the ~/.spacemacs file.\nexport SPACEMACSDIR=\"$XDG_CONFIG_HOME\"/spacemacs, mv ~/.spacemacs \"$SPACEMACSDIR\"/init.el\nOther files need to be configured like Emacs.\n_Relevant issue_: https://github.com/syl20bnr/spacemacs/issues/3589\n"
+        }
+    ]
+}

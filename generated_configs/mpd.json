@@ -1,0 +1,10 @@
+{
+    "name": "mpd",
+    "files": [
+        {
+            "path": "~/.mpdconf",
+            "movable": true,
+            "help": "\n"
+        }
+    ]
+}

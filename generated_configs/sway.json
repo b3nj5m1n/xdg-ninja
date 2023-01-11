@@ -1,0 +1,10 @@
+{
+    "name": "sway",
+    "files": [
+        {
+            "path": "~/.sway/config",
+            "movable": true,
+            "help": "XDG_CONFIG_HOME/sway/config\n_Relevant issue_: https://github.com/SirCmpwn/sway/issues/5\n"
+        }
+    ]
+}

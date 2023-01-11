@@ -1,0 +1,10 @@
+{
+    "name": "fzf-gitAUR",
+    "files": [
+        {
+            "path": "~/.fzf.bash, ~/.fzf.zsh",
+            "movable": true,
+            "help": "The shell init files will be installed to XDG_CONFIG_HOME/fzf if the installation script is called with --xdg for example  /usr/local/opt/fzf/install --xdg.\n_Relevant issue_: https://github.com/junegunn/fzf/pull/1282\n"
+        }
+    ]
+}

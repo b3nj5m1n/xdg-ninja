@@ -1,0 +1,10 @@
+{
+    "name": "get_iplayerAUR",
+    "files": [
+        {
+            "path": "~/.get_iplayer",
+            "movable": true,
+            "help": "export GETIPLAYERUSERPREFS=\"$XDG_DATA_HOME\"/get_iplayer\n"
+        }
+    ]
+}

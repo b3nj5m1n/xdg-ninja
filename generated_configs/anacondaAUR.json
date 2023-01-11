@@ -1,0 +1,25 @@
+{
+    "name": "anacondaAUR",
+    "files": [
+        {
+            "path": "~/.conda/.condarc",
+            "movable": true,
+            "help": "Previous versions required setting variables in condarc:\n$XDG_CONFIG_HOME/conda/condarc\nconda-build:\n  # Replace /home/user/.local/share with your $XDG_DATA_HOME path, as the\n    # `conda-build.root-dir` option does not support environment expansion\n  root-dir: /home/user/.local/share/conda/conda-bld\nenvs_dirs:\n  - ${XDG_DATA_HOME}/conda/envs\npkgs_dirs:\n  - ${XDG_CACHE_HOME}/conda/pkgs\n_Relevant issue_: https://conda.io/projects/conda/en/latest/user-guide/configuration/use-condarc.html#searching-for-condarc\n"
+        },
+        {
+            "path": "~/.conda/condarc",
+            "movable": true,
+            "help": "Previous versions required setting variables in condarc:\n$XDG_CONFIG_HOME/conda/condarc\nconda-build:\n  # Replace /home/user/.local/share with your $XDG_DATA_HOME path, as the\n    # `conda-build.root-dir` option does not support environment expansion\n  root-dir: /home/user/.local/share/conda/conda-bld\nenvs_dirs:\n  - ${XDG_DATA_HOME}/conda/envs\npkgs_dirs:\n  - ${XDG_CACHE_HOME}/conda/pkgs\n_Relevant issue_: https://conda.io/projects/conda/en/latest/user-guide/configuration/use-condarc.html#searching-for-condarc\n"
+        },
+        {
+            "path": "~/.conda/condarc.d/",
+            "movable": true,
+            "help": "Previous versions required setting variables in condarc:\n$XDG_CONFIG_HOME/conda/condarc\nconda-build:\n  # Replace /home/user/.local/share with your $XDG_DATA_HOME path, as the\n    # `conda-build.root-dir` option does not support environment expansion\n  root-dir: /home/user/.local/share/conda/conda-bld\nenvs_dirs:\n  - ${XDG_DATA_HOME}/conda/envs\npkgs_dirs:\n  - ${XDG_CACHE_HOME}/conda/pkgs\n_Relevant issue_: https://conda.io/projects/conda/en/latest/user-guide/configuration/use-condarc.html#searching-for-condarc\n"
+        },
+        {
+            "path": "~/.condarc",
+            "movable": true,
+            "help": "Previous versions required setting variables in condarc:\n$XDG_CONFIG_HOME/conda/condarc\nconda-build:\n  # Replace /home/user/.local/share with your $XDG_DATA_HOME path, as the\n    # `conda-build.root-dir` option does not support environment expansion\n  root-dir: /home/user/.local/share/conda/conda-bld\nenvs_dirs:\n  - ${XDG_DATA_HOME}/conda/envs\npkgs_dirs:\n  - ${XDG_CACHE_HOME}/conda/pkgs\n_Relevant issue_: https://conda.io/projects/conda/en/latest/user-guide/configuration/use-condarc.html#searching-for-condarc\n"
+        }
+    ]
+}

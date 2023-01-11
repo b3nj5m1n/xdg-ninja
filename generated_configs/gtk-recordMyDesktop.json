@@ -1,0 +1,10 @@
+{
+    "name": "gtk-recordMyDesktop",
+    "files": [
+        {
+            "path": "~/.gtk-recordmydesktop",
+            "movable": false,
+            "help": "\n"
+        }
+    ]
+}

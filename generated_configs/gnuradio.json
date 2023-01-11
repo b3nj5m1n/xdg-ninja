@@ -1,0 +1,10 @@
+{
+    "name": "gnuradio",
+    "files": [
+        {
+            "path": "~/.gnuradio",
+            "movable": true,
+            "help": "\n_Relevant issue_: https://github.com/gnuradio/gnuradio/issues/3631\n"
+        }
+    ]
+}

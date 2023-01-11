@@ -1,0 +1,10 @@
+{
+    "name": "ppsspp",
+    "files": [
+        {
+            "path": "~/.ppsspp",
+            "movable": true,
+            "help": "\n_Relevant issue_: https://github.com/hrydgard/ppsspp/issues/4623\n"
+        }
+    ]
+}

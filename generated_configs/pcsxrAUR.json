@@ -1,0 +1,10 @@
+{
+    "name": "pcsxrAUR",
+    "files": [
+        {
+            "path": "~/.pcsxr",
+            "movable": false,
+            "help": "A -cfg flag exists, but can only be set relative to ~/.pcsxr.\n"
+        }
+    ]
+}

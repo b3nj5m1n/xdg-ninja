@@ -1,0 +1,10 @@
+{
+    "name": "TeamSpeak",
+    "files": [
+        {
+            "path": "~/.ts3client",
+            "movable": false,
+            "help": "export TS3_CONFIG_DIR=\"$XDG_CONFIG_HOME/ts3client\"\n"
+        }
+    ]
+}

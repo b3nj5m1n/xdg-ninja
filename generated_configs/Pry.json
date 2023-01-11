@@ -1,0 +1,15 @@
+{
+    "name": "Pry",
+    "files": [
+        {
+            "path": "~/.pryrc",
+            "movable": true,
+            "help": "\n_Relevant issue_: https://github.com/pry/pry/issues/1316\n"
+        },
+        {
+            "path": "~/.pry_history",
+            "movable": true,
+            "help": "\n_Relevant issue_: https://github.com/pry/pry/issues/1316\n"
+        }
+    ]
+}

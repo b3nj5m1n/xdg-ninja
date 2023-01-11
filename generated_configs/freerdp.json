@@ -1,0 +1,10 @@
+{
+    "name": "freerdp",
+    "files": [
+        {
+            "path": "~/.freerdp",
+            "movable": true,
+            "help": "\n"
+        }
+    ]
+}

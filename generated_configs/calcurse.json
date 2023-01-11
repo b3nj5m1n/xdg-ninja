@@ -1,0 +1,10 @@
+{
+    "name": "calcurse",
+    "files": [
+        {
+            "path": "~/.calcurse",
+            "movable": true,
+            "help": "XDG_CONFIG_HOME/calcurse\nXDG_DATA_HOME/calcurse\n\nIf the legacy path ~/.calcurse is present, it will take precedence.\n_Relevant issue_: https://github.com/lfos/calcurse/pull/254\n"
+        }
+    ]
+}

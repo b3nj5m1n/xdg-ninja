@@ -1,0 +1,10 @@
+{
+    "name": "scribus",
+    "files": [
+        {
+            "path": "~/.scribus",
+            "movable": true,
+            "help": "\n"
+        }
+    ]
+}

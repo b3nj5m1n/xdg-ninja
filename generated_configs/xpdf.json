@@ -1,0 +1,10 @@
+{
+    "name": "xpdf",
+    "files": [
+        {
+            "path": "~/.xpdfrc",
+            "movable": false,
+            "help": "\n"
+        }
+    ]
+}

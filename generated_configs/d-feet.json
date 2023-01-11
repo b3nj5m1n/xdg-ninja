@@ -1,0 +1,10 @@
+{
+    "name": "d-feet",
+    "files": [
+        {
+            "path": "~/.d-feet",
+            "movable": true,
+            "help": "\n"
+        }
+    ]
+}

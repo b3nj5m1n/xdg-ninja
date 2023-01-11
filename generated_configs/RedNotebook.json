@@ -1,0 +1,10 @@
+{
+    "name": "RedNotebook",
+    "files": [
+        {
+            "path": "~/.rednotebook",
+            "movable": false,
+            "help": "\n_Relevant issue_: https://github.com/jendrikseipp/rednotebook/issues/404\n"
+        }
+    ]
+}

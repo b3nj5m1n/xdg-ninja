@@ -1,0 +1,10 @@
+{
+    "name": "irb",
+    "files": [
+        {
+            "path": "~/.irbrc",
+            "movable": true,
+            "help": "~/.profile\n$ export IRBRC=\"$XDG_CONFIG_HOME\"/irb/irbrc\n\"$XDG_CONFIG_HOME\"/irb/irbrc\nIRB.conf[:SAVE_HISTORY] ||= 1000\nIRB.conf[:HISTORY_FILE] ||= File.join(ENV[\"XDG_DATA_HOME\"], \"irb\", \"history\")\n"
+        }
+    ]
+}

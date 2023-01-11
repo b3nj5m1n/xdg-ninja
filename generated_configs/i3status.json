@@ -1,0 +1,10 @@
+{
+    "name": "i3status",
+    "files": [
+        {
+            "path": "~/.i3status.conf",
+            "movable": true,
+            "help": "\n"
+        }
+    ]
+}

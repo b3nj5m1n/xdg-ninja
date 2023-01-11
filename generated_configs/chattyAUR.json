@@ -1,0 +1,10 @@
+{
+    "name": "chattyAUR",
+    "files": [
+        {
+            "path": "~/.chatty/",
+            "movable": false,
+            "help": "\n_Relevant issue_: https://github.com/chatty/chatty/issues/273\n"
+        }
+    ]
+}

@@ -1,0 +1,10 @@
+{
+    "name": "rlwrap",
+    "files": [
+        {
+            "path": "~/.*_history",
+            "movable": true,
+            "help": "export RLWRAP_HOME=\"$XDG_DATA_HOME\"/rlwrap\n_Relevant issue_: https://github.com/hanslub42/rlwrap/issues/25\n"
+        }
+    ]
+}

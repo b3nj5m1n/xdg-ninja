@@ -1,0 +1,10 @@
+{
+    "name": "RuboCop",
+    "files": [
+        {
+            "path": "~/.rubocop.yml",
+            "movable": true,
+            "help": "\n_Relevant issue_: https://github.com/rubocop-hq/rubocop/issues/6662\n"
+        }
+    ]
+}

@@ -1,0 +1,10 @@
+{
+    "name": "Remarkable",
+    "files": [
+        {
+            "path": "~/.remarkable",
+            "movable": false,
+            "help": "\n"
+        }
+    ]
+}

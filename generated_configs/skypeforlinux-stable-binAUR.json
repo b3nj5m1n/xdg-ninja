@@ -1,0 +1,10 @@
+{
+    "name": "skypeforlinux-stable-binAUR",
+    "files": [
+        {
+            "path": "~/.Skype",
+            "movable": true,
+            "help": "\n"
+        }
+    ]
+}

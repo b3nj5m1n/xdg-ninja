@@ -1,0 +1,25 @@
+{
+    "name": "emscripten",
+    "files": [
+        {
+            "path": "~/.emscripten",
+            "movable": true,
+            "help": "export EM_CONFIG=\"$XDG_CONFIG_HOME\"/emscripten/config, export EM_CACHE=\"$XDG_CACHE_HOME\"/emscripten/cache, export EM_PORTS=\"$XDG_DATA_HOME\"/emscripten/cache, emcc --em-config \"$XDG_CONFIG_HOME\"/emscripten/config --em-cache \"$XDG_CACHE_HOME\"/emscripten/cache\n_Relevant issue_: https://github.com/kripken/emscripten/issues/3624\n"
+        },
+        {
+            "path": "~/.emscripten_sanity",
+            "movable": true,
+            "help": "export EM_CONFIG=\"$XDG_CONFIG_HOME\"/emscripten/config, export EM_CACHE=\"$XDG_CACHE_HOME\"/emscripten/cache, export EM_PORTS=\"$XDG_DATA_HOME\"/emscripten/cache, emcc --em-config \"$XDG_CONFIG_HOME\"/emscripten/config --em-cache \"$XDG_CACHE_HOME\"/emscripten/cache\n_Relevant issue_: https://github.com/kripken/emscripten/issues/3624\n"
+        },
+        {
+            "path": "~/.emscripten_ports",
+            "movable": true,
+            "help": "export EM_CONFIG=\"$XDG_CONFIG_HOME\"/emscripten/config, export EM_CACHE=\"$XDG_CACHE_HOME\"/emscripten/cache, export EM_PORTS=\"$XDG_DATA_HOME\"/emscripten/cache, emcc --em-config \"$XDG_CONFIG_HOME\"/emscripten/config --em-cache \"$XDG_CACHE_HOME\"/emscripten/cache\n_Relevant issue_: https://github.com/kripken/emscripten/issues/3624\n"
+        },
+        {
+            "path": "~/.emscripten_cache__last_clear",
+            "movable": true,
+            "help": "export EM_CONFIG=\"$XDG_CONFIG_HOME\"/emscripten/config, export EM_CACHE=\"$XDG_CACHE_HOME\"/emscripten/cache, export EM_PORTS=\"$XDG_DATA_HOME\"/emscripten/cache, emcc --em-config \"$XDG_CONFIG_HOME\"/emscripten/config --em-cache \"$XDG_CACHE_HOME\"/emscripten/cache\n_Relevant issue_: https://github.com/kripken/emscripten/issues/3624\n"
+        }
+    ]
+}

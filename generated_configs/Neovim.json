@@ -1,0 +1,20 @@
+{
+    "name": "Neovim",
+    "files": [
+        {
+            "path": "~/.nvim",
+            "movable": true,
+            "help": "\n"
+        },
+        {
+            "path": "~/.nvimlog",
+            "movable": true,
+            "help": "\n"
+        },
+        {
+            "path": "~/.nviminfo",
+            "movable": true,
+            "help": "\n"
+        }
+    ]
+}

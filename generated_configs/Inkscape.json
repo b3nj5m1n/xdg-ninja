@@ -1,0 +1,10 @@
+{
+    "name": "Inkscape",
+    "files": [
+        {
+            "path": "~/.inkscape",
+            "movable": true,
+            "help": "\n_Relevant issue_: https://bugs.launchpad.net/inkscape/+bug/199720\n"
+        }
+    ]
+}

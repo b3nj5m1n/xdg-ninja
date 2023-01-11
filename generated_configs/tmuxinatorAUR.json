@@ -1,0 +1,10 @@
+{
+    "name": "tmuxinatorAUR",
+    "files": [
+        {
+            "path": "~/.tmuxinator",
+            "movable": true,
+            "help": "\n_Relevant issue_: https://github.com/tmuxinator/tmuxinator/pull/511\n"
+        }
+    ]
+}

@@ -1,0 +1,10 @@
+{
+    "name": "Ruby#RubyGems",
+    "files": [
+        {
+            "path": "~/.gem",
+            "movable": true,
+            "help": "XDG_CONFIG_HOME/gemrc\nXDG_CONFIG_HOME/irb\nXDG_DATA_HOME/gem\nXDG_DATA_HOME/rdoc\n_Relevant issue_: https://github.com/ruby/ruby/pull/2174\n"
+        }
+    ]
+}

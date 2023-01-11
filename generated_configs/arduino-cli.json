@@ -1,0 +1,10 @@
+{
+    "name": "arduino-cli",
+    "files": [
+        {
+            "path": "~.arduino15/",
+            "movable": false,
+            "help": "mv ~/.arduino15 $XDG_CONFIG_HOME/arduino15\nSpecify the new directories used by Arduino CLI in arduino-cli.yaml as mentioned in the documentation here.\nalias arduino-cli='arduino-cli --config-file $XDG_CONFIG_HOME/arduino15/arduino-cli.yaml'\n_Relevant issue_: https://github.com/arduino/arduino-cli/pull/140\n"
+        }
+    ]
+}

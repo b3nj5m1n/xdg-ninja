@@ -1,0 +1,10 @@
+{
+    "name": "Wireshark",
+    "files": [
+        {
+            "path": "~/.wireshark",
+            "movable": true,
+            "help": "\n"
+        }
+    ]
+}

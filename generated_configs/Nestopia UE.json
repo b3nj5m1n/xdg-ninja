@@ -1,0 +1,10 @@
+{
+    "name": "Nestopia UE",
+    "files": [
+        {
+            "path": "~/.nestopia/",
+            "movable": true,
+            "help": "\n_Relevant issue_: https://github.com/0ldsk00l/nestopia/issues/343\n"
+        }
+    ]
+}

@@ -1,0 +1,10 @@
+{
+    "name": "XVim2",
+    "files": [
+        {
+            "path": "~/.xvimrc",
+            "movable": false,
+            "help": "\n_Relevant issue_: https://github.com/XVimProject/XVim2/issues/389\n"
+        }
+    ]
+}

@@ -1,0 +1,10 @@
+{
+    "name": "tmuxp",
+    "files": [
+        {
+            "path": "~/.tmuxp",
+            "movable": true,
+            "help": "Fixed in 1.5.2\n_Relevant issue_: https://github.com/tmux-python/tmuxp/pull/404\n"
+        }
+    ]
+}

@@ -1,0 +1,10 @@
+{
+    "name": "portfolio-performance-binAUR",
+    "files": [
+        {
+            "path": "~/.PortfolioPerformance/",
+            "movable": false,
+            "help": "\n_Relevant issue_: https://github.com/buchen/portfolio/issues/1922\n"
+        }
+    ]
+}

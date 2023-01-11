@@ -1,0 +1,10 @@
+{
+    "name": "snes9x",
+    "files": [
+        {
+            "path": "~/.snes9x",
+            "movable": true,
+            "help": "By default, the configuration file is left blank with intention that the user will fill it at their will (through the gui or manually).\n_Relevant issue_: https://github.com/snes9xgit/snes9x/issues/194\n"
+        }
+    ]
+}

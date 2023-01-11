@@ -1,0 +1,10 @@
+{
+    "name": "Snap",
+    "files": [
+        {
+            "path": "~/snap/",
+            "movable": false,
+            "help": "\n_Relevant issue_: https://bugs.launchpad.net/ubuntu/+source/snapd/+bug/1575053\n"
+        }
+    ]
+}

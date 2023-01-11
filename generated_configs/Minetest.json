@@ -1,0 +1,10 @@
+{
+    "name": "Minetest",
+    "files": [
+        {
+            "path": "~/.minetest/",
+            "movable": false,
+            "help": "\n_Relevant issue_: https://github.com/minetest/minetest/issues/864\n"
+        }
+    ]
+}

@@ -1,0 +1,10 @@
+{
+    "name": "Xsettingsd",
+    "files": [
+        {
+            "path": "~/.xsettingsd",
+            "movable": true,
+            "help": "\n"
+        }
+    ]
+}

@@ -1,0 +1,10 @@
+{
+    "name": "btpd-gitAUR",
+    "files": [
+        {
+            "path": "~/.btpd/",
+            "movable": true,
+            "help": "btpd -d \"$XDG_DATA_HOME\"/.btpd\nHOME=\"$XDG_DATA_HOME\" btcli\n_Relevant issue_: https://github.com/btpd/btpd/issues/55\n"
+        }
+    ]
+}

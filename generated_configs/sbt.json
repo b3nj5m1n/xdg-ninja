@@ -1,0 +1,15 @@
+{
+    "name": "sbt",
+    "files": [
+        {
+            "path": "~/.sbt",
+            "movable": true,
+            "help": "sbt -ivy \"$XDG_DATA_HOME\"/ivy2 -sbt-dir \"$XDG_DATA_HOME\"/sbt (beware [217])\n_Relevant issue_: https://github.com/sbt/sbt/issues/3681\n"
+        },
+        {
+            "path": "~/.ivy2",
+            "movable": true,
+            "help": "sbt -ivy \"$XDG_DATA_HOME\"/ivy2 -sbt-dir \"$XDG_DATA_HOME\"/sbt (beware [217])\n_Relevant issue_: https://github.com/sbt/sbt/issues/3681\n"
+        }
+    ]
+}

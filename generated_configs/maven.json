@@ -1,0 +1,10 @@
+{
+    "name": "maven",
+    "files": [
+        {
+            "path": "~/.m2",
+            "movable": true,
+            "help": "mvn -gs \"$XDG_CONFIG_HOME\"/maven/settings.xml and set <localRepository> as appropriate in settings.xml\n_Relevant issue_: https://issues.apache.org/jira/browse/MNG-6603\n"
+        }
+    ]
+}

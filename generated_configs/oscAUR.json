@@ -1,0 +1,15 @@
+{
+    "name": "oscAUR",
+    "files": [
+        {
+            "path": "~/.oscrc",
+            "movable": true,
+            "help": "XDG_CONFIG_HOME/osc/oscrc\nXDG_STATE_HOME/osc/cookiejar\nLegacy path takes precedence if it exists\n_Relevant issue_: https://github.com/openSUSE/osc/pull/940\n"
+        },
+        {
+            "path": "~/.osc_cookiejar",
+            "movable": true,
+            "help": "XDG_CONFIG_HOME/osc/oscrc\nXDG_STATE_HOME/osc/cookiejar\nLegacy path takes precedence if it exists\n_Relevant issue_: https://github.com/openSUSE/osc/pull/940\n"
+        }
+    ]
+}

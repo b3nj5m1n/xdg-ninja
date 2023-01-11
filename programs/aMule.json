@@ -1,0 +1,10 @@
+{
+    "files": [
+        {
+            "help": "Currently unsupported.\n\n_Relevant issue_: https://bugs.amule.org/view.php?id=1308\n",
+            "movable": false,
+            "path": "~/.aMule"
+        }
+    ],
+    "name": "aMule"
+}

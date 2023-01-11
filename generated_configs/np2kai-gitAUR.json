@@ -1,0 +1,15 @@
+{
+    "name": "np2kai-gitAUR",
+    "files": [
+        {
+            "path": "~/.config/np2kai",
+            "movable": true,
+            "help": "\n_Relevant issue_: https://github.com/AZO234/NP2kai/pull/50\n"
+        },
+        {
+            "path": "~/.config/xnp2kai",
+            "movable": true,
+            "help": "\n_Relevant issue_: https://github.com/AZO234/NP2kai/pull/50\n"
+        }
+    ]
+}

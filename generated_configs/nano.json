@@ -1,0 +1,15 @@
+{
+    "name": "nano",
+    "files": [
+        {
+            "path": "~/.nano/",
+            "movable": true,
+            "help": "\n_Relevant issue_: https://savannah.gnu.org/patch/?8523\n"
+        },
+        {
+            "path": "~/.nanorc",
+            "movable": true,
+            "help": "\n_Relevant issue_: https://savannah.gnu.org/patch/?8523\n"
+        }
+    ]
+}

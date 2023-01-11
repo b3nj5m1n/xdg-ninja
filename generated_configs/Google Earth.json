@@ -1,0 +1,10 @@
+{
+    "name": "Google Earth",
+    "files": [
+        {
+            "path": "~/.googleearth",
+            "movable": true,
+            "help": "Some paths can be changed with the KMLPath and CachePath options in ~/.config/Google/GoogleEarthPlus.conf\n"
+        }
+    ]
+}

@@ -1,0 +1,10 @@
+{
+    "name": "opentyrianAUR",
+    "files": [
+        {
+            "path": "~/.opentyrian",
+            "movable": true,
+            "help": "\n_Relevant issue_: https://web.archive.org/web/20140815181350/http://code.google.com/p/opentyrian/issues/detail?id=125\n"
+        }
+    ]
+}

@@ -1,0 +1,10 @@
+{
+    "name": "Transmission",
+    "files": [
+        {
+            "path": "~/.transmission",
+            "movable": true,
+            "help": "\n"
+        }
+    ]
+}

@@ -1,0 +1,10 @@
+{
+    "name": "Dolphin emulator",
+    "files": [
+        {
+            "path": "~/.dolphin-emu",
+            "movable": true,
+            "help": "\n_Relevant issue_: https://github.com/dolphin-emu/dolphin/pull/2304\n"
+        }
+    ]
+}

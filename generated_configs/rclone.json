@@ -1,0 +1,10 @@
+{
+    "name": "rclone",
+    "files": [
+        {
+            "path": "~/.rclone.conf",
+            "movable": true,
+            "help": "\n_Relevant issue_: https://github.com/ncw/rclone/issues/868\n"
+        }
+    ]
+}

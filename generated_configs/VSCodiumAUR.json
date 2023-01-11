@@ -1,0 +1,10 @@
+{
+    "name": "VSCodiumAUR",
+    "files": [
+        {
+            "path": "~/.vscode-oss/",
+            "movable": true,
+            "help": "You can run VSCodium with the --extensions-dir flag, such as vscodium --extensions-dir \"$XDG_DATA_HOME/vscode\". This however won't prevent the creation of  ~/.vscode-oss/ directory.\n_Relevant issue_: https://github.com/VSCodium/vscodium/issues/561\n"
+        }
+    ]
+}

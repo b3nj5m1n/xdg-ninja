@@ -1,0 +1,15 @@
+{
+    "name": "Chromium",
+    "files": [
+        {
+            "path": "~/.chromium",
+            "movable": true,
+            "help": "\n_Relevant issue_: https://groups.google.com/forum/#!topic/chromium-dev/QekVQxF3nho\n"
+        },
+        {
+            "path": "~/.pki",
+            "movable": true,
+            "help": "\n_Relevant issue_: https://groups.google.com/forum/#!topic/chromium-dev/QekVQxF3nho\n"
+        }
+    ]
+}

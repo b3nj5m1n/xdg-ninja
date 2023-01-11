@@ -1,0 +1,10 @@
+{
+    "name": "kscriptAUR",
+    "files": [
+        {
+            "path": "~/.kscript",
+            "movable": true,
+            "help": "export KSCRIPT_CACHE_DIR=\"$XDG_CACHE_HOME\"/kscript\n_Relevant issue_: https://github.com/holgerbrandl/kscript/issues/323\n"
+        }
+    ]
+}

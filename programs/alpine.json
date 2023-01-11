@@ -1,0 +1,40 @@
+{
+    "files": [
+        {
+            "help": "```\nalias alpine=\"alpine -p $XDG_CONFIG_HOME/alpine/pinerc\"\n```\nIn the above config file, some locations can be customized using options like `newsrc-path=` and `address-book=`.\n",
+            "movable": false,
+            "path": "~/.pinerc"
+        },
+        {
+            "help": "```\nalias alpine=\"alpine -p $XDG_CONFIG_HOME/alpine/pinerc\"\n```\nIn the above config file, some locations can be customized using options like `newsrc-path=` and `address-book=`.\n",
+            "movable": false,
+            "path": "~/.addressbook"
+        },
+        {
+            "help": "```\nalias alpine=\"alpine -p $XDG_CONFIG_HOME/alpine/pinerc\"\n```\nIn the above config file, some locations can be customized using options like `newsrc-path=` and `address-book=`.\n",
+            "movable": false,
+            "path": "~/.pine-debug[1-4]"
+        },
+        {
+            "help": "```\nalias alpine=\"alpine -p $XDG_CONFIG_HOME/alpine/pinerc\"\n```\nIn the above config file, some locations can be customized using options like `newsrc-path=` and `address-book=`.\n",
+            "movable": false,
+            "path": "~/.newsrc"
+        },
+        {
+            "help": "```\nalias alpine=\"alpine -p $XDG_CONFIG_HOME/alpine/pinerc\"\n```\nIn the above config file, some locations can be customized using options like `newsrc-path=` and `address-book=`.\n",
+            "movable": false,
+            "path": "~/.mailcap"
+        },
+        {
+            "help": "```\nalias alpine=\"alpine -p $XDG_CONFIG_HOME/alpine/pinerc\"\n```\nIn the above config file, some locations can be customized using options like `newsrc-path=` and `address-book=`.\n",
+            "movable": false,
+            "path": "~/.mime.types"
+        },
+        {
+            "help": "```\nalias alpine=\"alpine -p $XDG_CONFIG_HOME/alpine/pinerc\"\n```\nIn the above config file, some locations can be customized using options like `newsrc-path=` and `address-book=`.\n",
+            "movable": false,
+            "path": "~/.pine-interrupted-mail"
+        }
+    ],
+    "name": "alpine"
+}
