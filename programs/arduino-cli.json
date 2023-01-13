@@ -1,0 +1,10 @@
+{
+    "files": [
+        {
+            "help": "You can move this to `$XDG_CONFIG_HOME/arduino15`.\n\nSpecify the new directories used by Arduino CLI in arduino-cli.yaml as mentioned in the documentation [here](https://arduino.github.io/arduino-cli/0.29/configuration/).\n\nAdd the following alias:\n```bash\nalias arduino-cli='arduino-cli --config-file $XDG_CONFIG_HOME/arduino15/arduino-cli.yaml'\n```\n\n_Relevant issue_: https://github.com/arduino/arduino-cli/pull/140\n",
+            "movable": false,
+            "path": "$HOME/.arduino15"
+        }
+    ],
+    "name": "arduino-cli"
+}
