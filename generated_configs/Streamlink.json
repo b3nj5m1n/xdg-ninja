@@ -2,7 +2,7 @@
     "name": "Streamlink",
     "files": [
         {
-            "path": "~/.livestreamerrc",
+            "path": "$HOME/.livestreamerrc",
             "movable": true,
             "help": "\n_Relevant issue_: https://github.com/chrippa/livestreamer/pull/106\n"
         }

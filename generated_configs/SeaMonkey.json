@@ -2,7 +2,7 @@
     "name": "SeaMonkey",
     "files": [
         {
-            "path": "~/.mozilla/seamonkey",
+            "path": "$HOME/.mozilla/seamonkey",
             "movable": false,
             "help": "\n_Relevant issue_: https://bugzil.la/726939\n"
         }

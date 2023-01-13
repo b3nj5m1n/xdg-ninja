@@ -2,7 +2,7 @@
     "name": "ocaml-utopAUR",
     "files": [
         {
-            "path": "~/.utop-history",
+            "path": "$HOME/.utop-history",
             "movable": false,
             "help": "There's an open PR to move ~/.utop-hostory to $XDG_CACHE_HOME [308]\n_Relevant issue_: https://github.com/ocaml-community/utop/issues/361\n"
         }

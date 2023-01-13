@@ -2,7 +2,7 @@
     "name": "jgmenu",
     "files": [
         {
-            "path": "~/.jgmenu-lockfile",
+            "path": "$HOME/.jgmenu-lockfile",
             "movable": false,
             "help": "\n_Relevant issue_: https://github.com/johanmalm/jgmenu/blob/3e48121dc28d06efb23c7901b7e138c2de167a84/src/lockfile.c#L11\n"
         }

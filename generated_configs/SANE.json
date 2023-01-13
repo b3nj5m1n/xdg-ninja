@@ -2,7 +2,7 @@
     "name": "SANE",
     "files": [
         {
-            "path": "~/.sane/",
+            "path": "$HOME/.sane/",
             "movable": false,
             "help": "scanimage creates a .cal file there\n"
         }

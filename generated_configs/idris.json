@@ -2,7 +2,7 @@
     "name": "idris",
     "files": [
         {
-            "path": "~/.idris",
+            "path": "$HOME/.idris",
             "movable": false,
             "help": "\n_Relevant issue_: https://github.com/idris-lang/Idris-dev/pull/3456\n"
         }

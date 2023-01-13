@@ -2,7 +2,7 @@
     "name": "kotlin",
     "files": [
         {
-            "path": "~/.kotlinc_history",
+            "path": "$HOME/.kotlinc_history",
             "movable": false,
             "help": "Related Konan issue: [294]\n"
         }

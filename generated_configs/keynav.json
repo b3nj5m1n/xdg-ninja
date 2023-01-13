@@ -2,7 +2,7 @@
     "name": "keynav",
     "files": [
         {
-            "path": "~/.keynavrc",
+            "path": "$HOME/.keynavrc",
             "movable": true,
             "help": "XDG_CONFIG_HOME/keynav/keynavrc\n"
         }

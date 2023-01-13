@@ -2,12 +2,12 @@
     "name": "Chromium",
     "files": [
         {
-            "path": "~/.chromium",
+            "path": "$HOME/.chromium",
             "movable": true,
             "help": "\n_Relevant issue_: https://groups.google.com/forum/#!topic/chromium-dev/QekVQxF3nho\n"
         },
         {
-            "path": "~/.pki",
+            "path": "$HOME/.pki",
             "movable": true,
             "help": "\n_Relevant issue_: https://groups.google.com/forum/#!topic/chromium-dev/QekVQxF3nho\n"
         }

@@ -2,7 +2,7 @@
     "name": "llpp",
     "files": [
         {
-            "path": "~/.config/llpp.conf",
+            "path": "$HOME/.config/llpp.conf",
             "movable": false,
             "help": "Added in 3ab86f0 but subsequently reverted in e253c9f1[dead link 2022-09-23 ⓘ]\n_Relevant issue_: https://github.com/moosotc/llpp/issues/180\n"
         }

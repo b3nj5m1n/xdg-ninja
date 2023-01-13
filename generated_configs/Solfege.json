@@ -2,17 +2,17 @@
     "name": "Solfege",
     "files": [
         {
-            "path": "~/.solfege",
+            "path": "$HOME/.solfege",
             "movable": false,
             "help": "\n_Relevant issue_: https://savannah.gnu.org/bugs/index.php?50251\n"
         },
         {
-            "path": "~/.solfegerc",
+            "path": "$HOME/.solfegerc",
             "movable": false,
             "help": "\n_Relevant issue_: https://savannah.gnu.org/bugs/index.php?50251\n"
         },
         {
-            "path": "~/lessonfiles",
+            "path": "$HOME/lessonfiles",
             "movable": false,
             "help": "\n_Relevant issue_: https://savannah.gnu.org/bugs/index.php?50251\n"
         }

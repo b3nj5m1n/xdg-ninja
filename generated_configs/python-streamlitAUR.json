@@ -2,7 +2,7 @@
     "name": "python-streamlitAUR",
     "files": [
         {
-            "path": "~/.streamlit",
+            "path": "$HOME/.streamlit",
             "movable": false,
             "help": "\n_Relevant issue_: https://github.com/streamlit/streamlit/issues/2068\n"
         }

@@ -2,12 +2,12 @@
     "name": "dart",
     "files": [
         {
-            "path": "~/.dart",
+            "path": "$HOME/.dart",
             "movable": false,
             "help": "\n_Relevant issue_: https://github.com/dart-lang/sdk/issues/41560\n"
         },
         {
-            "path": "~/.dartServer",
+            "path": "$HOME/.dartServer",
             "movable": false,
             "help": "\n_Relevant issue_: https://github.com/dart-lang/sdk/issues/41560\n"
         }

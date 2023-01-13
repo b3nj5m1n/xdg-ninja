@@ -2,7 +2,7 @@
     "name": "xrdpAUR",
     "files": [
         {
-            "path": "~/thinclient_drives",
+            "path": "$HOME/thinclient_drives",
             "movable": false,
             "help": "For the directory ~/thinclient_drives, you may consider editing /etc/xrdp/sesman.ini and modifying the section [Chansrv] following the example config.\n"
         }

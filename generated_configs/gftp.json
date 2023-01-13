@@ -2,7 +2,7 @@
     "name": "gftp",
     "files": [
         {
-            "path": "~/.gftp/",
+            "path": "$HOME/.gftp/",
             "movable": false,
             "help": "Following the XDG spec is planned for gftp.\n_Relevant issue_: https://github.com/masneyb/gftp/issues/99#issuecomment-735030824\n"
         }

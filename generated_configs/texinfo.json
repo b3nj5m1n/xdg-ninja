@@ -2,7 +2,7 @@
     "name": "texinfo",
     "files": [
         {
-            "path": "~/.infokey",
+            "path": "$HOME/.infokey",
             "movable": false,
             "help": "info --init-file \"$XDG_CONFIG_HOME/infokey\"\n"
         }

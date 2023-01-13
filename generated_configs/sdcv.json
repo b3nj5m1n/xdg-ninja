@@ -2,12 +2,12 @@
     "name": "sdcv",
     "files": [
         {
-            "path": "~/.stardict/",
+            "path": "$HOME/.stardict/",
             "movable": true,
             "help": "\n_Relevant issue_: https://github.com/Dushistov/sdcv/issues/51\n"
         },
         {
-            "path": "~/.sdcv_history",
+            "path": "$HOME/.sdcv_history",
             "movable": true,
             "help": "\n_Relevant issue_: https://github.com/Dushistov/sdcv/issues/51\n"
         }

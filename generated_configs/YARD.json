@@ -2,7 +2,7 @@
     "name": "YARD",
     "files": [
         {
-            "path": "~/.yard",
+            "path": "$HOME/.yard",
             "movable": false,
             "help": "Would accept Pull Request if anyone want to implement it.\n_Relevant issue_: https://github.com/lsegal/yard/issues/1230\n"
         }

@@ -2,7 +2,7 @@
     "name": "xsel",
     "files": [
         {
-            "path": "~/.xsel.log",
+            "path": "$HOME/.xsel.log",
             "movable": true,
             "help": "\n_Relevant issue_: https://github.com/kfish/xsel/issues/10\n"
         }

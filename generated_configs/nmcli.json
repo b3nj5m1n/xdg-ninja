@@ -2,7 +2,7 @@
     "name": "nmcli",
     "files": [
         {
-            "path": "~/.nmcli-history",
+            "path": "$HOME/.nmcli-history",
             "movable": false,
             "help": "Hardcoded to g_get_home_dir()[304] [305]\n_Relevant issue_: https://gitlab.freedesktop.org/NetworkManager/NetworkManager/-/issues/64\n"
         }

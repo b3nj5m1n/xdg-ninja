@@ -2,7 +2,7 @@
     "name": "grsync",
     "files": [
         {
-            "path": "~/.grsync/",
+            "path": "$HOME/.grsync/",
             "movable": false,
             "help": "\n_Relevant issue_: https://sourceforge.net/p/grsync/feature-requests/15/\n"
         }

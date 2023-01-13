@@ -2,7 +2,7 @@
     "name": "darcs",
     "files": [
         {
-            "path": "~/.darcs/",
+            "path": "$HOME/.darcs/",
             "movable": false,
             "help": "\n_Relevant issue_: http://bugs.darcs.net/issue2453\n"
         }

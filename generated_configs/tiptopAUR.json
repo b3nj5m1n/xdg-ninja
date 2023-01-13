@@ -2,7 +2,7 @@
     "name": "tiptopAUR",
     "files": [
         {
-            "path": "~/.tiptoprc",
+            "path": "$HOME/.tiptoprc",
             "movable": true,
             "help": "This will still expect the .tiptoprc file.\ntiptop -W \"$XDG_CONFIG_HOME\"/tiptop\n"
         }

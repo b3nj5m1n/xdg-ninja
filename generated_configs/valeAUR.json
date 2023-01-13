@@ -2,7 +2,7 @@
     "name": "valeAUR",
     "files": [
         {
-            "path": "~/.vale.ini",
+            "path": "$HOME/.vale.ini",
             "movable": false,
             "help": "vale --config \"$XDG_CONFIG_HOME/vale/config.ini\"\n_Relevant issue_: https://github.com/errata-ai/vale/issues/152\n"
         }

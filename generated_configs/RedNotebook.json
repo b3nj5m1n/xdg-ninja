@@ -2,7 +2,7 @@
     "name": "RedNotebook",
     "files": [
         {
-            "path": "~/.rednotebook",
+            "path": "$HOME/.rednotebook",
             "movable": false,
             "help": "\n_Relevant issue_: https://github.com/jendrikseipp/rednotebook/issues/404\n"
         }

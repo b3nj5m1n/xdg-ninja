@@ -2,7 +2,7 @@
     "name": "hydrogen",
     "files": [
         {
-            "path": "~/.hydrogen/",
+            "path": "$HOME/.hydrogen/",
             "movable": false,
             "help": "\n_Relevant issue_: https://github.com/hydrogen-music/hydrogen/issues/643\n"
         }

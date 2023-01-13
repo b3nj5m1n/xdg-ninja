@@ -2,7 +2,7 @@
     "name": "python-pip",
     "files": [
         {
-            "path": "~/.pip",
+            "path": "$HOME/.pip",
             "movable": true,
             "help": "\n_Relevant issue_: https://github.com/pypa/pip/issues/1733\n"
         }

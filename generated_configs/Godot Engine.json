@@ -2,7 +2,7 @@
     "name": "Godot Engine",
     "files": [
         {
-            "path": "~/.godot",
+            "path": "$HOME/.godot",
             "movable": true,
             "help": "\n_Relevant issue_: https://github.com/godotengine/godot/issues/3513\n"
         }

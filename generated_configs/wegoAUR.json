@@ -2,7 +2,7 @@
     "name": "wegoAUR",
     "files": [
         {
-            "path": "~/.wegorc",
+            "path": "$HOME/.wegorc",
             "movable": false,
             "help": "\n_Relevant issue_: https://github.com/schachmat/wego/issues/116\n"
         }

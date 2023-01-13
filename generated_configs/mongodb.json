@@ -2,12 +2,12 @@
     "name": "mongodb",
     "files": [
         {
-            "path": "~/.mongorc.js",
+            "path": "$HOME/.mongorc.js",
             "movable": false,
             "help": "This Stack Overflow thread suggests a partial workaround using command-line switch --norc.\n_Relevant issue_: https://jira.mongodb.org/browse/DOCS-5652?jql=text%20~%20%22.mongorc.js%22\n"
         },
         {
-            "path": "~/.dbshell",
+            "path": "$HOME/.dbshell",
             "movable": false,
             "help": "This Stack Overflow thread suggests a partial workaround using command-line switch --norc.\n_Relevant issue_: https://jira.mongodb.org/browse/DOCS-5652?jql=text%20~%20%22.mongorc.js%22\n"
         }

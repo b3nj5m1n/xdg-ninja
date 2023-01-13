@@ -2,7 +2,7 @@
     "name": "cryptomatorAUR",
     "files": [
         {
-            "path": "~/.Cryptomator",
+            "path": "$HOME/.Cryptomator",
             "movable": false,
             "help": "\n_Relevant issue_: https://github.com/cryptomator/cryptomator/issues/710\n"
         }

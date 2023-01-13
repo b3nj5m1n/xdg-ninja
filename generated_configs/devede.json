@@ -2,7 +2,7 @@
     "name": "devede",
     "files": [
         {
-            "path": "~/.devedeng",
+            "path": "$HOME/.devedeng",
             "movable": false,
             "help": "Hardcoded here\n"
         }

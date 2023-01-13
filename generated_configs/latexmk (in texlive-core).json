@@ -2,7 +2,7 @@
     "name": "latexmk (in texlive-core)",
     "files": [
         {
-            "path": "~/.latexmkrc",
+            "path": "$HOME/.latexmkrc",
             "movable": true,
             "help": "XDG_CONFIG_HOME/latexmk/latexmkrc\n"
         }

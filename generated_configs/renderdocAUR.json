@@ -2,7 +2,7 @@
     "name": "renderdocAUR",
     "files": [
         {
-            "path": "~/.renderdoc",
+            "path": "$HOME/.renderdoc",
             "movable": false,
             "help": "\n_Relevant issue_: https://github.com/baldurk/renderdoc/pull/1741\n"
         }

@@ -2,7 +2,7 @@
     "name": "quodlibet",
     "files": [
         {
-            "path": "~/.quodlibet",
+            "path": "$HOME/.quodlibet",
             "movable": true,
             "help": "\n_Relevant issue_: https://github.com/quodlibet/quodlibet/issues/138\n"
         }

@@ -2,7 +2,7 @@
     "name": "minicom",
     "files": [
         {
-            "path": "~/.minirc.dfl",
+            "path": "$HOME/.minirc.dfl",
             "movable": false,
             "help": "Upstream has a TODO entry for supporting configuration files under ~/.config/minicom. [300]\n"
         }

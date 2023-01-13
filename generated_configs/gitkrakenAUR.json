@@ -2,7 +2,7 @@
     "name": "gitkrakenAUR",
     "files": [
         {
-            "path": "~/.gitkraken/",
+            "path": "$HOME/.gitkraken/",
             "movable": false,
             "help": "\n_Relevant issue_: https://feedback.gitkraken.com/suggestions/197923/support-for-moving-the-config-directory-on-linux\n"
         }

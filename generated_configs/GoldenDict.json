@@ -2,7 +2,7 @@
     "name": "GoldenDict",
     "files": [
         {
-            "path": "~/.goldendict/",
+            "path": "$HOME/.goldendict/",
             "movable": false,
             "help": "\n_Relevant issue_: https://github.com/goldendict/goldendict/issues/151\n"
         }

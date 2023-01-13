@@ -2,7 +2,7 @@
     "name": "sbcl",
     "files": [
         {
-            "path": "~/.sbclrc",
+            "path": "$HOME/.sbclrc",
             "movable": false,
             "help": "/etc/sbclrc\n(require :asdf)\n(setf sb-ext:*userinit-pathname-function*\n      (lambda () (uiop:xdg-config-home #P\"sbcl/sbclrc\")))\n\nNote that this requires root privileges and will change the location of ~/.sbclrc for all users. This can be mitigated by checking for an existing ~/.sbclrc inside the lambda form.\n"
         }

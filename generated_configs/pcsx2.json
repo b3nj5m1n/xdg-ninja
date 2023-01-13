@@ -2,7 +2,7 @@
     "name": "pcsx2",
     "files": [
         {
-            "path": "~/.pcsx2",
+            "path": "$HOME/.pcsx2",
             "movable": true,
             "help": "\n_Relevant issue_: https://github.com/PCSX2/pcsx2/issues/352\n"
         }

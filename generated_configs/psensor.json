@@ -2,7 +2,7 @@
     "name": "psensor",
     "files": [
         {
-            "path": "~/.psensor",
+            "path": "$HOME/.psensor",
             "movable": false,
             "help": "\n_Relevant issue_: https://gitlab.com/jeanfi/psensor/-/issues/38\n"
         }

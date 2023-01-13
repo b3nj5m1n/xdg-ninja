@@ -2,12 +2,12 @@
     "name": "nano",
     "files": [
         {
-            "path": "~/.nano/",
+            "path": "$HOME/.nano/",
             "movable": true,
             "help": "\n_Relevant issue_: https://savannah.gnu.org/patch/?8523\n"
         },
         {
-            "path": "~/.nanorc",
+            "path": "$HOME/.nanorc",
             "movable": true,
             "help": "\n_Relevant issue_: https://savannah.gnu.org/patch/?8523\n"
         }

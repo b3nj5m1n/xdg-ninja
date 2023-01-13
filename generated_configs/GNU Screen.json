@@ -2,7 +2,7 @@
     "name": "GNU Screen",
     "files": [
         {
-            "path": "~/.screenrc",
+            "path": "$HOME/.screenrc",
             "movable": true,
             "help": "export SCREENRC=\"$XDG_CONFIG_HOME\"/screen/screenrc\n"
         }
