@@ -1,0 +1,10 @@
+{
+    "files": [
+         {
+            "help" : "Try exporting the following environment variable:\n\n```bash\nCLICKHOUSE_HISTORY_FILE=\"$XDG_DATA_HOME\"/clickhouse-client-history```",
+            "movable" : true,
+            "path" : "$HOME/.clickhouse-client-history"
+         }
+      ],
+      "name" : "clickhouse"
+}
