@@ -1,0 +1,15 @@
+{
+    "name": "nano",
+    "files": [
+        {
+            "path": "$HOME/.nanorc",
+            "movable": true,
+            "help": "XDG is partially supported since _v2.9.0_. You can move the file to _XDG_CONFIG_HOME/nano/nanorc_."
+        },
+        {
+            "path": "$HOME/.nano",
+            "movable": true,
+            "help": "XDG is partially supported since _v2.9.0_. You can move the directory to _XDG_DATA_HOME/nano_."
+        }
+    ]
+}
