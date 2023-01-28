@@ -134,7 +134,7 @@ check_if_file_exists() {
     fi
 }
 
-decode_string() {
+print_body() {
     HELP="$1"
     SOURCE="$2"
     printf "%s" "$HELP" | sed -e 's/\\n/\
@@ -179,7 +179,7 @@ log() {
         ;;
 
     HELP)
-        decode_string "$HELP" "$SOURCE" | PAGER="cat" $DECODER
+        print_body "$HELP" "$SOURCE" | PAGER="cat" $DECODER
         ;;
 
     esac
