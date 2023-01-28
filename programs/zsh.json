@@ -28,22 +28,26 @@
         {
             "help": "Move the file to _\"$HOME\"/.config/zsh/.zlogin_ and export the following environment variable:\n\n```bash\nexport ZDOTDIR=\"$HOME\"/.config/zsh\n```\nYou can do this in _/etc/zshenv_ (Or _/etc/zsh/zshenv_, on some distros).\n",
             "movable": true,
-            "path": "$HOME/.zlogin"
+            "path": "$HOME/.zlogin",
+            "source": "https://zsh.sourceforge.io/Doc/Release/Files.html#Files"
         },
         {
             "help": "Move the file to _\"$HOME\"/.config/zsh/.zprofile_ and export the following environment variable:\n\n```bash\nexport ZDOTDIR=\"$HOME\"/.config/zsh\n```\nYou can do this in _/etc/zshenv_ (Or _/etc/zsh/zshenv_, on some distros).\n",
             "movable": true,
-            "path": "$HOME/.zprofile"
+            "path": "$HOME/.zprofile",
+            "source": "https://zsh.sourceforge.io/Doc/Release/Files.html#Files"
         },
         {
             "help": "Move the file to _\"$HOME\"/.config/zsh/.zshenv_ and export the following environment variable:\n\n```bash\nexport ZDOTDIR=\"$HOME\"/.config/zsh\n```\nYou can do this in _/etc/zshenv_ (Or _/etc/zsh/zshenv_, on some distros).\n",
             "movable": true,
-            "path": "$HOME/.zshenv"
+            "path": "$HOME/.zshenv",
+            "source": "https://zsh.sourceforge.io/Doc/Release/Files.html#Files"
         },
         {
             "help": "Move the file to _\"$HOME\"/.config/zsh/.zshrc_ and export the following environment variable:\n\n```bash\nexport ZDOTDIR=\"$HOME\"/.config/zsh\n```\nYou can do this in _/etc/zshenv_ (Or _/etc/zsh/zshenv_, on some distros).\n",
             "movable": true,
-            "path": "$HOME/.zshrc"
+            "path": "$HOME/.zshrc",
+            "source": "https://zsh.sourceforge.io/Doc/Release/Files.html#Files"
         }
     ],
     "name": "zsh"
