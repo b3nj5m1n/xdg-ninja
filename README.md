@@ -42,7 +42,8 @@ You define a program, and then a list of files and directories which this progra
 
 For each file/directory, you specify if it can be (re)moved.
 
-If this is the case, you also specify instructions on how to accomplish this in Markdown.
+If this is the case, you also specify instructions on how to accomplish this in Markdown. Alongside the instruction you can also
+specify a source to let the user know where you got this information from.
 
 Files in this directory can have any name, but using the name of the program is encouraged.
 
@@ -100,7 +101,8 @@ Now, we can assemble our final json file:
         {
             "path": "$HOME/.gitconfig",
             "movable": true,
-            "help": "Luckily, the XDG spec is supported by git, so we can simply move the file to _XDG_CONFIG_HOME/git/config_.\n"
+            "help": "Luckily, the XDG spec is supported by git, so we can simply move the file to _XDG_CONFIG_HOME/git/config_.\n",
+            "source": "https://git-scm.com/docs/git-config#FILES"
         }
     ]
 }
