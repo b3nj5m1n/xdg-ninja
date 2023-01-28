@@ -141,7 +141,7 @@ print_body() {
 /g' -e 's/\\\"/\"/g' -e '$ s/\n*$/\
 \
 /' # Replace \n with literal newline and \" with ", normalize number of trailing newlines to 2
-    if ! [[ "$SOURCE" == "null" ]]; then
+    if ! [ "$SOURCE" == "null" ]; then
         printf "Source: %s\n\n" "$SOURCE"
     fi
 }
