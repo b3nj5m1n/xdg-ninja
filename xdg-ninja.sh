@@ -135,10 +135,15 @@ check_if_file_exists() {
 }
 
 decode_string() {
-    printf "%s" "$1" | sed -e 's/\\n/\
+    HELP="$1"
+    SOURCE="$2"
+    printf "%s" "$HELP" | sed -e 's/\\n/\
 /g' -e 's/\\\"/\"/g' -e '$ s/\n*$/\
 \
 /' # Replace \n with literal newline and \" with ", normalize number of trailing newlines to 2
+    if ! [[ "$SOURCE" == "null" ]]; then
+        printf "Source: %s\n\n" "$SOURCE"
+    fi
 }
 
 # Counter to keep track of how many files can be moved
@@ -150,6 +155,7 @@ log() {
     NAME="$2"
     FILENAME="$3"
     HELP="$4"
+    SOURCE="$5"
 
     case "$MODE" in
 
@@ -173,7 +179,7 @@ log() {
         ;;
 
     HELP)
-        decode_string "$HELP" | PAGER="cat" $DECODER
+        decode_string "$HELP" "$SOURCE" | PAGER="cat" $DECODER
         ;;
 
     esac
@@ -185,27 +191,28 @@ check_file() {
     FILENAME="$2"
     MOVABLE="$3"
     HELP="$4"
+    SOURCE="$5"
 
     check_if_file_exists "$FILENAME"
 
     case $? in
 
     0)
-        log SUCS "$NAME" "$FILENAME" "$HELP"
+        log SUCS "$NAME" "$FILENAME" "$HELP" "$SOURCE"
         ;;
 
     1)
         if [ "$MOVABLE" = true ]; then
-            log ERR "$NAME" "$FILENAME" "$HELP"
+            log ERR "$NAME" "$FILENAME" "$HELP" "$SOURCE"
         else
-            log WARN "$NAME" "$FILENAME" "$HELP"
+            log WARN "$NAME" "$FILENAME" "$HELP" "$SOURCE"
         fi
         if [ "$HELP" ]; then
             if [ "$MOVABLE" = true ] || [ "$SKIP_UNSUPPORTED" = false ]; then
-                log HELP "$NAME" "$FILENAME" "$HELP"
+                log HELP "$NAME" "$FILENAME" "$HELP" "$SOURCE"
             fi
         else
-            log HELP "$NAME" "$FILENAME" "_No help available._"
+            log HELP "$NAME" "$FILENAME" "_No help available._" "$SOURCE"
         fi
         ;;
 
@@ -215,10 +222,10 @@ check_file() {
 # Reads files from programs/, calls check_file on each file specified for each program
 do_check_programs() {
     while IFS="
-" read -r name; read -r filename; read -r movable; read -r help; do
-        check_file "$name" "$filename" "$movable" "$help"
+" read -r name; read -r filename; read -r movable; read -r help; read -r source; do
+        check_file "$name" "$filename" "$movable" "$help" "$source"
     done <<EOF
-$(jq 'inputs as $input | $input.files[] as $file | $input.name, $file.path, $file.movable, $file.help' "$(realpath "$0" | xargs dirname)"/programs/* | sed -e 's/^"//' -e 's/"$//')
+$(jq 'inputs as $input | $input.files[] as $file | $input.name, $file.path, $file.movable, $file.help, $file.source' "$(realpath "$0" | xargs dirname)"/programs/* | sed -e 's/^"//' -e 's/"$//')
 EOF
 # sed is to trim quotes
 }
