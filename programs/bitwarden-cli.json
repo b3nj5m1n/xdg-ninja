@@ -1,0 +1,10 @@
+{
+    "files": [
+        {
+            "help": "Export the following environment variable:\n\n```bash\nBITWARDENCLI_APPDATA_DIR=\"$XDG_DATA_HOME\"/bitwarden\n```\n\n_Relevant issue_: https://github.com/bitwarden/cli/pull/46\n",
+            "movable": true,
+            "path": "$HOME/.config/Bitwarden CLI"
+        }
+    ],
+    "name": "bitwarden-cli"
+}
