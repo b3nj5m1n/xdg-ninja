@@ -1,0 +1,10 @@
+{
+    "files": [
+        {
+            "help": "Add the following command to your .profile, .bashrc, .zshrc or wherever you export other environment variables:\n\n```\ndefaults write org.hammerspoon.Hammerspoon MJConfigFile \"$XDG_CONFIG_HOME\"/hammerspoon/init.lua\n```\n\n_Note: you may also just run the command once, but you will have to re-run it if you change $XDG_CONFIG_HOME. The command is idempotent, so it is safe to include in a .profile or similar._\n",
+            "movable": true,
+            "path": "$HOME/.hammerspoon"
+        }
+    ],
+    "name": "hammerspoon"
+}
