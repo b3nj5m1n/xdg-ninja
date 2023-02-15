@@ -2,8 +2,8 @@
     "files": [
         {
             "path": "$HOME/.w3m",
-            "movable": false,
-            "help": "Currently not supported, see this [PR](https://github.com/tats/w3m/pull/207).\n"
+            "movable": true,
+            "help": "Export the following environment variables:\n\n```bash\nexport W3M_DIR=\"$XDG_DATA_HOME\"/w3m\n```\n"
         }
     ],
     "name": "w3m"
