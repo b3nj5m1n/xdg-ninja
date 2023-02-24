@@ -1,0 +1,10 @@
+{
+    "files": [
+        {
+            "path": "$HOME/.minttyrc",
+            "movable": true,
+            "help": "Supported out of the box, just move the file to:\n\n```bash\n$XDG_CONFIG_HOME/mintty/config \n```\n"
+        }
+    ],
+    "name": "mintty"
+}
