@@ -4,6 +4,11 @@
             "path": "$HOME/.sqlite_history",
             "movable": true,
             "help": "Export the following environment variables:\n\n```bash\nexport SQLITE_HISTORY=\"$XDG_CACHE_HOME\"/sqlite_history\n```\n"
+        },
+        {
+            "path": "$HOME/.sqliterc",
+            "movable": true,
+            "help": "XDG paths are supported in version 3.41.0+, so you can move this file to _XDG_CONFIG_HOME/sqlite3/sqliterc_.\n"
         }
     ],
     "name": "sqlite"
