@@ -1,0 +1,10 @@
+{
+    "files": [
+        {
+            "path": "$HOME/.t-engine",
+            "movable": true,
+            "help": "Add the following to the Steam arguments for Tales of Maj'Eyal 4: ```--home $XDG_DATA_HOME```\nThen, move _$HOME/.t-engine_ to _$XDG_DATA_HOME/.t-engine_\n\n**NOTE**: This flag only changes the location in which the directory is created. The actual directory itself is hardcoded as _.t-engine_, so it will still be hidden by default. There is currently no workaround for this.\n\nAlternatively, use the Flatpak version of Steam as noted in the help for _.steam_"
+        }
+    ],
+    "name": "t-engine"
+}
