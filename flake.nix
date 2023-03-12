@@ -25,11 +25,28 @@
         pkgs = import nixpkgs { inherit system overlays; };
       in rec {
         packages = flake-utils.lib.flattenTree {
+          # The shell script and configurations, uses derivation from offical nixpkgs
           xdg-ninja = pkgs.xdg-ninja;
+          # Pre-built binary of xdgnj tool downloaded from github
+          xdgnj-bin = pkgs.stdenvNoCC.mkDerivation {
+            name = "xdgnj-bin";
+            version = "0.2.0.1-alpha";
+            description = "Pre-built binary of the xdgnj tool for creating and editing configuration files for xdg-ninja.";
+            src = pkgs.fetchurl {
+              url = "https://github.com/b3nj5m1n/xdg-ninja/releases/download/v0.2.0.1/xdgnj";
+              sha256 = "y1BSqKQWbhCyg2sRgMsv8ivmylSUJj6XZ8o+/2oT5ns=";
+            };
+            dontUnpack = true;
+            installPhase = ''
+              mkdir -p "$out/bin"
+              install -Dm755 $src "$out/bin/xdgnj"
+            '';
+          };
         };
         defaultPackage = packages.xdg-ninja;
         apps = {
           xdg-ninja = flake-utils.lib.mkApp { drv = packages.xdg-ninja; };
+          xdgnj-bin = flake-utils.lib.mkApp { drv = packages.xdgnj-bin; exePath = "/bin/xdgnj"; };
         };
         defaultApp = apps.xdg-ninja;
       }
