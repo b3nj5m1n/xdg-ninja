@@ -1,32 +1,37 @@
 {
-  inputs.flake-utils.url = "github:numtide/flake-utils";
+  inputs = {
+    nixpkgs.url = "nixpkgs";
+    flake-utils.url = "github:numtide/flake-utils";
+  };
   outputs = {
     self,
     nixpkgs,
     flake-utils,
   }:
-    flake-utils.lib.eachDefaultSystem (
-      system: let
-        pkgs = nixpkgs.legacyPackages.${system};
+    flake-utils.lib.eachDefaultSystem (system:
+      let
+        runtimeDependencies = with pkgs; [
+          glow
+          jq
+        ];
+        overlays = [
+          (self: super: {
+            xdg-ninja = super.xdg-ninja.overrideAttrs (old: {
+              version = "git";
+              src = ./.;
+            });
+          })
+        ];
+        pkgs = import nixpkgs { inherit system overlays; };
       in rec {
-        packages = flake-utils.lib.flattenTree rec {
-          xdg-ninja = pkgs.stdenvNoCC.mkDerivation {
-            name = "xdg-ninja";
-            src = ./.;
-            nativeBuildInputs = [pkgs.makeWrapper];
-            installPhase = ''
-              runHook preInstall
-              install -Dm755 xdg-ninja.sh "$out/share/xdg-ninja/xdg-ninja.sh"
-              install -Dm644 programs/* -t "$out/share/xdg-ninja/programs"
-              mkdir -p "$out/bin"
-              ln -s "$out/share/xdg-ninja/xdg-ninja.sh" "$out/bin/xdg-ninja"
-              wrapProgram "$out/bin/xdg-ninja" --prefix PATH : "${pkgs.lib.makeBinPath [pkgs.glow pkgs.jq]}"
-              runHook postInstall
-            '';
-          };
-          default = xdg-ninja;
+        packages = flake-utils.lib.flattenTree {
+          xdg-ninja = pkgs.xdg-ninja;
         };
-        defaultApp = packages.default;
+        defaultPackage = packages.xdg-ninja;
+        apps = {
+          xdg-ninja = flake-utils.lib.mkApp { drv = packages.xdg-ninja; };
+        };
+        defaultApp = apps.xdg-ninja;
       }
     );
 }
