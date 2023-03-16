@@ -1,0 +1,10 @@
+{
+    "files": [
+        {
+            "path": "$HOME/.rusherhack",
+            "movable": false,
+            "help": "Currently unsupported.\n\n_Relevant issue:_ https://github.com/RusherDevelopment/rusherhack-issues/issues/1422\n"
+        }
+    ],
+    "name": "rusherhack"
+}
