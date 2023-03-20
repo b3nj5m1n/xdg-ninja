@@ -9,12 +9,7 @@
             "help": "In $XDG_CONFIG_HOME/octave/octaverc, add the following line:\n\n```\nsource /usr/share/octave/site/m/startup/octaverc;\npkg prefix ~/.local/share/octave/packages ~/.local/share/octave/packages;\npkg local_list /home/<your username>/.local/share/octave/octave_packages;\n```\n\nThe `local_list` option must be given an absolute path.",
             "movable": true,
             "path": "$HOME/.octave_packages"
-        },
-        {
-            "help": "Export the following environment variables:\n\n```bash\nexport OCTAVE_HISTFILE=\"$XDG_CACHE_HOME/octave-hsts\"\n```",
-            "movable": true,
-            "path": "$HOME/.octave_hist"
         }
-    ],
+            ],
     "name": "octave"
 }
