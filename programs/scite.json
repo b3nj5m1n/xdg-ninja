@@ -4,7 +4,7 @@
         {
             "path": "$HOME/.SciTE.session",
             "movable": true,
-            "help": "Export the following environment variables:\n\n```bash\nexport SciTE_USERHOME=\"$XDG_CONFIG_HOME\"/SciTE\n```\n",
+            "help": "Export the following environment variables:\n\n```bash\nexport SciTE_USERHOME=\"$XDG_CONFIG_HOME\"/SciTE\n```\n"
         },
         {
             "path": "$HOME/.SciTEUser.properties",
