@@ -1,0 +1,10 @@
+{
+    "files": [
+        {
+            "help": "Export the following environment variables:\n\n```bash\nexport OCTAVE_SITE_INITFILE=\"$XDG_CONFIG_HOME/octave/octaverc\"\n```",
+            "movable": true,
+            "path": "$HOME/.octaverc"
+        }
+            ],
+    "name": "octave"
+}
