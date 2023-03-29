@@ -1,0 +1,15 @@
+{
+    "files": [
+        {
+            "help": "Currently unsupported.\n\n_Relevant issue:_ https://github.com/b3nj5m1n/xdg-ninja/issues/14\n",
+            "movable": false,
+            "path": "$HOME/.condarc"
+        },
+        {
+            "help": "Currently unsupported.\n\n_Relevant issue:_ https://github.com/b3nj5m1n/xdg-ninja/issues/14\n",
+            "movable": false,
+            "path": "$HOME/.conda"
+        }
+    ],
+    "name": "conda"
+}
