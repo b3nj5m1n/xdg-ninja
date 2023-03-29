@@ -4,6 +4,16 @@
             "help": "This has been added since 0.17.4. See https://github.com/junegunn/fzf/pull/1282.\nReinstall from git with\n```bash\n~/.fzf/uninstall\nrm -rf ~/.fzf\ngit clone --depth 1 https://github.com/junegunn/fzf.git $XDG_DATA_HOME/fzf\n$XDG_DATA_HOME/fzf/install --xdg\n```\n",
             "movable": true,
             "path": "$HOME/.fzf"
+        },
+        {
+            "help": "Follow instructions for moving `.fzf`\n",
+            "movable": true,
+            "path": "$HOME/.fzf.zsh"
+        },
+        {
+            "help": "Follow instructions for moving `.fzf`\n",
+            "movable": true,
+            "path": "$HOME/.fzf.bash"
         }
     ],
     "name": "fzf"
