@@ -1,0 +1,10 @@
+{
+    "files": [
+        {
+            "path": "$HOME/.cozy",
+            "movable": false,
+            "help": "Currently unsupported.\n\n_Relevant pull request:_ https://github.com/cozy/cozy-stack/pull/3863\n"
+        }
+    ],
+    "name": "cozy"
+}
