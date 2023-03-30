@@ -1,0 +1,10 @@
+{
+    "name": "v",
+    "files": [
+        {
+            "path": "$HOME/.vmodules",
+            "movable": false,
+            "help": "Export the following environment variables:\n\n```bash\nexport VMODULES=\"$XDG_DATA_HOME\"/vmodules\n```\n"
+        }
+    ]
+}
