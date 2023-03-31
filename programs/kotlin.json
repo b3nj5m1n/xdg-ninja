@@ -1,0 +1,10 @@
+{
+  "name": "kotlin",
+  "files": [
+      {
+          "path": "$HOME/.konan",
+          "movable": false,
+          "help": "Export the following environment variables:\n\n```bash\nexport KONAN_DATA_DIR=\"$XDG_DATA_HOME/konan\"\n```\n"
+      }
+  ]
+}
