@@ -1,0 +1,10 @@
+{
+    "name": "deno",
+    "files": [
+        {
+            "path": "$HOME/.deno",
+            "movable": true,
+            "help": "Deno supports the XDG Spec, however __~/.deno__ serves as a fallback if __XDG_CACHE_HOME__ is not set.\n\nMake sure to set __XDG_CACHE_HOME__, then:\n\n```sh\nmv ~/.deno \"$XDG_CACHE_HOME/deno\"\n```\n\n[Source:](https://github.com/denoland/deno/issues/1241)\n"
+        }
+    ]
+}
