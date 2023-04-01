@@ -1,0 +1,10 @@
+{
+    "files": [
+        {
+            "help": "Currently unsupported.\n\n_Relevant issue:_\nhttps://github.com/LeetCode-OpenSource/vscode-leetcode/issues/873\n",
+            "movable": false,
+            "path": "$HOME/.lc"
+        }
+    ],
+    "name": "VSCode LeetCode Extension"
+}
