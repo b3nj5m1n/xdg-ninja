@@ -1,0 +1,10 @@
+{
+    "files": [
+        {
+            "help": "Currently unsupported.\n\n_Relevant issue:_ https://bugs.launchpad.net/equalx/+bug/2014460 \n",
+            "movable": false,
+            "path": "$HOME/.equalx"
+        }
+    ],
+    "name": "EqualX"
+}
