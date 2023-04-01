@@ -1,0 +1,10 @@
+{
+    "name": "act",
+    "files": [
+        {
+            "path": "$HOME/.actrc",
+            "movable": true,
+            "help": "Act supports the XDG spec.\n\n```sh\nmkdir \"$XDG_CONFIG_HOME/act\"\nmv .actrc \"$XDG_CONFIG_HOME/act/actrc\"\n```\n\n[Source:](https://github.com/nektos/act/issues/1678)\n"
+        }
+    ]
+}
