@@ -1,0 +1,10 @@
+{
+    "name": "sonarlint",
+    "files": [
+        {
+            "path": "$HOME/.sonarlint",
+            "movable": true,
+            "help": "Export the following environment variables:\n\n```sh\nexport SONARLINT_USER_HOME=\"$XDG_DATA_HOME/sonarlint\"\n```\n\n[Source:](https://groups.google.com/g/sonarlint/c/q8odliz-IoY?pli=1)\n"
+        }
+    ]
+}
