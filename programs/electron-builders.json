@@ -1,0 +1,15 @@
+{
+    "files": [
+        {
+            "path": "$HOME/.electron-gyp",
+            "movable": false,
+            "help": "You can delete this directory. Many electron apps using native modules use this directory as a build cache. Its up to developers to modify build scripts, so that builds from source do not create this directory. If you build electron based apps from sources it may appear again.\n"
+        },
+        {
+            "path": "$HOME/.electron-rebuild-cache",
+            "movable": false,
+            "help": "You can delete this directory. Many electron apps using native modules use this directory as a build cache. Its up to developers to modify build scripts, so that builds from source do not create this directory. If you build electron based apps from sources it may appear again.\n"
+        }
+    ],
+    "name": "Electron apps built from source"
+}
