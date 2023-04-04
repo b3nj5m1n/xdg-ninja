@@ -1,0 +1,10 @@
+{
+    "files": [
+        {
+            "path": "$HOME/.dlv",
+            "movable": false,
+            "help": "On systems other than Linux, for example, on macOS, config is stored in $HOME/.dlv. Export $XDG_CONFIG_HOME explicitly, config will be moved to $XDG_CONFIG_HOME/dlv on the next launch of dlv automatically.\n"
+        }
+    ],
+    "name": "delve"
+}
