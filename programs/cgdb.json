@@ -3,7 +3,7 @@
         {
             "path": "$HOME/.cgdb",
             "movable": true,
-            "help": "Export the following environment variables:\n\n```bash\nexport CGDB_DIR=\"$XDG_CONFIG_HOME\"/cgdb\n```\n\nMove the configuration file to _XDG_CONFIG_HOME/cgdb/cgdbrc_\n"
+            "help": "Export the following environment variables:\n\n```bash\nexport CGDB_DIR=\"$XDG_CONFIG_HOME\"/cgdb\n```\n\nMove the configuration file to _$XDG_CONFIG_HOME/cgdb/cgdbrc_\n"
         }
     ],
     "name": "cgdb"

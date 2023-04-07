@@ -4,7 +4,7 @@
         {
             "path": "$HOME/.sandboxrc",
             "movable": true,
-            "help": "Supported since commit _91e0b6a_.\n\nYou can move the file to _XDG_CONFIG_HOME/sandboxd/sandboxrc_.\n"
+            "help": "Supported since commit _91e0b6a_.\n\nYou can move the file to _$XDG_CONFIG_HOME/sandboxd/sandboxrc_.\n"
         }
     ]
 }

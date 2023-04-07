@@ -2,9 +2,9 @@
     "name": "ccache",
     "files": [
         {
-            "path": "${HOME}/.ccache",
+            "path": "$HOME/.ccache",
             "movable": true,
-            "help": "Export the following environment variables:\n\n```bash\nexport CCACHE_DIR=\"${XDG_CACHE_HOME}\"/ccache\n```\n"
+            "help": "Export the following environment variables:\n\n```bash\nexport CCACHE_DIR=\"$XDG_CACHE_HOME\"/ccache\n```\n"
         }
     ]
 }

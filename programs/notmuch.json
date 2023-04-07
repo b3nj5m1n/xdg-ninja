@@ -4,7 +4,7 @@
         {
             "path": "$HOME/.notmuch-config",
             "movable": true,
-            "help": "Supported out-of-the-box.\n\nYou can move the file to _XDG_CONFIG_HOME/notmuch/default/config_.\n"
+            "help": "Supported out-of-the-box.\n\nYou can move the file to _$XDG_CONFIG_HOME/notmuch/default/config_.\n"
         }
     ]
 }

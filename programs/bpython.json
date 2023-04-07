@@ -3,7 +3,7 @@
         {
             "path": "$HOME/.pythonhist",
             "movable": true,
-            "help": "You can overwrite this in the config file:\n\n(_XDG_CONFIG_HOME/bpython/config_)\n```bash\n[general]\nhist_file = $XDG_DATA_HOME/bpythonhistory\n```\n"
+            "help": "You can overwrite this in the config file:\n\n(_$XDG_CONFIG_HOME/bpython/config_)\n```bash\n[general]\nhist_file = $XDG_DATA_HOME/bpythonhistory\n```\n"
         }
     ],
     "name": "bpython"

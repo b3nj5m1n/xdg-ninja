@@ -8,7 +8,7 @@
         {
             "path": "$HOME/.sqliterc",
             "movable": true,
-            "help": "XDG paths are supported in version 3.41.0+, so you can move this file to _XDG_CONFIG_HOME/sqlite3/sqliterc_.\n"
+            "help": "XDG paths are supported in version 3.41.0+, so you can move this file to _$XDG_CONFIG_HOME/sqlite3/sqliterc_.\n"
         }
     ],
     "name": "sqlite"

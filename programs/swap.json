@@ -4,7 +4,7 @@
         {
             "path": "$HOME/.sway",
             "movable": true,
-            "help": "Supported since commit _614393c_.\n\nYou can move the file _~/.sway/config_ to _XDG_CONFIG_HOME/sway/config_.\n"
+            "help": "Supported since commit _614393c_.\n\nYou can move the file _~/.sway/config_ to _$XDG_CONFIG_HOME/sway/config_.\n"
         }
     ]
 }

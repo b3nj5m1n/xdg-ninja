@@ -2,9 +2,9 @@
     "name": "icons",
     "files": [
         {
-            "path": "${HOME}/.icons",
+            "path": "$HOME/.icons",
             "movable": true,
-            "help": "Supported\n\nThe file ${HOME}/.icons can be moved to ${XDG_DATA_HOME}/icons.\n\nIf there are cursor themes installed in _${XDG_DATA_HOME}/icons_, it may be necessary to add the path to XCURSOR_PATH. For example:\n\n```bash\nexport XCURSOR_PATH=/usr/share/icons:${XDG_DATA_HOME}/icons\n```\n\n"
+            "help": "Supported\n\nThe file $HOME/.icons can be moved to $XDG_DATA_HOME/icons.\n\nIf there are cursor themes installed in _$XDG_DATA_HOME/icons_, it may be necessary to add the path to XCURSOR_PATH. For example:\n\n```bash\nexport XCURSOR_PATH=/usr/share/icons:$XDG_DATA_HOME/icons\n```\n\n"
         }
     ]
 }

@@ -2,9 +2,9 @@
     "name": "qrcp",
     "files": [
         {
-            "path": "${HOME}/.qrcp",
+            "path": "$HOME/.qrcp",
             "movable": true,
-            "help": "Supported\n\nThe file ${HOME}/.qrcp can be moved to ${XDG_CONFIG_HOME}/qrcp/config.json.\n"
+            "help": "Supported\n\nThe file $HOME/.qrcp can be moved to $XDG_CONFIG_HOME/qrcp/config.json.\n"
         }
     ]
 }

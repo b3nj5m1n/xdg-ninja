@@ -4,7 +4,7 @@
         {
             "path": "$HOME/.xmobarrc",
             "movable": true,
-            "help": "Supported since commit _9fc6b37_.\n\nYou can move the file to _XDG_CONFIG_HOME/xmobar/xmobarrc_.\n"
+            "help": "Supported since commit _9fc6b37_.\n\nYou can move the file to _$XDG_CONFIG_HOME/xmobar/xmobarrc_.\n"
         }
     ]
 }

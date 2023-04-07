@@ -4,7 +4,7 @@
         {
             "path": "$HOME/.binwalk",
             "movable": true,
-            "help": "Supported since commit _2051757_.\n\nYou can move the file to _XDG_CONFIG_HOME/binwalk_.\n"
+            "help": "Supported since commit _2051757_.\n\nYou can move the file to _$XDG_CONFIG_HOME/binwalk_.\n"
         }
     ]
 }

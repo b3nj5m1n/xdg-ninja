@@ -3,12 +3,12 @@
         {
             "path": "$HOME/.asdf",
             "movable": true,
-            "help": "Export the following environment variables:\n\n```bash\nexport ASDF_DATA_DIR=\"${XDG_DATA_HOME}\"/asdf\n```\n"
+            "help": "Export the following environment variables:\n\n```bash\nexport ASDF_DATA_DIR=\"$XDG_DATA_HOME\"/asdf\n```\n"
         },
         {
             "path": "$HOME/.asdfrc",
             "movable": true,
-            "help": "Export the following environment variables:\n\n```bash\nexport ASDF_CONFIG_FILE=\"${XDG_CONFIG_HOME}\"/asdf/asdfrc\n```\n"
+            "help": "Export the following environment variables:\n\n```bash\nexport ASDF_CONFIG_FILE=\"$XDG_CONFIG_HOME\"/asdf/asdfrc\n```\n"
         }
     ],
     "name": "asdf-vm"

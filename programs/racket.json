@@ -2,9 +2,9 @@
     "name": "racket",
     "files": [
         {
-            "path": "${HOME}/.racket",
+            "path": "$HOME/.racket",
             "movable": true,
-            "help": "Supported\n\nThe file ${HOME}/.racket can be moved to ${XDG_CONFIG_HOME}/racket.\n"
+            "help": "Supported\n\nThe file $HOME/.racket can be moved to $XDG_CONFIG_HOME/racket.\n"
         }
     ]
 }

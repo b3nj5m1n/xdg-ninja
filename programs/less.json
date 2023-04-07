@@ -3,7 +3,7 @@
         {
             "help": "Export the following environment variables:\n\n```bash\nexport LESSHISTFILE=\"$XDG_STATE_HOME\"/less/history\n```\n",
             "movable": true,
-            "path": "${HOME}/.lesshst"
+            "path": "$HOME/.lesshst"
         }
     ],
     "name": "less"

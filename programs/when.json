@@ -1,7 +1,7 @@
 {
     "files": [
         {
-            "help": "Supported natively.\n\nYou can move the file to _XDG_CONFIG_HOME/when_.\n\nDo not forget, in _XDG_CONFIG_HOME/when/preferences_, to add\n```\ncalendar = XDG_CONFIG_HOME/when/calendar\n```\n",
+            "help": "Supported natively.\n\nYou can move the file to _$XDG_CONFIG_HOME/when_.\n\nDo not forget, in _$XDG_CONFIG_HOME/when/preferences_, to add\n```\ncalendar = XDG_CONFIG_HOME/when/calendar\n```\n",
             "movable": true,
             "path": "$HOME/.when"
         }

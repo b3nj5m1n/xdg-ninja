@@ -4,7 +4,7 @@
         {
             "path": "$HOME/.asoundrc",
             "movable": true,
-            "help": "Supported since _v1.2.3_.\n\nYou can move the file to _XDG_CONFIG_HOME/alsa/asoundrc_.\n"
+            "help": "Supported since _v1.2.3_.\n\nYou can move the file to _$XDG_CONFIG_HOME/alsa/asoundrc_.\n"
         }
     ]
 }
