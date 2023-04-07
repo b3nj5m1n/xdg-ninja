@@ -2,9 +2,9 @@
     "name": "lnav",
     "files": [
         {
-            "path": "${HOME}/.lnav",
+            "path": "$HOME/.lnav",
             "movable": true,
-            "help": "Supported\n\nThe file ${HOME}/.lnav can be moved to ${XDG_CONFIG_HOME}/lnav.\n"
+            "help": "Supported\n\nThe file $HOME/.lnav can be moved to $XDG_CONFIG_HOME/lnav.\n"
         }
     ]
 }

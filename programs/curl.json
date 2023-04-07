@@ -4,7 +4,7 @@
         {
             "path": "$HOME/.curlrc",
             "movable": true,
-            "help": "Supported since _v7.73.0_.\n\nYou can move the file to _XDG_CONFIG_HOME/.curlrc_.\n"
+            "help": "Supported since _v7.73.0_.\n\nYou can move the file to _$XDG_CONFIG_HOME/.curlrc_.\n"
         }
     ]
 }

@@ -2,19 +2,19 @@
     "name": "gem",
     "files": [
         {
-            "path": "${HOME}/.gem/ruby",
+            "path": "$HOME/.gem/ruby",
             "movable": true,
-            "help": "Supported\n\nThe file ${HOME}/.gem/ruby can be moved to ${XDG_CONFIG_HOME}/gem.\n"
+            "help": "Supported\n\nThe file $HOME/.gem/ruby can be moved to $XDG_CONFIG_HOME/gem.\n"
         },
         {
-            "path": "${HOME}/.gem",
+            "path": "$HOME/.gem",
             "movable": true,
-            "help": "Export the following environment variables:\n\n```bash\nexport GEM_HOME=\"${XDG_DATA_HOME}\"/gem\n```\n"
+            "help": "Export the following environment variables:\n\n```bash\nexport GEM_HOME=\"$XDG_DATA_HOME\"/gem\n```\n"
         },
         {
-            "path": "${HOME}/.gem/specs",
+            "path": "$HOME/.gem/specs",
             "movable": true,
-            "help": "Export the following environment variables:\n\n```bash\nexport GEM_SPEC_CACHE=\"${XDG_CACHE_HOME}\"/gem\n```\n"
+            "help": "Export the following environment variables:\n\n```bash\nexport GEM_SPEC_CACHE=\"$XDG_CACHE_HOME\"/gem\n```\n"
         }
     ]
 }

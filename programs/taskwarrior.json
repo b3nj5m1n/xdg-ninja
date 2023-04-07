@@ -8,7 +8,7 @@
         {
             "path": "$HOME/.taskrc",
             "movable": true,
-            "help": "Supported since version _2.6_, _XDG_CONFIG_HOME/task/taskrc_ needs to exist, or task will offer to create the legacy file for you.\n"
+            "help": "Supported since version _2.6_, _$XDG_CONFIG_HOME/task/taskrc_ needs to exist, or task will offer to create the legacy file for you.\n"
         }
     ],
     "name": "taskwarrior"

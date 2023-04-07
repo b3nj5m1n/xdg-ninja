@@ -1,7 +1,7 @@
 {
     "files": [
         {
-            "help": "Unless you are on macOS, this is probably a custom directory on your system, and you can move the file to _XDG_DATA_HOME/trash_.\n\nIf you are on macOS, there is probably no way to move this. See [202](https://github.com/b3nj5m1n/xdg-ninja/issues/202) for more info.\n\n",
+            "help": "Unless you are on macOS, this is probably a custom directory on your system, and you can move the file to _$XDG_DATA_HOME/trash_.\n\nIf you are on macOS, there is probably no way to move this. See [202](https://github.com/b3nj5m1n/xdg-ninja/issues/202) for more info.\n\n",
             "movable": true,
             "path": "$HOME/.trash"
         }

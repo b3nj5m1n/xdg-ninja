@@ -4,12 +4,12 @@
         {
             "path": "$HOME/.scummvmrc",
             "movable": true,
-            "help": "Supported since commit _7d014be_.\n\nYou can move the file to _XDG_CONFIG_HOME/scummvm/scummvm.ini_.\n"
+            "help": "Supported since commit _7d014be_.\n\nYou can move the file to _$XDG_CONFIG_HOME/scummvm/scummvm.ini_.\n"
         },
         {
             "path": "$HOME/.scummvm",
             "movable": true,
-            "help": "Supported since commit _7d014be_.\n\nYou can move the directory to _XDG_DATA_HOME/scummvm/saves_.\n"
+            "help": "Supported since commit _7d014be_.\n\nYou can move the directory to _$XDG_DATA_HOME/scummvm/saves_.\n"
         }
     ]
 }

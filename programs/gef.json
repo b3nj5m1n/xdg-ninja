@@ -4,7 +4,7 @@
         {
             "path": "$HOME/.gef.rc",
             "movable": true,
-            "help": "GEF supports setting it's config file path through an environment variable. Simply move your _.gef.rc_ file to _XDG_CONFIG_HOME/gef_ and export the following:\n\n```bash\nexport GEF_RC=\"$XDG_CONFIG_HOME\"/gef/.gef.rc \n```\n"
+            "help": "GEF supports setting it's config file path through an environment variable. Simply move your _.gef.rc_ file to _$XDG_CONFIG_HOME/gef_ and export the following:\n\n```bash\nexport GEF_RC=\"$XDG_CONFIG_HOME\"/gef/.gef.rc \n```\n"
         }
     ]
 }

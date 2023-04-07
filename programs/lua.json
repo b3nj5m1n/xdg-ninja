@@ -8,7 +8,7 @@
 		{
 			"path": "$HOME/.luarocks",
 			"movable": true,
-			"help": "Supported\n\nThe file ${HOME}/.luarocks can be moved to ${XDG_CONFIG_HOME}/luarocks.\n\n"
+			"help": "Supported\n\nThe file $HOME/.luarocks can be moved to $XDG_CONFIG_HOME/luarocks.\n\n"
 		}
     ],
     "name": "lua"

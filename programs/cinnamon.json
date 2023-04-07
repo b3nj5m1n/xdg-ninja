@@ -4,32 +4,32 @@
         {
             "path": "$HOME/.cinnamon/spices.cache/",
             "movable": true,
-            "help": "Supported since _5.6.0_.\n\nYou can either delete or move the folder to _XDG_CACHE_HOME/cinnamon/spices_.\n"
+            "help": "Supported since _5.6.0_.\n\nYou can either delete or move the folder to _$XDG_CACHE_HOME/cinnamon/spices_.\n"
         },
         {
             "path": "$HOME/.cinnamon/panel-launchers/",
             "movable": true,
-            "help": "Supported since _5.6.0_.\n\nYou can move the folder to _XDG_DATA_HOME/cinnamon/panel-launchers_.\n"
+            "help": "Supported since _5.6.0_.\n\nYou can move the folder to _$XDG_DATA_HOME/cinnamon/panel-launchers_.\n"
         },
         {
             "path": "$HOME/.cinnamon/backgrounds/",
             "movable": true,
-            "help": "Supported since _5.6.0_.\n\nYou can move the folder to _XDG_DATA_HOME/cinnamon/backgrounds_.\n"
+            "help": "Supported since _5.6.0_.\n\nYou can move the folder to _$XDG_DATA_HOME/cinnamon/backgrounds_.\n"
         },
         {
             "path": "$HOME/.cinnamon/configs/",
             "movable": true,
-            "help": "Supported since _5.6.0_.\n\nYou can move the folder to _XDG_CONFIG_HOME/cinnamon/spices_.\n"
+            "help": "Supported since _5.6.0_.\n\nYou can move the folder to _$XDG_CONFIG_HOME/cinnamon/spices_.\n"
         },
         {
             "path": "$HOME/.cinnamon/glass.log",
             "movable": true,
-            "help": "Supported since _5.6.0_.\n\nYou can either delete or move the file to _XDG_STATE_HOME/cinnamon/glass.log_.\n"
+            "help": "Supported since _5.6.0_.\n\nYou can either delete or move the file to _$XDG_STATE_HOME/cinnamon/glass.log_.\n"
         },
         {
             "path": "$HOME/.cinnamon/harvester.log",
             "movable": true,
-            "help": "Supported since _5.6.0_.\n\nYou can either delete or move the file to _XDG_STATE_HOME/cinnamon/harvester.log_.\n"
+            "help": "Supported since _5.6.0_.\n\nYou can either delete or move the file to _$XDG_STATE_HOME/cinnamon/harvester.log_.\n"
         }
     ]
 }

@@ -28,7 +28,7 @@
         {
             "path": "$HOME/.oh-my-bash",
             "movable": true,
-            "help": "Export the following environment variables:\n\n```bash\nexport OSH=\"${XDG_DATA_HOME}/oh-my-bash\"\n```\n"
+            "help": "Export the following environment variables:\n\n```bash\nexport OSH=\"$XDG_DATA_HOME/oh-my-bash\"\n```\n"
         },
         {
             "path": "$HOME/.bash_history",

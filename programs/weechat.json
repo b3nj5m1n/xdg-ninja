@@ -2,9 +2,9 @@
     "name": "weechat",
     "files": [
         {
-            "path": "${HOME}/.weechat",
+            "path": "$HOME/.weechat",
             "movable": true,
-            "help": "Export the following environment variables:\n\n```bash\nexport WEECHAT_HOME=\"${XDG_CONFIG_HOME}\"/weechat\n```\nAlias weechat to use custom locations:\n\n```bash\nalias weechat=weechat -d ${XDG_CONFIG_HOME}/weechat```\n"
+            "help": "Export the following environment variables:\n\n```bash\nexport WEECHAT_HOME=\"$XDG_CONFIG_HOME\"/weechat\n```\nAlias weechat to use custom locations:\n\n```bash\nalias weechat=weechat -d $XDG_CONFIG_HOME/weechat```\n"
         }
     ]
 }

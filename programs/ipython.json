@@ -1,7 +1,7 @@
 {
     "files": [
         {
-            "help": "Supported since _8.0.0_.\n\nYou can move the file to _XDG_CONFIG_HOME/ipython_.\n\nOr set the following environment variable:\n```bash\nexport IPYTHONDIR=\"${XDG_CONFIG_HOME}/ipython\"\n```\n",
+            "help": "Supported since _8.0.0_.\n\nYou can move the file to _$XDG_CONFIG_HOME/ipython_.\n\nOr set the following environment variable:\n```bash\nexport IPYTHONDIR=\"$XDG_CONFIG_HOME/ipython\"\n```\n",
             "movable": true,
             "path": "$HOME/.ipython"
         }

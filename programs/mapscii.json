@@ -2,9 +2,9 @@
     "name": "mapscii",
     "files": [
         {
-            "path": "${HOME}/.mapscii",
+            "path": "$HOME/.mapscii",
             "movable": true,
-            "help": "Supported\n\nThe file ${HOME}/.mapscii can be moved to ${XDG_CACHE_HOME}/mapscii.\n"
+            "help": "Supported\n\nThe file $HOME/.mapscii can be moved to $XDG_CACHE_HOME/mapscii.\n"
         }
     ]
 }
