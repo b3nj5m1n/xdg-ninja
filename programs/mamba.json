@@ -1,0 +1,15 @@
+{
+    "files": [
+        {
+            "help": "Currently unsupported.\n\n_Relevant issue:_ https://github.com/mamba-org/mamba/issues/1787\n",
+            "movable": false,
+            "path": "$HOME/.mambarc"
+        },
+        {
+            "help": "Currently unsupported.\n\n_Relevant issue:_ https://github.com/mamba-org/mamba/issues/1787\n",
+            "movable": false,
+            "path": "$HOME/.mamba"
+        }
+    ],
+    "name": "mamba"
+}
