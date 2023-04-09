@@ -1,0 +1,10 @@
+{
+    "files": [
+        {
+            "help": "Currently unsupported. The only _hacky_ way to get rid of it is via a **bubblewrap sandbox**.\n\nRelevant Arch Wiki: https://wiki.archlinux.org/title/Bubblewrap",
+            "movable": false,
+            "path": "$HOME/.paradoxinteractive"
+        }
+    ],
+    "name": "paradox games"
+}
