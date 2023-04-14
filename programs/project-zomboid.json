@@ -1,0 +1,10 @@
+{
+    "files": [
+        {
+            "help": "Add the following startup parameters to the game on Steam:\n\n`-cachedir=~/.local/share/Zomboid`",
+            "movable": true,
+            "path": "$HOME/Zomboid"
+        }
+    ],
+    "name": "project zomboid"
+}
