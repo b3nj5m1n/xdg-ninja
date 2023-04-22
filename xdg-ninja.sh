@@ -218,7 +218,7 @@ do_check_programs() {
 " read -r name; read -r filename; read -r movable; read -r help; do
         check_file "$name" "$filename" "$movable" "$help"
     done <<EOF
-$(jq 'inputs as $input | $input.files[] as $file | $input.name, $file.path, $file.movable, $file.help' "$(realpath "$0" | xargs dirname)"/programs/* | sed -e 's/^"//' -e 's/"$//')
+$(jq 'inputs as $input | $input.files[] as $file | $input.name, $file.path, $file.movable, $file.help' "$XN_PROGRAMS_DIR"/* | sed -e 's/^"//' -e 's/"$//')
 EOF
 # sed is to trim quotes
 }
@@ -232,6 +232,9 @@ check_programs() {
     printf "%bIf you have files in your %b\$HOME%b that shouldn't be there, but weren't recognised by xdg-ninja, please consider creating a configuration file for it and opening a pull request on github.%b\n" "${FX_ITALIC}" "${FG_CYAN}" "${FX_RESET}${FX_ITALIC}" "${FX_RESET}"
     printf "\n"
 }
+
+[ "$XN_PROGRAMS_DIR" ] ||
+    XN_PROGRAMS_DIR="$(realpath "$0" | xargs dirname | sed 's:/bin$:/share/xdg-ninja:g')/programs"
 
 check_programs
 if [ $FIXABLE -gt 100 ]; then

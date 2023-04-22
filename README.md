@@ -43,7 +43,7 @@ To install xdg-ninja with [Homebrew](https://brew.sh), run `brew install xdg-nin
 
 ## Configuration
 
-The configuration is done in the _programs/_ directory.
+The configuration is done in the _programs/_ directory, which should be located in the same working directory as the xdg-ninja.sh script. This can be overriden with the `XN_PROGRAMS_DIR` environment variable.
 
 You define a program, and then a list of files and directories which this program ruthlessly puts into your _$HOME_ directory.
 
