@@ -26,7 +26,25 @@
       in rec {
         packages = flake-utils.lib.flattenTree {
           # The shell script and configurations, uses derivation from offical nixpkgs
-          xdg-ninja = pkgs.xdg-ninja;
+          xdg-ninja = pkgs.stdenv.mkDerivation rec {
+            pname = "xdg-ninja";
+            version = "0.1.0";
+
+            src = ./.;
+
+            nativeBuildInputs = with pkgs; [ makeWrapper ];
+
+            installPhase = ''
+              runHook preInstall
+
+              DESTDIR="$out" PREFIX="/usr" make install
+
+              wrapProgram "$out/usr/bin/xdg-ninja" \
+                --prefix PATH : "${pkgs.lib.makeBinPath [ pkgs.glow pkgs.jq ]}"
+
+              runHook postInstall
+            '';
+          };
           # Pre-built binary of xdgnj tool downloaded from github
           xdgnj-bin = pkgs.stdenvNoCC.mkDerivation {
             name = "xdgnj-bin";
@@ -45,7 +63,7 @@
         };
         defaultPackage = packages.xdg-ninja;
         apps = {
-          xdg-ninja = flake-utils.lib.mkApp { drv = packages.xdg-ninja; };
+          xdg-ninja = flake-utils.lib.mkApp { drv = packages.xdg-ninja; exePath = "/usr/bin/xdg-ninja"; };
           xdgnj-bin = flake-utils.lib.mkApp { drv = packages.xdgnj-bin; exePath = "/bin/xdgnj"; };
         };
         defaultApp = apps.xdg-ninja;
