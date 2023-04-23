@@ -1,0 +1,11 @@
+name: "Nix Flake Check"
+on:
+  pull_request:
+  push:
+jobs:
+  tests:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v3
+    - uses: cachix/install-nix-action@v19
+    - run: nix flake check
