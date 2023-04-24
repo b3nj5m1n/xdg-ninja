@@ -1,0 +1,10 @@
+{
+    "files": [
+        {
+            "path": "$HOME/.dhexrc",
+            "movable": true,
+            "help": "Alias dhex to use a different configuration location:\n\n```bash\nalias dhex=\"dhex -f $XDG_CONFIG_HOME/dhexrc\"\n```\n"
+        }
+    ],
+    "name": "dhex"
+}
