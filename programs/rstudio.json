@@ -1,0 +1,10 @@
+{
+    "name": "rstudio",
+    "files": [
+        {
+            "path": "$HOME/R",
+            "movable": true,
+            "help": "Default directory location can be configured in RStudio\nReference: https://www.accelebrate.com/library/how-to-articles/r-rstudio-library"
+        }
+    ]
+}
