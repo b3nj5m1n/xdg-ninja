@@ -1,14 +1,29 @@
 {
     "files": [
         {
-            "help": "Currently unsupported.\n\n_Relevant issue:_ https://github.com/b3nj5m1n/xdg-ninja/issues/14\n",
-            "movable": false,
+            "help": "Move the file to _\"XDG_CONFIG_HOME\"/conda/.condarc_.\n\n_See conda documentation for details:_ https://conda.io/projects/conda/en/latest/user-guide/configuration/use-condarc.html#searching-for-condarc\n",
+            "movable": true,
             "path": "$HOME/.condarc"
         },
         {
-            "help": "Currently unsupported.\n\n_Relevant issue:_ https://github.com/b3nj5m1n/xdg-ninja/issues/14\n",
+            "help": "Move the file to _\"XDG_CONFIG_HOME\"/conda/.condarc_.\n\n_See conda documentation for details:_ https://conda.io/projects/conda/en/latest/user-guide/configuration/use-condarc.html#searching-for-condarc\n",
+            "movable": true,
+            "path": "$HOME/.conda/.condarc"
+        },
+        {
+            "help": "Move the file to _\"XDG_CONFIG_HOME\"/conda/condarc_.\n\n_See conda documentation for details:_ https://conda.io/projects/conda/en/latest/user-guide/configuration/use-condarc.html#searching-for-condarc\n",
+            "movable": true,
+            "path": "$HOME/.conda/condarc"
+        },
+        {
+            "help": "Move the directory to _\"$HOME\"/.config/conda/_.\n\n_See conda documentation for details:_ https://conda.io/projects/conda/en/latest/user-guide/configuration/use-condarc.html#searching-for-condarc\n",
+            "movable": true,
+            "path": "$HOME/.conda/condarc.d/"
+        },
+        {
+            "help": "environments.txt unsupported.\n\n_Relevant issue:_ https://github.com/b3nj5m1n/xdg-ninja/issues/14\n",
             "movable": false,
-            "path": "$HOME/.conda"
+            "path": "$HOME/.conda/environments.txt"
         }
     ],
     "name": "conda"
