@@ -1,7 +1,7 @@
 {
     "files": [
         {
-            "help": "You need to put the following into your npmrc:\n\n```\nprefix=$XDG_DATA_HOME/npm\ncache=$XDG_CACHE_HOME/npm\ninit-module=$XDG_CONFIG_HOME/npm/config/npm-init.js\ntmp=${XDG_RUNTIME_DIR}/npm\n```\n\n_Note: the `tmp` option has been removed in more recent versions of npm, including it will generate a warning._\n",
+            "help": "You need to put the following into your npmrc:\n\n```\nprefix=${XDG_DATA_HOME}/npm\ncache=${XDG_CACHE_HOME}/npm\ninit-module=${XDG_CONFIG_HOME}/npm/config/npm-init.js\ntmp=${XDG_RUNTIME_DIR}/npm\n```\n\n_Note: the `tmp` option has been removed in more recent versions of npm, including it will generate a warning._\n",
             "movable": true,
             "path": "$HOME/.npm"
         },
