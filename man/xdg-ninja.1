@@ -1,0 +1,52 @@
+.nh
+.TH "xdg-ninja" "1" "May 2023" "b3nj5m1n" "xdg-ninja manual"
+
+.SH NAME
+.PP
+\fBxdg-ninja\fP — because you wouldn't let just anyone into your $HOME
+
+.SH SYNOPSIS
+.PP
+\fBxdg-ninja\fP [\fI\,OPTIONS\/\fR]
+.br
+\fBxdg-ninja\fP -h|--help
+
+.SH DESCRIPTION
+.PP
+A shell script which checks your $HOME for unwanted files and directories.
+
+.PP
+The script is designed to provide change recommendations and does not make any
+modifications to the system itself.
+
+.PP
+This program has optional runtime dependencies that can modify and improve the
+visual output. The recommended dependency for best results is \fIglow\fP.
+
+.SH OPTIONS
+.TP
+\fB-v\fP, \fB--no-skip-ok\fP
+Display messages for all files checked (verbose)
+.TP
+\fB--skip-ok\fP
+Don't display anything for files that do not exist (default behavior)
+.TP
+\fB--skip-unsupported\fP
+Don't display anything for files that do not have fixes available
+
+.SH ENVIRONMENT VARIABLES
+.TP
+\fBXN_PROGRAMS_DIR\fP=
+Overwrites the path where programs information are located (default: programs/
+or ../share/xdg-ninja/programs/)
+
+.SH COPYRIGHT
+.PP
+Licensed under the MIT license <http://opensource.org/licenses/MIT>.
+.br
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.
+
+.SH SEE ALSO
+.PP
+Sources, bug report, and more are available at <https://github.com/b3nj5m1n/xdg-ninja>.
