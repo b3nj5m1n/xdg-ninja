@@ -1,0 +1,10 @@
+{
+    "files": [
+        {
+            "path": "$HOME/.mediainfo-gui",
+            "movable": false,
+            "help": "Currently unsupported.\n\n_Relevant issue:_ https://github.com/MediaArea/MediaInfo/issues/723\n"
+        }
+    ],
+    "name": "mediainfo-gui"
+}
