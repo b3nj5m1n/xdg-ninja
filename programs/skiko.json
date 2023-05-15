@@ -1,0 +1,10 @@
+{
+    "files": [
+        {
+            "help": "Currently unsupported.\n\n_Relevant issue:_\nhttps://youtrack.jetbrains.com/issue/FL-10572\n",
+            "movable": false,
+            "path": "$HOME/.skiko"
+        }
+    ],
+    "name": "Skiko (Skia for Kotlin)"
+}
