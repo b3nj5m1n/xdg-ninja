@@ -6,7 +6,7 @@
 A shell script which checks your _$HOME_ for unwanted files and directories.
 
 <p align="center">
-  <img src="https://s8.gifyu.com/images/Peek-2022-05-13-16-07.gif" width="500"/>
+  <img src="https://s11.gifyu.com/images/68747470733a2f2f73382e67696679752e636f6d2f696d616765732f5065656b2d323032322d30352d31332d31362d30372e676966.gif" width="500"/>
 </p>
 
 When it encounters a file it knows about, it will tell you whether it's possible to move this file to an appropriate location, and how to do it.
