@@ -1,0 +1,10 @@
+{
+    "name": "easyocr",
+    "files": [
+        {
+            "path": "$HOME/.EasyOCR",
+            "movable": true,
+            "help": "Export the following environment variable:\n\n```bash\nexport EASYOCR_MODULE_PATH=\"$XDG_CONFIG_HOME/EasyOCR\"\n```\n"
+        }
+    ]
+}
