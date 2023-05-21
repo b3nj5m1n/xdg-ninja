@@ -1,0 +1,10 @@
+{
+  "files": [
+    {
+      "help": "Move .pinforc to $XDG_CONFIG_HOME/pinfo/pinforc\nand set this alias in your shell\n\nalias pinfo='pinfo --rcfile=$HOME/.config/pinfo/pinforc'\n",
+      "movable": true,
+      "path": "$HOME/.pinforc"
+    }
+  ],
+  "name": "pinfo"
+}
