@@ -123,14 +123,32 @@ apply_shell_expansion() {
     eval "$command"
 }
 
-# Returns 0 if the path doesn't lead anywhere
-# Returns 1 if the path leads to something
-check_if_file_exists() {
-    FILE_PATH=$(apply_shell_expansion "$1")
-    if [ -e "$FILE_PATH" ]; then
-        return 1
-    else
+# Function to check if a string contains shell pattern matching
+has_pattern() {
+    case $1 in
+    *\** | *\?* | *\[*\]*)
         return 0
+        ;;
+    *)
+        return 1
+        ;;
+    esac
+}
+
+# Returns the actual name of the given file that is on the user's disk
+# This command applies shell pattern matching and return the actual filename
+retrieve_existing_filename() {
+    FILE_PATH=$(apply_shell_expansion "$1")
+
+    # return filename if found, nothing else
+    if has_pattern "$FILE_PATH"; then
+        dir="$(dirname "$FILE_PATH")"
+        part="$(basename "$FILE_PATH")"
+        find "$dir" -maxdepth 1 -name "$part" -print -quit 2>/dev/null
+    else
+        if [ -e "$FILE_PATH" ]; then
+            printf "%s" "$FILE_PATH"
+        fi
     fi
 }
 
@@ -186,30 +204,24 @@ check_file() {
     MOVABLE="$3"
     HELP="$4"
 
-    check_if_file_exists "$FILENAME"
+    file=$(retrieve_existing_filename "$FILENAME")
 
-    case $? in
-
-    0)
-        log SUCS "$NAME" "$FILENAME" "$HELP"
-        ;;
-
-    1)
+    if [ "$file" ]; then
         if [ "$MOVABLE" = true ]; then
-            log ERR "$NAME" "$FILENAME" "$HELP"
+            log ERR "$NAME" "$file" "$HELP"
         else
-            log WARN "$NAME" "$FILENAME" "$HELP"
+            log WARN "$NAME" "$file" "$HELP"
         fi
         if [ "$HELP" ]; then
             if [ "$MOVABLE" = true ] || [ "$SKIP_UNSUPPORTED" = false ]; then
-                log HELP "$NAME" "$FILENAME" "$HELP"
+                log HELP "$NAME" "$file" "$HELP"
             fi
         else
-            log HELP "$NAME" "$FILENAME" "_No help available._"
+            log HELP "$NAME" "$file" "_No help available._"
         fi
-        ;;
-
-    esac
+    else
+        log SUCS "$NAME" "$file" "$HELP"
+    fi
 }
 
 # Reads files from programs/, calls check_file on each file specified for each program
