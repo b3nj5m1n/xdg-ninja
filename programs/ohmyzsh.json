@@ -9,6 +9,11 @@
             "path": "$HOME/.zshrc.pre-oh-my-zsh",
             "movable": true,
             "help": "If it exists, it is used when switching back to the default shell you had before installing Oh My Zsh. See the [FAQ](https://github.com/ohmyzsh/ohmyzsh/wiki/FAQ#how-do-i-uninstall-oh-my-zsh) for more information.\n\nYou can either back it up elsewhere or delete it.\n"
+        },
+        {
+            "path": "$HOME/.zshrc.pre-oh-my-zsh-[0-9][0-9][0-9][0-9]-[0-9][0-9]-[0-9][0-9]_[0-9][0-9]-[0-9][0-9]-[0-9][0-9]",
+            "movable": true,
+            "help": "If it exists, it is used when switching back to the default shell you had before installing Oh My Zsh. See the [FAQ](https://github.com/ohmyzsh/ohmyzsh/wiki/FAQ#how-do-i-uninstall-oh-my-zsh) for more information.\n\nYou can either back it up elsewhere or delete it.\n"
         }
     ],
     "name": "ohmyzsh"
