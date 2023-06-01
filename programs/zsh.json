@@ -8,7 +8,7 @@
         {
             "help": "Set this in your zshrc:\n\n```bash\ncompinit -d \"$XDG_CACHE_HOME\"/zsh/zcompdump-\"$ZSH_VERSION\"\n```\n",
             "movable": true,
-            "path": "$HOME/.zcompdump"
+            "path": "$HOME/.zcompdump*"
         },
         {
             "help": "Set this in your zshrc:\n\n```bash\nexport HISTFILE=\"$XDG_STATE_HOME\"/zsh/history\n```\n",
