@@ -4,7 +4,7 @@
         {
             "path": "$HOME/R",
             "movable": true,
-            "help": "Export the following environment variables:\n\n```bash\nexport R_LIBS_USER=\"$XDG_DATA_HOME\"/R/x86_64-pc-linux-gnu-library\n```\n\nAnd/or append this line to the end of `/usr/lib/R/library/base/R/Rprofile`:\n\n```R.libPaths( c( \"$XDG_DATA_HOME/R/x86_64-pc-linux-gnu-library/\" , .libPaths() ) )```\n\n**Disclaimer: You may need to re-install your libraries**"
+            "help": "Set R_LIBS_USER in `$HOME/.Renviron:\n\n```\nR_LIBS_USER=\"$XDG_DATA_HOME\"/R/x86_64-pc-linux-gnu-library\n```\n\nYou may find it necessary to append this line to the end of `/usr/lib/R/library/base/R/Rprofile`:\n\n```R.libPaths( c( \"$XDG_DATA_HOME/R/x86_64-pc-linux-gnu-library/\" , .libPaths() ) )```\n\n**Disclaimer: You may need to re-install your libraries**"
         }
     ]
 }
