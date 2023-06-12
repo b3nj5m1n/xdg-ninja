@@ -1,0 +1,10 @@
+{
+    "name": "calibre",
+    "files": [
+        {
+            "path": "$HOME/Calibre Library",
+            "movable": true,
+            "help": "Alias calibre to use a custom library location:\n\n```bash\nalias calibre=calibre --with-library \"$XDG_DATA_HOME/Calibre Library\"\n```\n"
+        }
+    ]
+}
