@@ -42,7 +42,10 @@ init_constants() {
 
     BG_MAGENTA="\033[45m"
 }
-init_constants
+
+if test -t 0 && test "$TERM" != "dumb" && test "$TERM" != "xterm-mono" && test -n "$NO_COLOR" & test "$LS_COLORS" -gt 0; then
+    init_constants
+fi
 
 help() {
     init_constants
