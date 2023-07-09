@@ -1,0 +1,10 @@
+{
+    "name": "john",
+    "files": [
+        {
+            "path": "$HOME/.john",
+            "movable": false,
+            "help": "Currently unsupported.\n\n_Relevant issue:_ https://github.com/openwall/john/issues/4552\n"
+        }
+    ]
+}
