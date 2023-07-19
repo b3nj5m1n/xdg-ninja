@@ -1,0 +1,10 @@
+{
+    "name": "davfs2",
+    "files": [
+        {
+            "path": "$HOME/.davfs2",
+            "movable": false,
+            "help": "Currently unsupported.\n\n_Relevant issue:_ https://savannah.nongnu.org/support/?110249\n"
+        }
+    ]
+}
