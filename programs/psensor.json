@@ -1,0 +1,10 @@
+{
+    "name": "psensor",
+    "files": [
+        {
+            "path": "$HOME/.psensor",
+            "movable": false,
+            "help": "Currently unsupported.\n\n_Relevant patch:_ https://gitlab.com/jeanfi/psensor/-/merge_requests/27\n"
+        }
+    ]
+}
