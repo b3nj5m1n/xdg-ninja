@@ -1,0 +1,10 @@
+{
+    "name": "minetest",
+    "files": [
+        {
+            "path": "$HOME/.minetest",
+            "movable": true,
+            "help": "Export the following environment variables:\n\n```bash\nexport MINETEST_USER_PATH=\"$XDG_DATA_HOME\"/minetest\n```\n"
+        }
+    ]
+}
