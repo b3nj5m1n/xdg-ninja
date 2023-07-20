@@ -1,0 +1,10 @@
+{
+    "files": [
+        {
+            "help": "Try exporting the following environment variables:\n\n```bash\nexport ADB_VENDOR_KEYS=\"$XDG_DATA_HOME\"/android\nexport ANDROID_HOME=\"$XDG_DATA_HOME\"/android\n```\n\n",
+            "movable": true,
+            "path": "$HOME/.android"
+        }
+    ],
+    "name": "android"
+}
