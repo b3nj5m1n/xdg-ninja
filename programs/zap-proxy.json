@@ -1,0 +1,11 @@
+{
+    "name": "ZAP Proxy",
+    "files": [
+        {
+            "path": "$HOME/.ZAP",
+            "movable": false,
+            "help": "Currently unsupported.\n\n_Relevant issue:_ https://github.com/zaproxy/zaproxy/issues/7718"
+        }
+    ]
+}
+
