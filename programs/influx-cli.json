@@ -1,0 +1,11 @@
+
+{
+    "name": "influx-cli",
+    "files": [
+        {
+            "path": "$HOME/.influx_history",
+            "movable": false,
+            "help": "Currently unsupported\n\n _Relevant issue:_ https://github.com/influxdata/influx-cli/issues/514"
+        }
+    ]
+}
