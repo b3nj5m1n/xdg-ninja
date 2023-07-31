@@ -4,7 +4,7 @@
         {
             "path": "$HOME/.gdbinit",
             "movable": true,
-            "help": "Alias gdb to use custom locations:\n\n```bash\nalias gdb=gdb -n -x $XDG_CONFIG_HOME/gdb/init```\n"
+            "help": "XDG is supported out-of-the-box, so you can simply move the file to _$XDG_CONFIG_HOME/gdb/gdbinit_.\n"
         },
         {
             "path": "$HOME/.gdb_history",
