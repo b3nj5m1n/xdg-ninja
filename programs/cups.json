@@ -1,10 +1,10 @@
 {
-    "name": "CUPS",
-    "files": [
-        {
-            "path": "$HOME/.cups",
-	    "movable": false,
-	    "help": "Currently unsupported.\n\n_Relevant issue:_ https://github.com/OpenPrinting/cups/issues/10\n"
-        }
-    ]
+  "name": "CUPS",
+  "files": [
+    {
+      "path": "$HOME/.cups",
+      "movable": true,
+      "help": "Supported.\n\nThe file $HOME/.cups can be moved to $XDG_CONFIG_HOME/cups.\n\n_Relevant issue:_ https://github.com/OpenPrinting/cups/issues/10\n"
+    }
+  ]
 }
