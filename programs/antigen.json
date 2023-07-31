@@ -1,0 +1,10 @@
+{
+  "files": [
+    {
+      "path": "$HOME/.antigen",
+      "movable": true,
+      "help": "Export the following environmental variable:\n\n```bash\nexport ADOTDIR=\"$XDG_DATA_HOME\"/antigen\n```\n\n_Note: do_ **not** _move the pre-existing antigen folder from $HOME/.antigen to the new location because it would make antigen crash (the reason is antigen hardcodes the \"$HOME/.antigen\" directory in the `init.zsh` file upon installation of the bundle), simply_ **remove** _\"$HOME/.antigen\" and the next time you will spawn an instance of zsh, antigen will install all the plugins correctly in the new location (and hardcode the new, correct, location)._\n"
+    }
+  ],
+  "name": "antigen"
+}
