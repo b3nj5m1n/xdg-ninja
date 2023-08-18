@@ -1,0 +1,10 @@
+{
+    "files": [
+        {
+            "path": "$HOME/.guile_history",
+            "movable": true,
+            "help": "Export the following environment variable:\n\n```bash\nexport GUILE_HISTORY=\"$XDG_STATE_HOME\"/guile_history\n```\n"
+        }
+    ],
+    "name": "guile"
+}
