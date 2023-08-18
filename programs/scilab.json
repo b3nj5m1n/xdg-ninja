@@ -1,0 +1,10 @@
+{
+    "files": [
+        {
+            "path": "$HOME/.Scilab",
+            "movable": true,
+            "help": "Export the following environment variable:\n\n```bash\nexport SCIHOME=\"$XDG_STATE_HOME\"/scilab\n```\n"
+        }
+    ],
+    "name": "scilab"
+}
