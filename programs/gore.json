@@ -1,0 +1,10 @@
+{
+    "files": [
+        {
+            "path": "$HOME/.gore",
+            "movable": true,
+            "help": "Export the following environment variables:\n\n```bash\nexport GORE_HOME=\"$XDG_DATA_HOME/gore\"\n```\n"
+        }
+    ],
+    "name": "gore"
+}
