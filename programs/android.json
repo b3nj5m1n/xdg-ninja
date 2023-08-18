@@ -1,0 +1,10 @@
+{
+    "files": [
+        {
+            "help": "Export the following environment variable:\n\n```bash\nexport ANDROID_HOME=\"$XDG_DATA_HOME\"/android\n```\n\nAdditionally, if you use adb, use the following alias:\n\n```bash\nalias adb='HOME=\"$XDG_DATA_HOME\"/android adb'\n```\n\n",
+            "movable": true,
+            "path": "$HOME/.android"
+        }
+    ],
+    "name": "android"
+}
