@@ -1,0 +1,10 @@
+{
+    "name": "fennel",
+    "files": [
+        {
+            "path": "$HOME/.fennelrc",
+            "movable": true,
+            "help": "Supported since _v0.3.1_.\n\nYou can move the file to _$XDG_CONFIG_HOME/fennel/fennelrc_.\n"
+        }
+    ]
+}
