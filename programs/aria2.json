@@ -7,9 +7,9 @@
             "help": "Supported\n\nThe file $HOME/.aria2/dht.dat can be moved to $XDG_CACHE_HOME/aria2/dht.dat.\n"
         },
         {
-            "path": "$HOME/.aria2/aria.conf",
+            "path": "$HOME/.aria2/aria2.conf",
             "movable": true,
-            "help": "Supported\n\nThe file $HOME/.aria2/aria.conf can be moved to $XDG_CONFIG_HOME/aria2/aria2.conf.\n"
+            "help": "Supported\n\nThe file $HOME/.aria2/aria2.conf can be moved to $XDG_CONFIG_HOME/aria2/aria2.conf.\n"
         }
     ]
 }
