@@ -34,9 +34,9 @@
             installPhase = ''
               runHook preInstall
 
-              DESTDIR="$out" PREFIX="/usr" make install
+              DESTDIR="$out" PREFIX= make install
 
-              wrapProgram "$out/usr/bin/xdg-ninja" \
+              wrapProgram "$out/bin/xdg-ninja" \
                 --prefix PATH : "${pkgs.lib.makeBinPath (with pkgs; [ glow jq ])}"
 
               runHook postInstall
