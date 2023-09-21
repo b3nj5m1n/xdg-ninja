@@ -20,7 +20,8 @@
         ];
         pkgs = import nixpkgs { inherit system overlays; };
       in rec {
-        packages = flake-utils.lib.flattenTree {
+        packages = flake-utils.lib.flattenTree rec {
+          default = xdg-ninja;
           # The shell script and configurations, uses derivation from offical nixpkgs
           xdg-ninja = pkgs.stdenv.mkDerivation {
             pname = "xdg-ninja";
@@ -57,12 +58,11 @@
             meta.description = "Pre-built binary of the xdgnj tool for creating and editing configuration files for xdg-ninja.";
           };
         };
-        defaultPackage = packages.xdg-ninja;
-        apps = {
-          xdg-ninja = flake-utils.lib.mkApp { drv = packages.xdg-ninja; exePath = "/usr/bin/xdg-ninja"; };
+        apps = rec {
+          default = xdg-ninja;
+          xdg-ninja = flake-utils.lib.mkApp { drv = packages.xdg-ninja; exePath = "/bin/xdg-ninja"; };
           xdgnj-bin = flake-utils.lib.mkApp { drv = packages.xdgnj-bin; exePath = "/bin/xdgnj"; };
         };
-        defaultApp = apps.xdg-ninja;
       }
     );
 }
