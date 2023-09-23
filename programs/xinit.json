@@ -2,12 +2,12 @@
     "files": [
         {
             "help": "Export the following environment variable:\n\n```bash\nexport XSERVERRC=\"$XDG_CONFIG_HOME\"/X11/xserverrc\n```\n",
-            "movable": false,
+            "movable": true,
             "path": "$HOME/.xserverrc"
         },
         {
             "help": "Export the following environment variable:\n\n```bash\nexport XINITRC=\"$XDG_CONFIG_HOME\"/X11/xinitrc\n```\n",
-            "movable": false,
+            "movable": true,
             "path": "$HOME/.xinitrc"
         }
     ],
