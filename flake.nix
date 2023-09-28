@@ -13,6 +13,7 @@
         runtimeDependencies = with pkgs; [
           glow
           jq
+          findutils
         ];
         overlays = [
           (self: super: {
