@@ -230,7 +230,7 @@ do_check_programs() {
 " read -r name; read -r filename; read -r movable; read -r help; do
         check_file "$name" "$filename" "$movable" "$help"
     done <<EOF
-$(jq 'if type == "object" then .files[] as $file | .name, $file.path, $file.movable, $file.help else . end' programs/* | sed -e 's/^"//' -e 's/"$//')
+$(jq 'if type == "object" then .files[] as $file | .name, $file.path, $file.movable, $file.help else . end' "$XN_PROGRAMS_DIR"/* | sed -e 's/^"//' -e 's/"$//')
 EOF
 # sed is to trim quotes
 }
