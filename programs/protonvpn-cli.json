@@ -1,0 +1,10 @@
+{
+    "files": [
+        {
+            "path": "$HOME/.pvpn-cli",
+            "movable": false,
+            "help": "Currently unsupported.\n\n_Relevant Pull Request:_ https://github.com/Rafficer/linux-cli-community/pull/96\n"
+        }
+    ],
+    "name": "protonvpn-cli"
+}
