@@ -3,7 +3,7 @@
         {
             "path": "$HOME/.var",
             "movable": false,
-            "help": "Currently unsupported.\n\n_Relevant issue:_ https://github.com/flatpak/flatpak/issues/1519\n"
+            "help": "Currently unsupported.\n\n_Relevant issue:_ https://github.com/flatpak/flatpak/issues/3997\n"
         }
     ],
     "name": "Flatpak"
