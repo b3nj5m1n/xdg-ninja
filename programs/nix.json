@@ -4,17 +4,17 @@
         {
             "path": "$HOME/.nix-channels",
             "movable": false,
-            "help": "New nix command line interface supports XDG Base Directory but Old Commands will still create these directories.\n\n_Relevant Issue_: https://github.com/NixOS/nix/issues/1079\n\n"
+            "help": "New nix command line interface supports XDG Base Directory but Old Commands will still create these directories.\n\nTo use the XDG spec with the old command line, add to `/etc/nix/nix.conf`:\n\n```use-xdg-base-directories = true```\n\nYou also have to manually move the the file to __XDG_STATE_HOME__:\n\n```mv \"$HOME/.nix-channels\" \"$XDG_STATE_HOME/nix/channels\"```\n\n_See the Manual_: https://nixos.org/manual/nix/stable/command-ref/conf-file#conf-use-xdg-base-directories\n\n"
         },
         {
             "path": "$HOME/.nix-defexpr",
             "movable": false,
-            "help": "New nix command line interface supports XDG Base Directory but Old Commands will still create these directories.\n\n_Relevant Issue_: https://github.com/NixOS/nix/issues/1079\n\n"
+            "help": "New nix command line interface supports XDG Base Directory but Old Commands will still create these directories.\n\nTo use the XDG spec with the old command line, add to `/etc/nix/nix.conf`:\n\n```use-xdg-base-directories = true```\n\nYou also have to manually move the the file to __XDG_STATE_HOME__:\n\n```mv \"$HOME/.nix-defexpr\" \"$XDG_STATE_HOME/nix/defexpr\"```\n\n_See the Manual_: https://nixos.org/manual/nix/stable/command-ref/conf-file#conf-use-xdg-base-directories\n\n"
         },
         {
             "path": "$HOME/.nix-profile",
             "movable": false,
-            "help": "New nix command line interface supports XDG Base Directory but Old Commands will still create these directories.\n\n_Relevant Issue_: https://github.com/NixOS/nix/issues/1079\n\n"
+            "help": "New nix command line interface supports XDG Base Directory but Old Commands will still create these directories.\n\nTo use the XDG spec with the old command line, add to `/etc/nix/nix.conf`:\n\n```use-xdg-base-directories = true```\n\nYou also have to manually move the the file to __XDG_STATE_HOME__:\n\n```mv \"$HOME/.nix-profile\" \"$XDG_STATE_HOME/nix/profile\"```\n\n_See the Manual_: https://nixos.org/manual/nix/stable/command-ref/conf-file#conf-use-xdg-base-directories\n\n"
         }
     ]
 }
