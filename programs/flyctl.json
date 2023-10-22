@@ -1,0 +1,10 @@
+{
+  "name": "flyctl",
+  "files": [
+    {
+      "path": "$HOME/.fly",
+      "movable": false,
+      "help": "Currently unsupported.\n\n_Merge Request_: https://github.com/superfly/flyctl/pull/2785\n"
+    }
+  ]
+}
