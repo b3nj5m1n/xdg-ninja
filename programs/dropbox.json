@@ -1,0 +1,15 @@
+{
+  "name": "Dropbox",
+  "files": [
+      {
+        "path": "$HOME/.dropbox",
+        "movable": false,
+        "help": "Currently unsupported.\n\n_Relevant issue_: https://github.com/dropbox/nautilus-dropbox/issues/5\n"
+      },
+      {
+        "path": "$HOME/.dropbox-dist",
+        "movable": false,
+        "help": "Currently unsupported.\n\n_Relevant issue_: https://github.com/dropbox/nautilus-dropbox/issues/5\n"
+      }
+  ]
+}
