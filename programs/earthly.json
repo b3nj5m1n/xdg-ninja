@@ -1,0 +1,11 @@
+
+{
+  "name": "earthly",
+  "files": [
+    {
+      "path": "$HOME/.earthly",
+      "movable": false,
+      "help": "Currently unsupported.\n\n_Relevant issue_: https://github.com/earthly/earthly/issues/2210\n"
+        }
+    ]
+}
