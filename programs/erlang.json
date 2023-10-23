@@ -1,0 +1,10 @@
+{
+  "name": "erlang",
+  "files": [
+    {
+      "path": "$HOME/.erlang.cookie",
+      "movable": true,
+      "help": "Erlang supports the XDG spec, so just move this file to _$XDG_CONFIG_HOME/erlang/.erlang.cookie_.\n\n"
+    }
+  ]
+}
