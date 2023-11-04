@@ -1,0 +1,10 @@
+{
+    "files": [
+        {
+            "path": "$HOME/.mutt_certificates",
+            "movable": true,
+            "help": "Move the file to _$XDG_CACHE_HOME/neomutt/certificates_ and add the following to neomuttrc:\n\n```\nset certificate_file=\"$XDG_CACHE_HOME/neomutt/certificates\"\n```\n"
+        }
+    ],
+    "name": "neomutt"
+}
