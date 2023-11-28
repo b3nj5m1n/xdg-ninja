@@ -1,0 +1,11 @@
+{
+    "files": [
+        {
+            "path": "$HOME/.mtpaint",
+            "movable": true,
+            "help": "mtPaint supports setting its config file path through a system-wide configuration file.\n\nCreate file `/etc/mtpaint/mtpaintrc` and add the following contents:\n\n```userINI = ~/.config/mtpaint```\n\n*Relevant issue:* https://github.com/wjaguar/mtPaint/issues/22"
+        }
+    ],
+    "name": "mtPaint"
+}
+
