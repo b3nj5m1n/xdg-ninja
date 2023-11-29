@@ -1,0 +1,10 @@
+{
+    "files": [
+        {
+            "path": "$HOME/.pkg-cache",
+            "movable": true,
+            "help": "Export the following environment variable:\n\n```bash\nexport PKG_CACHE_PATH=\"$XDG_CACHE_HOME\"/pkg-cache\n```\n"
+        }
+    ],
+    "name": "pkg"
+}
