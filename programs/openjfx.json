@@ -1,0 +1,10 @@
+{
+    "files": [
+        {
+            "help": "**Disclaimer: some applications don't respect this setting.**\n\nExport the following environment variable:\n\n```bash\nexport _JAVA_OPTIONS=\"-Djava.util.prefs.userRoot=${XDG_CONFIG_HOME}/java -Djavafx.cachedir=${XDG_CACHE_HOME}/openjfx\"\n```\n\n_Relevant pull request:_ https://github.com/javafxports/openjdk-jfx/pull/300\n",
+            "movable": true,
+            "path": "$HOME/.openjfx"
+        }
+    ],
+    "name": "OpenJFX"
+}
