@@ -3,7 +3,7 @@
         {
             "path": "$HOME/.ghc",
             "movable": false,
-            "help": "Currently unsupported.\n"
+            "help": "Supported starting with v9.4.1\n\nhttps://downloads.haskell.org/~ghc/9.4.1/docs/users_guide/9.4.1-notes.html?highlight=xdg\n"
         }
     ],
     "name": "GHC"
