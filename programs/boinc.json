@@ -1,0 +1,15 @@
+{
+    "files": [
+        {
+            "path": "$HOME/.BOINC",
+            "movable": false,
+            "help": "Currently not supported.\n\nhttps://github.com/BOINC/boinc/blob/b978d5c14aab539116b885deebe30aa62d538fba/lib/diagnostics.cpp#L302-L303\n"
+        },
+        {
+            "path": "$HOME/.BOINC Manager",
+            "movable": false,
+            "help": "Currently not supported.\n"
+        }
+    ],
+    "name": "BOINC"
+}
