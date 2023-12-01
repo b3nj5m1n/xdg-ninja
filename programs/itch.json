@@ -1,0 +1,10 @@
+{
+    "name": "itch",
+    "files": [
+        {
+            "path": "$HOME/.itch",
+            "movable": false,
+            "help": "Currently unsupported.\n\nhttps://github.com/itchio/itch-setup/blob/f7e77569fee0b2dcf91b19e3c6533f4a1b5f02e9/native/native_linux.go#L39-L41\n"
+        }
+    ]
+}
