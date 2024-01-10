@@ -3,8 +3,8 @@
   "files": [
     {
       "path": "$HOME/.fly",
-      "movable": false,
-      "help": "Currently unsupported.\n\n_Merge Request_: https://github.com/superfly/flyctl/pull/2785\n"
+      "movable": true,
+      "help": "Export the following environment variables:\n\n```bash\nexport FLY_CONFIG_DIR=\"$XDG_STATE_HOME\"/fly\n```\n"
     }
   ]
 }
