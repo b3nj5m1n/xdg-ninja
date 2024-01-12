@@ -25,22 +25,28 @@ auto_set_decoder() {
         printf "Install glow for easier reading & copy-paste.\n"
     fi
 }
-auto_set_decoder
+if test -t 1 && test "$TERM" != "dumb" && test "$TERM" != "xterm-mono" && test -z "$NO_COLOR"; then
+    auto_set_decoder
+else
+    DECODER="cat"
+fi
 
 unalias -a
 
 init_constants() {
-    FX_RESET="\033[0m"
-    FX_BOLD="\033[1m"
-    FX_ITALIC="\033[3m"
+    if test -t 1 && test "$TERM" != "dumb" && test "$TERM" != "xterm-mono" && test -z "$NO_COLOR"; then
+        FX_RESET="\033[0m"
+        FX_BOLD="\033[1m"
+        FX_ITALIC="\033[3m"
 
-    FG_RED="\033[31m"
-    FG_GREEN="\033[32m"
-    FG_YELLOW="\033[33m"
-    FG_CYAN="\033[36m"
-    FG_WHITE="\033[37m"
+        FG_RED="\033[31m"
+        FG_GREEN="\033[32m"
+        FG_YELLOW="\033[33m"
+        FG_CYAN="\033[36m"
+        FG_WHITE="\033[37m"
 
-    BG_MAGENTA="\033[45m"
+        BG_MAGENTA="\033[45m"
+    fi
 }
 init_constants
 
