@@ -1,0 +1,10 @@
+{
+    "files": [
+        {
+            "path": "$HOME/.thumbnails",
+            "movable": true,
+            "help": "Supported\n\nDirectory .thumbnails can be moved to _$XDG_CACHE_HOME/thumbnails_."
+        }
+    ],
+    "name": "PCManFM"
+}
