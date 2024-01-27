@@ -1,0 +1,10 @@
+{
+    "name": "tuist",
+    "files": [
+        {
+            "path": "$HOME/.tuist",
+            "movable": false,
+            "help": "Currently unsupported.\n\nSupport for XDG Specification is planned in Tuist v4:\nhttps://github.com/tuist/tuist/pull/5791#discussion_r1451466334"
+        }
+    ]
+}
