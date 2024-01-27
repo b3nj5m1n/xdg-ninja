@@ -1,0 +1,10 @@
+{
+    "name": "CocoaPods",
+    "files": [
+        {
+            "path": "$HOME/.cocoapods",
+            "movable": true,
+            "help": "Export the following environment variables:\n\n```bash\nexport CP_HOME_DIR=\"$XDG_DATA_HOME\"/cocoapods\n```\n"
+        }
+    ]
+}
