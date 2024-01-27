@@ -32,6 +32,7 @@
         "required": ["path", "movable", "help"],
         "properties": {
           "path": {
+            "title": "path",
             "description": "A path to a file or a folder\nRestrictions:\n- can't contain just spaces\nhttps://github.com/b3nj5m1n/xdg-ninja",
             "type": "string",
             "minLength": 1,
@@ -41,10 +42,12 @@
             "examples": ["$HOME/.abook"]
           },
           "movable": {
+            "title": "movable",
             "description": "Whether a file or a folder is movable to a place other than $HOME\nhttps://github.com/b3nj5m1n/xdg-ninja",
             "type": "boolean"
           },
           "help": {
+            "title": "help",
             "description": "A help message for a user in markdown\nRestrictions:\n- can't contain just spaces\nhttps://github.com/b3nj5m1n/xdg-ninja",
             "type": "string",
             "minLength": 1,
