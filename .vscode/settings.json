@@ -1,0 +1,10 @@
+{
+    "json.schemas": [
+        {
+            "fileMatch": [
+                "programs/*.json"
+            ],
+            "url": "./json-schema/program.json"
+        }
+    ]
+}
