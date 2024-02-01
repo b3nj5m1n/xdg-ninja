@@ -5,6 +5,11 @@
             "path": "$HOME/.tig_history",
             "movable": true,
             "help": "Supported\n\nThe file $HOME/.tig_history can be moved to $XDG_DATA_HOME/tig/history.\n"
-        }
+        },
+	{
+	    "path": "$HOME/.tigrc",
+	    "movable": true,
+	    "help": "Supported\n\nThe file $HOME/.tigrc can be moved to $XDG_CONFIG/tig/config.\n"
+	}
     ]
 }
