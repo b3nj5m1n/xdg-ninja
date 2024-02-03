@@ -4,7 +4,7 @@
         {
             "path": "$HOME/.ash_history",
             "movable": true,
-            "help": "Export the following environment variables:\n\n```bash\nexport HISTFILE=\"$XDG_STATE_HOME\"/ash/history\n```\n"
+            "help": "Export the following environment variables:\n\n```bash\nexport HISTFILE=\"$XDG_STATE_HOME\"/ash/history\n```\n\nYou must manually create the _$XDG_STATE_HOME/ash directory if it doesn't exist yet.\n"
         }
     ]
 }
