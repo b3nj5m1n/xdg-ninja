@@ -1,0 +1,20 @@
+{
+    "name": "scriptkit",
+    "files": [
+        {
+            "path": "$HOME/.kit",
+            "movable": true,
+            "help": "Export the following environment variables:\n\n```bash\nexport KIT=\"$XDG_DATA_HOME\"/scriptkit/kit\n```\n"
+        },
+        {
+            "path": "$HOME/.kenv",
+            "movable": true,
+            "help": "Export the following environment variables:\n\n```bash\nexport KIT_DOTENV_PATH=\"$XDG_DATA_HOME\"/scriptkit/env\n```\n"
+        },
+        {
+            "path": "$HOME/knode",
+            "movable": true,
+            "help": "Export the following environment variables:\n\n```bash\nexport KNODE=\"$XDG_DATA_HOME\"/scriptkit/node\n```\n"
+        }
+    ]
+}
