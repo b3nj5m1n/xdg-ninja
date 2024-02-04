@@ -36,6 +36,7 @@ To install xdg-ninja with [Homebrew](https://brew.sh), run `brew install xdg-nin
 
 - your favorite POSIX-compliant shell ([bash](https://repology.org/project/bash/packages), [zsh](https://repology.org/project/zsh/packages), [dash](https://repology.org/project/dash-shell/packages), ...)
 - [jq](https://repology.org/project/jq/packages) for parsing the json files
+- [find](https://repology.org/project/findutils/versions)
 
 ### Optional
 

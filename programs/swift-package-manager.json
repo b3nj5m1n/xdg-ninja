@@ -1,0 +1,10 @@
+{
+    "name": "Swift Package Manager",
+    "files": [
+        {
+            "path": "$HOME/.swiftpm",
+            "movable": false,
+            "help": "Currently unsupported.\n\n_Relevant issue:_ https://github.com/apple/swift-package-manager/issues/6204\n"
+        }
+    ]
+}

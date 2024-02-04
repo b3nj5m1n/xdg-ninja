@@ -1,0 +1,10 @@
+{
+  "name": "flyctl",
+  "files": [
+    {
+      "path": "$HOME/.fly",
+      "movable": true,
+      "help": "Export the following environment variables:\n\n```bash\nexport FLY_CONFIG_DIR=\"$XDG_STATE_HOME\"/fly\n```\n"
+    }
+  ]
+}

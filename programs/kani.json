@@ -1,0 +1,10 @@
+{
+    "files": [
+        {
+            "path": "$HOME/.kani",
+            "movable": true,
+            "help": "Export the following environment variables:\n\n```bash\nexport KANI_HOME=\"$XDG_DATA_HOME\"/kani\n```\n"
+        }
+    ],
+    "name": "kani"
+}

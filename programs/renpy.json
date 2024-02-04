@@ -4,7 +4,7 @@
         {
             "path": "$HOME/.renpy",
             "movable": false,
-            "help": "Not going to be supported. See the relevant [issue](https://github.com/renpy/renpy/issues/1377).\n\nThere's a workaround in the comments that needs to be applied to every game."
+            "help": "Export the following environment variable:\n\n```export RENPY_PATH_TO_SAVES=\"$XDG_DATA_HOME\"```\n\n_See the official documentation_: https://www.renpy.org/doc/html/environment_variables.html\n\n"
         }
     ]
 }

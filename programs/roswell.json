@@ -1,0 +1,10 @@
+{
+    "files": [
+        {
+            "path": "$HOME/.roswell",
+            "movable": true,
+            "help": "Export the following environment variables:\n\n```bash\nexport ROSWELL_HOME=\"$XDG_DATA_HOME\"/roswell\n```\n"
+        }
+    ],
+    "name": "roswell"
+}
