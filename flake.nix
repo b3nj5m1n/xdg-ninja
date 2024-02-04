@@ -37,7 +37,7 @@
               DESTDIR="$out" PREFIX= make install
 
               wrapProgram "$out/bin/xdg-ninja" \
-                --prefix PATH : "${pkgs.lib.makeBinPath (with pkgs; [ glow jq ])}"
+                --prefix PATH : "${pkgs.lib.makeBinPath (with pkgs; [ glow jq findutils ])}"
 
               runHook postInstall
             '';
