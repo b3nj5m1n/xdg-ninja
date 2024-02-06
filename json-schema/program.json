@@ -55,6 +55,7 @@
               "$ref": "#/definitions/empty"
             },
             "examples": [
+              "Not provided",
               "Alias abook to use custom locations for configuration and data:\n\n```bash\nalias abook=abook --config \"$XDG_CONFIG_HOME\"/abook/abookrc --datafile \"$XDG_DATA_HOME\"/abook/addressbook\n```\n"
             ]
           }
