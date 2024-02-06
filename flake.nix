@@ -1,6 +1,6 @@
 {
   inputs = {
-    nixpkgs.url = "nixpkgs";
+    nixpkgs.url = "github:NixOS/nixpkgs/nixpkgs-unstable";
     flake-utils.url = "github:numtide/flake-utils";
   };
   outputs = {
@@ -10,11 +10,6 @@
   }:
     flake-utils.lib.eachDefaultSystem (system:
       let
-        runtimeDependencies = with pkgs; [
-          glow
-          jq
-          findutils
-        ];
         overlays = [
           (self: super: {
             xdg-ninja = super.xdg-ninja.overrideAttrs (old: {
@@ -25,9 +20,10 @@
         ];
         pkgs = import nixpkgs { inherit system overlays; };
       in rec {
-        packages = flake-utils.lib.flattenTree {
+        packages = flake-utils.lib.flattenTree rec {
+          default = xdg-ninja;
           # The shell script and configurations, uses derivation from offical nixpkgs
-          xdg-ninja = pkgs.stdenv.mkDerivation rec {
+          xdg-ninja = pkgs.stdenv.mkDerivation {
             pname = "xdg-ninja";
             version = "0.1.0";
 
@@ -38,10 +34,10 @@
             installPhase = ''
               runHook preInstall
 
-              DESTDIR="$out" PREFIX="/usr" make install
+              DESTDIR="$out" PREFIX= make install
 
-              wrapProgram "$out/usr/bin/xdg-ninja" \
-                --prefix PATH : "${pkgs.lib.makeBinPath [ pkgs.glow pkgs.jq ]}"
+              wrapProgram "$out/bin/xdg-ninja" \
+                --prefix PATH : "${pkgs.lib.makeBinPath (with pkgs; [ glow jq findutils ])}"
 
               runHook postInstall
             '';
@@ -50,7 +46,6 @@
           xdgnj-bin = pkgs.stdenvNoCC.mkDerivation {
             name = "xdgnj-bin";
             version = "0.2.0.1-alpha";
-            description = "Pre-built binary of the xdgnj tool for creating and editing configuration files for xdg-ninja.";
             src = pkgs.fetchurl {
               url = "https://github.com/b3nj5m1n/xdg-ninja/releases/download/v0.2.0.1/xdgnj";
               sha256 = "y1BSqKQWbhCyg2sRgMsv8ivmylSUJj6XZ8o+/2oT5ns=";
@@ -60,14 +55,14 @@
               mkdir -p "$out/bin"
               install -Dm755 $src "$out/bin/xdgnj"
             '';
+            meta.description = "Pre-built binary of the xdgnj tool for creating and editing configuration files for xdg-ninja.";
           };
         };
-        defaultPackage = packages.xdg-ninja;
-        apps = {
-          xdg-ninja = flake-utils.lib.mkApp { drv = packages.xdg-ninja; exePath = "/usr/bin/xdg-ninja"; };
+        apps = rec {
+          default = xdg-ninja;
+          xdg-ninja = flake-utils.lib.mkApp { drv = packages.xdg-ninja; exePath = "/bin/xdg-ninja"; };
           xdgnj-bin = flake-utils.lib.mkApp { drv = packages.xdgnj-bin; exePath = "/bin/xdgnj"; };
         };
-        defaultApp = apps.xdg-ninja;
       }
     );
 }

@@ -1,7 +1,11 @@
 name: "Nix Flake Check"
 on:
   pull_request:
+    paths:
+      - '**.nix'
   push:
+    paths:
+      - '**.nix'
 jobs:
   tests:
     runs-on: ubuntu-latest

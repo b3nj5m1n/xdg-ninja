@@ -1,0 +1,25 @@
+{
+    "files": [
+        {
+            "help": "Currently unsupported.\n\n _Relevant issue_: https://github.com/dart-lang/sdk/issues/41560\n",
+            "movable": false,
+            "path": "$HOME/.dart"
+        },
+        {
+            "help": "Currently unsupported.\n\n _Relevant issue_: https://github.com/dart-lang/sdk/issues/41560\n",
+            "movable": false,
+            "path": "$HOME/.dartServer"
+        },
+        {
+            "help": "Currently unsupported.\n\n _Relevant issue_: https://github.com/dart-lang/sdk/issues/41560\n",
+            "movable": false,
+            "path": "$HOME/.dart-tool"
+        },
+        {
+            "help": "Currently unsupported.\n\n _Relevant issue_: https://github.com/dart-lang/sdk/issues/41560\n",
+            "movable": false,
+            "path": "$HOME/.pub-cache"
+        }
+    ],
+    "name": "dart"
+}

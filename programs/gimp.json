@@ -1,9 +1,9 @@
 {
     "files": [
         {
-            "help": "Currently unsupported.\n\n_Relevant issue:_ https://bugzilla.gnome.org/show_bug.cgi?id=166643\n",
-            "movable": false,
-            "path": "$HOME/.thumbnails"
+            "path": "$HOME/.thumbnails",
+            "movable": true,
+            "help": "Supported\n\nDirectory .thumbnails can be moved to _$XDG_CACHE_HOME/thumbnails_.\nConfiguration dicrectorycan be moved to _$XDG_CONFIG_HOME/GIMP/{GIMP_APP_VERSION}_."
         }
     ],
     "name": "gimp"
