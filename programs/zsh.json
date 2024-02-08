@@ -26,22 +26,22 @@
             "path": "$HOME/.zsh_history"
         },
         {
-            "help": "Move the file to _\"$HOME\"/.config/zsh/.zlogin_ and export the following environment variable:\n\n```bash\nexport ZDOTDIR=\"$HOME\"/.config/zsh\n```\nYou can do this in _/etc/zshenv_ (Or _/etc/zsh/zshenv_, on some distros).\n",
+            "help": "Move the file to _\"$XDG_CONFIG_HOME\"/zsh/.zlogin_ and export the following environment variable:\n\n```bash\nexport ZDOTDIR=\"$XDG_CONFIG_HOME\"/zsh\n```\nYou can do this in _/etc/zshenv_ (Or _/etc/zsh/zshenv_, on some distros).\n",
             "movable": true,
             "path": "$HOME/.zlogin"
         },
         {
-            "help": "Move the file to _\"$HOME\"/.config/zsh/.zprofile_ and export the following environment variable:\n\n```bash\nexport ZDOTDIR=\"$HOME\"/.config/zsh\n```\nYou can do this in _/etc/zshenv_ (Or _/etc/zsh/zshenv_, on some distros).\n",
+            "help": "Move the file to _\"$XDG_CONFIG_HOME\"/zsh/.zprofile_ and export the following environment variable:\n\n```bash\nexport ZDOTDIR=\"$XDG_CONFIG_HOME\"/zsh\n```\nYou can do this in _/etc/zshenv_ (Or _/etc/zsh/zshenv_, on some distros).\n",
             "movable": true,
             "path": "$HOME/.zprofile"
         },
         {
-            "help": "Move the file to _\"$HOME\"/.config/zsh/.zshenv_ and export the following environment variable:\n\n```bash\nexport ZDOTDIR=\"$HOME\"/.config/zsh\n```\nYou can do this in _/etc/zshenv_ (Or _/etc/zsh/zshenv_, on some distros).\n",
+            "help": "Move the file to _\"$XDG_CONFIG_HOME\"/zsh/.zshenv_ and export the following environment variable:\n\n```bash\nexport ZDOTDIR=\"$XDG_CONFIG_HOME\"/zsh\n```\nYou can do this in _/etc/zshenv_ (Or _/etc/zsh/zshenv_, on some distros).\n",
             "movable": true,
             "path": "$HOME/.zshenv"
         },
         {
-            "help": "Move the file to _\"$HOME\"/.config/zsh/.zshrc_ and export the following environment variable:\n\n```bash\nexport ZDOTDIR=\"$HOME\"/.config/zsh\n```\nYou can do this in _/etc/zshenv_ (Or _/etc/zsh/zshenv_, on some distros).\n",
+            "help": "Move the file to _\"$XDG_CONFIG_HOME\"/zsh/.zshrc_ and export the following environment variable:\n\n```bash\nexport ZDOTDIR=\"$XDG_CONFIG_HOME\"/zsh\n```\nYou can do this in _/etc/zshenv_ (Or _/etc/zsh/zshenv_, on some distros).\n",
             "movable": true,
             "path": "$HOME/.zshrc"
         }
