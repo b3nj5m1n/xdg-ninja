@@ -6,6 +6,11 @@
             "help": "Export the following environment variables:\n\n```bash\nexport DOTNET_CLI_HOME=\"$XDG_DATA_HOME\"/dotnet\n```\n"
         },
         {
+            "path": "$HOME/.templateengine",
+            "movable": true,
+            "help": "Export the following environment variables:\n\n```bash\nexport DOTNET_CLI_HOME=\"$XDG_DATA_HOME\"/dotnet\n```\n"
+        },
+        {
             "path": "$HOME/.net",
             "movable": false,
             "help": "This directory is used by software written with .NET to store all the DLLs they need to work.\nSo it's pratically impossible to provide a general way to configure this specific behaviour.\n"
