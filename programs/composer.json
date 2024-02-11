@@ -4,7 +4,7 @@
         {
             "path": "$HOME/.composer",
             "movable": true,
-            "help": "Supported by default.\n\nYou can move the directory to _$XDG_CONFIG_HOME/composer.\n"
+            "help": "Supported by default.\n\nYou can move the directory to _$XDG_CONFIG_HOME/composer_.\n"
         }
     ]
 }
