@@ -1,0 +1,11 @@
+
+{
+    "name": "Blender",
+    "files": [
+        {
+            "path": "$HOME/.blender",
+            "movable": true,
+            "help": "Supported by default.\n\nYou can move the directory to _$XDG_CONFIG_HOME/blender_.\n"
+        }
+    ]
+}
