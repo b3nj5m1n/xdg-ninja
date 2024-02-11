@@ -1,9 +1,14 @@
 {
     "files": [
         {
-            "help": "Export the following environment variables:\n\n```bash\nexport LESSHISTFILE=\"$XDG_STATE_HOME\"/less/history\n```\n",
+            "path": "$HOME/.lesshst",
             "movable": true,
-            "path": "$HOME/.lesshst"
+            "help": "Supported by default.\n\nYou can move the file to _$XDG_STATE_HOME/lesshst_.\n"
+        },
+        {
+            "path": "$HOME/.lesskey",
+            "movable": true,
+            "help": "Supported by default.\n\nYou can move the file to _$XDG_CONFIG_HOME/lesskey_.\n"
         }
     ],
     "name": "less"
