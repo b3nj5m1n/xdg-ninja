@@ -1,0 +1,10 @@
+{
+    "name": "streamlink",
+    "files": [
+        {
+            "path": "$HOME/.livestreamerrc",
+            "movable": true,
+            "help": "Supported by default.\n\nYou can move the file to _$XDG_CONFIG_HOME/livestreamer/config_.\n"
+        }
+    ]
+}
