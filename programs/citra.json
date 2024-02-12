@@ -4,7 +4,7 @@
         {
             "path": "$HOME/.citra-emu",
             "movable": true,
-            "help": "Supported by default.\n\nNewer versions of cemu automatically create directories at correct locations, so this can safely be deleted.\n"
+            "help": "Supported by default.\n\nNewer versions of citra automatically create directories at correct locations, so this can safely be deleted.\n"
         }
     ]
 }
