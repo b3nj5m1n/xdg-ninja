@@ -1,0 +1,10 @@
+{
+    "name": "i3status",
+    "files": [
+        {
+            "path": "$HOME/.i3status.conf",
+            "movable": true,
+            "help": "Supported by default.\n\nYou can move the file to _$XDG_CONFIG_HOME/i3status/config_.\n"
+        }
+    ]
+}
