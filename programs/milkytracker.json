@@ -1,0 +1,10 @@
+{
+    "name": "milkytracker",
+    "files": [
+        {
+            "path": "$HOME/.milkytracker_config",
+            "movable": true,
+            "help": "Supported by default.\n\nNewer versions of milkytracker will automatically move this file to the correct location unless another config already exists at that location.\n"
+        }
+    ]
+}
