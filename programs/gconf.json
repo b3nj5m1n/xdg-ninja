@@ -1,0 +1,15 @@
+{
+    "name": "gconf",
+    "files": [
+        {
+            "path": "$HOME/.gconf",
+            "movable": true,
+            "help": "Supported by default, but uses the old location if it exists.\n\nYou can move the directory to _$XDG_CONFIG_HOME/gconf_.\n"
+        },
+        {
+            "path": "$HOME/.gconf.path",
+            "movable": true,
+            "help": "Supported by default.\n\nYou can move the file to _$XDG_CONFIG_HOME/gconf/path_.\n"
+        }
+    ]
+}
