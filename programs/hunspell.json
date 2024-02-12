@@ -1,0 +1,10 @@
+{
+    "name": "hunspell",
+    "files": [
+        {
+            "path": "$HOME/.hunspell_default",
+            "movable": false,
+            "help": "Currently unsupported.\n\n_Relevant issue:_ https://github.com/hunspell/hunspell/pull/637\n"
+        }
+    ]
+}
