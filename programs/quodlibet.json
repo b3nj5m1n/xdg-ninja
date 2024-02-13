@@ -1,0 +1,10 @@
+{
+    "name": "quodlibet",
+    "files": [
+        {
+            "path": "$HOME/.quodlibet",
+            "movable": false,
+            "help": "Currently unsupported.\n\n_Relevant issue:_ https://github.com/quodlibet/quodlibet/issues/2202\n"
+        }
+    ]
+}
