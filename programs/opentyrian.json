@@ -1,0 +1,10 @@
+{
+    "name": "opentyrian",
+    "files": [
+        {
+            "path": "$HOME/.opentyrian",
+            "movable": true,
+            "help": "Supported by default.\n\nYou can move the directory to _$XDG_CONFIG_HOME/opentyrian/_.\n"
+        }
+    ]
+}
