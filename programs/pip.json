@@ -1,0 +1,10 @@
+{
+    "name": "pip",
+    "files": [
+        {
+            "path": "$HOME/.pip",
+            "movable": true,
+            "help": "Supported by default.\n\nNewer versions of pip automatically create directories at correct locations, so this can safely be deleted.\n\nIf you have a custom config file at _~/.pip/pip.conf_, you should move it to _$XDG_CONFIG_HOME/pip/pip.conf_.\n"
+        }
+    ]
+}
