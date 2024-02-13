@@ -3,7 +3,7 @@
         {
             "path": "$HOME/.poetry",
             "movable": true,
-            "help": "Export the following environment variables:\n\n```bash\nexport POETRY_HOME=\"$XDG_DATA_HOME\"/poetry\n```\n"
+            "help": "Supported by default.\n\nNewer versions of poetry automatically create directories at correct locations, so this can safely be deleted.\n"
         }
     ],
     "name": "python-poetry"
