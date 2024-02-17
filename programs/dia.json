@@ -1,0 +1,10 @@
+{
+    "name": "dia",
+    "files": [
+        {
+            "path": "$HOME/.dia",
+            "movable": false,
+            "help": "Currently unsupported.\n\n_Relevant issue:_ https://gitlab.gnome.org/GNOME/dia/-/issues/40\n"
+        }
+    ]
+}
