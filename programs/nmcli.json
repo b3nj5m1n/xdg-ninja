@@ -1,0 +1,10 @@
+{
+    "name": "nmcli",
+    "files": [
+        {
+            "path": "$HOME/.nmcli",
+            "movable": false,
+            "help": "Currently unsupported.\n\n_Relevant issue:_ https://gitlab.freedesktop.org/NetworkManager/NetworkManager/-/issues/64\n"
+        }
+    ]
+}
