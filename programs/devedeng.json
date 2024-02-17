@@ -1,0 +1,10 @@
+{
+    "name": "devedeng",
+    "files": [
+        {
+            "path": "$HOME/.devedeng",
+            "movable": true,
+            "help": "Supported by default.\n\nYou can move the file to _$XDG_CONFIG_HOME/devedeng/devedeng.cfg_.\n"
+        }
+    ]
+}
