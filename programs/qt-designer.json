@@ -1,0 +1,10 @@
+{
+    "name": "Qt Designer",
+    "files": [
+        {
+            "path": "$HOME/.designer",
+            "movable": true,
+            "help": "Supported by default.\n\nNewer versions of Qt Designer automatically create directories at correct locations, so this can safely be deleted.\n"
+        }
+    ]
+}
