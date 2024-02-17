@@ -15,6 +15,6 @@
             "path": "$HOME/.nvimlog",
             "movable": true,
             "help": "Supported by default.\n\nNewer versions of neovim automatically create files at correct locations, so this can safely be deleted.\n"
-        },
+        }
     ]
 }
