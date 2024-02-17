@@ -1,0 +1,10 @@
+{
+    "name": "dig",
+    "files": [
+        {
+            "path": "$HOME/.digrc",
+            "movable": false,
+            "help": "Currently unsupported.\n"
+        }
+    ]
+}
