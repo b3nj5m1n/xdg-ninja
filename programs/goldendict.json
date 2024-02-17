@@ -1,0 +1,10 @@
+{
+    "name": "goldendict",
+    "files": [
+        {
+            "path": "$HOME/.goldendict",
+            "movable": true,
+            "help": "Supported by default.\n\nNewer versions of goldendict automatically create directories at correct locations, so this can safely be deleted.\n"
+        }
+    ]
+}
