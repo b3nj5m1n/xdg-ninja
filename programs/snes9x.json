@@ -1,0 +1,10 @@
+{
+    "name": "snes9x",
+    "files": [
+        {
+            "path": "$HOME/.snes9x",
+            "movable": true,
+            "help": "Supported by default.\n\nYou can move the directory to _$XDG_CONFIG_HOME/snes9x_.\n"
+        }
+    ]
+}
