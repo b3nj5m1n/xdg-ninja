@@ -1,0 +1,10 @@
+{
+    "name": "jmol",
+    "files": [
+        {
+            "path": "$HOME/.jmol",
+            "movable": false,
+            "help": "Currently unsupported.\n\n_Relevant issue:_ https://sourceforge.net/p/jmol/feature-requests/261\n"
+        }
+    ]
+}
