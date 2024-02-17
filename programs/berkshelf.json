@@ -1,0 +1,10 @@
+{
+    "name": "berkshelf",
+    "files": [
+        {
+            "path": "$HOME/.berkshelf",
+            "movable": false,
+            "help": "Currently unsupported.\n"
+        }
+    ]
+}
