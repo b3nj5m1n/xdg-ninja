@@ -1,0 +1,15 @@
+{
+    "name": "surfraw",
+    "files": [
+        {
+            "path": "$HOME/.surfraw.conf",
+            "movable": true,
+            "help": "Supported by default.\n\nYou can move the file to _$XDG_CONFIG_HOME/surfraw/conf_.\n"
+        },
+        {
+            "path": "$HOME/.surfraw.bookmarks",
+            "movable": true,
+            "help": "Supported by default.\n\nYou can move the file to _$XDG_CONFIG_HOME/surfraw/bookmarks_.\n"
+        }
+    ]
+}
