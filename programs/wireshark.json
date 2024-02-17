@@ -1,0 +1,10 @@
+{
+    "name": "wireshark",
+    "files": [
+        {
+            "path": "$HOME/.wireshark",
+            "movable": true,
+            "help": "Supported by default.\n\nYou can move the directory to _$XDG_CONFIG_HOME/wireshark_.\n"
+        }
+    ]
+}
