@@ -1,0 +1,10 @@
+{
+    "name": "chatty",
+    "files": [
+        {
+            "path": "$HOME/.chatty",
+            "movable": false,
+            "help": "Currently unsupported.\n\n_Relevant issue:_ https://github.com/chatty/chatty/issues/273\n"
+        }
+    ]
+}
