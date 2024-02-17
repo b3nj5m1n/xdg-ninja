@@ -1,0 +1,10 @@
+{
+    "name": "rr",
+    "files": [
+        {
+            "path": "$HOME/.rr",
+            "movable": true,
+            "help": "Supported by default, but uses the old location if it exists.\n\nYou can move the directory to _$XDG_DATA_HOME/rr_.\n"
+        }
+    ]
+}
