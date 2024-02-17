@@ -1,0 +1,10 @@
+{
+    "name": "tmuxinator",
+    "files": [
+        {
+            "path": "$HOME/.tmuxinator",
+            "movable": true,
+            "help": "Supported by default.\n\nYou can move the directory to _$XDG_CONFIG_HOME/tmuxinator_.\n"
+        }
+    ]
+}
