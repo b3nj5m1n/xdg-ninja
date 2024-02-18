@@ -1,0 +1,10 @@
+{
+    "files": [
+        {
+            "path": "$HOME/.emulator_console_auth_token",
+            "movable": false,
+            "help": "Currently unsupported.\n"
+        }
+    ],
+    "name": "Android Studio"
+}
