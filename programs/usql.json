@@ -1,0 +1,15 @@
+{
+    "files": [
+        {
+            "path": "$HOME/.usql_history",
+            "movable": true,
+            "help": "Export the following environment variables:\n\n```bash\nexport USQL_HISTORY=\"$XDG_DATA_HOME\"/usql/history\n```\n"
+        },
+        {
+            "path": "$HOME/.usqlrc",
+            "movable": true,
+            "help": "Export the following environment variables:\n\n```bash\nexport USQLRC=\"$XDG_CONFIG_HOME\"/usql/config\n```\n"
+        }
+    ],
+    "name": "usql"
+}
