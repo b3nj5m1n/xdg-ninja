@@ -1,6 +1,11 @@
 {
     "files": [
         {
+            "path": "$HOME/.pnpm-state",
+            "movable": true,
+            "help": "Add the following to your npmrc:\n\n```\nstate-dir=$XDG_STATE_HOME/pnpm-state\n```\n"
+        },
+        {
             "path": "$HOME/.pnpm-store",
             "movable": true,
             "help": "Add the following to your npmrc:\n\n```\nstore-dir=$XDG_DATA_HOME/pnpm-store\n```\n"
