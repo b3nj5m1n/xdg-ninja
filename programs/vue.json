@@ -1,0 +1,10 @@
+{
+    "files": [
+        {
+            "path": "$HOME/.vuerc",
+            "movable": false,
+            "help": "Currently unsupported.\n\n_Relevant issue:_ https://github.com/vuejs/vue-cli/issues/5649\n"
+        }
+    ],
+    "name": "vue"
+}
