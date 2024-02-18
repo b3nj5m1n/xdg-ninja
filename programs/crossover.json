@@ -1,0 +1,15 @@
+{
+    "files": [
+        {
+            "path": "$HOME/.mailcap",
+            "movable": false,
+            "help": "Currently unsupported.\n"
+        },
+        {
+            "path": "$HOME/.mime.types",
+            "movable": false,
+            "help": "Currently unsupported.\n"
+        }
+    ],
+    "name": "Crossover"
+}
