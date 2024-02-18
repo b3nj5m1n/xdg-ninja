@@ -1,12 +1,17 @@
 {
     "files": [
         {
+            "path": "$HOME/.redisinsight-app",
+            "movable": true,
+            "help": "Export the following environment variables:\n\n```bash\nexport RI_APP_FOLDER_ABSOLUTE_PATH=\"$XDG_DATA_HOME\"/redisinsight-app\n```\n"
+        },
+        {
             "path": "$HOME/.redisinsight-v2",
             "movable": true,
             "help": "Export the following environment variables:\n\n```bash\nexport APP_FOLDER_ABSOLUTE_PATH=\"$XDG_DATA_HOME\"/redisinsight-v2\n```\n"
         },
         {
-            "path": "$HOME/..redisinsight-preview",
+            "path": "$HOME/.redisinsight-preview",
             "movable": false,
             "help": "If you do not use the obsolete preview version then just remove the folder. Otherwise export the following environment variables and upgrade to the current version.:\n\n```bash\nexport APP_FOLDER_ABSOLUTE_PATH=\"$XDG_DATA_HOME\"/redisinsight-v2\n```\n"
         }
