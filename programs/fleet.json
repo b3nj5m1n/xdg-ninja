@@ -1,0 +1,10 @@
+{
+    "files": [
+        {
+            "path": "$HOME/.fleet",
+            "movable": false,
+            "help": "Currently unsupported.\n\n_Relevant issue:_ https://youtrack.jetbrains.com/issue/FL-12903\n"
+        }
+    ],
+    "name": "Fleet"
+}
