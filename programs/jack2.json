@@ -1,0 +1,10 @@
+{
+    "name": "jack2",
+    "files": [
+        {
+            "path": "$HOME/.jackdrc",
+            "movable": false,
+            "help": "Currently unsupported. Hardcoded value.\n"
+        }
+    ]
+}
