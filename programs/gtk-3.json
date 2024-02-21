@@ -3,7 +3,7 @@
         {
             "path": "$HOME/.gtk-bookmarks",
             "movable": true,
-            "help": "Can be moved to .config/gtk-3.0/bookmarks"
+            "help": "Can be moved to .config/gtk-3.0/bookmarks\n"
         }
     ],
     "name": "gtk-3"
