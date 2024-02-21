@@ -3,7 +3,7 @@
         {
             "path": "$HOME/.irb_history",
             "movable": true,
-            "help": "In Ruby versions 2.7 or later, configure IRB.conf[:HISTORY_FILE] in your .irbrc to $XDG_STATE_HOME/irb/history. For prior versions, set $irbrc"
+            "help": "In Ruby versions 2.7 or later, configure IRB.conf[:HISTORY_FILE] in your .irbrc to $XDG_STATE_HOME/irb/history. For prior versions, set $irbrc\n"
         }
     ],
     "name": "irb history"
