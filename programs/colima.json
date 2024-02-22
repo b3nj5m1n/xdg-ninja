@@ -1,0 +1,10 @@
+{
+    "name": "colima",
+    "files": [
+        {
+            "path": "$HOME/.colima",
+            "movable": true,
+            "help": "XDG is supported out-of-the-box, so we can simply move the folder to _$XDG_CONFIG_HOME/colima_.\n"
+        }
+    ]
+}

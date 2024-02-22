@@ -1,0 +1,15 @@
+{
+    "files": [
+        {
+            "path": "$HOME/.proxyman",
+            "movable": false,
+            "help": "Currently unsupported.\n\n_Relevant issue:_ https://github.com/ProxymanApp/Proxyman/issues/476\n"
+        },
+        {
+            "path": "$HOME/.proxyman-data",
+            "movable": false,
+            "help": "Currently unsupported.\n\n_Relevant issue:_ https://github.com/ProxymanApp/Proxyman/issues/476\n"
+        }
+    ],
+    "name": "Proxyman"
+}
