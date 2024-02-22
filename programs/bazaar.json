@@ -1,14 +1,14 @@
 {
     "files": [
         {
-            "path": "$HOME/.bzr.log",
-            "movable": false,
-            "help": "\n"
+            "help": "Try exporting the following enviornment variable:\n```bash\nBZR_LOG=$XDG_CACHE_HOME/bazaar\n```\n",
+            "movable": true,
+            "path": "$HOME/.bzr.log"
         },
         {
-            "path": "$HOME/.bazaar",
+            "help": "Bazaar should use _$HOME/.config/bazaar_ if it exists.\n",
             "movable": true,
-            "help": "Bazaar should use _$HOME/.config/bazaar_ if it exists.\n"
+            "path": "$HOME/.bazaar"
         }
     ],
     "name": "bazaar"
