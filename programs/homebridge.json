@@ -1,0 +1,10 @@
+{
+    "files": [
+        {
+            "help": "Use the following alias:\n\n```bash\nalias homebridge='homebridge -U \"$XDG_CONFIG_HOME\"/homebridge'\n```\n\n",
+            "movable": true,
+            "path": "$HOME/.homebridge"
+        }
+    ],
+    "name": "homebridge"
+}

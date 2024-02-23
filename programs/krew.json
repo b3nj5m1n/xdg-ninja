@@ -1,0 +1,10 @@
+{
+    "files": [
+        {
+            "path": "$HOME/.krew",
+            "movable": true,
+            "help": "Export the following environment variable:\n\n```bash\nexport KREW_ROOT=\"$XDG_DATA_HOME\"/krew\n```\n"
+        }
+    ],
+    "name": "krew"
+}

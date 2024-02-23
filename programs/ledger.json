@@ -1,14 +1,14 @@
 {
     "files": [
         {
-            "path": "$HOME/.pricedb",
-            "movable": false,
-            "help": "\n"
+            "help": "You can set a custom location for this file using the `--price-db $XDG_DATA_HOME/pricedb` flag.\n",
+            "movable": true,
+            "path": "$HOME/.pricedb"
         },
         {
-            "path": "$HOME/.ledgerrc",
+            "help": "Move file to `$XDG_CONFIG_HOME/ledger/ledgerrc`.\nSee [1960](https://github.com/ledger/ledger/pull/1960).\n\nIf using an older version, alias ledger to use a custom configuration file:\n\n```bash\nledger --init-file \"$XDG_CONFIG_HOME\"/ledgerrc\n```\n\n",
             "movable": true,
-            "help": "Alias ledger to use a custom configuration file:\n\n```bash\nledger --init-file \"$XDG_CONFIG_HOME\"/ledgerrc\n```\n"
+            "path": "$HOME/.ledgerrc"
         }
     ],
     "name": "ledger"

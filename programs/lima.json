@@ -1,0 +1,10 @@
+{
+    "name": "lima",
+    "files": [
+        {
+            "path": "$HOME/.lima",
+            "movable": false,
+            "help": "Currently unsupported.\n"
+        }
+    ]
+}

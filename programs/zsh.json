@@ -1,27 +1,27 @@
 {
     "files": [
         {
-            "help": "Set this in your zshrc:\n\n```bash\nzstyle ':completion:*' cache-path \"$XDG_CACHE_HOME\"/zsh/zcompcache\n```\n",
+            "help": "Set this in your zshrc:\n\n```bash\nzstyle ':completion:*' cache-path \"$XDG_CACHE_HOME\"/zsh/zcompcache\n```\n\nYou must manually create the _$XDG_CACHE_HOME/zsh_ directory if it doesn't exist yet.\n",
             "movable": true,
             "path": "$HOME/.zcompcache"
         },
         {
-            "help": "Set this in your zshrc:\n\n```bash\ncompinit -d \"$XDG_CACHE_HOME\"/zsh/zcompdump-\"$ZSH_VERSION\"\n```\n",
+            "help": "Set this in your zshrc:\n\n```bash\ncompinit -d \"$XDG_CACHE_HOME\"/zsh/zcompdump-\"$ZSH_VERSION\"\n```\n\nYou must manually create the _$XDG_CACHE_HOME/zsh_ directory if it doesn't exist yet.\n",
             "movable": true,
             "path": "$HOME/.zcompdump*"
         },
         {
-            "help": "Set this in your zshrc:\n\n```bash\nexport HISTFILE=\"$XDG_STATE_HOME\"/zsh/history\n```\n",
+            "help": "Set this in your zshrc:\n\n```bash\nexport HISTFILE=\"$XDG_STATE_HOME\"/zsh/history\n```\n\nYou must manually create the _$XDG_STATE_HOME/zsh_ directory if it doesn't exist yet.\n",
             "movable": true,
             "path": "$HOME/.zhistory"
         },
         {
-            "help": "Set this in your zshrc:\n\n```bash\nexport HISTFILE=\"$XDG_STATE_HOME\"/zsh/history\n```\n",
+            "help": "Set this in your zshrc:\n\n```bash\nexport HISTFILE=\"$XDG_STATE_HOME\"/zsh/history\n```\n\nYou must manually create the _$XDG_STATE_HOME/zsh_ directory if it doesn't exist yet.\n",
             "movable": true,
             "path": "$HOME/.histfile"
         },
         {
-            "help": "Set this in your zshrc:\n\n```bash\nexport HISTFILE=\"$XDG_STATE_HOME\"/zsh/history\n```\n",
+            "help": "Set this in your zshrc:\n\n```bash\nexport HISTFILE=\"$XDG_STATE_HOME\"/zsh/history\n```\n\nYou must manually create the _$XDG_STATE_HOME/zsh_ directory if it doesn't exist yet.\n",
             "movable": true,
             "path": "$HOME/.zsh_history"
         },
