@@ -1,0 +1,15 @@
+{
+    "files": [
+        {
+            "path": "$HOME/.solfege",
+            "movable": false,
+            "help": "Currently unsupported. Hardcoded value.\n"
+        },
+        {
+            "path": "$HOME/.solfegerc",
+            "movable": false,
+            "help": "Currently unsupported. Hardcoded value.\n"
+        }
+    ],
+    "name": "GNU solfege"
+}

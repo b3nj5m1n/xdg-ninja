@@ -1,0 +1,10 @@
+{
+  "name": "fnm",
+  "files": [
+    {
+      "path": "$HOME/.fnm",
+      "movable": true,
+      "help": "Export the following environment variables:\n\n```bash\nexport FNM_DIR=\"$XDG_DATA_HOME\"/fnm\n```\n"
+    }
+  ]
+}

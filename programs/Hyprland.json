@@ -1,0 +1,10 @@
+{
+    "name": "Hyprland",
+    "files": [
+        {
+            "path": "$HOME/.hyprland",
+            "movable": true,
+            "help": "Used for crash reports. Fixed in https://github.com/hyprwm/Hyprland/pull/4719 and can be moved to $XDG_CACHE_HOME\n"
+        }
+    ]
+}

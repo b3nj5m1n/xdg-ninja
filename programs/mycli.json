@@ -1,19 +1,19 @@
 {
     "files": [
         {
-            "path": "$HOME/.myclirc",
+            "help": "Move the file to $XDG_CONFIG_HOME/mycli/myclirc\n",
             "movable": true,
-            "help": "Supported since version _1.21.0_. You can move the file to $XDG_CONFIG_HOME/mycli/myclirc\n"
+            "path": "$HOME/.myclirc"
         },
         {
-            "path": "$HOME/.mycli-history",
+            "help": "Set MYCLI_HISTFILE to $XDG_STATE_HOME/mycli/mycli_history\n",
             "movable": true,
-            "help": "Supported since version _1.8.0_. Export the following environment variables:\n\n```bash\nexport MYCLI_HISTFILE=\"$XDG_DATA_HOME/mycli/history\"\n```\n"
+            "path": "$HOME/.mycli-history"
         },
         {
-            "path":"$HOME/.mycli.log",
-            "movable":true,
-            "help": "The location for the log file can be set in the config file. See https://www.mycli.net/config"
+            "help": "Set this in your myclirc:\n```log_file=~/.cache/mycli.log```\nDoes not work with enviorment variables\n Relevant issue : https://github.com/dbcli/mycli/issues/581\n",
+            "movable": true,
+            "path": "$HOME/.mycli.log"
         }
     ],
     "name": "mycli"

@@ -1,0 +1,15 @@
+{
+    "name": "iTerm 2",
+    "files": [
+        {
+            "path": "$HOME/.iterm2",
+            "movable": false,
+            "help": "Currently unsupported.\n\n_Relevant issue:_ https://gitlab.com/gnachman/iterm2/-/issues/4843\n"
+        },
+        {
+            "path": "$HOME/.iterm2_shell_integration.fish",
+            "movable": true,
+            "help": "You can move this file to _$XDG_CONFIG_HOME/fish/conf.d/iterm2.fish_.\n"
+        }
+    ]
+}

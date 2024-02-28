@@ -1,19 +1,19 @@
 {
     "files": [
         {
-            "path": "$HOME/.mylogin.cnf",
-            "movable": false,
-            "help": ""
-        },
-        {
-            "path": "$HOME/.my.cnf",
-            "movable": false,
-            "help": ""
-        },
-        {
-            "path": "$HOME/.mysql_history",
+            "help": "You can specify the file location using the `--login-path` flag.\nApparently only supported for mysql-server, not mysql-client.\n",
             "movable": true,
-            "help": "Export the following environment variables:\n\n```bash\nexport MYSQL_HISTFILE=\"$XDG_DATA_HOME\"/mysql_history\n```\n"
+            "path": "$HOME/.mylogin.cnf"
+        },
+        {
+            "help": "Unsupported.\n",
+            "movable": false,
+            "path": "$HOME/.my.cnf"
+        },
+        {
+            "help": "Export the following environment variables:\n\n```bash\nexport MYSQL_HISTFILE=\"$XDG_DATA_HOME\"/mysql_history\n```\n",
+            "movable": true,
+            "path": "$HOME/.mysql_history"
         }
     ],
     "name": "mysql"

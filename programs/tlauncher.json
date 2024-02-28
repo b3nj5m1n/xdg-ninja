@@ -1,15 +1,15 @@
 {
-    "name": "tlauncher",
     "files": [
         {
-            "path": "$HOME/.tlauncher",
+            "help": "Doesn't seem like it's supported, and apparently [the bug tracker is facebook](https://tlauncher.org/en/send-bug-tlauncher.html).\n",
             "movable": false,
-            "help": ""
+            "path": "$HOME/.tlauncher"
         },
         {
-            "path": "$HOME/.tl",
+            "help": "Doesn't seem like it's supported, and apparently [the bug tracker is facebook](https://tlauncher.org/en/send-bug-tlauncher.html).\n",
             "movable": false,
-            "help": ""
+            "path": "$HOME/.tl"
         }
-    ]
+    ],
+    "name": "tlauncher"
 }
