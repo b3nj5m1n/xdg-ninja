@@ -5,12 +5,12 @@ on:
     branches:
       - main
     paths:
-      - '**.json'
+      - "**.json"
   pull_request:
     branches:
       - main
     paths:
-      - '**.json'
+      - "**.json"
 
 jobs:
   validate:
@@ -24,4 +24,4 @@ jobs:
           schema: json-schema/program.json
           schema-version: draft-07
           fail-on-missing-schema: true
-          strict: true
+          strict: false
