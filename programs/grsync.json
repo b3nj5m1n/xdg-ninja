@@ -1,0 +1,10 @@
+{
+    "name": "grsync",
+    "files": [
+        {
+            "path": "$HOME/.grsync",
+            "movable": true,
+            "help": "Supported by default.\n\nYou can move the directory to _$XDG_CONFIG_HOME/grsync_.\n"
+        }
+    ]
+}
