@@ -1,0 +1,10 @@
+{
+    "name": "fetchmail",
+    "files": [
+        {
+            "path": "$HOME/.fetchmailrc",
+            "movable": false,
+            "help": "Currently unsupported.\n"
+        }
+    ]
+}
