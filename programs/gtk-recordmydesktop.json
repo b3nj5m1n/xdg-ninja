@@ -1,0 +1,10 @@
+{
+    "name": "gtk-recordmydesktop",
+    "files": [
+        {
+            "path": "$HOME/.gtk-recordmydesktop",
+            "movable": false,
+            "help": "Currently unsupported.\n"
+        }
+    ]
+}
