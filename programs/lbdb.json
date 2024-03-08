@@ -1,0 +1,20 @@
+{
+    "name": "lbdb",
+    "files": [
+        {
+            "path": "$HOME/.lbdbrc",
+            "movable": true,
+            "help": "Supported by default.\n\nYou can move the file to _$XDG_CONFIG_HOME/lbdb/config_.\n"
+        },
+        {
+            "path": "$HOME/.lbdb/rc",
+            "movable": true,
+            "help": "Supported by default.\n\nYou can move the file to _$XDG_CONFIG_HOME/lbdb/config_.\n"
+        },
+        {
+            "path": "$HOME/.lbdb/lbdbrc",
+            "movable": true,
+            "help": "Supported by default.\n\nYou can move the file to _$XDG_CONFIG_HOME/lbdb/config_.\n"
+        }
+    ]
+}
