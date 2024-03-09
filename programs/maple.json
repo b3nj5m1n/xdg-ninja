@@ -1,0 +1,20 @@
+{
+    "name": "Maple",
+    "files": [
+        {
+            "path": "$HOME/.flexlmrc",
+            "movable": false,
+            "help": "Not supported.\n"
+        },
+        {
+            "path": "$HOME/.maple",
+            "movable": false,
+            "help": "Not supported.\n"
+        },
+        {
+            "path": "$HOME/.maplesoft",
+            "movable": false,
+            "help": "Not supported.\n"
+        }
+    ]
+}
