@@ -1,0 +1,10 @@
+{
+    "name": "crossnote",
+    "files": [
+        {
+            "path": "$HOME/.mume",
+            "movable": true,
+            "help": "Move the directory to $XDG_CONFIG_HOME/mume\n"
+        }
+    ]
+}
