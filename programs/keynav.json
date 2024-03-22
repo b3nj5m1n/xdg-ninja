@@ -1,0 +1,10 @@
+{
+    "name": "keynav",
+    "files": [
+        {
+            "path": "$HOME/.keynavrc",
+            "movable": true,
+            "help": "Supported by default.\n\nYou can move the file to _$XDG_CONFIG_HOME/keynav/keynavrc_.\n"
+        }
+    ]
+}

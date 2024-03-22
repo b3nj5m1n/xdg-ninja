@@ -1,0 +1,10 @@
+{
+    "name": "mpd",
+    "files": [
+        {
+            "path": "$HOME/.mpdconf",
+            "movable": true,
+            "help": "Supported by default.\n\nYou can move the file to _$XDG_CONFIG_HOME/mpd/mpd.conf_.\n"
+        }
+    ]
+}

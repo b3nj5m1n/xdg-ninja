@@ -1,0 +1,10 @@
+{
+    "name": "Dolphin Emulator",
+    "files": [
+        {
+            "path": "$HOME/.dolphin-emu",
+            "movable": true,
+            "help": "Supported by default.\n\nNewer versions of dolphin automatically create directories at correct locations, so this can safely be deleted.\n"
+        }
+    ]
+}

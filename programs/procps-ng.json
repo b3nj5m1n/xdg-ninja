@@ -1,0 +1,10 @@
+{
+    "name": "procps-ng",
+    "files": [
+        {
+            "path": "$HOME/.toprc",
+            "movable": true,
+            "help": "Supported by default, but uses the old location if it exists.\n\nYou can move the file to _$XDG_CONFIG_HOME/procps/toprc_.\n"
+        }
+    ]
+}

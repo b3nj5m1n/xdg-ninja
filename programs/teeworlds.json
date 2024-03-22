@@ -1,0 +1,10 @@
+{
+    "name": "teeworlds",
+    "files": [
+        {
+            "path": "$HOME/.teeworlds",
+            "movable": true,
+            "help": "Supported by default.\n\nYou can move the directory to _$XDG_DATA_HOME/teeworlds_.\n"
+        }
+    ]
+}

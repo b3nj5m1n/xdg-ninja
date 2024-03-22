@@ -1,0 +1,10 @@
+{
+    "name": "lgogdownloader",
+    "files": [
+        {
+            "path": "$HOME/.gogdownloader",
+            "movable": true,
+            "help": "Supported by default.\n\nYou can move the _~/.gogdownloader/xml_ directory to _$XDG_CACHE_HOME/lgogdownloader/xml_ and everything else to _$XDG_CONFIG_HOME/lgogdownloader_.\n"
+        }
+    ]
+}

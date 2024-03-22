@@ -1,0 +1,10 @@
+{
+    "name": "Apache Directory Studio",
+    "files": [
+        {
+            "path": "$HOME/.ApacheDirectoryStudio",
+            "movable": false,
+            "help": "Currently unsupported.\n"
+        }
+    ]
+}

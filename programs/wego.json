@@ -1,0 +1,10 @@
+{
+    "name": "wego",
+    "files": [
+        {
+            "path": "$HOME/.wegorc",
+            "movable": false,
+            "help": "Currently unsupported.\n\n_Relevant issue:_ https://github.com/schachmat/wego/issues/161\n"
+        }
+    ]
+}

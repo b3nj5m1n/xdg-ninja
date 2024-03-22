@@ -1,0 +1,10 @@
+{
+    "name": "perf",
+    "files": [
+        {
+            "path": "$HOME/.debug",
+            "movable": false,
+            "help": "This path is hardcoded and can't be changed.\n"
+        }
+    ]
+}

@@ -4,7 +4,7 @@
         {
             "path": "$HOME/.weechat",
             "movable": true,
-            "help": "Export the following environment variables:\n\n```bash\nexport WEECHAT_HOME=\"$XDG_CONFIG_HOME\"/weechat\n```\nAlias weechat to use custom locations:\n\n```bash\nalias weechat=weechat -d $XDG_CONFIG_HOME/weechat```\n"
+            "help": "Supported by default.\n\nYou can move the files like this:\n```bash\nmkdir -p \"$XDG_CONFIG_HOME\"/weechat\nmkdir -p \"$XDG_DATA_HOME\"/weechat\nmv ~/.weechat/weechat.log \"$XDG_DATA_HOME\"/weechat\nmv ~/.weechat/*.conf \"$XDG_CONFIG_HOME\"/weechat\nrm -rv ~/.weechat\n```\n"
         }
     ]
 }

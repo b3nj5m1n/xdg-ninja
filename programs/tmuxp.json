@@ -1,0 +1,10 @@
+{
+    "name": "tmuxp",
+    "files": [
+        {
+            "path": "$HOME/.tmuxp",
+            "movable": true,
+            "help": "Supported by default.\n\nYou can move the directory to _$XDG_CONFIG_HOME/tmuxp_.\n"
+        }
+    ]
+}

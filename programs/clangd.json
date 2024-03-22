@@ -1,0 +1,10 @@
+{
+    "name": "clangd",
+    "files": [
+        {
+            "path": "$HOME/.clangd",
+            "movable": true,
+            "help": "Supported by default.\n\nYou can move the directory to _$XDG_CACHE_HOME/clangd_.\n"
+        }
+    ]
+}

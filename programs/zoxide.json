@@ -1,0 +1,10 @@
+{
+    "name": "zoxide",
+    "files": [
+        {
+            "path": "$HOME/.zo",
+            "movable": true,
+            "help": "Supported by default.\n\nYou can move the directory to _$XDG_DATA_HOME/zoxide_.\n"
+        }
+    ]
+}

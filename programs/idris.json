@@ -1,0 +1,10 @@
+{
+    "name": "idris",
+    "files": [
+        {
+            "path": "$HOME/.idris",
+            "movable": false,
+            "help": "Currently unsupported.\n\n_Relevant pull request_ https://github.com/idris-lang/Idris-dev/pull/3456\n"
+        }
+    ]
+}

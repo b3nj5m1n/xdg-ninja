@@ -1,0 +1,10 @@
+{
+    "name": "Godot",
+    "files": [
+        {
+            "path": "$HOME/.godot",
+            "movable": true,
+            "help": "Supported by default since version 3.0.\n\nGodot will now automatically create directories at correct locations, so this can safely be deleted.\n"
+        }
+    ]
+}

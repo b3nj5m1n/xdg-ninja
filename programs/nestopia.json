@@ -1,0 +1,10 @@
+{
+    "name": "nestopia",
+    "files": [
+        {
+            "path": "$HOME/.nestopia",
+            "movable": true,
+            "help": "Supported by default.\n\nNewer versions of nestopia automatically create directories at correct locations, so this can safely be deleted.\n"
+        }
+    ]
+}

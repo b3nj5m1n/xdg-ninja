@@ -1,0 +1,10 @@
+{
+    "name": "Skype",
+    "files": [
+        {
+            "path": "$HOME/.Skype",
+            "movable": true,
+            "help": "Supported by default.\n\nNewer versions of Skype automatically create directories at correct locations, so this can safely be deleted.\n"
+        }
+    ]
+}

@@ -2,19 +2,19 @@
     "name": "gem",
     "files": [
         {
-            "path": "$HOME/.gem/ruby",
-            "movable": true,
-            "help": "Supported\n\nThe file $HOME/.gem/ruby can be moved to $XDG_CONFIG_HOME/gem.\n"
-        },
-        {
             "path": "$HOME/.gem",
             "movable": true,
-            "help": "Export the following environment variables:\n\n```bash\nexport GEM_HOME=\"$XDG_DATA_HOME\"/gem\n```\n"
+            "help": "Supported by default.\n\nNewer versions of directories automatically create directories at correct locations, so this can safely be deleted (after moving your configuration files).\n"
         },
         {
-            "path": "$HOME/.gem/specs",
+            "path": "$HOME/.gem/gemrc",
             "movable": true,
-            "help": "Export the following environment variables:\n\n```bash\nexport GEM_SPEC_CACHE=\"$XDG_CACHE_HOME\"/gem\n```\n"
+            "help": "Supported by default.\n\nYou can move the file to _$XDG_CONFIG_HOME/gem/gemrc_.\n"
+        },
+        {
+            "path": "$HOME/.gem/irbrc",
+            "movable": true,
+            "help": "Supported by default.\n\nYou can move the file to _$XDG_CONFIG_HOME/irb/irbrc_.\n"
         }
     ]
 }
