@@ -1,0 +1,10 @@
+{
+    "files": [
+        {
+            "help": "Currently unsupported.\n\n_Relevant issue:_ https://sourceforge.net/p/sweethome3d/bugs/1256/\n",
+            "movable": false,
+            "path": "$HOME/.eteks/sweethome3d"
+        }
+    ],
+    "name": "Sweet Home 3D"
+}
