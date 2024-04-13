@@ -1,0 +1,10 @@
+{
+    "name": "sts4",
+    "files": [
+        {
+            "path": "$HOME/.sts4",
+            "movable": true,
+            "help": "Pass the following JVM argument to sts4:\n\n```\n-Dlanguageserver.boot.symbolCacheDir=$XDG_CACHE_HOME/sts4/symbolCache\n```\n\nTo learn how to pass JVM arguments, check [this instruction](https://github.com/spring-projects/sts4/wiki/Custom-VM-Args).\n"
+        }
+    ]
+}
