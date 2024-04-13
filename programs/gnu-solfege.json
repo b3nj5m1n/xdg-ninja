@@ -3,12 +3,17 @@
         {
             "path": "$HOME/.solfege",
             "movable": false,
-            "help": "Currently unsupported. Hardcoded value.\n"
+            "help": "Currently unsupported.\n\n_Relevant issue:_ https://savannah.gnu.org/bugs/index.php?50251\n"
         },
         {
             "path": "$HOME/.solfegerc",
             "movable": false,
-            "help": "Currently unsupported. Hardcoded value.\n"
+            "help": "Currently unsupported.\n\n_Relevant issue:_ https://savannah.gnu.org/bugs/index.php?50251\n"
+        },
+        {
+            "path": "$HOME/lessonfiles",
+            "movable": false,
+            "help": "Currently unsupported.\n\n_Relevant issue:_ https://savannah.gnu.org/bugs/index.php?50251\n"
         }
     ],
     "name": "GNU solfege"
