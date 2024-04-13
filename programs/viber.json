@@ -1,0 +1,10 @@
+{
+    "name": "Viber",
+    "files": [
+        {
+            "path": "$HOME/.ViberPC",
+            "movable": false,
+            "help": "Currently unsupported.\n"
+        }
+    ]
+}
