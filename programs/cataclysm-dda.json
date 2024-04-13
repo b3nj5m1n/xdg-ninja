@@ -1,0 +1,10 @@
+{
+    "name": "cataclysm-dda",
+    "files": [
+        {
+            "path": "$HOME/.cataclysm-dda",
+            "movable": true,
+            "help": "Supported by default, but requires you to compile Cataclysm DDA with the `USE_XDG_DIR=1` option. Some distros do this by default.\n"
+        }
+    ]
+}
