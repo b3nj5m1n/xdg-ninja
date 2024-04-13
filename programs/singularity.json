@@ -1,0 +1,10 @@
+{
+    "name": "singularity",
+    "files": [
+        {
+            "path": "$HOME/.singularity",
+            "movable": true,
+            "help": "Export the following environment variables:\n\n```bash\nexport SINGULARITY_CONFIGDIR=\"$XDG_CONFIG_HOME/singularity\"\nexport SINGULARITY_CACHEDIR=\"$XDG_CACHE_HOME/singularity\"\n```\n"
+        }
+    ]
+}
