@@ -1,0 +1,10 @@
+{
+    "name": "chktex",
+    "files": [
+        {
+            "path": "$HOME/.chktexrc",
+            "movable": true,
+            "help": "Export the following environment variable:\n\n```bash\nexport CHKTEXRC=\"$XDG_CONFIG_HOME/chktex\"\n```\nThen move the config file to _$XDG_CONFIG_HOME/chktex/.chktexrc_.\n"
+        }
+    ]
+}
