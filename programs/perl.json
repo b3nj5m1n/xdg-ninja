@@ -1,0 +1,15 @@
+{
+    "name": "perl",
+    "files": [
+        {
+            "path": "$HOME/.cpan",
+            "movable": true,
+            "help": "Not officially supported, but you can get CPAN to use XDG locations by using a workaround described [here](https://github.com/andk/cpanpm/issues/149).\n"
+        },
+        {
+            "path": "$HOME/.perl5",
+            "movable": true,
+            "help": "Not officially supported, but you can get CPAN to use XDG locations by using a workaround described [here](https://github.com/andk/cpanpm/issues/149).\n"
+        }
+    ]
+}
