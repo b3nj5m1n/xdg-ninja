@@ -1,0 +1,10 @@
+{
+    "name": "jgmenu",
+    "files": [
+        {
+            "path": "$HOME/.jgmenu-lockfile",
+            "movable": false,
+            "help": "Currently unsupported.\n"
+        }
+    ]
+}
