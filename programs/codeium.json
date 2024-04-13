@@ -1,0 +1,10 @@
+{
+    "name": "codeium.vim",
+    "files": [
+        {
+            "path": "$HOME/.codeium",
+            "movable": false,
+            "help": "Currently unsupported.\n\n_Relevant issue:_ https://github.com/Exafunction/codeium.vim/issues/290\n"
+        }
+    ]
+}
