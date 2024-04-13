@@ -1,0 +1,10 @@
+{
+    "name": "spamassassin",
+    "files": [
+        {
+            "path": "$HOME/.spamassassin",
+            "movable": false,
+            "help": "Currently unsupported.\n"
+        }
+    ]
+}
