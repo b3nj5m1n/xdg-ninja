@@ -1,0 +1,10 @@
+{
+    "name": "Google Earth",
+    "files": [
+        {
+            "path": "$HOME/.googleearth",
+            "movable": false,
+            "help": "Currently unsupported.\n"
+        }
+    ]
+}
