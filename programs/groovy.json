@@ -1,0 +1,10 @@
+{
+    "name": "groovy",
+    "files": [
+        {
+            "path": "$HOME/.groovy",
+            "movable": false,
+            "help": "Currently unsupported.\n"
+        }
+    ]
+}
