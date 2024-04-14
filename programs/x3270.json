@@ -1,0 +1,20 @@
+{
+    "name": "x3270",
+    "files": [
+        {
+            "path": "$HOME/.x3270pro",
+            "movable": true,
+            "help": "Export the following environment variable:\n\n```bash\nexport X3270PRO=\"$XDG_CONFIG_HOME/x3270/config\"\n```\n"
+        },
+        {
+            "path": "$HOME/.c3270pro",
+            "movable": true,
+            "help": "Export the following environment variable:\n\n```bash\nexport C3270PRO=\"$XDG_CONFIG_HOME/c3270/config\"\n```\n"
+        },
+        {
+            "path": "$HOME/.x3270connect",
+            "movable": false,
+            "help": "Currently unsupported.\n"
+        }
+    ]
+}
