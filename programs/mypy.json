@@ -4,6 +4,11 @@
             "path": "$HOME/.mypy_cache",
             "movable": true,
             "help": "Export the following environment variables:\n\n```bash\nexport MYPY_CACHE_DIR=\"$XDG_CACHE_HOME\"/mypy\n```\n"
+        },
+        {
+            "path": "$HOME/.mypy.ini",
+            "movable": true,
+            "help": "Supported by default.\n\nYou can move the file to _$XDG_CONFIG_HOME/mypy/config_.\n"
         }
     ],
     "name": "mypy"
