@@ -1,0 +1,10 @@
+{
+    "name": "tiptop",
+    "files": [
+        {
+            "path": "$HOME/.tiptoprc",
+            "movable": false,
+            "help": "Currently unsupported.\n\nYou can use the `-W` flag to launch tiptop with a custom config file, but it will still expect _~/.tiptoprc_ to be present.\n"
+        }
+    ]
+}
