@@ -1,10 +1,20 @@
 {
     "files": [
         {
-            "help": "Export the following environment variables:\n\n```bash\nexport OCTAVE_SITE_INITFILE=\"$XDG_CONFIG_HOME/octave/octaverc\"\n```",
+            "path": "$HOME/.octaverc",
             "movable": true,
-            "path": "$HOME/.octaverc"
+            "help": "Export the following environment variable:\n\n```bash\nexport OCTAVE_SITE_INITFILE=\"$XDG_CONFIG_HOME/octave/octaverc\"\n```"
+        },
+        {
+            "path": "$HOME/.octave_hist",
+            "movable": true,
+            "help": "Export the following environment variable:\n\n```bash\nexport OCTAVE_HISTFILE=\"$XDG_STATE_HOME/octave_hist\"\n```"
+        },
+        {
+            "path": "$HOME/.octave_packages",
+            "movable": true,
+            "help": "Add the following to your octaverc:\n\n```\nsource /usr/share/octave/site/m/startup/octaverc;\npkg prefix ~/.local/share/octave/packages ~/.local/share/octave/packages;\npkg local_list /home/<your username>/.local/share/octave/octave_packages;\n```\n"
         }
-            ],
+    ],
     "name": "octave"
 }
