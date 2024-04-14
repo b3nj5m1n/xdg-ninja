@@ -1,0 +1,10 @@
+{
+    "name": "nmap",
+    "files": [
+        {
+            "path": "$HOME/.zenmap",
+            "movable": false,
+            "help": "Currently unsupported.\n\n_Relevant issue:_ https://github.com/nmap/nmap/issues/590\n"
+        }
+    ]
+}

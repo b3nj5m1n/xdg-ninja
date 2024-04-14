@@ -1,0 +1,10 @@
+{
+    "name": "htop",
+    "files": [
+        {
+            "path": "$HOME/.htoprc",
+            "movable": true,
+            "help": "Supported by default.\n\nYou can move the file to _$XDG_CONFIG_HOME/htop/htoprc_.\n"
+        }
+    ]
+}

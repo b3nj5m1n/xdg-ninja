@@ -1,0 +1,15 @@
+{
+    "name": "rpm",
+    "files": [
+        {
+            "path": "$HOME/.rpmrc",
+            "movable": true,
+            "help": "Supported by default.\n\nYou can move the file to _$XDG_CONFIG_HOME/rpm/rpmrc_.\n"
+        },
+        {
+            "path": "$HOME/.rpmmacros",
+            "movable": true,
+            "help": "Supported by default.\n\nYou can move the directory to _$XDG_CONFIG_HOME/rpm/macros_.\n"
+        }
+    ]
+}

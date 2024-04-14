@@ -1,0 +1,10 @@
+{
+    "name": "elan",
+    "files": [
+        {
+            "path": "$HOME/.elan",
+            "movable": false,
+            "help": "Currently unsupported.\n\n_Relevant issue:_ https://github.com/leanprover/elan/issues/75\n"
+        }
+    ]
+}

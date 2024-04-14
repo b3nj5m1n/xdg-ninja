@@ -1,0 +1,10 @@
+{
+    "name": "yard",
+    "files": [
+        {
+            "path": "$HOME/.yard",
+            "movable": false,
+            "help": "Currently unsupported.\n\n_Relevant issue:_ https://github.com/lsegal/yard/issues/1230\n"
+        }
+    ]
+}

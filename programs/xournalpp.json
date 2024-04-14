@@ -1,0 +1,10 @@
+{
+    "name": "xournal++",
+    "files": [
+        {
+            "path": "$HOME/.xournalpp",
+            "movable": true,
+            "help": "Supported by default.\n\nNewer versions of xournal++ will automatically move the files to the correct locations.\n"
+        }
+    ]
+}

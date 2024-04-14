@@ -1,0 +1,10 @@
+{
+    "name": "freerdp",
+    "files": [
+        {
+            "path": "$HOME/.freerdp",
+            "movable": true,
+            "help": "Supported by default.\n\nNewer versions of freerdp automatically create directories at correct locations, so this can safely be deleted.\n"
+        }
+    ]
+}

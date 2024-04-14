@@ -1,0 +1,10 @@
+{
+    "name": "openshot",
+    "files": [
+        {
+            "path": "$HOME/.openshot_qt",
+            "movable": false,
+            "help": "Currently unsupported.\n"
+        }
+    ]
+}

@@ -1,0 +1,10 @@
+{
+    "name": "vale",
+    "files": [
+        {
+            "path": "$HOME/.vale.ini",
+            "movable": true,
+            "help": "Alias vale to use a custom configuration location:\n\n```bash\nalias vale=vale --config \"$XDG_CONFIG_HOME/vale/config.ini\"\n```\n"
+        }
+    ]
+}

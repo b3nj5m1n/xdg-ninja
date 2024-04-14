@@ -1,0 +1,10 @@
+{
+    "name": "remarkable",
+    "files": [
+        {
+            "path": "$HOME/.remarkable",
+            "movable": false,
+            "help": "Currently unsupported.\n"
+        }
+    ]
+}

@@ -1,0 +1,20 @@
+{
+    "name": "vint",
+    "files": [
+        {
+            "path": "$HOME/.vintrc.yaml",
+            "movable": true,
+            "help": "Supported by default.\n\nYou can move the file to _$XDG_CONFIG_HOME/.vintrc.yaml_\n"
+        },
+        {
+            "path": "$HOME/.vintrc.yml",
+            "movable": true,
+            "help": "Supported by default.\n\nYou can move the file to _$XDG_CONFIG_HOME/.vintrc.yaml_\n"
+        },
+        {
+            "path": "$HOME/.vintrc",
+            "movable": true,
+            "help": "Supported by default.\n\nYou can move the file to _$XDG_CONFIG_HOME/.vintrc.yaml_\n"
+        }
+    ]
+}

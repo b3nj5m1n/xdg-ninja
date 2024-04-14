@@ -1,0 +1,10 @@
+{
+    "name": "ruff",
+    "files": [
+        {
+            "path": "$HOME/.ruff_cache",
+            "movable": true,
+            "help": "Export the following environment variable:\n\n```bash\nexport RUFF_CACHE_DIR=\"$XDG_CACHE_HOME/ruff\"\n```\n"
+        }
+    ]
+}

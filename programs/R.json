@@ -5,6 +5,21 @@
             "path": "$HOME/R",
             "movable": true,
             "help": "Set R_LIBS_USER in `$HOME/.Renviron:\n\n```\nR_LIBS_USER=\"$XDG_DATA_HOME\"/R/x86_64-pc-linux-gnu-library\n```\n\nYou may find it necessary to append this line to the end of `/usr/lib/R/library/base/R/Rprofile`:\n\n```R.libPaths( c( \"$XDG_DATA_HOME/R/x86_64-pc-linux-gnu-library/\" , .libPaths() ) )```\n\n**Disclaimer: You may need to re-install your libraries**"
+        },
+        {
+            "path": "$HOME/.Rprofile",
+            "movable": true,
+            "help": "Export the following environment variable:\n\n```bash\nexport R_PROFILE_USER=\"$XDG_CONFIG_HOME/R/profile\"\n```\n"
+        },
+        {
+            "path": "$HOME/.Rdata",
+            "movable": true,
+            "help": "Export the following environment variable:\n\n```bash\nexport R_HOME_USER=\"$XDG_CONFIG_HOME/R\"\n```\n"
+        },
+        {
+            "path": "$HOME/.Rhistory",
+            "movable": true,
+            "help": "Export the following environment variable:\n\n```bash\nexport R_HISTFILE=\"$XDG_CONFIG_HOME/R/history\"\n```\n"
         }
     ]
 }

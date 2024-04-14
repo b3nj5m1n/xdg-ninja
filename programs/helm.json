@@ -1,0 +1,10 @@
+{
+    "name": "helm",
+    "files": [
+        {
+            "path": "$HOME/.helm",
+            "movable": true,
+            "help": "Supported by default.\n\nNewer versions of helm automatically create directories at correct locations, so this can safely be deleted.\n"
+        }
+    ]
+}

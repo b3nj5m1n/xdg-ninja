@@ -1,0 +1,10 @@
+{
+    "name": "Eclipse",
+    "files": [
+        {
+            "path": "$HOME/.eclipse",
+            "movable": true,
+            "help": "You need to add the following option to _$ECLIPSE_HOME/eclipse.ini_:\n```ini\n-Dosgi.configuration.area=@user.home/.config/eclipse\n```\n\nIn some cases, you may not have write access to the _$ECLIPSE_HOME_ directory (for example, Arch Linux hardcodes it to _/usr/bin/eclipse_).\n"
+        }
+    ]
+}

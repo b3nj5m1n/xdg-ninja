@@ -1,0 +1,15 @@
+{
+    "name": "sdcv",
+    "files": [
+        {
+            "path": "$HOME/.stardict",
+            "movable": true,
+            "help": "Supported by default.\n\nYou can move the directory to _$XDG_DATA_HOME/stardict_.\n"
+        },
+        {
+            "path": "$HOME/.sdcv_history",
+            "movable": true,
+            "help": "Supported by default.\n\nYou can move the file to _$XDG_DATA_HOME/sdcv_history_.\n"
+        }
+    ]
+}

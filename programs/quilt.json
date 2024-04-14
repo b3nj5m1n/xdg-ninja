@@ -1,0 +1,10 @@
+{
+    "name": "quilt",
+    "files": [
+        {
+            "path": "$HOME/.quiltrc",
+            "movable": true,
+            "help": "Alias quilt to use custom config location:\n\n```bash\nalias quilt='quilt --quiltrc \"$XDG_CONFIG_HOME\"/quiltrc'\n```\n"
+        }
+    ]
+}

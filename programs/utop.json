@@ -1,0 +1,15 @@
+{
+    "name": "utop",
+    "files": [
+        {
+            "path": "$HOME/.utoprc",
+            "movable": true,
+            "help": "Supported by default.\n\nYou can move the file to _$XDG_CONFIG_HOME/utop/utoprc_.\n"
+        },
+        {
+            "path": "$HOME/.utop-history",
+            "movable": true,
+            "help": "Supported by default.\n\nYou can move the file to _$XDG_STATE_HOME/utop/utop-history_.\n"
+        }
+    ]
+}

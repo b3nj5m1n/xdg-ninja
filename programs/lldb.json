@@ -1,0 +1,15 @@
+{
+    "name": "lldb",
+    "files": [
+        {
+            "path": "$HOME/.lldb",
+            "movable": false,
+            "help": "Currently unsupported.\n\n_Relevant issue:_ https://github.com/llvm/llvm-project/issues/71426\n"
+        },
+        {
+            "path": "$HOME/.lldbinit",
+            "movable": false,
+            "help": "Currently unsupported.\n\n_Relevant issue:_ https://github.com/llvm/llvm-project/issues/71426\n"
+        }
+    ]
+}

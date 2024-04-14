@@ -1,0 +1,15 @@
+{
+    "name": "FontForge",
+    "files": [
+        {
+            "path": "$HOME/.FontForge",
+            "movable": true,
+            "help": "Supported by default.\n\nNewer versions of FontForge automatically create directories at correct locations, so this can safely be deleted.\n"
+        },
+        {
+            "path": "$HOME/.PfaEdit",
+            "movable": true,
+            "help": "Supported by default.\n\nNewer versions of FontForge automatically create directories at correct locations, so this can safely be deleted.\n"
+        }
+    ]
+}

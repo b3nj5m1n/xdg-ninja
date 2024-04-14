@@ -1,0 +1,10 @@
+{
+    "name": "lftp",
+    "files": [
+        {
+            "path": "$HOME/.lftp",
+            "movable": true,
+            "help": "Supported by default.\n\nNewer versions of lftp automatically create directories at correct locations, so this can safely be deleted.\n"
+        }
+    ]
+}

@@ -4,7 +4,12 @@
         {
             "path": "$HOME/.julia",
             "movable": true,
-            "help": "Export the following environment variables:\n\n```bash\nexport JULIA_DEPOT_PATH=\"$XDG_DATA_HOME/julia:$JULIA_DEPOT_PATH\"\n```\n_Note: the trailing **:$JULIA_DEPOT_PATH** is necessary._\n"
+            "help": "Export the following environment variable:\n\n```bash\nexport JULIA_DEPOT_PATH=\"$XDG_DATA_HOME/julia:$JULIA_DEPOT_PATH\"\n```\n_Note: the trailing **:$JULIA_DEPOT_PATH** is necessary._\n"
+        },
+        {
+            "path": "$HOME/.julia/juliaup",
+            "movable": true,
+            "help": "Export the following environment variable:\n\n```bash\nexport JULIAUP_DEPOT_PATH=\"$XDG_DATA_HOME/julia\"\n```\n"
         }
     ]
 }

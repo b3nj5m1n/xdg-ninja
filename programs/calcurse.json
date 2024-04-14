@@ -1,0 +1,10 @@
+{
+    "name": "calcurse",
+    "files": [
+        {
+            "path": "$HOME/.calcurse",
+            "movable": true,
+            "help": "Supported by default, but old location will be used if it exists.\n\nYou can move the directories like this:\n```bash\nmkdir -p \"$XDG_CONFIG_HOME\"/calcurse\nmkdir -p \"$XDG_DATA_HOME\"/calcurse\nmv ~/.calcurse/___{apts,notes,todo} \"$XDG_DATA_HOME\"/calcurse\nmv ~/.calcurse/___{conf,hooks,keys} \"$XDG_CONFIG_HOME\"/calcurse\nrm -rv ~/.calcurse\n```\n"
+        }
+    ]
+}

@@ -1,0 +1,10 @@
+{
+    "name": "mc",
+    "files": [
+        {
+            "path": "$HOME/.mc",
+            "movable": true,
+            "help": "Supported by default.\n\nNewer versions of mc automatically create directories at correct locations, so this can safely be deleted.\n"
+        }
+    ]
+}

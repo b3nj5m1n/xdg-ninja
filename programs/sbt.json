@@ -1,0 +1,15 @@
+{
+    "name": "sbt",
+    "files": [
+        {
+            "path": "$HOME/.sbt",
+            "movable": true,
+            "help": "Alias sbt to use correct locations:\n\n```bash\nalias sbt=\"sbt -ivy $XDG_DATA_HOME/ivy2 -sbt-dir $XDG_DATA_HOME/sbt\"\n```\n"
+        },
+        {
+            "path": "$HOME/.ivy2",
+            "movable": true,
+            "help": "Alias sbt to use correct locations:\n\n```bash\nalias sbt=\"sbt -ivy $XDG_DATA_HOME/ivy2 -sbt-dir $XDG_DATA_HOME/sbt\"\n```\n"
+        }
+    ]
+}

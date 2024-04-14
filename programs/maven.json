@@ -1,0 +1,10 @@
+{
+    "name": "maven",
+    "files": [
+        {
+            "path": "$HOME/.m2",
+            "movable": true,
+            "help": "Alias maven to use a custom config location:\n\n```bash\nalias mvn=\"mvn -gs $XDG_CONFIG_HOME/maven/settings.xml\"\n```\n\nThen add the following to the _settings.xml_ file:\n\n```xml\n<localRepository>${env.XDG_CACHE_HOME}/maven/repository</localRepository>\n```\n"
+        }
+    ]
+}

@@ -1,0 +1,10 @@
+{
+    "name": "spectrwm",
+    "files": [
+        {
+            "path": "$HOME/.spectrwm.conf",
+            "movable": true,
+            "help": "Supported by default.\n\nYou can move the file to _$XDG_CONFIG_HOME/spectrwm/spectrwm.conf_.\n"
+        }
+    ]
+}

@@ -1,0 +1,10 @@
+{
+    "name": "mypaint",
+    "files": [
+        {
+            "path": "$HOME/.mypaint",
+            "movable": true,
+            "help": "Supported by default.\n\nNewer versions of mypaint automatically create directories at correct locations, so this can safely be deleted.\n"
+        }
+    ]
+}

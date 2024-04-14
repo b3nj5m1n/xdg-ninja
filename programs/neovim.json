@@ -1,0 +1,20 @@
+{
+    "name": "neovim",
+    "files": [
+        {
+            "path": "$HOME/.nvim",
+            "movable": true,
+            "help": "Supported by default.\n\nNewer versions of neovim automatically create files at correct locations. You can move your configuration to _$XDG_CONFIG_HOME/nvim/_ and delete this directory.\n"
+        },
+        {
+            "path": "$HOME/.nviminfo",
+            "movable": true,
+            "help": "Supported by default.\n\nNewer versions of neovim automatically create files at correct locations, so this can safely be deleted.\n"
+        },
+        {
+            "path": "$HOME/.nvimlog",
+            "movable": true,
+            "help": "Supported by default.\n\nNewer versions of neovim automatically create files at correct locations, so this can safely be deleted.\n"
+        }
+    ]
+}

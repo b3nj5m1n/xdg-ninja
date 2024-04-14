@@ -1,0 +1,10 @@
+{
+    "name": "minicom",
+    "files": [
+        {
+            "path": "$HOME/.minirc.dfl",
+            "movable": false,
+            "help": "Currently unsupported.\n"
+        }
+    ]
+}

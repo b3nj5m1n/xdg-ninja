@@ -1,0 +1,10 @@
+{
+    "name": "tllocalmgr",
+    "files": [
+        {
+            "path": "$HOME/.texlive",
+            "movable": false,
+            "help": "Currently unsupported.\n"
+        }
+    ]
+}

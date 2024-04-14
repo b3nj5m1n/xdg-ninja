@@ -1,0 +1,10 @@
+{
+    "name": "sbcl",
+    "files": [
+        {
+            "path": "$HOME/.sbclrc",
+            "movable": true,
+            "help": "Create an _/etc/sbclrc_ file with the following contents:\n\n```lisp\n(require :asdf)\n(setf sb-ext:*userinit-pathname-function*\n    (lambda () (uiop:xdg-config-home #P\"sbcl/sbclrc\")))\n```\n"
+        }
+    ]
+}

@@ -1,0 +1,10 @@
+{
+    "name": "dircolors",
+    "files": [
+        {
+            "path": "$HOME/.dircolors",
+            "movable": true,
+            "help": "Supported by default.\n\nYou can move the file to _$XDG_CONFIG_HOME/dircolors_. Then initialize dircolors like this:\n\n```bash\neval $(dircolors \"$XDG_CONFIG_HOME\"/dircolors)\n```\n"
+        }
+    ]
+}

@@ -1,0 +1,10 @@
+{
+    "name": "amule",
+    "files": [
+        {
+            "path": "$HOME/.aMule",
+            "movable": false,
+            "help": "Currently unsupported.\n\n_Relevant issue:_ https://github.com/amule-project/amule/issues/254\n"
+        }
+    ]
+}

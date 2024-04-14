@@ -1,9 +1,14 @@
 {
     "files": [
         {
+            "path": "$HOME/.irbrc",
+            "movable": true,
+            "help": "Export the following environment variable:\n\n```bash\nexport IRBRC=\"$XDG_CONFIG_HOME/irb/irbrc\"\n```\n"
+        },
+        {
             "path": "$HOME/.irb_history",
             "movable": true,
-            "help": "In Ruby versions 2.7 or later, configure IRB.conf[:HISTORY_FILE] in your .irbrc to $XDG_STATE_HOME/irb/history. For prior versions, set $irbrc\n"
+            "help": "In Ruby versions 2.7 or later, add the following to your .irbrc:\n\n```ruby\nIRB.conf[:HISTORY_FILE] ||= File.join(ENV[\"XDG_DATA_HOME\"], \"irb\", \"history\")\n```\n\nFor prior versions, set $IRBRC\n"
         }
     ],
     "name": "irb history"

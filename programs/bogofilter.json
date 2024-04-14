@@ -1,0 +1,10 @@
+{
+    "name": "bogofilter",
+    "files": [
+        {
+            "path": "$HOME/.bogofilter",
+            "movable": true,
+            "help": "Export the following environment variable:\n\n```bash\nexport BOGOFILTER_DIR=\"$XDG_DATA_HOME/bogofilter\"\n```\n"
+        }
+    ]
+}
