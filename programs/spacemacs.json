@@ -1,0 +1,15 @@
+{
+    "name": "spacemacs",
+    "files": [
+        {
+            "path": "$HOME/.spacemacs",
+            "movable": true,
+            "help": "Supported by default.\n\nYou can move the directory to _$XDG_CONFIG_HOME/spacemacs_.\n"
+        },
+        {
+            "path": "$HOME/.spacemacs.d",
+            "movable": true,
+            "help": "Supported by default.\n\nYou can move the directory to _$XDG_CONFIG_HOME/spacemacs_.\n"
+        }
+    ]
+}
