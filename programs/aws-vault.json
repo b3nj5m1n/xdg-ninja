@@ -3,7 +3,7 @@
         {
             "path": "$HOME/.awsvault",
             "movable": true,
-            "help": "Export the following environment variable:\n\n```bash\nexport AWS_VAULT_FILE_DIR="$XDG_DATA_HOME/awsvault"\n```\n"
+            "help": "Export the following environment variable:\n\n```bash\nexport AWS_VAULT_FILE_DIR=\"$XDG_DATA_HOME/awsvault\"\n```\n"
         }
     ],
     "name": "aws-vault"
