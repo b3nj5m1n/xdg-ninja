@@ -1,6 +1,8 @@
 <div>
   <h1 align="center">xdg-ninja</h1>
-  <h5 align="center">Because you wouldn't let just anyone into your <i>$HOME</i></h5>
+  <h5 align="center">
+    Because you wouldn't let just anyone into your <i>$HOME</i>
+  </h5>
 </div>
 
 A shell script which checks your _$HOME_ for unwanted files and directories.
@@ -18,6 +20,7 @@ The configurations are from the [arch wiki page on XDG_BASE_DIR](https://wiki.ar
 ### Using nix
 
 If you're using [nix](https://nixos.org) and have flakes turned on, you can just run the following command:
+
 ```sh
 nix run github:b3nj5m1n/xdg-ninja
 ```
@@ -59,7 +62,7 @@ brew upgrade xdg-ninja --fetch-HEAD
 
 ## Configuration
 
-The configuration is done in the _programs/_ directory, which should be located in the same working directory as the xdg-ninja.sh script. This can be overriden with the `XN_PROGRAMS_DIR` environment variable.
+The configuration is done in the _programs/_ directory, which should be located in the same working directory as the xdg-ninja.sh script. This can be overridden with the `XN_PROGRAMS_DIR` environment variable.
 
 You define a program, and then a list of files and directories which this program ruthlessly puts into your _$HOME_ directory.
 
@@ -74,6 +77,7 @@ Files in this directory can have any name, but using the name of the program is 
 You can download the _xdgnj_ executable from the releases page. Alternatively, you can use the nix flake or build it from scratch using _cabal_, _stack_, or the provided docker image in _build/_. (To be clear, this is just a tool that will help you automatically generate the config files, you still only need your shell to run the tests)
 
 Available commands:
+
 ```sh
 xdgnj add # Adds a new configuration
 xdgnj prev programs/FILE.json # Preview the configuration for a program
@@ -84,6 +88,7 @@ xdgnj run # Mostly the same as running the shell script
 #### Using nix
 
 If you're using [nix](https://nixos.org) and have flakes turned on, you can just run the following command:
+
 ```sh
 nix run github:b3nj5m1n/xdg-ninja#xdgnj-bin ...
 ```
@@ -101,29 +106,36 @@ It puts the file _.gitconfig_ into _$HOME_.
 Luckily, the XDG spec is supported by git, so we can simply move the file to _XDG_CONFIG_HOME/git/config_.
 
 We can use that last sentence as our instructions. In this case, there are no newlines, so escaping this string for use in json is trivial, however, this is how you should generally approach it:
+
 ```sh
 echo "Luckily, the XDG spec is supported by git, so we can simply move the file to _XDG_CONFIG_HOME/git/config_." | jq -aRs .
 ```
 
 Let's see what the output of this command looks like for something a little more sophisticated.
 Here's an example file:
+
 ```sh
 cat example.md
 ```
-```
+
+```sh
 Currently not fixable.
 
 _(But you can probably just delete the dir)_
 ```
+
 Here's what catting this file to the _jq_ command produces:
+
 ```sh
 cat example.md | jq -aRs .
 ```
-```
+
+```sh
 "Currently not fixable.\n\n_(But you can probably just delete the dir)_\n"
 ```
 
 Now, we can assemble our final json file:
+
 ```json
 {
     "name": "git",
