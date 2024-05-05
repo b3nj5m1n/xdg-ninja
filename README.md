@@ -28,9 +28,24 @@ Clone the repository somewhere, then run the _./xdg-ninja.sh_ script.
 
 This will run every test in the default configuration.
 
-### Installing with Homebrew
+### [Homebrew](https://brew.sh)
 
-To install xdg-ninja with [Homebrew](https://brew.sh), run `brew install xdg-ninja` to install the script and all of its dependencies, then run the `xdg-ninja` command.
+> [!NOTE]
+> Due to how `xdg-ninja` is developed, releases are not cut, so `brew` ships a stale version, therefore you have to install and upgrade `xdg-ninja` from the git HEAD. ref: [#204](https://github.com/b3nj5m1n/xdg-ninja/issues/204)
+>
+> Homebrew will not upgrade `xdg-ninja` when running a generic `brew upgrade`, you must specifically upgrade `xdg-ninja` from the git HEAD, _see below_
+
+Install:
+
+```sh
+brew install xdg-ninja --HEAD
+```
+
+Upgrade:
+
+```sh
+brew upgrade xdg-ninja --fetch-HEAD
+```
 
 ## Dependencies
 
