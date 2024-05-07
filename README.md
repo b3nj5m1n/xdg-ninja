@@ -59,11 +59,13 @@ Upgrade:
 brew upgrade xdg-ninja --fetch-HEAD
 ```
 
-### Manual Installation
+### Other Package Managers
 
-Clone the repository, then run the [`./xdg-ninja.sh`](./xdg-ninja.sh) script.
+`xdg-ninja` is avaliable in many other package managers.
 
-This will run every test in the default configuration.
+The full list is available on the [repology page](https://repology.org/project/xdg-ninja/versions).
+
+Follow the instructions for your package manager to install `xdg-ninja`.
 
 ## Contributing
 
