@@ -133,7 +133,7 @@ Luckily, the XDG spec is supported by git, so we can simply move the file to `$X
 We can use that last sentence as our instructions. In this case, there are no newlines, so escaping this string for use in json is trivial, however, this is how you should generally approach it:
 
 ```sh
-echo "Luckily, the XDG spec is supported by git, so we can simply move the file to `$XDG_CONFIG_HOME/git/config`." | jq -aRs .
+echo "Luckily, the XDG spec is supported by git, so we can simply move the file to _$XDG_CONFIG_HOME/git/config_." | jq -aRs .
 ```
 
 Let's see what the output of this command looks like for something a little more sophisticated.
@@ -169,7 +169,7 @@ Now, we can assemble our final json file:
         {
             "path": "$HOME/.gitconfig",
             "movable": true,
-            "help": "Luckily, the XDG spec is supported by git, so we can simply move the file to `$XDG_CONFIG_HOME/git/config`.\n"
+            "help": "Luckily, the XDG spec is supported by git, so we can simply move the file to _$XDG_CONFIG_HOME/git/config_.\n"
         }
     ]
 }
