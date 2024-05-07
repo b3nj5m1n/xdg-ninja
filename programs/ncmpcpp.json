@@ -5,6 +5,11 @@
             "path": "$HOME/.ncmpcpp",
             "movable": true,
             "help": "Supported by default.\n\nYou can move the directory to _$XDG_CONFIG_HOME/ncmpcpp_.\n\nNote that the _error.log_ file will still be created at the old location. To avoid that, set `ncmcpp_directory` in your config file.\n"
+        },
+        {
+            "path": "$HOME/.lyrics",
+            "movable": true,
+            "help": "This directory is where _ncmpcpp_ stores lyrics by default, for other _mpd_ clients also use this default path. You can move it to elsewhere, say `$XDG_CONFIG_HOME/lyrics`, but it works __only if you only use _ncmpcpp___.\n\nSupposed your `$XDG_CONFIG_HOME` is set to `~/.local/share`.\nPut the following to your _ncmpcpp_ configuration, usually `$XDG_CONFIG_HOME/ncmpcpp/config`\n\n```\nlyrics_directory = ~/.local/share/lyrics\n```\n\n"
         }
     ]
 }
