@@ -20,6 +20,18 @@ The configurations are from the [arch wiki page on XDG_BASE_DIR](https://wiki.ar
 
 ## Installing
 
+### Manual Installation
+
+Clone the repository, then run the [`./xdg-ninja.sh`](./xdg-ninja.sh) script.
+
+```sh
+git clone https://github.com/b3nj5m1n/xdg-ninja
+cd xdg-ninja
+./xdg-ninja.sh
+```
+
+This will run every test in the default configuration.
+
 ### [Nix](https://nixos.org)
 
 Turn on [flakes](https://nixos.wiki/wiki/Flakes), then run the following command:
