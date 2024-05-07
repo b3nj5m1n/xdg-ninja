@@ -1,0 +1,10 @@
+{
+    "name": "login",
+    "files": [
+        {
+            "path": "$HOME/.hushlogin",
+            "movable": true,
+            "help": "Some systems support moving this file to _/etc/hushlogins_\n\nRun `man login` for documentation"
+        }
+    ]
+}
