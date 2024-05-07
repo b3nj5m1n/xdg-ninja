@@ -4,7 +4,7 @@
         {
             "path": "$HOME/.hushlogin",
             "movable": true,
-            "help": "Some systems support moving this file to _/etc/hushlogins_\n\nRun `man login` for documentation"
+            "help": "This is an optional file that surpresses the shell login message\n\nYou can safely remove this file if you do not want to silence your shell startup\n\nSome systems support moving this file to _/etc/hushlogins_\n\nRun `man login` for documentation"
         }
     ]
 }
