@@ -93,11 +93,30 @@ Files in this directory can have any name, but using the name of the program is 
 
 ### Automatically Generating Configuration
 
-You can download the `xdgnj` executable from the releases page.
+For x86_64 Linux systems, you can download the `xdgnj` binary from the [releases page](https://github.com/b3nj5m1n/xdg-ninja/releases).
 
 Alternatively, you can build it from source using `cabal` or `stack`, use the nix flake or use the provided docker image.
 
 > To be clear, this is just a tool that will help you automatically generate the config files, you still only need your shell to run the tests
+
+#### Available commands
+
+```sh
+xdgnj add # Adds a new configuration
+xdgnj prev programs/FILE.json # Preview the configuration for a program
+xdgnj edit programs/FILE.json # Edit the configuration for a program
+xdgnj run # Mostly the same as running the shell script
+```
+
+#### Prebuilt Binaries
+
+> [!IMPORTANT]
+> The binaries only run on x86_64 Linux systems.
+
+```sh
+curl -fsSL -o xdgnj https://github.com/b3nj5m1n/xdg-ninja/releases/latest/download/xdgnj
+chmod +x xdgnj
+```
 
 #### Building from source
 
@@ -112,15 +131,6 @@ nix run github:b3nj5m1n/xdg-ninja#xdgnj-bin ...
 #### Docker
 
 Use the provided dockerfile in [`./haskell/build/`](./haskell/build/).
-
-Available commands:
-
-```sh
-xdgnj add # Adds a new configuration
-xdgnj prev programs/FILE.json # Preview the configuration for a program
-xdgnj edit programs/FILE.json # Edit the configuration for a program
-xdgnj run # Mostly the same as running the shell script
-```
 
 ### Manually Creating Configuration
 
