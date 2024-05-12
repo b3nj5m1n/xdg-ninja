@@ -3,8 +3,8 @@
     "files": [
         {
             "path": "$HOME/.minecraft",
-            "movable": false,
-            "help": "Most launchers support moving this directory:\n\n - Official launcher:\n\nSet directory path with --workDir flag. **CURRENTLY BROKEN**\n\n*Relevant issue:*\nhttps://bugs.mojang.com/browse/MCL-17153\n\n - TLauncher:\n\nChange directory path in settings.\n"
+            "movable": true,
+            "help": "The official launcher currently does not allow this.\n\n - Official launcher:\n\nSet directory path with --workDir flag. **CURRENTLY BROKEN**\n\n*Relevant issue:*\nhttps://bugs.mojang.com/browse/MCL-17153\n\nMost third party launchers support moving this directory:\n\n- TLauncher:\n\nChange directory path in settings.\n"
         },
         {
             "path": "$HOME/.betacraft",
