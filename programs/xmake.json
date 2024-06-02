@@ -4,7 +4,7 @@
         {
             "path": "$HOME/.xmake",
             "movable": true,
-            "help": "export XMAKE_GLOBALDIR=\"$XDG_CONFIG_HOME/xmake\"\nSee `xmake show -l envs` or [xmake doc](https://xmake.io/#/guide/configuration?id=environment-variables) for details"
+            "help": "export XMAKE_GLOBALDIR=\"$XDG_CONFIG_HOME/xmake\"\nSee `xmake show -l envs` or xmake doc for details\nhttps://xmake.io/#/guide/configuration?id=environment-variables"
         },
         {
             "path": "$HOME/.xmake/packages",
