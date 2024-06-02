@@ -1,0 +1,20 @@
+{
+    "name": "xmake",
+    "files": [
+        {
+            "path": "$HOME/.xmake",
+            "movable": true,
+            "help": "export XMAKE_GLOBALDIR=\"$XDG_CONFIG_HOME/xmake\"\nSee `xmake show -l envs` or [xmake doc](https://xmake.io/#/guide/configuration?id=environment-variables) for details"
+        },
+        {
+            "path": "$HOME/.xmake/packages",
+            "movable": true,
+            "help": "export XMAKE_PKG_INSTALLDIR=\"$XDG_DATA_HOME/xmake\"\n"
+        },
+        {
+            "path": "$HOME/.xmake/cache",
+            "movable": true,
+            "help": "export XMAKE_PKG_CACHEDIR=\"$XDG_CACHE_HOME/xmake\"\n"
+        }
+    ]
+}
