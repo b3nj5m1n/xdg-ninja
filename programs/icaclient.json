@@ -1,0 +1,10 @@
+{
+    "files": [
+        {
+            "path": "$HOME/.ICAClient",
+            "movable": false,
+            "help": "Currently unsupported.\n"
+        }
+    ],
+    "name": "Citrix Workspace App"
+}
