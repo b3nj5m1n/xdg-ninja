@@ -1,0 +1,15 @@
+{
+    "files": [
+        {
+            "help": "Currently unsupported.\n\n_Relevant issue:_ https://github.com/Neverball/neverball/pull/184\n",
+            "movable": false,
+            "path": "$HOME/.neverball"
+        },
+        {
+            "help": "Currently unsupported.\n\n_Relevant issue:_ https://github.com/Neverball/neverball/pull/184\n",
+            "movable": false,
+            "path": "$HOME/.neverball-dev"
+        }
+    ],
+    "name": "Neverball"
+}
