@@ -1,0 +1,10 @@
+{
+    "name": "Red Hat telemetry",
+    "files": [
+        {
+            "path": "$HOME/.redhat",
+            "movable": false,
+            "help": "Currently unsupported.\n\nThis directory contains data used by Red Hat for telemetry. If you don't want telemetry you can probably safely delete the directory. Note that the directory may also contain your preferences regarding telemetry though (enable or disable).\n\n_Relevant issue:_ https://github.com/redhat-developer/vscode-redhat-telemetry/issues/51\n"
+        }
+    ]
+}
