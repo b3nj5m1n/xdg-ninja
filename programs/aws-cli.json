@@ -1,9 +1,24 @@
 {
     "files": [
         {
-            "path": "$HOME/.aws",
+            "path": "$HOME/.aws/credentials",
             "movable": true,
-            "help": "Export the following environment variables:\n\n```bash\nexport AWS_SHARED_CREDENTIALS_FILE=\"$XDG_CONFIG_HOME\"/aws/credentials\nexport AWS_CONFIG_FILE=\"$XDG_CONFIG_HOME\"/aws/config\n```\n"
+            "help": "Export the following environment variable:\n\n```bash\nexport AWS_SHARED_CREDENTIALS_FILE=\"$XDG_CONFIG_HOME\"/aws/credentials\n```\n"
+        },
+        {
+            "path": "$HOME/.aws/config",
+            "movable": true,
+            "help": "Export the following environment variable:\n\n```bash\nexport AWS_CONFIG_FILE=\"$XDG_CONFIG_HOME\"/aws/config\n```\n"
+        },
+        {
+            "path": "$HOME/.aws/sso",
+            "movable": false,
+            "help": "Currently unsupported.\n\n_Relevant issue:_ https://github.com/aws/aws-cli/issues/1804\n"
+        },
+        {
+            "path": "$HOME/.aws/cli",
+            "movable": false,
+            "help": "Currently unsupported.\n\n_Relevant issue:_ https://github.com/aws/aws-cli/issues/1804\n"
         }
     ],
     "name": "aws-cli"
