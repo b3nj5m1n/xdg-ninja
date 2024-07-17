@@ -4,12 +4,12 @@
         {
             "path": "$HOME/.fontconfig",
             "movable": true,
-            "help": "Supported\n\nThe file $HOME/.fontconfig can be moved to $XDG_DATA_HOME/fontconfig.\n"
+            "help": "Supported\n\nThe file $HOME/.fontconfig can be moved to $XDG_CACHE_HOME/fontconfig.\n"
         },
         {
             "path": "$HOME/.fonts.conf",
             "movable": true,
-            "help": "Supported\n\nThe file $HOME/.fonts.conf can be moved to $XDG_DATA_HOME/fontconfig/fonts.conf.\n"
+            "help": "Supported\n\nThe file $HOME/.fonts.conf can be moved to $XDG_CONFIG_HOME/fontconfig/fonts.conf.\nThe <dir> element may be changed to <dir prefix=\"xdg\">fonts</dir>\n"
         }
     ]
 }
