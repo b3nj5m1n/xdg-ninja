@@ -13,7 +13,7 @@
         {
             "path": "$HOME/.psql_history",
             "movable": true,
-            "help": "Export the following environment variables:\n\n```bash\nexport PSQL_HISTORY=\"$XDG_DATA_HOME/psql_history\"\n```\n"
+            "help": "Export the following environment variables:\n\n```bash\nexport PSQL_HISTORY=\"$XDG_STATE_HOME/psql_history\"\n```\n"
         },
         {
             "path": "$HOME/.psqlrc",

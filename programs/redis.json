@@ -3,7 +3,7 @@
         {
             "path": "$HOME/.rediscli_history",
             "movable": true,
-            "help": "Export the following environment variables:\n\n```bash\nexport REDISCLI_HISTFILE=\"$XDG_DATA_HOME\"/redis/rediscli_history\n```\n"
+            "help": "Export the following environment variables:\n\n```bash\nexport REDISCLI_HISTFILE=\"$XDG_STATE_HOME\"/redis/rediscli_history\n```\n"
         },
         {
             "path": "$HOME/.redisclirc",
