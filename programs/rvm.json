@@ -1,0 +1,10 @@
+{
+    "files": [
+        {
+            "path": "$HOME/.rvm",
+            "movable": true,
+            "help": "Export the following environment variables, and note the lower case:\n\n```bash\nexport rvm_path=\"$XDG_DATA_HOME\"/rvm\n```\n"
+        }
+    ],
+    "name": "rvn"
+}
