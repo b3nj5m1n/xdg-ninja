@@ -1,0 +1,10 @@
+{
+    "name": "emscripten",
+    "files": [
+        {
+            "path": "$HOME/.emscripten",
+            "movable": false,
+            "help": "Currently unsupported.\n\n_Relevant issue:_ https://github.com/emscripten-core/emscripten/issues/3624\n"
+        }
+    ]
+}

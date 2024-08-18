@@ -1,0 +1,10 @@
+{
+    "name": "gpodder",
+    "files": [
+        {
+            "path": "$HOME/gPodder",
+            "movable": true,
+            "help": "Export the following envirtonment variables:\n\n```bash\nexport GPODDER_HOME=\"$XDG_DATA_HOME/gPodder\"\nexport GPODDER_DOWNLOAD_DIR=\"$HOME/Downloads/gPodder\"\n```\n"
+        }
+    ]
+}

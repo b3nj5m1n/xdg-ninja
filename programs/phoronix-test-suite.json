@@ -1,0 +1,10 @@
+{
+    "name": "Phoronix test suite",
+    "files": [
+        {
+            "path": "$HOME/.phoronix-test-suite",
+            "movable": false,
+            "help": "Currently unsupported.\n\n_Relevant issue:_ https://github.com/phoronix-test-suite/phoronix-test-suite/issues/453\n"
+        }
+    ]
+}

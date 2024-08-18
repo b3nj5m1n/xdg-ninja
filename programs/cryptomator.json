@@ -1,0 +1,10 @@
+{
+    "name": "Cryptomator",
+    "files": [
+        {
+            "path": "$HOME/.Cryptomator",
+            "movable": true,
+            "help": "You need to launch Cryptomator with the following flag:\n\n```\n-Dcryptomator.mountPointsDir=\"$XDG_DATA_HOME/cryptomator\"\n```\n\n"
+        }
+    ]
+}

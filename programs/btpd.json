@@ -1,0 +1,10 @@
+{
+    "name": "btpd",
+    "files": [
+        {
+            "path": "$HOME/.btpd",
+            "movable": true,
+            "help": "Alias btpd and btcli to use correct locations:\n\n```bash\nalias btpd='btpd -d \"$XDG_DATA_HOME\"/.btpd'\nalias btcli='HOME=\"$XDG_DATA_HOME\" btcli'\n```\n"
+        }
+    ]
+}

@@ -1,0 +1,10 @@
+{
+    "name": "nyx",
+    "files": [
+        {
+            "path": "$HOME/.nyx",
+            "movable": true,
+            "help": "First, create a _$XDG_CONFIG_HOME/nyxrc_ file with the following content:\n\n```\ndata_directory ~/.cache/nyx\n```\nNote that you can't use variable substitution inside nyxrc, so you will have to hardcode your _XDG_CACHE_HOME_.\nAlternatively, disable caching to disk:\n\n```\ndata_directory disabled\n```\nFinally, in your shell startup file:\n\n```sh\nalias nyx=\"nyx --config $XDG_CONFIG_HOME/nyxrc\"\n```\nSource: https://nyx.torproject.org/#configuration\n"
+        }
+    ]
+}

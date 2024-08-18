@@ -1,0 +1,10 @@
+{
+    "name": "pipx",
+    "files": [
+        {
+            "path": "$HOME/.local/pipx",
+            "movable": true,
+            "help": "Supported by default, but uses the old location if it exists.\n\nYou can move the contents of this directory as described [here](https://github.com/pypa/pipx/pull/1001)\n"
+        }
+    ]
+}

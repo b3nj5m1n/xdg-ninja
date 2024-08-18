@@ -1,0 +1,10 @@
+{
+    "name": "Portfolio Performance",
+    "files": [
+        {
+            "path": "$HOME/.PortfolioPerformance",
+            "movable": false,
+            "help": "Currently unsupported.\n\n_Relevant issue:_ https://github.com/portfolio-performance/portfolio/issues/1922\n"
+        }
+    ]
+}

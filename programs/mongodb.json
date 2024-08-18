@@ -1,0 +1,20 @@
+{
+    "files": [
+        {
+            "help": "Currently unsupported.\n\n_Relevant issue:_ https://jira.mongodb.org/browse/MONGOSH-1070\n",
+            "movable": false,
+            "path": "$HOME/.mongodb"
+        },
+        {
+            "help": "Currently unsupported.\n\n_Relevant issue:_ https://jira.mongodb.org/browse/DOCS-5652\n",
+            "movable": false,
+            "path": "$HOME/.mongorc.js"
+        },
+        {
+            "help": "Currently unsupported.\n",
+            "movable": false,
+            "path": "$HOME/.dbshell"
+        }
+    ],
+    "name": "MongoDB"
+}

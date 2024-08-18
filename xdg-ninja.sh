@@ -66,7 +66,7 @@ help() {
     ${FX_ITALIC}--skip-unsupported${FX_RESET}  ${FX_BOLD}Don't display anything for files that do not have fixes available${FX_RESET}
 
     """
-    printf "%b" "$HELPSTRING"
+    printf "%b\n" "$HELPSTRING"
 }
 
 SKIP_OK=true

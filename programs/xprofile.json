@@ -1,0 +1,10 @@
+{
+    "files": [
+        {
+            "help": "Currently unsupported.\n\nhttps://wiki.archlinux.org/title/Xprofile\n",
+            "movable": false,
+            "path": "$HOME/.xprofile"
+        }
+    ],
+    "name": "xprofile"
+}

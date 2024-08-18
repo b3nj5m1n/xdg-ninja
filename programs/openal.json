@@ -1,0 +1,10 @@
+{
+    "name": "openal",
+    "files": [
+        {
+            "path": "$HOME/.alsoftrc",
+            "movable": true,
+            "help": "Supported by default.\n\nYou can move the file to _$XDG_CONFIG_HOME/alsoft.conf_.\n"
+        }
+    ]
+}

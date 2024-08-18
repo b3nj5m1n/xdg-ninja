@@ -1,44 +1,66 @@
 {
-    "title": "Program",
-    "description": "Specification of files or folders in the $HOME folder for a program",
-    "type": "object",
-    "properties": {
-        "name": {
-            "type": "string",
-            "description": "Name of the program",
-            "minLength": 1
-        },
-        "files": {
-            "description": "List of files (or folders) associated with the program",
-            "type": "array",
-            "items": {
-                    "type": "object",
-                    "properties": {
-                        "path": {
-                            "type": "string",
-                            "description": "Path to file (or folder).",
-                            "minLength": 1
-                        },
-                        "movable": {
-                            "type": "boolean",
-                            "description": "Is file (or folder) movable to a place other than $HOME."
-                        },
-                        "help": {
-                            "type": "string",
-                            "description": "Help text for user. Supports markdown."
-                        }
-                    },
-                    "required": [
-                        "path",
-                        "movable",
-                        "help"
-                    ]
-            },
-            "minItems": 1
-        }
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "definitions": {
+    "empty": {
+      "type": "string",
+      "pattern": "^\\s+$"
+    }
+  },
+  "title": "specification",
+  "description": "A specification of files or folders in the $HOME folder for a program\nhttps://github.com/b3nj5m1n/xdg-ninja",
+  "type": "object",
+  "required": ["name", "files"],
+  "properties": {
+    "name": {
+      "title": "name",
+      "description": "A program name\nRestrictions:\n- can't contain just spaces\nhttps://github.com/b3nj5m1n/xdg-ninja",
+      "type": "string",
+      "minLength": 1,
+      "not": {
+        "$ref": "#/definitions/empty"
+      },
+      "examples": ["abook"]
     },
-    "required": [
-        "name",
-        "files"
-    ]
+    "files": {
+      "title": "files",
+      "description": "Files and folders for a program\nhttps://github.com/b3nj5m1n/xdg-ninja",
+      "type": "array",
+      "uniqueItems": true,
+      "minItems": 1,
+      "items": {
+        "description": "A file or a folder for a program\nhttps://github.com/b3nj5m1n/xdg-ninja",
+        "type": "object",
+        "required": ["path", "movable", "help"],
+        "properties": {
+          "path": {
+            "title": "path",
+            "description": "A path to a file or a folder\nRestrictions:\n- can't contain just spaces\nhttps://github.com/b3nj5m1n/xdg-ninja",
+            "type": "string",
+            "minLength": 1,
+            "not": {
+              "$ref": "#/definitions/empty"
+            },
+            "examples": ["$HOME/.abook"]
+          },
+          "movable": {
+            "title": "movable",
+            "description": "Whether a file or a folder is movable to a place other than $HOME\nhttps://github.com/b3nj5m1n/xdg-ninja",
+            "type": "boolean"
+          },
+          "help": {
+            "title": "help",
+            "description": "A help message for a user in markdown\nRestrictions:\n- can't contain just spaces\nhttps://github.com/b3nj5m1n/xdg-ninja",
+            "type": "string",
+            "minLength": 1,
+            "not": {
+              "$ref": "#/definitions/empty"
+            },
+            "examples": [
+              "Alias abook to use custom locations for configuration and data:\n\n```bash\nalias abook=abook --config \"$XDG_CONFIG_HOME\"/abook/abookrc --datafile \"$XDG_DATA_HOME\"/abook/addressbook\n```\n"
+            ]
+          }
+        }
+      }
+    }
+  }
 }

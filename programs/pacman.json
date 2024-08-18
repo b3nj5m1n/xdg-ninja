@@ -1,0 +1,10 @@
+{
+    "name": "pacman",
+    "files": [
+        {
+            "path": "$HOME/.makepkg.conf",
+            "movable": true,
+            "help": "Supported by default.\n\nYou can move the file to _$XDG_CONFIG_HOME/pacman/makepkg.conf_.\n"
+        }
+    ]
+}

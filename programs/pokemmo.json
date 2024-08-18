@@ -1,0 +1,11 @@
+{
+	"name": "pokemmo",
+	"files": [
+		{
+			"path": "$HOME/.pokemmo",
+			"movable": true,
+			"help": "Supported by default, you can move this directory to _$XDG_DATA_HOME/pokemmo_.\n"
+		}
+	]
+}
+

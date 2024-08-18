@@ -1,0 +1,10 @@
+{
+    "name": "texinfo",
+    "files": [
+        {
+            "path": "$HOME/.infokey",
+            "movable": true,
+            "help": "Alias texinfo to use the correct location:\n\n```bash\nalias info='info --init-file \"$XDG_CONFIG_HOME/infokey\"'\n```\n"
+        }
+    ]
+}

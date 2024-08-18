@@ -3,7 +3,7 @@
         {
             "path": "$HOME/.jupyter",
             "movable": true,
-            "help": "Export the following environment variables:\n\n```bash\nexport JUPYTER_CONFIG_DIR=\"$XDG_CONFIG_HOME\"/jupyter\n```\n"
+            "help": "Supported by default.\n\nYou can move the directory to _$XDG_CONFIG_HOME/jupyter.\n"
         }
     ],
     "name": "jupyter"

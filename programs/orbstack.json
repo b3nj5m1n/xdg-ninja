@@ -1,0 +1,15 @@
+{
+    "name": "OrbStack",
+    "files": [
+        {
+            "path": "$HOME/.orbstack",
+            "movable": false,
+            "help": "Currently unsupported.\n\n_Relevant issue:_ https://github.com/orbstack/orbstack/issues/60\n"
+        },
+        {
+            "path": "$HOME/OrbStack",
+            "movable": false,
+            "help": "Currently unsupported.\n\n_Relevant issue:_ https://github.com/orbstack/orbstack/issues/239\n"
+        }
+    ]
+}

@@ -1,7 +1,7 @@
 {
     "files": [
         {
-            "help": "Alias xonsh to use a custom configuration location:\n\n```bash\nalias xonsh=\"xonsh --rc $XDG_CONFIG_HOME/xonsh/xonshrc\"\n```\n",
+            "help": "Supported by default.\n\nYou can move the directory to _$XDG_CONFIG_HOME/xonsh/rc.xsh.\n",
             "movable": true,
             "path": "$HOME/.xonshrc"
         },

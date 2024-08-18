@@ -1,0 +1,10 @@
+{
+    "name": "iwctl",
+    "files": [
+        {
+            "path": "$HOME/.iwctl_history",
+            "movable": true,
+            "help": "Supported by default.\n\nYou can move the file to _$XDG_DATA_HOME/iwctl/history_.\n"
+        }
+    ]
+}

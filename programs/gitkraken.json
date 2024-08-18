@@ -1,0 +1,10 @@
+{
+    "name": "gitkraken",
+    "files": [
+        {
+            "path": "$HOME/.gitkraken",
+            "movable": false,
+            "help": "Currently unsupported.\n\n_Relevant issue:_ https://feedback.gitkraken.com/suggestions/197923/support-for-moving-the-config-directory-on-linux\n"
+        }
+    ]
+}

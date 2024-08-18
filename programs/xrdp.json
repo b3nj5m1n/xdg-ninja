@@ -1,0 +1,10 @@
+{
+    "name": "xrdp",
+    "files": [
+        {
+            "path": "$HOME/thinclient_drives",
+            "movable": false,
+            "help": "Currently unsupported.\n"
+        }
+    ]
+}

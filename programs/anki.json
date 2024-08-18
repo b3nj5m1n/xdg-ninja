@@ -3,7 +3,12 @@
         {
             "path": "$HOME/Anki",
             "movable": true,
-            "help": "Alias anki to use a custom data location:\n\n```bash\nanki -b \"$XDG_DATA_HOME\"/Anki\n```\n"
+            "help": "Supported by default, you can move this directory to _$XDG_DATA_HOME/Anki2_.\n"
+        },
+        {
+            "path": "$HOME/Documents/Anki",
+            "movable": true,
+            "help": "Supported by default, you can move this directory to _$XDG_DATA_HOME/Anki2_.\n"
         }
     ],
     "name": "anki"

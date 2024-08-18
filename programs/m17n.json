@@ -1,0 +1,10 @@
+{
+    "name": "m17n",
+    "files": [
+        {
+            "path": "$HOME/.m17n.d",
+            "movable": false,
+            "help": "Currently unsupported.\n\n_Relevant issue:_ https://savannah.nongnu.org/bugs/?63056\n"
+        }
+    ]
+}

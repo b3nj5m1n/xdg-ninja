@@ -1,0 +1,10 @@
+{
+    "name": "urlview",
+    "files": [
+        {
+            "path": "$HOME/.urlview",
+            "movable": false,
+            "help": "Currently unsupported.\n\nYou can use this fork instead: https://github.com/bachoseven/urlview\n"
+        }
+    ]
+}

@@ -23,7 +23,7 @@
         packages = flake-utils.lib.flattenTree rec {
           default = xdg-ninja;
           # The shell script and configurations, uses derivation from offical nixpkgs
-          xdg-ninja = pkgs.stdenv.mkDerivation {
+          xdg-ninja = pkgs.stdenvNoCC.mkDerivation {
             pname = "xdg-ninja";
             version = "0.1.0";
 

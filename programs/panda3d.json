@@ -1,0 +1,10 @@
+{
+    "name": "panda3d",
+    "files": [
+        {
+            "path": "$HOME/.panda3d",
+            "movable": true,
+            "help": "Supported by default.\n\nNewer versions of panda3d automatically create directories at correct locations, so this can safely be deleted.\n"
+        }
+    ]
+}

@@ -5,6 +5,11 @@
             "path": "$HOME/.racket",
             "movable": true,
             "help": "Supported\n\nThe file $HOME/.racket can be moved to $XDG_CONFIG_HOME/racket.\n"
+        },
+        {
+            "path": "$HOME/.racketrc",
+            "movable": true,
+            "help": "Supported\n\nThe file $HOME/.racketrc can be moved to $XDG_CONFIG_HOME/racket.\n"
         }
     ]
 }

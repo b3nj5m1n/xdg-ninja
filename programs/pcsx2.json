@@ -1,0 +1,10 @@
+{
+    "name": "pcsx2",
+    "files": [
+        {
+            "path": "$HOME/.pcsx2",
+            "movable": true,
+            "help": "Supported by default.\n\nYou can move the directory to _$XDG_CONFIG_HOME/pcsx2_.\n"
+        }
+    ]
+}

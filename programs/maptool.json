@@ -1,0 +1,10 @@
+{
+    "name": "maptool",
+    "files": [
+        {
+            "path": "$HOME/.maptool-rptools",
+            "movable": true,
+            "help": "Add the following to the _/opt/maptool/lib/app/MapTool.cfg_ file:\n\n```cfg\n[JavaOptions]\n-DMAPTOOL_DATADIR=.local/share/maptool-rptools\n```\n"
+        }
+    ]
+}

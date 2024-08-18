@@ -1,0 +1,10 @@
+{
+    "name": "pcsxr",
+    "files": [
+        {
+            "path": "$HOME/.pcsxr",
+            "movable": false,
+            "help": "Currently unsupported.\n"
+        }
+    ]
+}

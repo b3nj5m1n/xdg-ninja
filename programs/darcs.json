@@ -1,0 +1,10 @@
+{
+    "name": "darcs",
+    "files": [
+        {
+            "path": "$HOME/.darcs",
+            "movable": false,
+            "help": "Currently unsupported.\n\n_Relevant issue:_ https://bugs.darcs.net/issue2453\n"
+        }
+    ]
+}

@@ -1,0 +1,15 @@
+{
+	"name": "emulationstation-de",
+	"files": [
+		{
+			"path": "$HOME/.emulationstation",
+			"movable": true,
+			"help": "Export the following environment variable:\n\n```bash\nexport ESDE_APPDATA_DIR=\"$XDG_CONFIG_HOME\"/ES-DE\n```\n"
+		},
+		{
+			"path": "$HOME/ES-DE",
+			"movable": true,
+			"help": "Export the following environment variable:\n\n```bash\nexport ESDE_APPDATA_DIR=\"$XDG_CONFIG_HOME\"/ES-DE\n```\n"
+		}
+	]
+}

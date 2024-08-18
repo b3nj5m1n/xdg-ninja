@@ -1,0 +1,10 @@
+{
+    "name": "xsel",
+    "files": [
+        {
+            "path": "$HOME/.xsel.log",
+            "movable": true,
+            "help": "Supported by default.\n\nNewer versions of xsel automatically create logs in _$XDG_CACHE_HOME_, so this can safely be deleted.\n"
+        }
+    ]
+}

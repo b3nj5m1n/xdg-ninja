@@ -1,0 +1,55 @@
+{
+    "name": "alpine",
+    "files": [
+        {
+            "path": "$HOME/.pinerc",
+            "movable": true,
+            "help": "Alias alpine to use custom config location:\n\n```bash\nalias alpine=\"alpine -p $XDG_CONFIG_HOME/alpine/pinerc\"\n```\n"
+        },
+        {
+            "path": "$HOME/.addressbook",
+            "movable": true,
+            "help": "In your pinerc, set the following option:\n\n```ini\naddress-book=$XDG_DATA_HOME/alpine/addressbook\n```\n"
+        },
+        {
+            "path": "$HOME/.newsrc",
+            "movable": true,
+            "help": "In your pinerc, set the following option:\n\n```ini\nnewsrc-path=$XDG_CONFIG_HOME/alpine/newsrc\n```\n"
+        },
+        {
+            "path": "$HOME/.mailcap",
+            "movable": true,
+            "help": "In your pinerc, set the following option:\n\n```ini\nmailcap-search-path=$XDG_CONFIG_HOME/alpine/mailcap\n```\n"
+        },
+        {
+            "path": "$HOME/.mime.types",
+            "movable": true,
+            "help": "In your pinerc, set the following option:\n\n```ini\nmimetype-search-path=$XDG_CONFIG_HOME/alpine/mime.types\n```\n"
+        },
+        {
+            "path": "$HOME/.pine-interrupted-mail",
+            "movable": false,
+            "help": "Currently unsupported.\n"
+        },
+        {
+            "path": "$HOME/.pine-debug1",
+            "movable": false,
+            "help": "Currently unsupported.\n"
+        },
+        {
+            "path": "$HOME/.pine-debug2",
+            "movable": false,
+            "help": "Currently unsupported.\n"
+        },
+        {
+            "path": "$HOME/.pine-debug3",
+            "movable": false,
+            "help": "Currently unsupported.\n"
+        },
+        {
+            "path": "$HOME/.pine-debug4",
+            "movable": false,
+            "help": "Currently unsupported.\n"
+        }
+    ]
+}

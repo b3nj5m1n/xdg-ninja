@@ -1,0 +1,10 @@
+{
+    "name": "vital",
+    "files": [
+        {
+            "path": "$HOME/.vital",
+            "movable": false,
+            "help": "Currently unsupported.\n\n_Relevant Issues_:\nhttps://github.com/mtytel/vital/issues/20\nhttps://forum.vital.audio/t/linux-move-vital-to-xdg-config-home/6243\n"
+        }
+    ]
+}

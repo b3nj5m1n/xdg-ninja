@@ -1,0 +1,15 @@
+{
+    "name": "osc",
+    "files": [
+        {
+            "path": "$HOME/.oscrc",
+            "movable": true,
+            "help": "Supported by default, but uses the old location if it exists.\n\nYou can move the file to _$XDG_CONFIG_HOME/osc/oscrc_.\n"
+        },
+        {
+            "path": "$HOME/.osc_cookiejar",
+            "movable": true,
+            "help": "Supported by default, but uses the old location if it exists.\n\nYou can move the file to _$XDG_STATE_HOME/osc/cookiejar_.\n"
+        }
+    ]
+}

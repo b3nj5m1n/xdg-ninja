@@ -10,6 +10,16 @@
             "path": "$HOME/.yarn",
             "movable": false,
             "help": "Changing this is currently not supported.\n"
+        },
+        {
+            "path": "$HOME/.yarncache",
+            "movable": false,
+            "help": "Changing this is currently not supported.\n"
+        },
+        {
+            "path": "$HOME/.yarn-config",
+            "movable": false,
+            "help": "Changing this is currently not supported.\n"
         }
     ]
 }
