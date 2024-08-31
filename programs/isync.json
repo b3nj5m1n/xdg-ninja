@@ -3,7 +3,7 @@
         {
             "path": "$HOME/.mbsyncrc",
             "movable": true,
-            "help": "Alias mbsync to use a custom configuration file location:\n\n```bash\nalias mbsync=mbsync -c \"$XDG_CONFIG_HOME\"/isync/mbsyncrc\n```\nIf you are using mutt-wizard export the following environment variable:\n\n```bash\nexport MBSYNCRC=\"$XDG_CONFIG_HOME\"/isync/mbsyncrc\n```"
+            "help": "Supported since 1.5.0. Can be moved to \"$XDG_CONFIG_HOME/isyncrc\"\n\nOlder versions can alias mbsync to use a custom configuration file location:\n\n```bash\nalias mbsync=mbsync -c \"$XDG_CONFIG_HOME\"/isync/mbsyncrc\n```\nIf you are using mutt-wizard export the following environment variable:\n\n```bash\nexport MBSYNCRC=\"$XDG_CONFIG_HOME\"/isync/mbsyncrc\n```"
         }
     ],
     "name": "isync"
