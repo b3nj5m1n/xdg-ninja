@@ -1,0 +1,10 @@
+{
+    "name": "install4j",
+    "files": [
+        {
+            "path": "$HOME/.install4j",
+            "movable": false,
+            "help": "XDG is supported out-of-the-box for newer versions of *install4j*,\nbut apps using old versions of it will continue to use the old location.\n\nYou can delete the file without harm, but it might be regenerated.\n"
+        }
+    ]
+}
