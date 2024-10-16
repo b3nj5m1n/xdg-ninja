@@ -1,0 +1,15 @@
+{
+    "name": "jameica",
+    "files": [
+        {
+            "path": "$HOME/.jameica",
+            "movable": true,
+            "help": "The path to this directory can be adjusted freely inside _.jameica.properties_.\n"
+        },
+        {
+            "path": "$HOME/.jameica.properties",
+            "movable": false,
+            "help": "Currently unsupported.\n"
+        }
+    ]
+}

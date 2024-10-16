@@ -1,0 +1,10 @@
+{
+    "name": "jpilot",
+    "files": [
+        {
+            "path": "$HOME/.jpilot",
+            "movable": true,
+            "help": "Export the following environment variables:\n\n```bash\nexport JPILOT_HOME=\"$XDG_DATA_HOME\"\n```\n"
+        }
+    ]
+}
