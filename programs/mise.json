@@ -1,0 +1,10 @@
+{
+    "name": "mise",
+    "files": [
+        {
+            "path": "$HOME/.mise.toml",
+            "movable": true,
+            "help": "Create a directory for mise-en-place within your `XDG_CONFIG_HOME`:\n\n```mkdir -p '$XDG_CONFIG_HOME/mise'```\n\nSet the `MISE_CONFIG_DIR` environment variable to point to this new directory:\n\n```export MISE_CONFIG_DIR='$XDG_CONFIG_HOME/mise'```\n\nThen move the file to the new location:\n\n```mv ~/.mise.toml _'$XDG_CONFIG_HOME/mise/config.toml```"
+        }
+    ]
+}
