@@ -3,10 +3,10 @@
         {
             "path": "$HOME/.node-gyp",
             "movable": true,
-            "help": "You need to put the following into your npmrc:\n\n```\ncache=${XDG_CACHE_HOME}/npm\n```\n"
+            "help": "Export the following environment variables:\n\n```bash\nexport NPM_CONFIG_CACHE=\"$XDG_CACHE_HOME\"/npm\n```\n"
         },
         {
-            "help": "You need to put the following into your npmrc:\n\n```\nprefix=${XDG_DATA_HOME}/npm\ncache=${XDG_CACHE_HOME}/npm\ninit-module=${XDG_CONFIG_HOME}/npm/config/npm-init.js\ntmp=${XDG_RUNTIME_DIR}/npm\n```\n\n_Note: the `tmp` option has been removed in more recent versions of npm, including it will generate a warning._\n",
+            "help": "Export the following environment variables:\n\n```bash\nexport NPM_CONFIG_INIT_MODULE=\"$XDG_CONFIG_HOME\"/npm/config/npm-init.js\nexport NPM_CONFIG_CACHE=\"$XDG_CACHE_HOME\"/npm\nexport NPM_CONFIG_TMP=\"$XDG_RUNTIME_DIR\"/npm\n```\n"
             "movable": true,
             "path": "$HOME/.npm"
         },
