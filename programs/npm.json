@@ -6,7 +6,7 @@
             "help": "Export the following environment variables:\n\n```bash\nexport NPM_CONFIG_CACHE=\"$XDG_CACHE_HOME\"/npm\n```\n"
         },
         {
-            "help": "Export the following environment variables:\n\n```bash\nexport NPM_CONFIG_INIT_MODULE=\"$XDG_CONFIG_HOME\"/npm/config/npm-init.js\nexport NPM_CONFIG_CACHE=\"$XDG_CACHE_HOME\"/npm\nexport NPM_CONFIG_TMP=\"$XDG_RUNTIME_DIR\"/npm\n```\n"
+            "help": "Export the following environment variables:\n\n```bash\nexport NPM_CONFIG_INIT_MODULE=\"$XDG_CONFIG_HOME\"/npm/config/npm-init.js\nexport NPM_CONFIG_CACHE=\"$XDG_CACHE_HOME\"/npm\nexport NPM_CONFIG_TMP=\"$XDG_RUNTIME_DIR\"/npm\n```\n",
             "movable": true,
             "path": "$HOME/.npm"
         },
