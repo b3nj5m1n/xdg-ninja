@@ -1,17 +1,17 @@
 {
     "files": [
         {
-            "help": "Move the file to _\"XDG_CONFIG_HOME\"/conda/.condarc_.\n\n_See conda documentation for details:_ https://conda.io/projects/conda/en/latest/user-guide/configuration/use-condarc.html#searching-for-condarc\n",
+            "help": "Move the file to _\"$XDG_CONFIG_HOME\"/conda/.condarc_.\n\n_See conda documentation for details:_ https://conda.io/projects/conda/en/latest/user-guide/configuration/use-condarc.html#searching-for-condarc\n",
             "movable": true,
             "path": "$HOME/.condarc"
         },
         {
-            "help": "Move the file to _\"XDG_CONFIG_HOME\"/conda/.condarc_.\n\n_See conda documentation for details:_ https://conda.io/projects/conda/en/latest/user-guide/configuration/use-condarc.html#searching-for-condarc\n",
+            "help": "Move the file to _\"$XDG_CONFIG_HOME\"/conda/.condarc_.\n\n_See conda documentation for details:_ https://conda.io/projects/conda/en/latest/user-guide/configuration/use-condarc.html#searching-for-condarc\n",
             "movable": true,
             "path": "$HOME/.conda/.condarc"
         },
         {
-            "help": "Move the file to _\"XDG_CONFIG_HOME\"/conda/condarc_.\n\n_See conda documentation for details:_ https://conda.io/projects/conda/en/latest/user-guide/configuration/use-condarc.html#searching-for-condarc\n",
+            "help": "Move the file to _\"$XDG_CONFIG_HOME\"/conda/condarc_.\n\n_See conda documentation for details:_ https://conda.io/projects/conda/en/latest/user-guide/configuration/use-condarc.html#searching-for-condarc\n",
             "movable": true,
             "path": "$HOME/.conda/condarc"
         },
