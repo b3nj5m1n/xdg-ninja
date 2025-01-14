@@ -1,9 +1,9 @@
 {
     "files": [
         {
-            "help": "Currently unsupported. No information found.\n",
-            "movable": false,
-            "path": "$HOME/.boto"
+            "movable": true,
+            "path": "$HOME/.boto",
+            "help": "The `.boto` file is used for configuring Google Cloud SDK tools, specifically `gsutil`.\nIf you don't actively use `gsutil` or GCP storage from the CLI, it might be safe to remove it.\n```bash\n# Update the environment to ensure `gsutil` can find it:\nexport BOTO_CONFIG=\"${XDG_CONFIG_HOME}/gcloud/boto\"\nmkdir -p \"${XDG_CONFIG_HOME}/gcloud\"\nmv ~/.boto \"${XDG_CONFIG_HOME}/gcloud/boto\"\n```\n"
         }
     ],
     "name": "boto"
