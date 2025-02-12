@@ -8,7 +8,7 @@
         },
         {
             "path": "$HOME/.jameica.properties",
-            "movable": false,
+            "movable": true,
             "help": "XDG is supported out-of-the-box since version 2.10.5, we can simply move the file to _$XDG_CONFIG_HOME/jameica.properties_.\n"
         }
     ]
