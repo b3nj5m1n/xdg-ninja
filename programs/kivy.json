@@ -1,0 +1,10 @@
+{
+    "files": [
+        {
+            "path": "$HOME/.kivy",
+            "movable": true,
+            "help": "Export the following environment variables:\n\n```bash\nexport KIVY_HOME=$XDG_CONFIG_HOME/kivy\n```\n"
+        }
+    ],
+    "name": "kivy"
+}
