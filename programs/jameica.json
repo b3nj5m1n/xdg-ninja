@@ -4,12 +4,12 @@
         {
             "path": "$HOME/.jameica",
             "movable": true,
-            "help": "The path to this directory can be adjusted freely inside _.jameica.properties_.\n"
+            "help": "The path to this directory can be adjusted freely inside _jameica.properties_.\n"
         },
         {
             "path": "$HOME/.jameica.properties",
-            "movable": false,
-            "help": "Currently unsupported.\n"
+            "movable": true,
+            "help": "XDG is supported out-of-the-box since version 2.10.5, we can simply move the file to _$XDG_CONFIG_HOME/jameica.properties_.\n"
         }
     ]
 }
