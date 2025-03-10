@@ -3,7 +3,7 @@
         {
             "path": "$HOME/.keychain",
             "movable": true,
-            "help": "Alias keychain to use a custom runtime dir location:\n\n```bash\nkeychain --dir \"$XDG_RUNTIME_DIR\"/keychain --absolute\n```\n"
+            "help": "Alias keychain to use a custom runtime dir location:\n\n```bash\nkeychain --absolute --dir \"$XDG_RUNTIME_DIR\"/keychain\n```\n"
         }
     ],
     "name": "keychain"
