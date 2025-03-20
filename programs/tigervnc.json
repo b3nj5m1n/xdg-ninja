@@ -2,8 +2,8 @@
     "files": [
         {
             "path": "$HOME/.vnc",
-            "movable": false,
-            "help": "Currently unsupported.\n\n_Relevant issue:_ https://github.com/TigerVNC/tigervnc/issues/1195\n"
+            "movable": true,
+            "help": "Supported by default.\n\nNewer versions of tigervnc automatically create directories at correct locations, consult `man vncviewer` to see where to move files.\n**WARNING: Failure to move files to the correct location can result in locking out VNC access**"
         }
     ],
     "name": "tigervnc"
