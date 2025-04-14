@@ -1,0 +1,10 @@
+{
+    "files": [
+        {
+            "path": "$HOME/.zsh-evalcache",
+            "movable": true,
+            "help": "Export the following environment variables:\n\n```bash\nexport ZSH_EVALCACHE_DIR=\"$XDG_CACHE_HOME\"/zsh/evalcache\"\n```\n."
+        }
+    ],
+    "name": "zsh-evalcache"
+}

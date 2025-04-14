@@ -3,7 +3,7 @@
         {
             "path": "$HOME/.wget-hsts",
             "movable": true,
-            "help": "Alias wget to use a custom hsts cache file location:\n\n```bash\nalias wget=wget --hsts-file=\"$XDG_DATA_HOME/wget-hsts\"\n```\n"
+            "help": "Alias wget to use a custom hsts cache file location:\n\n```bash\nalias wget=\"wget --hsts-file=$XDG_DATA_HOME/wget-hsts\"\n```\n"
         },
         {
             "path": "$HOME/.wgetrc",

@@ -61,7 +61,7 @@ brew upgrade xdg-ninja --fetch-HEAD
 
 ### Other Package Managers
 
-`xdg-ninja` is avaliable in many other package managers.
+`xdg-ninja` is available in many other package managers.
 
 The full list is available on the [repology page](https://repology.org/project/xdg-ninja/versions).
 

@@ -1,0 +1,10 @@
+{
+    "files": [
+        {
+            "path": "$HOME/.nrfutil",
+            "movable": true,
+            "help": "Export the following environment variables:\n\n```bash\nexport NRFUTIL_HOME=\"$XDG_DATA_HOME\"/nrfutil\n```\n"
+        }
+    ],
+    "name": "nrfutil"
+}

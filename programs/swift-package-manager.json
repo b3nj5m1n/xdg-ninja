@@ -3,8 +3,8 @@
     "files": [
         {
             "path": "$HOME/.swiftpm",
-            "movable": false,
-            "help": "Currently unsupported.\n\n_Relevant issue:_ https://github.com/apple/swift-package-manager/issues/6204\n"
+            "movable": true,
+            "help": "Set the _$XDG_CONFIG_HOME_ environment variable\n\nOnce set, Swift Package Manager will store its configuration files in _$XDG_CONFIG_HOME/swiftpm_."
         }
     ]
 }

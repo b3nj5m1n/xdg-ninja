@@ -1,0 +1,10 @@
+{
+    "name": "fvm",
+    "files": [
+        {
+            "path": "$HOME/fvm",
+            "movable": true,
+            "help": "Export the following environment variable:\n\n```bash\nexport FVM_CACHE_PATH=\"$XDG_CACHE_HOME\"/fvm\n```\n"
+        }
+    ]
+}

@@ -1,7 +1,7 @@
 {
     "files": [
         {
-            "help": "Try exporting the following enviornment variable:\n```bash\nBZR_LOG=$XDG_CACHE_HOME/bazaar\n```\n",
+            "help": "Try exporting the following environment variable:\n```bash\nBZR_LOG=$XDG_CACHE_HOME/bazaar\n```\n",
             "movable": true,
             "path": "$HOME/.bzr.log"
         },

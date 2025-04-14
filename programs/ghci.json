@@ -1,0 +1,10 @@
+{
+    "name": "ghci",
+    "files": [
+        {
+            "path": "$HOME/.ghci",
+            "movable": true,
+            "help": "Reading .ghci from $XDG_CONFIG_HOME is now supported by GHCi, so the file can be moved to _$XDG_CONFIG_HOME/.ghci_.\n"
+        }
+    ]
+}

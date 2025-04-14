@@ -1,0 +1,15 @@
+{
+    "name": "MakeMKV",
+    "files": [
+        {
+            "path": "$HOME/.MakeMKV",
+            "movable": false,
+            "help": "Currently unsupported.\n\nIf you really want to get rid of it, you can try overwriting `$HOME` for MakeMKV\ne.g. by creating a wrapper script `~/.local/bin/makemkv`:\n```sh\n#!/bin/sh\nexport HOME=\"${XDG_STATE_HOME:-$HOME/.local/state}\"/makemkv\nmkdir --parent \"$HOME\"\n/usr/bin/makemkv\n```\n"
+        },
+        {
+            "path": "$HOME/MakeMKV_log.txt",
+            "movable": false,
+            "help": "Currently unsupported.\n\nIf you really want to get rid of it, you can try overwriting `$HOME` for MakeMKV\ne.g. by creating a wrapper script `~/.local/bin/makemkv`:\n```sh\n#!/bin/sh\nexport HOME=\"${XDG_STATE_HOME:-$HOME/.local/state}\"/makemkv\nmkdir --parent \"$HOME\"\n/usr/bin/makemkv\n```\n"
+        }
+    ]
+}

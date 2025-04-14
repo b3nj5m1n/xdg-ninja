@@ -3,7 +3,7 @@
         {
             "path": "$HOME/.docker",
             "movable": true,
-            "help": "Export the following environment variables:\n\n```bash\nexport DOCKER_CONFIG=\"$XDG_CONFIG_HOME\"/docker\n```\n\n_Note: docker-dektop won't follow this rulling, see:_ [https://github.com/docker/roadmap/issues/408](https://github.com/docker/roadmap/issues/408)\n"
+            "help": "Export the following environment variables:\n\n```bash\nexport DOCKER_CONFIG=\"$XDG_CONFIG_HOME\"/docker\n```\n\n_Note: docker-desktop won't follow this ruling, see:_ [https://github.com/docker/roadmap/issues/408](https://github.com/docker/roadmap/issues/408)\n"
         }
     ],
     "name": "docker"

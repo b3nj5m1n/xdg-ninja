@@ -1,0 +1,10 @@
+{
+	"name": "pCloud",
+	"files": [
+		{
+			"path": "$HOME/.pcloud",
+			"movable": false,
+			"help": "Currently unsupported."
+		}
+	]
+}

@@ -13,7 +13,7 @@
         {
             "path": "$HOME/.net",
             "movable": false,
-            "help": "This directory is used by software written with .NET to store all the DLLs they need to work.\nSo it's pratically impossible to provide a general way to configure this specific behaviour.\n"
+            "help": "This directory is used by software written with .NET to store all the DLLs they need to work.\nSo it's practically impossible to provide a general way to configure this specific behaviour.\n"
         }
     ],
     "name": "dotnet"

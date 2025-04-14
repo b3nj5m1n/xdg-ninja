@@ -11,7 +11,7 @@
             "path": "$HOME/.mycli-history"
         },
         {
-            "help": "Set this in your myclirc:\n```log_file=~/.cache/mycli.log```\nDoes not work with enviorment variables\n Relevant issue : https://github.com/dbcli/mycli/issues/581\n",
+            "help": "Set this in your myclirc:\n```log_file=~/.cache/mycli.log```\nDoes not work with environment variables\n Relevant issue : https://github.com/dbcli/mycli/issues/581\n",
             "movable": true,
             "path": "$HOME/.mycli.log"
         }
