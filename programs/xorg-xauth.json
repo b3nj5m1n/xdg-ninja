@@ -3,7 +3,7 @@
         {
             "path": "$HOME/.Xauthority",
             "movable": true,
-            "help": "Export the following environment variables:\n\n```bash\nexport XAUTHORITY=\"$XDG_RUNTIME_DIR\"/Xauthority\n```\n\n- **LightDM does not allow you to do this.** See [here](https://askubuntu.com/a/961459) for workaround.\n- SLiM has _~/.Xauthority_ hardcoded\n\n- SDDM uses its own config to set XAUTHORITY variable. **Do not set it manually.**\nExample `/etc/sddm.conf.d/xorg_settings.conf`:\n```ini\n[X11]\nUserAuthFile=.local/share/sddm/Xauthority\n```\n**WARNING: Moving this file can potentially lead to not being able to start your X11 session or some programs (eg. Wine) not working as intended.**\n"
+            "help": "Export the following environment variables:\n\n```bash\nexport XAUTHORITY=\"$XDG_RUNTIME_DIR\"/Xauthority\n```\n- XDG Desktop Portal might not work as intended (eg. not being able to use file picker in Chromium). to fix this we have to modifying a systemd service.\n\n```bash\nsystemctl --user edit xdg-desktop-portal-gtk # or whichever backend you use\n```\nThen add the environment variable to the service:\n```ini\n[Service]\nEnvironment=XAUTHORITY=/run/user/1000/Xauthority\n```\n\n- **LightDM does not allow you to do this.** See [here](https://askubuntu.com/a/961459) for workaround.\n- SLiM has _~/.Xauthority_ hardcoded\n\n- SDDM uses its own config to set XAUTHORITY variable. **Do not set it manually.**\nExample `/etc/sddm.conf.d/xorg_settings.conf`:\n```ini\n[X11]\nUserAuthFile=.local/share/sddm/Xauthority\n```\n**WARNING: Moving this file can potentially lead to not being able to start your X11 session or some programs (eg. Wine) not working as intended.**\n"
         }
     ],
     "name": "xorg-xauth"
