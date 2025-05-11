@@ -1,0 +1,10 @@
+{
+  "files": [
+    {
+      "path": "$HOME/.lazarus",
+      "movable": true,
+      "help": "Alias lazarus to use a custom configuration location:\n\n```bash\nalias lazarus=\"lazarus --pcp=$XDG_CONFIG_HOME/lazarus\"\n```\n"
+    }
+  ],
+  "name": "lazarus"
+}
