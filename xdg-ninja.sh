@@ -56,7 +56,7 @@ help() {
     ────────────────────────────────────
 
     ${FX_ITALIC}--help${FX_RESET}              ${FX_BOLD}This help menu${FX_RESET}
-    ${FX_ITALIC}-h\033${FX_RESET}
+    ${FX_ITALIC}-h${FX_RESET}
 
     ${FX_ITALIC}--no-skip-ok${FX_RESET}        ${FX_BOLD}Display messages for all files checked (verbose)${FX_RESET}
     ${FX_ITALIC}-v${FX_RESET}
