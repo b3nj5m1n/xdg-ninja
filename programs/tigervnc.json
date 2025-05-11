@@ -3,7 +3,7 @@
         {
             "path": "$HOME/.vnc",
             "movable": true,
-            "help": "Supported by default.\n\nNewer versions of tigervnc automatically create directories at correct locations, consult `man vncviewer` to see where to move files.\n**WARNING: Failure to move files to the correct location can result in locking out VNC access**"
+            "help": "Supported by default.\n\nAll versions above 1.14.0 will automatically create directories at correct locations, consult `man vncviewer` to see where to move files.\n**WARNING: Failure to move files to the correct location can result in locking out VNC access**"
         }
     ],
     "name": "tigervnc"
