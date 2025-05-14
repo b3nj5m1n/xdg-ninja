@@ -1,0 +1,10 @@
+{
+    "files": [
+        {
+            "path": "$HOME/.eaglemode",
+            "movable": true,
+            "help": "Export the following environment variable:\n\n```bash\nexport EM_USER_CONFIG_DIR=\"$XDG_CONFIG_HOME\"/eaglemode\n```\n"
+        }
+    ],
+    "name": "Eagle Mode"
+}
