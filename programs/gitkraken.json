@@ -5,6 +5,11 @@
             "path": "$HOME/.gitkraken",
             "movable": false,
             "help": "Currently unsupported.\n\n_Relevant issue:_ https://feedback.gitkraken.com/suggestions/197923/support-for-moving-the-config-directory-on-linux\n"
+        },
+        {
+            "path": "$HOME/.gk",
+            "movable": true,
+            "help": "XDG is supported out-of-the-box, so we can simply move the file to _$XDG_DATA_HOME/gk_.\n"
         }
     ]
 }
