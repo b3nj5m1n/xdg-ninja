@@ -3,12 +3,12 @@
         {
             "path": "$HOME/.lesshst",
             "movable": true,
-            "help": "Supported by default since less version [598](https://greenwoodsoftware.com/less/news.598.html).\n\nYou can move the file to _$XDG_STATE_HOME/lesshst_.\n"
+            "help": "Supported by default since less version [598](https://greenwoodsoftware.com/less/news.598.html). You can move the file to _$XDG_STATE_HOME/lesshst_.\n"
         },
         {
             "path": "$HOME/.lesskey",
             "movable": true,
-            "help": "Supported by default since less version [590](https://greenwoodsoftware.com/less/news.590.html).\n\nYou can move the file to _$XDG_CONFIG_HOME/lesskey_.\n"
+            "help": "Supported by default since less version [590](https://greenwoodsoftware.com/less/news.590.html). You can move the file to _$XDG_CONFIG_HOME/lesskey_.\n"
         }
     ],
     "name": "less"
