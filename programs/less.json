@@ -3,12 +3,12 @@
         {
             "path": "$HOME/.lesshst",
             "movable": true,
-            "help": "Supported by default since **less** version 598. You can check your version with the following command:\n\n```bash\nless --version\n```\n\nIf your version is not lower than that, you can move the file to _$XDG_STATE_HOME/lesshst_.\n\n\nIf your version is lower than that, you need to export the following environment variables:\n\n```bash\nexport LESSHISTFILE=\"${XDG_STATE_HOME}\"/lesshst\n```\n"
+            "help": "Supported by default since **less** version 598. You can check your version with the following command:\n\n```bash\nless --version\n```\n\nIf your version is **not lower** than that, you can move the file to _$XDG_STATE_HOME/lesshst_.\n\n\nIf your version is **lower** than that, you need to export the following environment variables:\n\n```bash\nexport LESSHISTFILE=\"${XDG_STATE_HOME}\"/lesshst\n```\n"
         },
         {
             "path": "$HOME/.lesskey",
             "movable": true,
-            "help": "Supported by default since **less** version 590. You can check your version with the following command:\n\n```bash\nless --version\n```\n\nIf your version is not lower than that, you can move the file to _$XDG_CONFIG_HOME/lesskey_.\n\n\nIf your version is lower than that, you need to export the following environment variables:\n\n```bash\nexport LESSKEYIN=\"${XDG_CONFIG_HOME}\"/lesskey\n```\n"
+            "help": "Supported by default since **less** version 590. You can check your version with the following command:\n\n```bash\nless --version\n```\n\nIf your version is **not lower** than that, you can move the file to _$XDG_CONFIG_HOME/lesskey_.\n\n\nIf your version is **lower** than that, you need to export the following environment variables:\n\n```bash\nexport LESSKEYIN=\"${XDG_CONFIG_HOME}\"/lesskey\n```\n"
         }
     ],
     "name": "less"
