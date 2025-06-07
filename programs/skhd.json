@@ -1,0 +1,10 @@
+{
+    "name": "skhd",
+    "files": [
+        {
+            "path": "$HOME/.skhdrc",
+            "movable": true,
+            "help": "XDG is supported out-of-the-box, so we can simply move the file to _$XDG_CONFIG_HOME/skhd/skhdrc_.\n"       
+	}
+    ]
+}
