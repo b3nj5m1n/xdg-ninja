@@ -10,6 +10,16 @@
             "path": "$HOME/.git-credentials",
             "movable": true,
             "help": "XDG is supported out-of-the-box, so we can simply move the file to _$XDG_CONFIG_HOME/git/credentials_.\n"
+        },
+        {
+            "path": "$HOME/.gitk",
+            "movable": true,
+            "help": "XDG is supported out-of-the-box, so we can simply move the file to _$XDG_CONFIG_HOME/git/gitk_.\n"
+        },
+        {
+            "path": "$HOME/.gitignore",
+            "movable": true,
+            "help": "XDG is supported out-of-the-box, so we can simply move the file to _$XDG_CONFIG_HOME/git/ignore_.\n"
         }
     ]
 }
