@@ -11,7 +11,7 @@
 A shell script that checks your `$HOME` for unwanted files and directories.
 
 <p align="center">
-  <img src="https://s11.gifyu.com/images/68747470733a2f2f73382e67696679752e636f6d2f696d616765732f5065656b2d323032322d30352d31332d31362d30372e676966.gif" width="500" alt="xdg-ninja command output" />
+  <img src="https://github.com/user-attachments/assets/4b406636-8a00-41da-9ed2-46f02c5789ab" width="500" alt="xdg-ninja command output" />
 </p>
 
 When `xdg-ninja` encounters a file or directory it knows about, it will tell you whether it's possible to move it to the appropriate location, and how to do it.
