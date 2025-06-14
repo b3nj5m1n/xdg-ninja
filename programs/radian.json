@@ -1,0 +1,10 @@
+{
+    "files": [
+        {
+            "help": "Set this to _XDG_CONFIG_HOME/radian/profile_:\n```\noptions(radian.global_history_file = \"$XDG_STATE_HOME/radian/history\")\n```\nand move the file to _$XDG_STATE_HOME/radian/history_\n",
+            "movable": true,
+            "path": "$HOME/.radian_history"
+        }
+    ],
+    "name": "radian"
+}
