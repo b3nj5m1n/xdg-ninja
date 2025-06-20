@@ -1,0 +1,10 @@
+{
+    "files": [
+        {
+            "path": "$HOME/.jfrog",
+            "movable": true,
+            "help": "Export the following environment variables:\n\n```bash\nexport JFROG_CLI_HOME_DIR=\"$XDG_DATA_HOME\"/jfrog\n```\n"
+        }
+    ],
+    "name": "jfrog-cli"
+}
