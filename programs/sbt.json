@@ -1,15 +1,15 @@
 {
-    "name": "sbt",
     "files": [
         {
-            "path": "$HOME/.sbt",
+            "help": "Export the following environment variable:\n\n```bash\nexport SBT_OPTS=\"\\\n-Dsbt.global.base=${XDG_DATA_HOME}/sbt/1.0 \\\n-Dsbt.boot.directory=${XDG_CACHE_HOME}/sbt/boot \\\n-Dsbt.repository.config=${XDG_CACHE_HOME}/sbt/repositories \\\n-Dsbt.ivy.home=${XDG_CACHE_HOME}/ivy2\"\n```\n\nSee https://github.com/sbt/sbt/issues/3681 for more information.\n",
             "movable": true,
-            "help": "Alias sbt to use correct locations:\n\n```bash\nalias sbt=\"sbt -ivy $XDG_DATA_HOME/ivy2 -sbt-dir $XDG_DATA_HOME/sbt\"\n```\n"
+            "path": "$HOME/.sbt"
         },
         {
-            "path": "$HOME/.ivy2",
+            "help": "Export the following environment variable:\n\n```bash\nexport SBT_OPTS=\"\\\n-Dsbt.global.base=${XDG_DATA_HOME}/sbt/1.0 \\\n-Dsbt.boot.directory=${XDG_CACHE_HOME}/sbt/boot \\\n-Dsbt.repository.config=${XDG_CACHE_HOME}/sbt/repositories \\\n-Dsbt.ivy.home=${XDG_CACHE_HOME}/ivy2\"\n```\n\nSee https://github.com/sbt/sbt/issues/3681 for more information.\n",
             "movable": true,
-            "help": "Alias sbt to use correct locations:\n\n```bash\nalias sbt=\"sbt -ivy $XDG_DATA_HOME/ivy2 -sbt-dir $XDG_DATA_HOME/sbt\"\n```\n"
+            "path": "$HOME/.ivy2"
         }
-    ]
+    ],
+    "name": "sbt"
 }
