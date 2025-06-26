@@ -1,0 +1,10 @@
+{
+    "files": [
+        {
+            "help": "Create the file _SaveLocation.txt_ in the steam installation directory (usually _~/.local/share/Steam/steamapps/common/From The Depths/_) containing the path to the save location.\n\nMake sure there is no trailing newline in the file.\n\n```bash\necho -n $XDG_DATA_HOME > SaveLocation.txt\n```\n",
+            "movable": true,
+            "path": "$HOME/From The Depths"
+        }
+    ],
+    "name": "From The Depths"
+}
