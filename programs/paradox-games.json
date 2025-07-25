@@ -4,6 +4,11 @@
             "help": "Currently unsupported. The only _hacky_ way to get rid of it is via a **bubblewrap sandbox**.\n\nRelevant Arch Wiki: https://wiki.archlinux.org/title/Bubblewrap",
             "movable": false,
             "path": "$HOME/.paradoxinteractive"
+        },
+        {
+            "help": "Edit the file _~/.local/share/Paradox Interactive/launcherpath_\n",
+            "movable": true,
+            "path": "$HOME/.paradoxlauncher"
         }
     ],
     "name": "paradox games"
