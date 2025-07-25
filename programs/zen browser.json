@@ -1,0 +1,10 @@
+{
+    "files": [
+        {
+            "help": "Currently unsupported.\n\n_Relevant issue:_ https://github.com/zen-browser/desktop/issues/7280\n",
+            "movable": false,
+            "path": "$HOME/.zen"
+        }
+    ],
+    "name": "zen browser"
+}
