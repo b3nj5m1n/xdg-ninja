@@ -1,0 +1,10 @@
+{
+    "files": [
+        {
+            "path": "$HOME/.op",
+            "movable": true,
+            "help": "Move to `$XDG_CONFIG_HOME/op` and alias op to use a custom configuration location:\n\n```bash\nalias op=\"op --config=${XDG_CONFIG_HOME}/op\"\n```\n"
+        }
+    ],
+    "name": "1Password CLI"
+}
