@@ -1,0 +1,10 @@
+{
+  "files": [
+    {
+      "path": "$HOME/.koka",
+      "movable": false,
+      "help": "Currently unsupported.\n\n_Relevant PR:_ https://github.com/koka-lang/koka/pull/753"
+    }
+  ],
+  "name": "koka"
+}
