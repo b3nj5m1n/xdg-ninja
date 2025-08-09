@@ -1,0 +1,10 @@
+{
+    "name": "Stellarium",
+    "files": [
+        {
+            "path": "$HOME/.stellarium",
+            "movable": true,
+            "help": "Alias `stellarium` to use a different user data directory:\n\n```bash\nalias stellarium=stellarium -u \"${XDG_CONFIG_DIR}/stellarium\"\n```\n"
+        }
+    ]
+}
