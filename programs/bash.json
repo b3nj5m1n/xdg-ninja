@@ -33,7 +33,7 @@
         {
             "path": "$HOME/.bash_history",
             "movable": true,
-            "help": "Export the following environment variables:\n\n```bash\nexport HISTFILE=\"${XDG_STATE_HOME}\"/bash/history\n```\n"
+            "help": "Export the following environment variables:\n\n```bash\nexport HISTFILE=\"${XDG_STATE_HOME}\"/bash/history\n```\n and create the exported file (it is not created automatically)\n"
         }
     ],
     "name": "bash"
