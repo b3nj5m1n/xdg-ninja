@@ -14,7 +14,7 @@ A shell script that checks your `$HOME` for unwanted files and directories.
   <img src="https://github.com/user-attachments/assets/4b406636-8a00-41da-9ed2-46f02c5789ab" width="500" alt="xdg-ninja command output" />
 </p>
 
-When `xdg-ninja` encounters a file or directory it knows about, it will tell you whether it's possible to move it to the appropriate location, and how to do it.
+When `xdg-ninja` encounters a file or directory it knows about, it will tell you whether it's possible to move it to the [appropriate](https://xdgbasedirectoryspecification.com) location, and how to do it.
 
 The configurations are from the [arch wiki page on XDG_BASE_DIR](https://wiki.archlinux.org/title/XDG_Base_Directory), [antidot](https://github.com/doron-cohen/antidot) (thanks to Scr0nch for writing a conversion tool), and crowdsourced by other users.
 
