@@ -1,0 +1,10 @@
+{
+    "files": [
+        {
+            "path": "$HOME/.abcde.conf",
+            "movable": false,
+            "help": "Currently unsupported.\n"
+        }
+    ],
+    "name": "abcde"
+}
