@@ -16,8 +16,8 @@
             "path": "$HOME/.dart-tool"
         },
         {
-            "help": "Currently unsupported.\n\n _Relevant issue_: https://github.com/dart-lang/sdk/issues/41560\n",
-            "movable": false,
+            "help": "Export the following environment variable:\n\n```bash\nexport PUB_CACHE=\"$XDG_CACHE_HOME\"/pub-cache\n```\n",
+            "movable": true,
             "path": "$HOME/.pub-cache"
         }
     ],
