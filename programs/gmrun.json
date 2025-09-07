@@ -4,7 +4,7 @@
         {
             "path": "$HOME/.gmrunrc",
             "movable": true,
-            "help": "Since version 1.2w, `gmrun` can be compiled with `FOLLOW_XDG_SPEC` flag, then _${HOME}/.gmrunrc_ may be moved to _${XDG_DATA_HOME}/gmrunrc_.\n"
+            "help": "Since version 1.2w, `gmrun` can be compiled with `FOLLOW_XDG_SPEC` flag, then _${HOME}/.gmrunrc_ may be moved to _${XDG_CONFIG_HOME}/gmrunrc_.\n"
         },
         {
             "path": "$HOME/.gmrun_history",
