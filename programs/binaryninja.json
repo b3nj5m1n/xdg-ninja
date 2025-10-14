@@ -1,0 +1,10 @@
+{
+    "name": "Binary Ninja",
+    "files": [
+        {
+            "path": "$HOME/.binaryninja",
+            "movable": true,
+            "help": "Export the following environment variable:\n\n```bash\nexport BN_USER_DIRECTORY=\"$XDG_DATA_HOME\"/binaryninja\n```\n"
+        }
+    ]
+}
