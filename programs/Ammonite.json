@@ -1,0 +1,10 @@
+{
+    "files": [
+        {
+            "help": "Currently unsupported.\n\n_Relevant issue:_ https://github.com/com-lihaoyi/Ammonite/issues/1309\n",
+            "movable": false,
+            "path": "$HOME/.ammonite"
+        }
+    ],
+    "name": "Ammonite"
+}
