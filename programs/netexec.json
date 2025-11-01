@@ -1,0 +1,10 @@
+{
+    "name": "netexec",
+    "files": [
+        {
+            "path": "$HOME/.nxc",
+            "movable": true,
+            "help": "Export the following environment variable:\n\n```bash\nexport NXC_PATH=\"$XDG_CONFIG_HOME\"/nxc\n```\n"
+        }
+    ]
+}
