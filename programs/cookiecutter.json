@@ -1,0 +1,19 @@
+{
+    "files": [
+        {
+            "help": "Currently unsupported.\n\n_Relevant issue:_ https://github.com/cookiecutter/cookiecutter/issues/2166 \n",
+            "movable": false,
+            "path": "$HOME/.cookiecutter_replay"
+        },
+        {
+            "help": "Currently unsupported.\n\n_Relevant issue:_ https://github.com/cookiecutter/cookiecutter/issues/2166 \n",
+            "movable": false,
+            "path": "$HOME/.cookiecutterrc"
+        },        {
+            "help": "Currently unsupported.\n\n_Relevant issue:_ https://github.com/cookiecutter/cookiecutter/issues/2166 \n",
+            "movable": false,
+            "path": "$HOME/.cookiecutters"
+        }
+    ],
+    "name": "cookiecutter"
+}
