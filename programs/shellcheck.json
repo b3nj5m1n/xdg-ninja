@@ -1,0 +1,10 @@
+{
+    "files": [
+        {
+            "path": "$HOME/.shellcheckrc",
+            "movable": true,
+            "help": "Supported by default.\n\nYou can move the file to _$XDG_CONFIG_HOME/.shellcheckrc_.\n"
+        }
+    ],
+    "name": "shellcheck"
+}

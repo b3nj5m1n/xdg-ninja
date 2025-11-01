@@ -1,0 +1,10 @@
+{
+    "files": [
+        {
+            "path": "$HOME/.reportbugrc",
+            "movable": false,
+            "help": "Currently unsupported.\n\n_Relevant issue:_ https://bugs.debian.org/cgi-bin/bugreport.cgi?bug=787911\n"
+        }
+    ],
+    "name": "reportbug"
+}
