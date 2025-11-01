@@ -3,7 +3,7 @@
         {
             "path": "$HOME/.mitmproxy",
             "movable": true,
-            "help": "Alias mitmproxy and mitweb to use a custom configuration location:\n\n```bash\nalias mitmproxy=\"mitmproxy --set confdir=$XDG_CONFIG_HOME/mitmproxy\"\nalias mitmweb=\"mitmweb --set confdir=$XDG_CONFIG_HOME/mitmproxy\"\n```\n"
+            "help": "Alias mitmproxy, mitmdump, and mitweb to use a custom configuration location:\n\n```bash\nalias mitmproxy=\"mitmproxy --set confdir=$XDG_CONFIG_HOME/mitmproxy\"\nalias mitdump=\"mitmdump --set confdir=$XDG_CONFIG_HOME/mitmproxy\"\nalias mitmweb=\"mitmweb --set confdir=$XDG_CONFIG_HOME/mitmproxy\"\n```\n"
         }
     ],
     "name": "mitmproxy"
