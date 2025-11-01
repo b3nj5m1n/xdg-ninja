@@ -1,0 +1,10 @@
+{
+    "name": "Joplin",
+    "files": [
+        {
+            "path": "$HOME/.joplin",
+            "movable": false,
+            "help": "Currently unsupported.\n\nRelevant issues:\n* https://github.com/laurent22/joplin/issues/887\n* https://github.com/laurent22/joplin/issues/3765\n"
+        }
+    ]
+}

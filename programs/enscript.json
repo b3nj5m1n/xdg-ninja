@@ -1,0 +1,10 @@
+{
+    "files": [
+        {
+            "path": "$HOME/.enscriptrc",
+            "movable": false,
+            "help": "Currently unsupported."
+        }
+    ],
+    "name": "GNU Enscript"
+}

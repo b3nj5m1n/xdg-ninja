@@ -1,0 +1,10 @@
+{
+    "name": "chirp",
+    "files": [
+        {
+            "path": "$HOME/.chirp",
+            "movable": false,
+            "help": "Currently unsupported.\n\n*Relevant issue:* https://chirpmyradio.com/issues/8175\n"
+        }
+    ]
+}

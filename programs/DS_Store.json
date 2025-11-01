@@ -1,0 +1,10 @@
+{
+    "name": "macOS Directory Services Store",
+    "files": [
+        {
+            "path": "$HOME/.DS_Store",
+            "movable": false,
+            "help": "Not applicable. May be removable.\n\nFrom [Wikipedia](https://wikipedia.org/wiki/.DS_Store):\n\n>In the macOS operating system, `.DS_Store` is a file that stores custom attributes of its containing folder such as folder view options, icon positions, and other visual information. [...]The file `.DS_Store` is created in any directory (folder) accessed by the Finder application, even on remote file systems mounted from servers that share files (for example, via Server Message Block (SMB) protocol or the Apple Filing Protocol (AFP)).\n\nOn macOS, and filesystems accessed by Finder on macOS, `.DS_Store` should probably be left alone. In other cases this file is safe to remove.\n"
+        }
+    ]
+}
