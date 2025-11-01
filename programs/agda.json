@@ -1,0 +1,10 @@
+{
+    "files": [
+        {
+            "path": "$HOME/.agda",
+            "movable": true,
+            "help": "Supported since v2.6.4.1. You can move it to \"$HOME/.config/agda\".\n\nRun `agda --print-agda-app-dir` for the precise location in your system. For more info, see\nhttps://agda.readthedocs.io/en/stable/tools/package-system.html#installing-libraries\n"
+        }
+    ],
+    "name": "GHC"
+}
