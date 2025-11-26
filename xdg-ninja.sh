@@ -113,15 +113,6 @@ fi
 
 printf "\n"
 
-# Function to expand environment variables in string
-# https://stackoverflow.com/a/20316582/11110290
-apply_shell_expansion() {
-    data="$1"
-    delimiter="__apply_shell_expansion_delimiter__"
-    command=$(printf "cat <<%s\n%s\n%s" "$delimiter" "$data" "$delimiter")
-    eval "$command"
-}
-
 # Function to check if a string contains shell pattern matching
 has_pattern() {
     case $1 in
@@ -137,7 +128,7 @@ has_pattern() {
 # Returns the actual name of the given file that is on the user's disk
 # This command applies shell pattern matching and return the actual filename
 retrieve_existing_filename() {
-    FILE_PATH=$(apply_shell_expansion "$1")
+    FILE_PATH=${1/\$HOME/$HOME}
 
     # return filename if found, nothing else
     if has_pattern "$FILE_PATH"; then
