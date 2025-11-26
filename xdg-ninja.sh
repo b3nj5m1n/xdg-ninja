@@ -137,7 +137,9 @@ retrieve_existing_filename() {
         find "$dir" -maxdepth 1 -name "$part" -print -quit 2>/dev/null
     else
         if [ -e "$FILE_PATH" ]; then
-            printf "%s" "$FILE_PATH"
+            file="$FILE_PATH"
+        else
+            file=""
         fi
     fi
 }
@@ -194,8 +196,8 @@ check_file() {
     MOVABLE="$3"
     HELP="$4"
 
-    file=$(retrieve_existing_filename "$FILENAME")
-
+    # saves result into $file
+    retrieve_existing_filename "$FILENAME"
     if [ "$file" ]; then
         if [ "$MOVABLE" = true ]; then
             log ERR "$NAME" "$file" "$HELP"
