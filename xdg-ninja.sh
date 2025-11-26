@@ -45,7 +45,6 @@ init_constants() {
 init_constants
 
 help() {
-    init_constants
     HELPSTRING="""\
 
 
