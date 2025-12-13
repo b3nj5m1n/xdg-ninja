@@ -2,8 +2,8 @@
     "files": [
         {
             "path": "$HOME/.mozilla",
-            "movable": False,
-             "help": "Supported\n\nThe file $HOME/.mozilla can be moved to $XDG_CONFIG_HOME/mozilla.\n"}
+            "movable": True,
+             "help": "Supported\n\nThe file $HOME/.mozilla can be moved to $XDG_CONFIG_HOME/mozilla.\n with risk of minor breakage"}
     ],
     "name": "Firefox"
 }
