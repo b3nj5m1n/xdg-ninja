@@ -1,0 +1,15 @@
+{
+    "files": [
+        {
+            "help": "Alias enigma to use a custom configuration location:\n\n```bash\nalias enigma=enigma --pref \"$XDG_DATA_HOME\"/enigma\n```\n",
+            "movable": true,
+            "path": "$HOME/.enigma/"
+        },
+        {
+            "help": "Alias enigma to use a custom configuration location:\n\n```bash\nalias enigma=enigma --pref \"$XDG_DATA_HOME\"/enigma\n```\n",
+            "movable": true,
+            "path": "$HOME/.enigmarc.xml"
+        }
+    ],
+    "name": "enigma"
+}
