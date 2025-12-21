@@ -1,0 +1,10 @@
+{
+    "files": [
+        {
+            "path": "$HOME/.codex",
+            "movable": true,
+            "help": "Export the following environment variables:\n\n```bash\nexport CODEX_HOME=\"$XDG_CONFIG_HOME\"/codex\n```\n"
+        }
+    ],
+    "name": "codex"
+}
