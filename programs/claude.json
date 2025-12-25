@@ -1,0 +1,20 @@
+{
+    "files": [
+        {
+            "path": "$HOME/.claude",
+            "movable": false,
+            "help": "Currently unsupported.\n\n_Relevant issue:_ https://github.com/anthropics/claude-code/issues/1455 \n"
+        },
+        {
+            "path": "$HOME/.claude.json",
+            "movable": false,
+            "help": "Currently unsupported.\n\n_Relevant issue:_ https://github.com/anthropics/claude-code/issues/1455 \n"
+        },
+        {
+            "path": "$HOME/.claude.json.backup",
+            "movable": false,
+            "help": "Currently unsupported.\n\n_Relevant issue:_ https://github.com/anthropics/claude-code/issues/1455 \n"
+        },
+    ],
+    "name": "Claude Code"
+}
