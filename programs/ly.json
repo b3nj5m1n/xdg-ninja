@@ -1,0 +1,10 @@
+{
+    "name": "ly",
+    "files": [
+        {
+            "path": "$HOME/ly-session.log",
+            "movable": true,
+            "help": "By default `ly` saves its log file in the user's home directory.\n\nYou can move `ly-session.log` by changing the value of `session_log`\nfield in _/etc/ly/config.ini_ file using your favourite editor.\n\n```bash\n$ sudo nano /etc/ly/config.ini      # using nano\n$ sudo vim /etc/ly/config.ini       # using vim\n```\n\n(_/etc/ly/config.ini_)\n```config\nsession_log = .local/state/ly-session.log\n```\n"
+        }
+    ]
+}
