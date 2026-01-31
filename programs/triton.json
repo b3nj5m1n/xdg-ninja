@@ -3,7 +3,7 @@
         {
             "path": "$HOME/.triton",
             "movable": true,
-            "help": "Export the following environment variables:\n\n```bash\nexport TRITON_HOME=\"$XDG_CACHE_HOME\"\n```\n"
+            "help": "Export the following environment variables:\n\n```bash\nexport TRITON_HOME=\"$XDG_CACHE_HOME/triton\"\n```\n"
         }
     ],
     "name": "triton"
