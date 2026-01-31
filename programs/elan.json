@@ -3,8 +3,8 @@
     "files": [
         {
             "path": "$HOME/.elan",
-            "movable": false,
-            "help": "Currently unsupported.\n\n_Relevant issue:_ https://github.com/leanprover/elan/issues/75\n"
+            "movable": true,
+            "help": "Export the following environment variables:\n\n```bash\nexport ELAN_HOME=\"$XDG_DATA_HOME\"/elan\n```\n\n_Relevant issue:_ https://github.com/leanprover/elan/issues/75\n"
         }
     ]
 }
