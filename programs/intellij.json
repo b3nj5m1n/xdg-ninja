@@ -9,7 +9,7 @@
             "path": "$HOME/IdeaSnapshots",
             "movable": true,
             "help": "Set the snapshots folder manually in the IntelliJ profiler settings.\n\nSee: [here](https://youtrack.jetbrains.com/issue/IJPL-149835)."
-        },
+        }
     ],
     "name": "intellij"
 }
