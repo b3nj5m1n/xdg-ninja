@@ -1,0 +1,10 @@
+{
+  "name": "spicetify",
+  "files": [
+    {
+      "path": "$HOME/.spicetify",
+      "movable": true,
+      "help": "Export the following environment variable:\n\n```bash\nexport SPICETIFY_CONFIG=\"${XDG_CONFIG_HOME:-$HOME/.config}/spicetify\"\n```\n\nYou can move the existing dir $HOME/.spicetify to ${XDG_CONFIG_HOME:-$HOME/.config}/spicetify (e.g. ~/.config/spicetify)\n"
+    }
+  ]
+}
