@@ -230,7 +230,7 @@ do_check_programs() {
 " read -r name; read -r filename; read -r movable; read -r help; do
         check_file "$name" "$filename" "$movable" "$help"
     done <<EOF
-$(jq '.files[] as $file | .name, $file.path, $file.movable, $file.help' "$XN_PROGRAMS_DIR"/* | sed -e 's/^"//' -e 's/"$//')
+$(find "$XN_PROGRAMS_DIR" -type f -print0 | xargs -0 jq '.files[] as $file | .name, $file.path, $file.movable, $file.help' | sed -e 's/^"//' -e 's/"$//')
 EOF
 # sed is to trim quotes
 }
