@@ -18,8 +18,8 @@
         },
         {
             "path": "$HOME/.gitignore",
-            "movable": true,
-            "help": "XDG is supported out-of-the-box, so we can simply move the file to _$XDG_CONFIG_HOME/git/ignore_.\n"
+            "movable": false,
+            "help": "If your _$HOME_ directory is a git repository - this file is the correct way to ignore files in it. For global gitignore, use _$XDG_CONFIG_HOME/git/ignore_.\n"
         }
     ]
 }
