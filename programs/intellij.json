@@ -4,6 +4,11 @@
             "path": "$HOME/.jdks",
             "movable": true,
             "help": "Add ```-Djdk.downloader.home=<your preferred path>``` to the IntelliJ Custom VM options.\n\nSee: [here](https://youtrack.jetbrains.com/issue/IDEA-254464)."
+        },
+        {
+            "path": "$HOME/IdeaSnapshots",
+            "movable": true,
+            "help": "Set the snapshots folder manually in the IntelliJ profiler settings.\n\nSee: [here](https://youtrack.jetbrains.com/issue/IJPL-149835)."
         }
     ],
     "name": "intellij"
