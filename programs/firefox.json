@@ -3,7 +3,7 @@
         {
             "path": "$HOME/.mozilla",
             "movable": true,
-            "help": "Supported since Firefox 147\n\nXDG is supported out-of-the-box, so we can simply move the file to _$XDG_CONFIG_HOME/mozilla_\n"
+            "help": "Supported from version 147.\n\nCannot be migrated consistently. Try migration, if that fails backup and remove $HOME/.mozilla and start firefox to have a new profile be created in $XDG_CONFIG_HOME/mozilla.\n\n_Relevant issue:_ https://bugzilla.mozilla.org/show_bug.cgi?id=259356\n"
         }
     ],
     "name": "Firefox"
