@@ -1,0 +1,10 @@
+{
+  "files": [
+    {
+      "path": "$HOME/.jq",
+      "movable": false,
+      "help": "Currently unsupported\nBOTH an \"on-startup-macro-file\" and an \"on-demand-module-directory\"\n\n*IF* used as a module directory using the -L option, we can do a workaround by creating an alias to set the a global default -L option:\n```bash\nalias jq=\"jq -L $XDG_DATA_HOME/jq\"\n```\n\nThis default can not be changed using the -L option if using an alias, consider using another name for the alias like ```jql```\n\n_Relevant issue:_ https://github.com/jqlang/jq/issues/2966\n"
+    }
+  ],
+  "name": "jq"
+}

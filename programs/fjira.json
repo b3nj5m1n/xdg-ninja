@@ -1,0 +1,10 @@
+{
+    "name": "fjira",
+    "files": [
+        {
+            "path": "$HOME/.fjira",
+            "movable": true,
+            "help": "Luckily, the XDG spec is supported by fjira, so we can simply move the file to _$XDG_CONFIG_HOME/fjira_.\n"
+        }
+    ]
+}

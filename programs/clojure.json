@@ -5,6 +5,11 @@
             "path": "$HOME/.clojure",
             "movable": true,
             "help": "XDG is supported out-of-the-box, so we can simply move the directory to _$XDG_CONFIG_HOME/clojure_.\n"
+        },
+        {
+            "path": "$HOME/.gitlibs",
+            "movable": true,
+            "help": "Export the following environment variables:\n\n```bash\nexport GITLIBS=\"$XDG_STATE_HOME\"/clojure/gitlibs\n```\n"
         }
     ]
 }

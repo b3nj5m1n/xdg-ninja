@@ -3,7 +3,7 @@
     "files": [
         {
             "path": "$HOME/.renpy",
-            "movable": false,
+            "movable": true,
             "help": "Export the following environment variable:\n\n```export RENPY_PATH_TO_SAVES=\"$XDG_DATA_HOME\"```\n\n_See the official documentation_: https://www.renpy.org/doc/html/environment_variables.html\n\n"
         }
     ]
