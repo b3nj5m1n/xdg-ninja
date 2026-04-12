@@ -1,0 +1,10 @@
+{
+    "files": [
+        {
+            "path": "$HOME/.ripgreprc",
+            "movable": true,
+            "help": "Export the following environment variable:\n\n```bash\nexport RIPGREP_CONFIG_PATH=\"$XDG_CONFIG_HOME/ripgrep/config\"\n```\nThen move the config file to _$XDG_CONFIG_HOME/ripgrep/config_.\n"
+        }
+    ],
+    "name": "ripgrep"
+}
