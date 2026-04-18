@@ -1,0 +1,10 @@
+{
+    "files": [
+        {
+            "path": "$HOME/.bb_repl_history",
+            "movable": true,
+            "help": "Export the following environment variable:\n\n```bash\nexport BABASHKA_REPL_HISTORY=\"$XDG_STATE_HOME\"/babashka/repl_history\n```\n\nSupported since 1.12.216. See https://github.com/babashka/babashka/issues/1930\n"
+        }
+    ],
+    "name": "babashka"
+}
