@@ -1,0 +1,15 @@
+{
+    "files": [
+        {
+            "help": "Currently unsupported.\n\n_Relevant issue:_ https://github.com/anthropics/claude-code/issues/1455\n",
+            "movable": false,
+            "path": "$HOME/.claude.json"
+        },
+        {
+            "help": "Export the following environment variables:\n\n```bash\nexport CLAUDE_CONFIG_DIR=\"$XDG_CONFIG_HOME\"/claude\n```\n",
+            "movable": true,
+            "path": "$HOME/.claude"
+        }
+    ],
+    "name": "Claude Code"
+}
