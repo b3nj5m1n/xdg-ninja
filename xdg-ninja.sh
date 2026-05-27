@@ -216,12 +216,12 @@ check_file() {
     HELP="$4"
 
     file=$(retrieve_existing_filename "$FILENAME")
-    base_name=$(basename "$file")
-    if [ "$SKIP_USER" = true ] && grep -qxF "$base_name" "$XN_IGNOREFILE"; then
-        # echo "Skipping $base_name from user ignore file..."
-        return
-    fi
     if [ "$file" ]; then
+        base_name=$(basename "$file")
+        if [ "$SKIP_USER" = true ] && grep -qxF "$base_name" "$XN_IGNOREFILE"; then
+          # echo "Skipping $base_name from user ignore file..."
+          return
+        fi
         if [ "$MOVABLE" = true ]; then
             log ERR "$NAME" "$file" "$HELP"
         else
@@ -245,7 +245,7 @@ do_check_programs() {
 " read -r name; read -r filename; read -r movable; read -r help; do
         check_file "$name" "$filename" "$movable" "$help"
     done <<EOF
-$(find "$XN_PROGRAMS_DIR" -type f -print0 | xargs -0 jq '.files[] as $file | .name, $file.path, $file.movable, $file.help' | sed -e 's/^"//' -e 's/"$//')
+$(find "$XN_PROGRAMS_DIR" -type f -print0 | xargs -0 jq ".files[] as \$file | .name, \$file.path, \$file.movable, \$file.help" | sed -e 's/^"//' -e 's/"$//')
 EOF
 # sed is to trim quotes
 }
