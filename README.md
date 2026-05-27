@@ -81,7 +81,7 @@ Follow the instructions for your package manager to install `xdg-ninja`.
 
 ### Configuration
 
-The configuration is done in the [`./programs/`](./programs/) directory, which should be located in the same working directory as the [`xdg-ninja.sh`](./xdg-ninja.sh) script. This can be overridden with the `XN_PROGRAMS_DIR` environment variable.
+The configuration is done in the [`./programs/`](./programs/) directory, which should be located in the same working directory as the [`xdg-ninja.sh`](./xdg-ninja.sh) script. This can be overridden with the `$XN_PROGRAMS_DIR` environment variable.
 
 You define a program, and then a list of files and directories which that program ruthlessly puts into your `$HOME` directory.
 
@@ -90,6 +90,21 @@ For each file/directory, you specify if it can be (re)moved.
 If this is the case, you also specify instructions on how to accomplish this in Markdown.
 
 Files in this directory can have any name, but using the name of the program is recommended.
+
+#### Ignoring
+
+To avoid unwanted warnings, you may skip unsupported files by running `xdg-ninja --skip-unsupported`.
+
+Additionally, the you may create an ignore file at `$XDG_CONFIG_HOME/xdg-ninja/ignore` or use the `$XN_IGNOREFILE` environment variable to point to your ignorefile.
+
+Enter the [basename](https://man7.org/linux/man-pages/man1/basename.1.html) of each file or directory you wish to keep cluttering your `$HOME`. Here's an example of an ignorefile:
+
+```txt
+.zshenv
+.zshrc
+.profile
+.xinitrc
+```
 
 ### Automatically Generating Configuration
 

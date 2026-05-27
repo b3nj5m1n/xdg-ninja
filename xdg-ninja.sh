@@ -58,12 +58,18 @@ help() {
     ${FX_ITALIC}--help${FX_RESET}              ${FX_BOLD}This help menu${FX_RESET}
     ${FX_ITALIC}-h${FX_RESET}
 
-    ${FX_ITALIC}--no-skip-ok${FX_RESET}        ${FX_BOLD}Display messages for all files checked (verbose)${FX_RESET}
+    ${FX_ITALIC}--no-skip-ok${FX_RESET}        ${FX_BOLD}Display messages for all files, overrides --skip-user (verbose)${FX_RESET}
     ${FX_ITALIC}-v${FX_RESET}
 
     ${FX_ITALIC}--skip-ok${FX_RESET}           ${FX_BOLD}Don't display anything for files that do not exist (default)${FX_RESET}
 
     ${FX_ITALIC}--skip-unsupported${FX_RESET}  ${FX_BOLD}Don't display anything for files that do not have fixes available${FX_RESET}
+
+    ${FX_ITALIC}--skip-user${FX_RESET}         ${FX_BOLD}Don't display anything for files that the user ignores (default)${FX_RESET}
+    ${FX_ITALIC}${FX_RESET}                    Ignore basenames in \$XN_IGNOREFILE or \$XDG_CONFIG_HOME/xdg-ninja/ignore
+    ${FX_ITALIC}${FX_RESET}                    Enter the basename of each file you'd like to ignore on a new line.
+
+    ${FX_ITALIC}--no-skip-user${FX_RESET}      ${FX_BOLD}Display messages for files that the user ignores${FX_RESET}
 
     """
     printf "%b\n" "$HELPSTRING"
@@ -71,6 +77,7 @@ help() {
 
 SKIP_OK=true
 SKIP_UNSUPPORTED=false
+SKIP_USER=true
 for i in "$@"; do
     if [ "$i" = "--help" ] || [ "$i" = "-h" ]; then
         help
@@ -79,10 +86,14 @@ for i in "$@"; do
         SKIP_OK=true
     elif [ "$i" = "--no-skip-ok" ]; then
         SKIP_OK=false
-    elif [ "$i" = "--skip-unsupported" ]; then
-        SKIP_UNSUPPORTED=true
     elif [ "$i" = "-v" ]; then
         SKIP_OK=false
+    elif [ "$i" = "--skip-unsupported" ]; then
+        SKIP_UNSUPPORTED=true
+    elif [ "$i" = "--skip-user" ]; then
+        SKIP_USER=true
+    elif [ "$i" = "--no-skip-user" ]; then
+        SKIP_USER=false
     fi
 done
 
@@ -205,7 +216,11 @@ check_file() {
     HELP="$4"
 
     file=$(retrieve_existing_filename "$FILENAME")
-
+    base_name=$(basename "$file")
+    if [ "$SKIP_USER" = true ] && grep -qxF "$base_name" "$XN_IGNOREFILE"; then
+        # echo "Skipping $base_name from user ignore file..."
+        return
+    fi
     if [ "$file" ]; then
         if [ "$MOVABLE" = true ]; then
             log ERR "$NAME" "$file" "$HELP"
@@ -247,6 +262,25 @@ check_programs() {
 
 [ "$XN_PROGRAMS_DIR" ] ||
     XN_PROGRAMS_DIR="$(realpath "$0" | xargs dirname | sed 's:/bin$:/share/xdg-ninja:g')/programs"
+
+check_ignore_file() {
+    # echo "Checking ignore file..."
+    if [ -f "$XN_IGNOREFILE" ]; then
+        true
+    elif [ -f "$XDG_CONFIG_HOME"/xdg-ninja/ignore ]; then
+        XN_IGNOREFILE=$XDG_CONFIG_HOME/xdg-ninja/ignore
+    elif [ -f "$HOME"/.config/xdg-ninja/ignore ]; then
+        XN_IGNOREFILE="$HOME"/.config/xdg-ninja/ignore
+    else
+        SKIP_USER=false
+    fi
+}
+
+if [ "$SKIP_OK" = true ]; then 
+    [ "$SKIP_USER" = true ] && check_ignore_file
+else
+    SKIP_USER=false
+fi
 
 check_programs
 if [ $FIXABLE -gt 100 ]; then
