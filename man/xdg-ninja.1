@@ -1,5 +1,5 @@
 .nh
-.TH "xdg-ninja" "1" "May 2023" "b3nj5m1n" "xdg-ninja manual"
+.TH "xdg-ninja" "1" "May 2026" "b3nj5m1n" "xdg-ninja manual"
 
 .SH NAME
 .PP
@@ -33,12 +33,26 @@ Don't display anything for files that do not exist (default behavior)
 .TP
 \fB--skip-unsupported\fP
 Don't display anything for files that do not have fixes available
+.TP
+\fB--skip-user\fP
+Don't display anything for files that the user ignores (default)
+.br
+Don't display basenames in $XN_IGNOREFILE or $XDG_CONFIG_HOME/xdg-ninja/ignore. Overridden by --skip-ok.
+.TP
+\fB--no-skip-user\fP
+Don't ignore files that the user specified in the ignorefile.
+
 
 .SH ENVIRONMENT VARIABLES
 .TP
-\fBXN_PROGRAMS_DIR\fP=
+\fB$XN_PROGRAMS_DIR\fP=
 Overwrites the path where programs information are located (default: programs/
 or ../share/xdg-ninja/programs/)
+.TP
+\fB$XN_IGNOREFILE\fP=
+Is read instead of $XDG_CONFIG_HOME/xdg-ninja/ignore or $HOME/xdg-ninja/ignore.
+The ignorefile is a plain text file with the basenames of files that xdg-ninja
+will not render a warning for unless --skip-ok or --no-skip-user is specified.
 
 .SH COPYRIGHT
 .PP
@@ -49,4 +63,6 @@ There is NO WARRANTY, to the extent permitted by law.
 
 .SH SEE ALSO
 .PP
+.B basename(1), jq(1)
+.br
 Sources, bug report, and more are available at <https://github.com/b3nj5m1n/xdg-ninja>.
