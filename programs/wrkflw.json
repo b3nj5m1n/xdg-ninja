@@ -1,0 +1,10 @@
+{
+  "files": [
+    {
+      "path": "$HOME/.wrkflw",
+      "movable": false,
+      "help": "Currently unsupported.\n\n_Relevant issue:_ https://github.com/bahdotsh/wrkflw/issues/117"
+    }
+  ],
+  "name": "koka"
+}
