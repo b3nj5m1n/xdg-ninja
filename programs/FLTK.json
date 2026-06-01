@@ -1,0 +1,10 @@
+{
+    "files": [
+        {
+            "help": "Supported since _1.4_.\n\nYou can move the folder to `$XDG_CONFIG_HOME/fltk.org`.\n",
+            "movable": true,
+            "path": "$HOME/.fltk"
+        }
+    ],
+    "name": "FLTK"
+}
