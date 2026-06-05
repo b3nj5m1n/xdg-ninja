@@ -1,0 +1,10 @@
+{
+    "files": [
+        {
+            "path": "$HOME/.talos",
+            "movable": true,
+            "help": "Export the following environment variables:\n\n```bash\nexport TALOSCONFIG=\"$XDG_CONFIG_HOME\"/talosconfig\n```\n"
+        }
+    ],
+    "name": "talos"
+}
