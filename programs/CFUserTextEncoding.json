@@ -4,7 +4,7 @@
         {
             "path": "$HOME/.CFUserTextEncoding",
             "movable": false,
-            "help": "Not applicable. Probably not remvoable.\n\nFrom [Apple](https://developer.apple.com/library/archive/technotes/tn2228/_index.html#//apple_ref/doc/uid/DTS40007991-CH1-SUBSECTION15):\n\n>Core Foundation tries to access the user's home directory to determine their default text encoding (stored in the file ~/.CFUserTextEncoding).\n"
+            "help": "Not applicable. Probably not removable.\n\nFrom [Apple](https://developer.apple.com/library/archive/technotes/tn2228/_index.html#//apple_ref/doc/uid/DTS40007991-CH1-SUBSECTION15):\n\n>Core Foundation tries to access the user's home directory to determine their default text encoding (stored in the file ~/.CFUserTextEncoding).\n"
         }
     ]
 }
