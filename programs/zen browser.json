@@ -1,8 +1,8 @@
 {
     "files": [
         {
-            "help": "Currently unsupported.\n\n_Relevant issue:_ https://github.com/zen-browser/desktop/issues/7280\n",
-            "movable": false,
+            "help": "Supported since _1.18.6b_.\n\nXDG is supported out-of-the-box, so move the directory to _\"$XDG_CONFIG_HOME\"/zen_ and delete the cache directory _\"$HOME\"/.cache/zen_.\n\n_Note: Migrating will delete all installed extension and must be reinstalled manually._\n",
+            "movable": true,
             "path": "$HOME/.zen"
         }
     ],
