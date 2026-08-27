@@ -1,0 +1,10 @@
+{
+    "files": [
+        {
+            "help": "Export the following environment variables:\n\n```bash\nexport T3CODE_HOME=\"$XDG_CONFIG_HOME\"/t3\n```\n",
+            "movable": true,
+            "path": "$HOME/.t3"
+        }
+    ],
+    "name": "T3 Code"
+}
