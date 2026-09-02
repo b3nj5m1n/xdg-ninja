@@ -1,0 +1,10 @@
+{
+    "name": "lexaloffle",
+    "files": [
+        {
+            "path": "$HOME/.lexaloffle",
+            "movable": true,
+            "help": "This directory is made by either Pico-8, Picotron or Voxatron.\nAlias whichever program being used to use a custom data location:\n\n```bash\nalias pico8=pico8 -home \"$XDG_DATA_HOME\"/pico-8\nalias picotron=picotron -home \"$XDG_DATA_HOME\"/picotron\nalias vox=vox -home \"$XDG_DATA_HOME\"/voxatron\n```\n"
+        }
+    ]
+}
