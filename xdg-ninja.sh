@@ -114,13 +114,20 @@ fi
 
 printf "\n"
 
-# Function to expand environment variables in string
-# https://stackoverflow.com/a/20316582/11110290
+# Currently, the only environment variable ever used is $HOME
+# at the beginning of the path, so there's no need for eval
 apply_shell_expansion() {
-    data="$1"
-    delimiter="__apply_shell_expansion_delimiter__"
-    command=$(printf "cat <<%s\n%s\n%s" "$delimiter" "$data" "$delimiter")
-    eval "$command"
+    case "$1" in
+        '$HOME')
+            printf '%s' "$HOME"
+            ;;
+        '$HOME/'*)
+            printf '%s/%s' "$HOME" "${1#\$HOME/}"
+            ;;
+        *)
+            printf '%s' "$1"
+            ;;
+    esac
 }
 
 # Function to check if a string contains shell pattern matching
