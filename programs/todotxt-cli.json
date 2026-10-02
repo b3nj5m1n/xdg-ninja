@@ -1,0 +1,35 @@
+{
+    "name": "todotxt-cli",
+    "files": [
+        {
+            "path": "$HOME/todo.cfg",
+            "movable": true,
+            "help": "XDG is supported out-of-the-box, so we can simply move the file to _$XDG_CONFIG_HOME/todo/config_.\n"
+        },
+        {
+            "path": "$HOME/.todo.cfg",
+            "movable": true,
+            "help": "XDG is supported out-of-the-box, so we can simply move the file to _$XDG_CONFIG_HOME/todo/config_.\n"
+        },
+        {
+            "path": "$HOME/.todo/config",
+            "movable": true,
+            "help": "XDG is supported out-of-the-box, so we can simply move the file to _$XDG_CONFIG_HOME/todo/config_.\n"
+        },
+        {
+            "path": "$HOME/.todo/todo.txt",
+            "movable": true,
+            "help": "If you don't have a configuration file, it's recommended you copy one from the installation-provided template in _/etc/todo/config_ to _$XDG_CONFIG_HOME/todo/config_\n\nOtherwise, set the following in your configuration:\n\n```bash\nexport TODO_DIR=\"$XDG_DATA_HOME/todo\"\nexport TODO_FILE=\"$TODO_DIR/todo.txt\"\nexport DONE_FILE=\"$TODO_DIR/done.txt\"\nexport REPORT_FILE=\"$TODO_DIR/report.txt\"\n```\n"
+        },
+        {
+            "path": "$HOME/.todo/report.txt",
+            "movable": true,
+            "help": "If you don't have a configuration file, it's recommended you copy one from the installation-provided template in _/etc/todo/config_ to _$XDG_CONFIG_HOME/todo/config_\n\nOtherwise, set the following in your configuration:\n\n```bash\nexport TODO_DIR=\"$XDG_DATA_HOME/todo\"\nexport TODO_FILE=\"$TODO_DIR/todo.txt\"\nexport DONE_FILE=\"$TODO_DIR/done.txt\"\nexport REPORT_FILE=\"$TODO_DIR/report.txt\"\n```\n"
+        },
+        {
+            "path": "$HOME/.todo/done.txt",
+            "movable": true,
+            "help": "If you don't have a configuration file, it's recommended you copy one from the installation-provided template in _/etc/todo/config_ to _$XDG_CONFIG_HOME/todo/config_\n\nOtherwise, set the following in your configuration:\n\n```bash\nexport TODO_DIR=\"$XDG_DATA_HOME/todo\"\nexport TODO_FILE=\"$TODO_DIR/todo.txt\"\nexport DONE_FILE=\"$TODO_DIR/done.txt\"\nexport REPORT_FILE=\"$TODO_DIR/report.txt\"\n```\n"
+        }
+    ]
+}
