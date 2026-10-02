@@ -219,7 +219,6 @@ check_file() {
     if [ "$file" ]; then
         base_name=$(basename "$file")
         if [ "$SKIP_USER" = true ] && grep -qxF "$base_name" "$XN_IGNOREFILE"; then
-          # echo "Skipping $base_name from user ignore file..."
           return
         fi
         if [ "$MOVABLE" = true ]; then
@@ -264,7 +263,6 @@ check_programs() {
     XN_PROGRAMS_DIR="$(realpath "$0" | xargs dirname | sed 's:/bin$:/share/xdg-ninja:g')/programs"
 
 check_ignore_file() {
-    # echo "Checking ignore file..."
     if [ -f "$XN_IGNOREFILE" ]; then
         true
     elif [ -f "$XDG_CONFIG_HOME"/xdg-ninja/ignore ]; then
@@ -276,7 +274,7 @@ check_ignore_file() {
     fi
 }
 
-if [ "$SKIP_OK" = true ]; then 
+if [ "$SKIP_OK" = true ]; then
     [ "$SKIP_USER" = true ] && check_ignore_file
 else
     SKIP_USER=false
