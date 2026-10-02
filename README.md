@@ -95,7 +95,7 @@ Files in this directory can have any name, but using the name of the program is 
 
 To avoid unwanted warnings, you may skip unsupported files by running `xdg-ninja --skip-unsupported`.
 
-Additionally, the you may create an ignore file at `$XDG_CONFIG_HOME/xdg-ninja/ignore` or use the `$XN_IGNOREFILE` environment variable to point to your ignorefile.
+Additionally, you may create an ignore file at `$XDG_CONFIG_HOME/xdg-ninja/ignore` or use the `$XN_IGNOREFILE` environment variable to point to your ignorefile.
 
 Enter the [basename](https://man7.org/linux/man-pages/man1/basename.1.html) of each file or directory you wish to keep cluttering your `$HOME`. Here's an example of an ignorefile:
 
