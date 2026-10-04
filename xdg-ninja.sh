@@ -124,22 +124,6 @@ fi
 
 printf "\n"
 
-# Currently, the only environment variable ever used is $HOME
-# at the beginning of the path, so there's no need for eval
-apply_shell_expansion() {
-    case "$1" in
-        '$HOME')
-            printf '%s' "$HOME"
-            ;;
-        '$HOME/'*)
-            printf '%s/%s' "$HOME" "${1#\$HOME/}"
-            ;;
-        *)
-            printf '%s' "$1"
-            ;;
-    esac
-}
-
 # Function to check if a string contains shell pattern matching
 has_pattern() {
     case $1 in
@@ -155,7 +139,7 @@ has_pattern() {
 # Returns the actual name of the given file that is on the user's disk
 # This command applies shell pattern matching and return the actual filename
 retrieve_existing_filename() {
-    FILE_PATH=$(apply_shell_expansion "$1")
+    FILE_PATH="$1"
 
     # return filename if found, nothing else
     if has_pattern "$FILE_PATH"; then
@@ -253,7 +237,7 @@ do_check_programs() {
 " read -r name; read -r filename; read -r movable; read -r help; do
         check_file "$name" "$filename" "$movable" "$help"
     done <<EOF
-$(find "$XN_PROGRAMS_DIR" -type f -print0 | xargs -0 jq '.files[] as $file | .name, $file.path, $file.movable, $file.help' | sed -e 's/^"//' -e 's/"$//')
+$(find "$XN_PROGRAMS_DIR" -type f -print0 | xargs -0 sed -e "s|\"path\": \"\$HOME|\"path\": \"$HOME|" | jq '.files[] as $file | .name, $file.path, $file.movable, $file.help' | sed -e 's/^"//' -e 's/"$//')
 EOF
 # sed is to trim quotes
 }
