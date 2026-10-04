@@ -1,0 +1,10 @@
+{
+    "files": [
+        {
+            "path": "$HOME/.nethackrc",
+            "movable": true,
+            "help": "Supported since version 3.6.3\nExport the following environment variable:\n\n```bash\nexport NETHACKOPTIONS=@\"$XDG_CONFIG_HOME\"/nethack/config\n```\n"
+        }
+    ],
+    "name": "nethack"
+}

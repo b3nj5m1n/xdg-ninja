@@ -1,0 +1,10 @@
+{
+    "name": "idapro",
+    "files": [
+        {
+            "path": "$HOME/.idapro",
+            "movable": true,
+            "help": "```\nexport IDAUSR=\"$XDG_CONFIG_HOME\"/idapro\n```\n\nThen create the file `$XDG_CONFIG_HOME/idapro/plugins/remove_dot_idapro.py`, and put the following code into it:\n\n```python #!/usr/bin/env python3\nfrom pathlib import Path\n\nimport ida_idaapi\n\n\nclass MyPlugin(ida_idaapi.plugin_t):\n    flags = ida_idaapi.PLUGIN_UNL | ida_idaapi.PLUGIN_MULTI | ida_idaapi.PLUGIN_FIX\n    wanted_name = \"Remove ~/.idapro\"\n\n    def init(self):\n        print(\">>>Remove ~/.idapro: called.\")\n        (Path.home() / \".idapro\").rmdir()\n        return ida_idaapi.plugmod_t()\n\n\ndef PLUGIN_ENTRY():\n    return MyPlugin()\n```\n"
+        }
+    ]
+}

@@ -1,0 +1,10 @@
+{
+    "files": [
+        {
+            "help": "You need to create a new installation of ESP-IDF using EIM (ESP-IDF Installation Manager).\n\n1. Open EIM.\n2. Select _\"Manage Installations\"_\n3. Click the trash can icon under your current installation, then select _\"Remove\"_.\n4. Click _\"Install New Version\"_ near the bottom of the window, then select _\"Custom Installation\"_. Go through the wizard until you hit the _\"Select Installation Path\"_ step.\n5. Edit the textbox to show the full absolute path of your `$XDG_DATA_HOME` directory followed by `/espressif`. Using the _\"Browse\"_ button will cause EIM to automatically select a `.espressif` folder.\n\nYour IDE should automatically detect the new ESP-IDF installation.\n",
+            "movable": true,
+            "path": "$HOME/.espressif"
+        }
+    ],
+    "name": "ESP-IDF"
+}

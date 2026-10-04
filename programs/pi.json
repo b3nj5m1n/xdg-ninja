@@ -1,0 +1,10 @@
+{
+	"name": "pi",
+	"files": [
+		{
+			"path": "$HOME/.pi",
+			"movable": true,
+			"help": "Export the following environment variable:\n\n```bash\nexport PI_CODING_AGENT_DIR=\"$XDG_CONFIG_HOME\"/pi/agent\n```\nThen move the `~/.pi` directory to `$XDG_CONFIG_HOME/pi`.\n"
+		}
+	]
+}

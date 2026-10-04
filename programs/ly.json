@@ -1,0 +1,10 @@
+{
+    "files": [
+        {
+            "path": "$HOME/.ly-session.log",
+            "movable": true,
+            "help": "Set the configure in /etc/ly/config.ini:\n\n```\nsession_log = .local/state/ly-session.log\"\n```\n"
+        }
+    ],
+    "name": "ly"
+}

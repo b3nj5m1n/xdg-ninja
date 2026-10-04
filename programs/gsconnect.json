@@ -1,0 +1,10 @@
+{
+    "files": [
+        {
+            "path": "$HOME/.mozilla",
+            "movable": false,
+            "help": "Currently unsupported.\n\n_Relevant Pull request:_ https://github.com/GSConnect/gnome-shell-extension-gsconnect/pull/2156"
+        }
+    ],
+    "name": "GSConnect"
+}

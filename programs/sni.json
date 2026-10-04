@@ -1,0 +1,10 @@
+{
+    "files": [
+        {
+            "path": "$HOME/.sni",
+            "movable": false,
+            "help": "Currently unsupported.\n\n_Relevant Pull request:_ https://github.com/alttpo/sni/pull/54"
+        }
+    ],
+    "name": "SNI"
+}

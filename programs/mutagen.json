@@ -1,0 +1,10 @@
+{
+    "files": [
+        {
+            "help": "Export the following environment variables:\n\n```bash\nexport MUTAGEN_DATA_DIRECTORY=\"$XDG_DATA_HOME\"/mutagen\n```\n\n_Note: move the existing contents over, they hold the daemon's sessions._\n",
+            "movable": true,
+            "path": "$HOME/.mutagen"
+        }
+    ],
+    "name": "mutagen"
+}

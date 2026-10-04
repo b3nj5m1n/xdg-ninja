@@ -1,0 +1,10 @@
+{
+    "name": "hmcl",
+    "files": [
+        {
+            "path": "$HOME/.hmcl",
+            "movable": true,
+            "help": "HMCL (Hello Minecraft! Launcher) stores its local data in `.hmcl` under the **current working directory**. When you launch HMCL while `cwd` is `$HOME`, it creates `$HOME/.hmcl`.\n\nTo pin the local home to a fixed directory regardless of where HMCL is started from, set the `HMCL_LOCAL_HOME` environment variable (or the `hmcl.dir` system property):\n\n```bash\nexport HMCL_LOCAL_HOME=\"$XDG_DATA_HOME/hmcl/local\"\n```\n\nNote that the per-user data directory is controlled separately by `HMCL_USER_HOME` (or `hmcl.home`); on Linux/BSD it already defaults to `$XDG_DATA_HOME/hmcl` (falling back to `$HOME/.local/share/hmcl`).\n\nLikewise, the dependencies cache (JREs, libraries, assets, etc.) defaults to `HMCL_LOCAL_HOME/dependencies` and can be redirected with the `HMCL_DEPENDENCIES_DIR` environment variable (or the `hmcl.dependencies.dir` system property).\n\nSee the following source files for more details:\n\n- [Metadata.java](https://github.com/HMCL-dev/HMCL/blob/main/HMCL/src/main/java/org/jackhuang/hmcl/Metadata.java)\n\n- [OperatingSystem.java](https://github.com/HMCL-dev/HMCL/blob/main/HMCLCore/src/main/java/org/jackhuang/hmcl/util/platform/OperatingSystem.java)\n"
+        }
+    ]
+}

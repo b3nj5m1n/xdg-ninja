@@ -1,0 +1,10 @@
+{
+    "files": [
+        {
+            "help": "Set the log directory in `$XDG_CONFIG_HOME/atuin/config.toml`:\n\n```toml\n[logs]\ndir = \"~/.local/state/atuin/logs\"\n```\n\n_Note: `bin/` in this directory is from the install script, which hardcodes the path._\n",
+            "movable": true,
+            "path": "$HOME/.atuin"
+        }
+    ],
+    "name": "atuin"
+}

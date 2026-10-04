@@ -1,0 +1,10 @@
+{
+    "name": "choosenim",
+    "files": [
+        {
+            "path": "$HOME/.choosenim",
+            "movable": true,
+            "help": "Export the following environment variable (supported since https://github.com/nim-lang/choosenim/commit/458e741411c51ff39158c53acf94cc98d6aaa5e1):\n\n```bash\nexport CHOOSENIM_DIR=\"$XDG_DATA_HOME/choosenim\"\n```\n\nOr use an alias (supported since https://github.com/nim-lang/choosenim/commit/2cdb45e0d6707e74f9925b90ab56f1097f804ebe):\n\n```bash\nalias choosenim='choosenim --choosenimDir:\"$XDG_DATA_HOME/choosenim'\n```\n\nAdditionally, make sure to set `NIMBLE_DIR`.\n"
+        }
+    ]
+}

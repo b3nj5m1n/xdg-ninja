@@ -1,0 +1,15 @@
+{
+    "files": [
+        {
+            "help": "Alias screen to use a custom configuration location:\n\n```bash\nalias screen=screen -c \"$XDG_CONFIG_HOME\"/screen/screenrc\n```\n",
+            "movable": true,
+            "path": "$HOME/.screenrc"
+        },
+        {
+            "help": "Export the following environment variables:\n\n```bash\nexport SCREENDIR=\"$XDG_RUNTIME_DIR\"/screen\n```\n\n...then change the folder's permissions.\n\n```bash\nchmod 700 \"$SCREENDIR\"\n```\n\n*Note: `SCREENDIR` **must** have `700` permissions exactly or `screen` will refuse to use it.*\n",
+            "movable": true,
+            "path": "$HOME/.screen"
+        }
+    ],
+    "name": "screen"
+}

@@ -1,0 +1,10 @@
+{
+    "files": [
+        {
+            "path": "$HOME/.triton",
+            "movable": true,
+            "help": "Export the following environment variables:\n\n```bash\nexport TRITON_HOME=\"$XDG_CACHE_HOME/triton\"\n```\n"
+        }
+    ],
+    "name": "triton"
+}
