@@ -1,0 +1,10 @@
+{
+    "files": [
+        {
+            "help": "Supported since _v4.0.0_ of the Johnny.Decimal CLI, `jd`.\n\nMove each item:\n\n- _$HOME/.jd/config.json_ to _$XDG_CONFIG_HOME/johnnydecimal/config.json_\n- _$HOME/.jd/journal.jsonl_ to _$XDG_STATE_HOME/johnnydecimal/journal.jsonl_\n- _$HOME/.jd/cli_ to _$XDG_DATA_HOME/johnnydecimal/cli_. Then change the path in the `source` line of your shell config.\n\n`jd paths` prints the commands for your machine.\n",
+            "movable": true,
+            "path": "$HOME/.jd"
+        }
+    ],
+    "name": "johnnydecimal"
+}
