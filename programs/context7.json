@@ -1,0 +1,10 @@
+{
+    "name": "Context7",
+    "files": [
+        {
+            "path": "$HOME/.context7",
+            "movable": true,
+            "help": "Context7 supports the XDG Base Directory Specification. Update to a current version and it will migrate this directory's contents automatically:\n\n- Credentials move to `$XDG_CONFIG_HOME/context7/credentials.json`.\n- CLI state moves to `$XDG_STATE_HOME/context7/cli-state.json`.\n- Generated previews move to `$XDG_CACHE_HOME/context7/previews/`.\n\nThe default locations are `~/.config/context7/`, `~/.local/state/context7/`, and `~/.cache/context7/` respectively. See [Context7 issue #2638](https://github.com/upstash/context7/issues/2638) for details.\n"
+        }
+    ]
+}
