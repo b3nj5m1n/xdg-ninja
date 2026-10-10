@@ -1,0 +1,10 @@
+{
+    "files": [
+        {
+            "path": "$HOME/.copilot",
+            "movable": true,
+            "help": "Export the following environment variable:\n\n```bash\nexport COPILOT_HOME=\"$XDG_CONFIG_HOME\"/copilot\n```\nWarning: also contains data that isn't configuration.\n"
+        }
+    ],
+    "name": "GitHub Copilot CLI"
+}
