@@ -1,0 +1,15 @@
+{
+  "files": [
+    {
+      "path": "$HOME/.trae",
+      "movable": false,
+      "help": "Extensions can be moved using `--extensions-dir \"$XDG_DATA_HOME/trae/extensions\"` in a wrapper script and updating your `.desktop` file.\n\nHowever, `argv.json` and agent skills/rules are still hardcoded here.\n\n_Relevant issues:_ https://github.com/microsoft/vscode/issues/162712 , https://github.com/microsoft/vscode/issues/3884\n"
+    },
+    {
+      "path": "$HOME/.trae-server",
+      "movable": false,
+      "help": "Created on remote hosts. Relocatable only for Remote-SSH via the client's `settings.json`:\n\n```json\n\"remote.SSH.serverInstallPath\": {\n  \"my-host\": \"$HOME/.local/share/trae-server\"\n}\n```\n\nGlobal SSH defaults are unsupported.\n\n_Relevant issue:_ https://github.com/microsoft/vscode/issues/3884\n"
+    }
+  ],
+  "name": "Trae"
+}

@@ -1,0 +1,15 @@
+{
+  "files": [
+    {
+      "path": "$HOME/.cursor",
+      "movable": false,
+      "help": "Extensions can be moved using `--extensions-dir \"$XDG_DATA_HOME/cursor/extensions\"` in a wrapper script and updating your `.desktop` file.\n\nHowever, `argv.json`, agent memory, and global rules (`rules/`) are still hardcoded here.\n\n_Relevant issues:_ https://github.com/microsoft/vscode/issues/162712 , https://github.com/microsoft/vscode/issues/3884\n"
+    },
+    {
+      "path": "$HOME/.cursor-server",
+      "movable": false,
+      "help": "Created on remote hosts. Relocatable via the client's `settings.json`:\n\n```json\n\"cursor.serverInstallFolderPath\": {\n  \"my-host\": \"$HOME/.local/share/cursor-server\"\n}\n```\n\nGlobal SSH defaults are unsupported.\n\n_Relevant issue:_ https://github.com/microsoft/vscode/issues/3884\n"
+    }
+  ],
+  "name": "Cursor"
+}

@@ -1,0 +1,35 @@
+{
+  "files": [
+    {
+      "path": "$HOME/.devin",
+      "movable": false,
+      "help": "Extensions and agent state for Devin Desktop (formerly Windsurf). Extensions can be moved using `--extensions-dir \"$XDG_DATA_HOME/devin/extensions\"` in a wrapper script and updating your `.desktop` file.\n\nHowever, `argv.json` and agent state are still hardcoded here.\n\n_Relevant issues:_ https://github.com/microsoft/vscode/issues/162712 , https://github.com/microsoft/vscode/issues/3884\n"
+    },
+    {
+      "path": "$HOME/.devin-server",
+      "movable": false,
+      "help": "Created on remote hosts. Relocatable only for Remote-SSH via the client's `settings.json`:\n\n```json\n\"remote.SSH.serverInstallPath\": {\n  \"my-host\": \"$HOME/.local/share/devin-server\"\n}\n```\n\nGlobal SSH defaults are unsupported.\n\n_Relevant issue:_ https://github.com/microsoft/vscode/issues/3884\n"
+    },
+    {
+      "path": "$HOME/.windsurf",
+      "movable": true,
+      "help": "Legacy directory from older Windsurf versions prior to the Devin Desktop rebrand. If you have migrated your settings to `~/.devin`, this directory can be safely deleted.\n"
+    },
+    {
+      "path": "$HOME/.codeium",
+      "movable": true,
+      "help": "Legacy configuration directory from Codeium/Windsurf. If not using standalone Codeium plugins and migrated to Devin Desktop, this directory can be safely deleted.\n"
+    },
+    {
+      "path": "$HOME/.windsurf-server",
+      "movable": true,
+      "help": "Legacy remote server directory from older Windsurf versions. Can be safely deleted from remote hosts.\n"
+    },
+    {
+      "path": "$HOME/CascadeProjects",
+      "movable": true,
+      "help": "Default scratchpad directory created by older Windsurf Cascade sessions. Can be moved to your preferred projects folder or safely deleted if empty.\n"
+    }
+  ],
+  "name": "Devin Desktop"
+}

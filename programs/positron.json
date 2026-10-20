@@ -1,0 +1,20 @@
+{
+  "files": [
+    {
+      "path": "$HOME/.positron",
+      "movable": false,
+      "help": "Extensions can be moved using `--extensions-dir \"$XDG_DATA_HOME/positron/extensions\"` in a wrapper script and updating your `.desktop` file.\n\nHowever, `argv.json` and `cli/` are still hardcoded here.\n\n_Relevant issues:_ https://github.com/microsoft/vscode/issues/162712 , https://github.com/microsoft/vscode/issues/3884\n"
+    },
+    {
+      "path": "$HOME/.positron-shared",
+      "movable": true,
+      "help": "Can be moved by passing `--shared-data-dir \"$XDG_STATE_HOME/positron-shared\"` in a wrapper script and updating your `.desktop` file.\n\nRequested to become the default upstream:\n\n_Relevant issues:_ https://github.com/microsoft/vscode/issues/330061 , https://github.com/microsoft/vscode/issues/3884\n"
+    },
+    {
+      "path": "$HOME/.positron-server",
+      "movable": false,
+      "help": "Created on remote hosts. Relocatable only for Remote-SSH via the client's `settings.json`:\n\n```json\n\"remote.SSH.serverInstallPath\": {\n  \"my-host\": \"$HOME/.local/share/positron-server\"\n}\n```\n\nGlobal SSH defaults are unsupported.\n\n_Relevant issue:_ https://github.com/microsoft/vscode/issues/3884\n"
+    }
+  ],
+  "name": "Positron"
+}
