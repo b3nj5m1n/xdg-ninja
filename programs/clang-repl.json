@@ -1,0 +1,11 @@
+{
+    "name": "clang-repl",
+    "files": [
+        {
+            "path": "$HOME/.clang-repl-history",
+            "movable": false,
+            "help": "Currently unsupported.\n\n_Relevant issue:_ https://github.com/llvm/llvm-project/issues/218266\n_Relevant pull request_: https://github.com/llvm/llvm-project/pull/223037\n"
+        }
+    ]
+}
+
