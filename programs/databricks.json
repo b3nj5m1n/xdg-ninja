@@ -1,0 +1,10 @@
+{
+  "files": [
+    {
+      "path": "$HOME/.databrickscfg",
+      "movable": true,
+      "help": "Export the following environment variables:\n\n```bash\nexport DATABRICKS_CONFIG_FILE=\"$XDG_CONFIG_HOME\"/databricks/databrickscfg\n```\nMove config file and verify with: `databricks auth describe`\n"
+    }
+  ],
+  "name": "databricks"
+}
