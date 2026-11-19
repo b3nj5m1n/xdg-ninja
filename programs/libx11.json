@@ -8,7 +8,7 @@
         {
             "path": "$HOME/.XCompose",
             "movable": true,
-            "help": "Export the following environment variables:\n\n```bash\nexport XCOMPOSEFILE=\"$XDG_CONFIG_HOME\"/X11/xcompose\n```\n"
+            "help": "XDG is supported out-of-the-box by libxkbcommon, so you can simply move the file to _$XDG_CONFIG_HOME/XCompose_.\n\nThis covers programs that compose through libxkbcommon, e.g. the input method daemon **fcitx5** and Qt applications.\n\nlibX11 (XIM) only knows _$HOME/.XCompose_. For X11 programs that compose without an input method, export the following environment variable:\n\n```bash\nexport XCOMPOSEFILE=\"$XDG_CONFIG_HOME\"/XCompose\n```\n\n_Note:_ the file is read once, when a program starts. Input method daemons such as fcitx5 start with the graphical session and never see variables set in your shell's rc file; set _XCOMPOSEFILE_ in the session environment instead (e.g. _$XDG_CONFIG_HOME/environment.d/_), and log out and back in after moving the file.\n"
         }
     ],
     "name": "libx11"
